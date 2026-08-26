@@ -3,7 +3,6 @@ import { NextRequest, NextResponse } from "next/server";
 type ContactPayload = {
   name: string;
   email: string;
-  budget: string;
   details: string;
   company?: string; // honeypot — must stay empty
 };
@@ -12,7 +11,7 @@ const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 export async function POST(request: NextRequest) {
   const body = (await request.json()) as Partial<ContactPayload>;
-  const { name, email, budget, details, company } = body;
+  const { name, email, details, company } = body;
 
   // Honeypot: bots fill hidden fields, humans never see this input.
   if (company) {
@@ -46,11 +45,11 @@ export async function POST(request: NextRequest) {
   //     from: "Impova <anfrage@impova.de>",
   //     to: "hallo@impova.de",
   //     subject: `Neue Projektanfrage von ${name}`,
-  //     text: `Name: ${name}\nE-Mail: ${email}\nBudget: ${budget}\n\n${details}`,
+  //     text: `Name: ${name}\nE-Mail: ${email}\n\n${details}`,
   //   }),
   // });
 
-  console.log("Neue Projektanfrage:", { name, email, budget, details });
+  console.log("Neue Projektanfrage:", { name, email, details });
 
   return NextResponse.json({ ok: true });
 }

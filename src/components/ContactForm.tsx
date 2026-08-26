@@ -6,17 +6,9 @@ import { CheckCircle2, Loader2 } from "lucide-react";
 import { Eyebrow } from "./Eyebrow";
 import { Reveal } from "./Reveal";
 
-const BUDGET_OPTIONS = [
-  "10.000–15.000€",
-  "15.000–25.000€",
-  "25.000€+",
-  "Individuell",
-];
-
 type FormState = {
   name: string;
   email: string;
-  budget: string;
   details: string;
   company: string;
 };
@@ -24,7 +16,6 @@ type FormState = {
 const INITIAL_STATE: FormState = {
   name: "",
   email: "",
-  budget: "",
   details: "",
   company: "",
 };
@@ -39,7 +30,6 @@ export function ContactForm() {
     let count = 0;
     if (form.name.trim()) count++;
     if (form.email.trim()) count++;
-    if (form.budget) count++;
     if (form.details.trim()) count++;
     return count;
   }, [form]);
@@ -101,7 +91,7 @@ export function ContactForm() {
             <div className="flex items-center justify-between border-b border-zinc-900 px-6 py-4 font-mono text-xs uppercase tracking-wider text-zinc-600">
               <span>Projektanfrage</span>
               <span>
-                FORM_STATUS: {fieldsComplete}/4 FIELDS COMPLETE
+                FORM_STATUS: {fieldsComplete}/3 FIELDS COMPLETE
               </span>
             </div>
 
@@ -137,33 +127,11 @@ export function ContactForm() {
             </div>
 
             <div className="border-t border-zinc-900 px-6 py-6">
-              <p className="font-mono text-xs uppercase tracking-wider text-zinc-600">
-                [03] Budget-Rahmen
-              </p>
-              <div className="mt-4 flex flex-wrap gap-3">
-                {BUDGET_OPTIONS.map((option) => (
-                  <button
-                    type="button"
-                    key={option}
-                    onClick={() => setForm({ ...form, budget: option })}
-                    className={`border px-4 py-2 font-mono text-xs uppercase tracking-wider transition-colors ${
-                      form.budget === option
-                        ? "border-accent text-accent"
-                        : "border-zinc-800 text-zinc-500 hover:border-zinc-600 hover:text-zinc-300"
-                    }`}
-                  >
-                    {option}
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            <div className="border-t border-zinc-900 px-6 py-6">
               <label
                 htmlFor="details"
                 className="font-mono text-xs uppercase tracking-wider text-zinc-600"
               >
-                [04] Projekt-Details
+                [03] Projekt-Details
               </label>
               <textarea
                 id="details"
