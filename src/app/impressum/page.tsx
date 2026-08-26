@@ -9,46 +9,62 @@ export const metadata: Metadata = {
 export default function ImpressumPage() {
   return (
     <LegalPage title="Impressum">
-      <p className="border border-dashed border-zinc-800 p-4 font-mono text-xs uppercase tracking-wider text-accent">
-        Platzhalter — bitte mit echten Firmendaten ersetzen (Angaben gemäß §
-        5 TMG).
-      </p>
       <section>
-        <h2 className="text-zinc-200">Angaben gemäß § 5 TMG</h2>
-        <p>
-          [Vollständiger Name / Firmenname]
+        <h2 className="text-xl font-medium text-zinc-100">Diensteanbieter</h2>
+        <p className="mt-2">
+          Tobias Springer
           <br />
-          [Straße und Hausnummer]
+          Impova
           <br />
-          [PLZ und Ort — Landshut]
+          Hauptstraße 21a, 84051 Essenbach
+          <br />
+          Deutschland
         </p>
       </section>
+
       <section>
-        <h2 className="text-zinc-200">Kontakt</h2>
-        <p>
-          Telefon: [Telefonnummer]
-          <br />
-          E-Mail: [E-Mail-Adresse]
+        <h2 className="text-xl font-medium text-zinc-100">Kontaktmöglichkeiten</h2>
+        <p className="mt-2">
+          E-Mail-Adresse:{" "}
+          <a
+            href="mailto:impovamarketing@gmail.com"
+            className="text-accent hover:underline"
+          >
+            impovamarketing@gmail.com
+          </a>
         </p>
       </section>
+
       <section>
-        <h2 className="text-zinc-200">Umsatzsteuer-ID</h2>
-        <p>
-          Umsatzsteuer-Identifikationsnummer gemäß §27a Umsatzsteuergesetz:
-          <br />
-          [USt-IdNr., falls vorhanden]
+        <h2 className="text-xl font-medium text-zinc-100">Angaben zum Unternehmen</h2>
+        <p className="mt-2">
+          Umsatzsteuer-Identifikationsnummer (USt-ID): DE454917891
         </p>
       </section>
+
       <section>
-        <h2 className="text-zinc-200">
-          Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV
+        <h2 className="text-xl font-medium text-zinc-100">
+          Social Media und andere Onlinepräsenzen
         </h2>
-        <p>
-          [Name]
-          <br />
-          [Anschrift wie oben]
+        <p className="mt-2">
+          Dieses Impressum gilt auch für die folgenden Social-Media-Präsenzen
+          und Onlineprofile:
         </p>
+        <p className="mt-2">Instagram: tobias.sprngr</p>
+        <p>LinkedIn: Tobias Springer</p>
       </section>
+
+      <p className="border-t border-zinc-900 pt-6 text-xs text-zinc-600">
+        <a
+          href="https://datenschutz-generator.de/"
+          target="_blank"
+          rel="noopener noreferrer nofollow"
+          className="text-accent hover:underline"
+        >
+          Erstellt mit kostenlosem Datenschutz-Generator.de von Dr. Thomas
+          Schwenke
+        </a>
+      </p>
     </LegalPage>
   );
 }
