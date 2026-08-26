@@ -3,6 +3,7 @@ import Link from "next/link";
 const NAV_ITEMS = [
   { label: "Philosophie", href: "#philosophie" },
   { label: "Leistungen", href: "#leistungen" },
+  { label: "Automatisierung", href: "#automatisierung" },
   { label: "Prozess", href: "#prozess" },
   { label: "Kontakt", href: "#kontakt" },
 ];

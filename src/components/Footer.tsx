@@ -39,6 +39,11 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="#automatisierung" className="hover:text-zinc-100">
+                  Automatisierung
+                </Link>
+              </li>
+              <li>
                 <Link href="#prozess" className="hover:text-zinc-100">
                   Prozess
                 </Link>
