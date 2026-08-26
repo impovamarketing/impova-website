@@ -3,7 +3,7 @@
 import { useRef } from "react";
 import Image from "next/image";
 import type { LucideIcon } from "lucide-react";
-import { Blocks, Gauge, SearchCode } from "lucide-react";
+import { Blocks, Code2, Edit3, Gauge, SearchCode } from "lucide-react";
 import { Eyebrow } from "./Eyebrow";
 import { Reveal } from "./Reveal";
 
@@ -13,6 +13,27 @@ type Service = {
   description: string;
   icon: LucideIcon;
 };
+
+type Path = {
+  title: string;
+  description: string;
+  icon: LucideIcon;
+};
+
+const PATHS: Path[] = [
+  {
+    title: "WordPress — individuell aufgesetzt",
+    description:
+      "Sauber programmiert statt Page-Builder-Ballast. Ideal, wenn du Inhalte selbst pflegen willst — flexibel erweiterbar, schneller umsetzbar als eine vollständige Custom-Lösung.",
+    icon: Edit3,
+  },
+  {
+    title: "Custom UI/UX & Next.js-Code",
+    description:
+      "Handgeschriebene Architektur für höchste Ansprüche an Design, Performance und Skalierbarkeit — für Unternehmen, die kompromisslos vorne mitspielen wollen.",
+    icon: Code2,
+  },
+];
 
 const SERVICES: Service[] = [
   {
@@ -111,6 +132,38 @@ export function Services() {
               <ServiceRow service={service} />
             </Reveal>
           ))}
+        </div>
+
+        <div className="mt-16">
+          <Reveal>
+            <h3 className="text-xl font-medium text-zinc-100 sm:text-2xl">
+              Zwei Wege, ein Ziel
+            </h3>
+            <p className="mt-3 max-w-lg text-zinc-400">
+              Kein starres System — wir wählen die Lösung, die zu deinem
+              Budget und deinem Anspruch passt.
+            </p>
+          </Reveal>
+
+          <div className="mt-8 grid grid-cols-1 gap-px overflow-hidden border border-zinc-900 bg-zinc-900 md:grid-cols-2">
+            {PATHS.map((path, i) => {
+              const Icon = path.icon;
+              return (
+                <Reveal key={path.title} delay={i * 0.08} className="bg-base p-8">
+                  <Icon
+                    strokeWidth={1}
+                    className="size-8 text-zinc-600 transition-colors duration-300 hover:text-accent"
+                  />
+                  <h4 className="mt-6 text-lg font-medium text-zinc-50">
+                    {path.title}
+                  </h4>
+                  <p className="mt-3 text-sm leading-relaxed text-zinc-400">
+                    {path.description}
+                  </p>
+                </Reveal>
+              );
+            })}
+          </div>
         </div>
       </div>
     </section>
