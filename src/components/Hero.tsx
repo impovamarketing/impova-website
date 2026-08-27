@@ -54,24 +54,22 @@ export function Hero() {
           variants={item}
           className="max-w-4xl text-5xl font-medium leading-[0.98] tracking-tight text-zinc-50 sm:text-6xl lg:text-7xl"
         >
-          Webdesign für Landshut,
+          Eine Website, die verkauft,
           <br />
-          das nicht wie Webdesign
-          <br />
-          aussieht.
+          während du schläfst.
         </motion.h1>
 
         <motion.p
           variants={item}
           className="max-w-xl text-lg leading-relaxed text-zinc-400"
         >
-          Individuell entwickelte Websites für Unternehmen, die auf
-          Performance und Rankings optimiert sind.{" "}
+          Schnell, gefunden, und so gebaut, dass du sie in fünf Jahren noch
+          nicht hassen wirst.{" "}
           <span className="text-zinc-200">Kein Theme. Kein Baukasten.</span>
         </motion.p>
 
         <motion.div variants={item} className="flex flex-wrap items-center gap-4 pt-4">
-          <MagneticButton href="#kontakt">Projekt anfragen</MagneticButton>
+          <MagneticButton href="#kontakt">Projekt starten</MagneticButton>
           <a
             href="#leistungen"
             className="font-mono text-xs uppercase tracking-wider text-zinc-500 transition-colors hover:text-zinc-200"

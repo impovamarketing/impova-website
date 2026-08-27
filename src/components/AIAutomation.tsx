@@ -14,19 +14,19 @@ const FEATURES: Feature[] = [
   {
     title: "KI-Integration",
     description:
-      "Intelligente Chatbots & KI-Assistenten direkt auf der Website für automatisierten Support und Lead-Generierung.",
+      "Beantwortest du dieselbe Kundenfrage zum zehnten Mal per E-Mail? Ein Chatbot auf deiner Website übernimmt das und sammelt nebenbei Leads, während du schläfst.",
     icon: Bot,
   },
   {
     title: "Workflow-Automatisierung",
     description:
-      "Automatische Verarbeitung von Kontaktanfragen, Terminbuchungen und Schnittstellen zu deinen bestehenden Systemen (CRM/E-Mail).",
+      "Tippst du Anfragen von Hand in dein CRM ab? Ich verbinde Formular, Terminbuchung und CRM direkt miteinander, damit die Daten ankommen, ohne dass du sie anfasst.",
     icon: Workflow,
   },
   {
     title: "Effizienz steigern",
     description:
-      "Wiederkehrende Aufgaben automatisieren, damit mehr Zeit für das eigentliche Kerngeschäft bleibt.",
+      "Jede Stunde mit Copy-Paste-Aufgaben fehlt dir im Kerngeschäft. Ich automatisiere die Aufgaben, die sich wiederholen, den Rest machst du.",
     icon: Zap,
   },
 ];

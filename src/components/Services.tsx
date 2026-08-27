@@ -24,13 +24,13 @@ const PATHS: Path[] = [
   {
     title: "WordPress — individuell aufgesetzt",
     description:
-      "Sauber programmiert statt Page-Builder-Ballast. Ideal, wenn du Inhalte selbst pflegen willst — flexibel erweiterbar, schneller umsetzbar als eine vollständige Custom-Lösung.",
+      "Du willst Texte und Bilder selbst ändern können, ohne mich anzurufen? Dann bau ich dir WordPress sauber und ohne Page-Builder-Ballast auf — schneller umsetzbar, trotzdem kein Baukasten-Look.",
     icon: Edit3,
   },
   {
     title: "Custom UI/UX & Next.js-Code",
     description:
-      "Handgeschriebene Architektur für höchste Ansprüche an Design, Performance und Skalierbarkeit — für Unternehmen, die kompromisslos vorne mitspielen wollen.",
+      "Reicht dir WordPress nicht mehr, weil du bei Design und Ladezeit ganz vorne mitspielen willst? Dann schreib ich dir jede Zeile Code von Hand — für Performance, die man tatsächlich misst, nicht nur behauptet.",
     icon: Code2,
   },
 ];
@@ -40,21 +40,21 @@ const SERVICES: Service[] = [
     index: "01",
     title: "Custom Web Architecture",
     description:
-      "Next.js-basierte Systeme statt Page-Builder. Sauberer Component-Aufbau, skalierbar, wartbar — für Unternehmen, die in fünf Jahren noch damit arbeiten wollen.",
+      "Statt Page-Builder: echter Code, den du in fünf Jahren noch verstehst und erweitern kannst, ohne dass jede Änderung zum Wartungsalbtraum wird.",
     icon: Blocks,
   },
   {
     index: "02",
     title: "Modern UI/UX Engineering",
     description:
-      "Interfaces, die sich technisch überlegen anfühlen. Mikrointeraktionen, Ladeverhalten und Typografie werden bis ins Detail durchdacht, nicht aus einem Theme kopiert.",
+      "Merkt ein Besucher in den ersten drei Sekunden, dass deine Seite von der Stange ist? Ich feile an jeder Mikrointeraktion, jeder Ladezeit, jeder Schriftgröße, damit er bleibt statt wegzuklicken.",
     icon: Gauge,
   },
   {
     index: "03",
     title: "Data-Driven SEO",
     description:
-      "Technisches SEO als Fundament: strukturierte Daten, Core Web Vitals, semantisches HTML. Rankings entstehen durch Architektur, nicht durch Zufall.",
+      "Rankst du aktuell auf Seite 3? Ich bau SEO direkt ins Fundament: strukturierte Daten, Core Web Vitals, sauberes HTML, damit du bei Google gefunden wirst statt nur theoretisch zu existieren.",
     icon: SearchCode,
   },
 ];
@@ -140,8 +140,9 @@ export function Services() {
               Zwei Wege, ein Ziel
             </h3>
             <p className="mt-3 max-w-lg text-zinc-400">
-              Kein starres System — wir wählen die Lösung, die zu deinem
-              Budget und deinem Anspruch passt.
+              Du musst dich nicht für ein System entscheiden, bevor du weißt,
+              was du brauchst. Ich sag dir ehrlich, welcher Weg zu deinem
+              Budget und deinem Ziel passt.
             </p>
           </Reveal>
 

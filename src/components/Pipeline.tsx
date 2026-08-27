@@ -10,28 +10,28 @@ const STEPS = [
     title: "Audit",
     status: "Bestandsaufnahme",
     description:
-      "Analyse deines aktuellen Auftritts, deiner Zielgruppe und deiner Wettbewerber. Technische SEO-Baseline wird erhoben.",
+      "Ich schau mir an, wo du aktuell stehst: deine Seite, deine Zielgruppe, deine Konkurrenz, und wo du gerade Kunden verlierst.",
   },
   {
     index: "02",
     title: "Architecture",
     status: "Konzeption",
     description:
-      "Informationsarchitektur, Wireframes und Design-System entstehen — abgestimmt auf Conversion-Ziele und Keyword-Strategie.",
+      "Daraus bau ich Struktur, Wireframes und ein Design-System, abgestimmt darauf, dass du Kunden gewinnst und bei Google gefunden wirst.",
   },
   {
     index: "03",
     title: "Development",
     status: "Umsetzung",
     description:
-      "Handgeschriebener Next.js-Code, performance-optimiert, mit strukturierten Daten und sauberem Component-Aufbau.",
+      "Ich schreib jede Zeile Code selbst, performance-optimiert, mit sauberer Struktur, kein Copy-Paste-Template, das halb passt.",
   },
   {
     index: "04",
     title: "Launch",
     status: "Go-Live",
     description:
-      "Deployment, Monitoring-Setup und Übergabe. Danach: laufende Performance- und Ranking-Betreuung nach Bedarf.",
+      "Deine Seite geht live, mit Monitoring, damit Probleme auffallen, bevor Kunden sie merken. Und danach bin ich noch da, kein Abschieds-Handshake.",
   },
 ];
 

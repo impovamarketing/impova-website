@@ -61,7 +61,7 @@ export function ContactForm() {
           </h2>
           <p className="mt-5 text-zinc-400">
             Aktuell 2 von 3 Projekt-Slots frei. Beschreib kurz dein Vorhaben —
-            Rückmeldung erfolgt innerhalb von 24 Stunden.
+            ich meld mich innerhalb von 24 Stunden persönlich zurück.
           </p>
 
           <div className="mt-12 flex items-center gap-4 border-t border-zinc-900 pt-8">

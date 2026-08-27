@@ -35,7 +35,7 @@ export function Header() {
           href="#kontakt"
           className="border border-zinc-700 px-4 py-2 font-mono text-xs uppercase tracking-wider text-zinc-100 transition-colors hover:border-accent hover:text-accent"
         >
-          Projekt anfragen
+          Projekt starten
         </Link>
       </div>
     </header>
