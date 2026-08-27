@@ -74,13 +74,22 @@ const jsonLd = {
   url: siteUrl,
   description:
     "High-End Webdesign & Performance-SEO Agentur für Unternehmen in Landshut.",
-  areaServed: {
-    "@type": "City",
-    name: "Landshut",
-  },
+  areaServed: [
+    {
+      "@type": "City",
+      name: "Landshut",
+    },
+    {
+      "@type": "City",
+      name: "Essenbach",
+    },
+  ],
   address: {
     "@type": "PostalAddress",
-    addressLocality: "Landshut",
+    streetAddress: "Hauptstraße 21a",
+    postalCode: "84051",
+    addressLocality: "Essenbach",
+    addressRegion: "Bayern",
     addressCountry: "DE",
   },
   priceRange: "€€€€",
