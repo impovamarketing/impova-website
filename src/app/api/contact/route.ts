@@ -32,24 +32,30 @@ export async function POST(request: NextRequest) {
     );
   }
 
-  // TODO: Resend/Formspree-Integration.
-  // Beispiel mit Resend (RESEND_API_KEY in .env.local setzen):
-  //
-  // await fetch("https://api.resend.com/emails", {
-  //   method: "POST",
-  //   headers: {
-  //     Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
-  //     "Content-Type": "application/json",
-  //   },
-  //   body: JSON.stringify({
-  //     from: "Impova <anfrage@impova.de>",
-  //     to: "hallo@impova.de",
-  //     subject: `Neue Projektanfrage von ${name}`,
-  //     text: `Name: ${name}\nE-Mail: ${email}\n\n${details}`,
-  //   }),
-  // });
+  // TODO: Sobald die Domain impova.de bei Resend verifiziert ist, "from"
+  // auf "Impova <info@impova.de>" umstellen.
+  const emailRes = await fetch("https://api.resend.com/emails", {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      from: "Impova <onboarding@resend.dev>",
+      to: "info@impova.de",
+      reply_to: email,
+      subject: `Neue Projektanfrage von ${name}`,
+      text: `Name: ${name}\nE-Mail: ${email}\n\n${details}`,
+    }),
+  });
 
-  console.log("Neue Projektanfrage:", { name, email, details });
+  if (!emailRes.ok) {
+    console.error("Resend-Fehler:", await emailRes.text());
+    return NextResponse.json(
+      { ok: false, error: "Anfrage konnte nicht versendet werden." },
+      { status: 502 }
+    );
+  }
 
   return NextResponse.json({ ok: true });
 }
