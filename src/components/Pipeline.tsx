@@ -7,21 +7,21 @@ import { Reveal } from "./Reveal";
 const STEPS = [
   {
     index: "01",
-    title: "Audit",
-    status: "Bestandsaufnahme",
+    title: "Analyse",
+    status: "Ausgangssituation",
     description:
       "Ich schau mir an, wo du aktuell stehst: deine Seite, deine Zielgruppe, deine Konkurrenz, und wo du gerade Kunden verlierst.",
   },
   {
     index: "02",
-    title: "Architecture",
+    title: "Strategie",
     status: "Konzeption",
     description:
-      "Daraus bau ich Struktur, Wireframes und ein Design-System, abgestimmt darauf, dass du Kunden gewinnst und bei Google gefunden wirst.",
+      "Daraus entsteht die Positionierung, die Seitenstruktur und die SEO-Ziele für deine neue Website, abgestimmt darauf, dass du gefunden wirst und Kunden gewinnst.",
   },
   {
     index: "03",
-    title: "Development",
+    title: "Entwicklung",
     status: "Umsetzung",
     description:
       "Ich schreib jede Zeile Code selbst, performance-optimiert, mit sauberer Struktur, kein Copy-Paste-Template, das halb passt.",
@@ -31,7 +31,7 @@ const STEPS = [
     title: "Launch",
     status: "Go-Live",
     description:
-      "Deine Seite geht live, mit Monitoring, damit Probleme auffallen, bevor Kunden sie merken. Und danach bin ich noch da, kein Abschieds-Handshake.",
+      "Deine Seite geht live, mit Tracking und Monitoring, damit Probleme auffallen, bevor Kunden sie merken. Und danach bin ich noch da, kein Abschieds-Handshake.",
   },
 ];
 
@@ -40,10 +40,14 @@ export function Pipeline() {
     <section id="prozess" className="border-b border-zinc-900 py-28">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <Reveal>
-          <Eyebrow index="05">Prozess</Eyebrow>
+          <Eyebrow index="04">Prozess</Eyebrow>
           <h2 className="mt-5 max-w-2xl text-3xl font-medium leading-tight tracking-tight text-zinc-50 sm:text-4xl">
-            Von Audit zu Launch — der Impova-Prozess
+            So läuft die Zusammenarbeit ab
           </h2>
+          <p className="mt-5 max-w-lg text-zinc-400">
+            Du weißt jederzeit, was als Nächstes passiert. Keine Blackbox,
+            kein Rätselraten.
+          </p>
         </Reveal>
 
         <div className="relative mt-20">

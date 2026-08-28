@@ -38,23 +38,23 @@ const PATHS: Path[] = [
 const SERVICES: Service[] = [
   {
     index: "01",
-    title: "Custom Web Architecture",
+    title: "Webdesign",
     description:
-      "Statt Page-Builder: echter Code, den du in fünf Jahren noch verstehst und erweitern kannst, ohne dass jede Änderung zum Wartungsalbtraum wird.",
+      "Ein moderner Auftritt, der zu dir und deiner Zielgruppe passt: individuell entwickelt statt auf ein fertiges Template gesetzt. Das gibt dir volle Kontrolle und eine Seite, die du in fünf Jahren noch problemlos erweitern kannst.",
     icon: Blocks,
   },
   {
     index: "02",
-    title: "Modern UI/UX Engineering",
+    title: "Conversion & Nutzerführung",
     description:
-      "Merkt ein Besucher in den ersten drei Sekunden, dass deine Seite von der Stange ist? Ich feile an jeder Mikrointeraktion, jeder Ladezeit, jeder Schriftgröße, damit er bleibt statt wegzuklicken.",
+      "Merkt ein Besucher in den ersten drei Sekunden nicht, was du anbietest, klickt er weg. Ich baue jede Seite so, dass Inhalte, Struktur und Buttons Besucher gezielt zur Anfrage führen.",
     icon: Gauge,
   },
   {
     index: "03",
-    title: "Data-Driven SEO",
+    title: "SEO",
     description:
-      "Rankst du aktuell auf Seite 3? Ich bau SEO direkt ins Fundament: strukturierte Daten, Core Web Vitals, sauberes HTML, damit du bei Google gefunden wirst statt nur theoretisch zu existieren.",
+      "Rankst du aktuell auf Seite 3? SEO ist bei mir Teil der Konzeption, nicht nachträglich draufgesetzt: technisch sauber und inhaltlich auf deine Suchbegriffe ausgerichtet, damit dich Kunden bei Google finden.",
     icon: SearchCode,
   },
 ];
@@ -101,7 +101,7 @@ export function Services() {
           <Reveal className="lg:col-span-8">
             <Eyebrow index="03">Leistungen</Eyebrow>
             <h2 className="mt-5 max-w-2xl text-3xl font-medium leading-tight tracking-tight text-zinc-50 sm:text-4xl">
-              Custom Web Architecture & Data-Driven SEO aus Landshut
+              Webdesign, SEO und Conversion aus Landshut
             </h2>
             <p className="mt-5 max-w-lg text-zinc-400">
               Kein Team aus Vertrieb, Projektmanagement und Praktikanten —

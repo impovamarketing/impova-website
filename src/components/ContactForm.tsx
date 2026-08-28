@@ -57,11 +57,13 @@ export function ContactForm() {
         <Reveal className="lg:col-span-4">
           <Eyebrow index="06">Kontakt</Eyebrow>
           <h2 className="mt-5 text-3xl font-medium leading-tight tracking-tight text-zinc-50 sm:text-4xl">
-            Premium Website erstellen — Projekt anfragen
+            Website-Projekt besprechen
           </h2>
           <p className="mt-5 text-zinc-400">
-            Aktuell 2 von 3 Projekt-Slots frei. Beschreib kurz dein Vorhaben —
-            ich meld mich innerhalb von 24 Stunden persönlich zurück.
+            Egal ob neue Website, Relaunch oder du erstmal nur wissen willst,
+            wo deine aktuelle Seite Potenzial liegen lässt — beschreib kurz
+            dein Anliegen. Aktuell 2 von 3 Projekt-Slots frei, ich meld mich
+            innerhalb von 24 Stunden persönlich zurück.
           </p>
 
           <div className="mt-12 flex items-center gap-4 border-t border-zinc-900 pt-8">

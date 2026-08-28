@@ -10,8 +10,8 @@ export function Footer() {
               IMPOVA<span className="text-accent">.</span>
             </p>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-zinc-500">
-              High-End Webdesign & Performance-SEO Agentur mit Sitz in
-              Landshut.
+              Websites für Unternehmen in Landshut, die professionell
+              wirken, gefunden werden und neue Anfragen bringen.
             </p>
             <div className="mt-6 flex items-center gap-4 font-mono text-xs uppercase tracking-wider text-zinc-600">
               <a href="#" aria-label="LinkedIn" className="hover:text-accent">
@@ -44,13 +44,13 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="#automatisierung" className="hover:text-zinc-100">
-                  Automatisierung
+                <Link href="#prozess" className="hover:text-zinc-100">
+                  Prozess
                 </Link>
               </li>
               <li>
-                <Link href="#prozess" className="hover:text-zinc-100">
-                  Prozess
+                <Link href="#automatisierung" className="hover:text-zinc-100">
+                  Automatisierung
                 </Link>
               </li>
               <li>

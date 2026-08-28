@@ -5,7 +5,8 @@ import { Reveal } from "./Reveal";
 type Project = {
   title: string;
   category: string;
-  description: string;
+  challenge: string;
+  solution: string;
   image: string;
 };
 
@@ -13,29 +14,37 @@ const PROJECTS: Project[] = [
   {
     title: "Sero's Barbershop",
     category: "Barbershop — Landshut",
-    description:
-      "Terminbuchung direkt per WhatsApp, Bewertungen im Header statt versteckt auf einer Unterseite, dunkles Editorial-Design statt Standard-Friseur-Vorlage.",
+    challenge:
+      "Bewertungen und Terminbuchung waren für Kunden schwer zu finden, die Seite wirkte wie jeder andere Friseur-Baukasten.",
+    solution:
+      "Terminbuchung direkt per WhatsApp, Bewertungen im Header statt versteckt, dunkles Editorial-Design statt Standard-Vorlage.",
     image: "/images/work/seros-barbershop.png",
   },
   {
     title: "Nox Aeterna",
     category: "Tattoo-Studio — Landshut",
-    description:
+    challenge:
+      "Ein Tattoo-Studio, das sich optisch kaum von jedem anderen im Stadtbild unterschied.",
+    solution:
       "Editorial-Typografie statt Tattoo-Klischee, Portfolio als Herzstück der Seite, Terminanfrage ohne Reibungsverlust.",
     image: "/images/work/nox-aeterna.png",
   },
   {
     title: "MA Hausmeisterei & Gebäudeservice",
     category: "Gebäudeservice — Landshut",
-    description:
-      "Vertrauenssignale (20+ Jahre Erfahrung, fester Ansprechpartner) direkt im ersten Blick, klare Leistungsübersicht für Hausverwaltungen und Gewerbe.",
+    challenge:
+      "20 Jahre Erfahrung, aber online für Hausverwaltungen kaum als vertrauenswürdiger Ansprechpartner erkennbar.",
+    solution:
+      "Vertrauenssignale (Erfahrung, fester Ansprechpartner) direkt im ersten Blick, klare Leistungsübersicht für Gewerbe.",
     image: "/images/work/ma-gebaeudeservice.png",
   },
   {
     title: "Dugalić Baum- & Gartenpflege",
     category: "Baum- & Gartenpflege — Landshut",
-    description:
-      "Persönliche Ansprache direkt im Hero, Angebotsanfrage in einem Klick, 20+ Jahre Erfahrung als sichtbares Vertrauenssignal statt Textzeile.",
+    challenge:
+      "Ein Ein-Mann-Betrieb, der online genauso unpersönlich wirkte wie jeder große Anbieter.",
+    solution:
+      "Persönliche Ansprache direkt im Hero, Angebotsanfrage in einem Klick, Erfahrung als sichtbares Vertrauenssignal statt Textzeile.",
     image: "/images/work/baumpflege-dugalic.png",
   },
 ];
@@ -75,8 +84,17 @@ export function Work() {
                   <h3 className="mt-2 text-lg font-medium text-zinc-50">
                     {project.title}
                   </h3>
-                  <p className="mt-3 text-sm leading-relaxed text-zinc-400">
-                    {project.description}
+                  <p className="mt-4 font-mono text-[11px] uppercase tracking-wider text-zinc-600">
+                    Herausforderung
+                  </p>
+                  <p className="mt-1.5 text-sm leading-relaxed text-zinc-500">
+                    {project.challenge}
+                  </p>
+                  <p className="mt-4 font-mono text-[11px] uppercase tracking-wider text-zinc-600">
+                    Lösung
+                  </p>
+                  <p className="mt-1.5 text-sm leading-relaxed text-zinc-300">
+                    {project.solution}
                   </p>
                 </div>
               </div>

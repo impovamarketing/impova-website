@@ -4,7 +4,6 @@ const NAV_ITEMS = [
   { label: "Referenzen", href: "#referenzen" },
   { label: "Philosophie", href: "#philosophie" },
   { label: "Leistungen", href: "#leistungen" },
-  { label: "Automatisierung", href: "#automatisierung" },
   { label: "Prozess", href: "#prozess" },
   { label: "Kontakt", href: "#kontakt" },
 ];
@@ -36,7 +35,7 @@ export function Header() {
           href="#kontakt"
           className="border border-zinc-700 px-4 py-2 font-mono text-xs uppercase tracking-wider text-zinc-100 transition-colors hover:border-accent hover:text-accent"
         >
-          Projekt starten
+          Website-Projekt besprechen
         </Link>
       </div>
     </header>

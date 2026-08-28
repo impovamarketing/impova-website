@@ -16,15 +16,17 @@ const siteUrl = "https://www.impova.de";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "Impova – High-End Webdesign & SEO Agentur Landshut",
+  title: "Impova – Webdesign & SEO Agentur Landshut",
   description:
-    "Premium Website erstellen lassen: High-End Webdesign & Performance-SEO für Unternehmen in Landshut. Kein Baukasten. Jetzt Projekt anfragen.",
+    "Website erstellen lassen oder Website-Relaunch in Landshut: professionell, bei Google gefunden, mit klarer Nutzerführung zur Anfrage.",
   keywords: [
-    "High-End Webdesign Landshut",
-    "SEO Agentur Landshut",
-    "Premium Website erstellen",
+    "Webdesign Landshut",
     "Webdesign Agentur Landshut",
-    "Individuelle Webentwicklung",
+    "SEO Agentur Landshut",
+    "Website erstellen lassen Landshut",
+    "Website Relaunch",
+    "Professionelle Website erstellen lassen",
+    "High-End Webdesign Landshut",
   ],
   authors: [{ name: "Impova" }],
   alternates: {
@@ -35,23 +37,23 @@ export const metadata: Metadata = {
     locale: "de_DE",
     url: siteUrl,
     siteName: "Impova",
-    title: "Impova – High-End Webdesign & SEO Agentur Landshut",
+    title: "Impova – Webdesign & SEO Agentur Landshut",
     description:
-      "Individuell entwickelte Websites für Unternehmen, die auf Performance und Rankings optimiert sind. Kein Baukasten, kein Theme.",
+      "Ich baue Websites für Unternehmen in Landshut, die professionell wirken, bei Google gefunden werden und Besucher zur Anfrage führen.",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Impova – High-End Webdesign & SEO Agentur Landshut",
+        alt: "Impova – Webdesign & SEO Agentur Landshut",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Impova – High-End Webdesign & SEO Agentur Landshut",
+    title: "Impova – Webdesign & SEO Agentur Landshut",
     description:
-      "Individuell entwickelte Websites für Unternehmen, die auf Performance und Rankings optimiert sind.",
+      "Websites für Unternehmen in Landshut, die professionell wirken, bei Google gefunden werden und Anfragen bringen.",
     images: ["/og-image.png"],
   },
   robots: {
@@ -73,7 +75,7 @@ const jsonLd = {
   image: `${siteUrl}/og-image.png`,
   url: siteUrl,
   description:
-    "High-End Webdesign & Performance-SEO Agentur für Unternehmen in Landshut.",
+    "Webdesign, SEO und Conversion-Optimierung für Unternehmen in Landshut.",
   areaServed: [
     {
       "@type": "City",

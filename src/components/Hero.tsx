@@ -54,28 +54,30 @@ export function Hero() {
           variants={item}
           className="max-w-4xl text-5xl font-medium leading-[0.98] tracking-tight text-zinc-50 sm:text-6xl lg:text-7xl"
         >
-          Eine Website, die verkauft,
+          Deine Website sollte
           <br />
-          während du schläfst.
+          nicht nur gut aussehen.
+          <br />
+          Sie soll neue Kunden gewinnen.
         </motion.h1>
 
         <motion.p
           variants={item}
           className="max-w-xl text-lg leading-relaxed text-zinc-400"
         >
-          Schnell, gefunden, und so gebaut, dass du sie in fünf Jahren noch
-          nicht hassen wirst.{" "}
-          <span className="text-zinc-200">Kein Theme. Kein Baukasten.</span>
+          Zu langsam, zu generisch, bei Google unsichtbar? Ich entwickle
+          Websites für Unternehmen in Landshut, die dich professionell
+          positionieren, gefunden werden und Besucher gezielt zur Anfrage
+          führen.
         </motion.p>
 
         <motion.div variants={item} className="flex flex-wrap items-center gap-4 pt-4">
-          <MagneticButton href="#kontakt">Projekt starten</MagneticButton>
-          <a
-            href="#leistungen"
-            className="font-mono text-xs uppercase tracking-wider text-zinc-500 transition-colors hover:text-zinc-200"
-          >
-            Leistungen ansehen ↓
-          </a>
+          <MagneticButton href="#kontakt">
+            Website-Projekt besprechen
+          </MagneticButton>
+          <MagneticButton href="#kontakt" variant="outline">
+            Website prüfen lassen
+          </MagneticButton>
         </motion.div>
 
         <motion.div
@@ -88,7 +90,7 @@ export function Hero() {
           </div>
           <div>
             <div className="text-zinc-200">&lt; 1.2s</div>
-            LCP
+            Ladezeit
           </div>
           <div>
             <div className="text-zinc-200">Landshut</div>

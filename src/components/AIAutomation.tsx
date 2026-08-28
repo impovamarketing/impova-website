@@ -36,13 +36,13 @@ export function AIAutomation() {
     <section id="automatisierung" className="border-b border-zinc-900 py-28">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <Reveal>
-          <Eyebrow index="04">KI & Automatisierung</Eyebrow>
+          <Eyebrow index="05">Zusatzoption</Eyebrow>
           <h2 className="mt-5 max-w-2xl text-3xl font-medium leading-tight tracking-tight text-zinc-50 sm:text-4xl">
-            Smarte KI-Lösungen & Prozessautomatisierung
+            Wenn deine Website mehr übernehmen soll als nur dastehen
           </h2>
           <p className="mt-5 max-w-xl text-zinc-400">
-            Spar wertvolle Zeit im Alltag durch automatisierte Workflows und
-            intelligente Systeme.
+            Zeit, die du mit Copy-Paste und Rückfragen verlierst, fehlt dir im
+            Tagesgeschäft. Auf Wunsch automatisiere ich, was sich wiederholt.
           </p>
         </Reveal>
 
@@ -68,7 +68,7 @@ export function AIAutomation() {
 
         <Reveal delay={0.3} className="mt-12">
           <MagneticButton href="#kontakt">
-            Automatisierungs-Potenzial prüfen
+            Website-Projekt besprechen
           </MagneticButton>
         </Reveal>
       </div>
