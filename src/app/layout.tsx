@@ -74,6 +74,7 @@ const jsonLd = {
   name: "Impova",
   image: `${siteUrl}/og-image.png`,
   url: siteUrl,
+  telephone: "+4915123819198",
   description:
     "Webdesign, SEO und Conversion-Optimierung für Unternehmen in Landshut.",
   areaServed: [

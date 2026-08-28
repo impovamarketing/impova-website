@@ -54,11 +54,13 @@ export function Hero() {
           variants={item}
           className="max-w-4xl text-5xl font-medium leading-[0.98] tracking-tight text-zinc-50 sm:text-6xl lg:text-7xl"
         >
-          Deine Website sollte
+          Webdesign & SEO
           <br />
-          nicht nur gut aussehen.
+          aus Landshut.
           <br />
-          Sie soll neue Kunden gewinnen.
+          Websites, die neue
+          <br />
+          Kunden bringen.
         </motion.h1>
 
         <motion.p

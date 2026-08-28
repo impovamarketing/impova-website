@@ -25,6 +25,11 @@ export default function ImpressumPage() {
       <section>
         <h2 className="text-xl font-medium text-zinc-100">Kontaktmöglichkeiten</h2>
         <p className="mt-2">
+          Telefon:{" "}
+          <a href="tel:+4915123819198" className="text-accent hover:underline">
+            0151 23819198
+          </a>
+          <br />
           E-Mail-Adresse:{" "}
           <a
             href="mailto:impovamarketing@gmail.com"
