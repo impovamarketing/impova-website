@@ -32,8 +32,9 @@ export async function POST(request: NextRequest) {
     );
   }
 
-  // TODO: Sobald die Domain impova.de bei Resend verifiziert ist, "from"
-  // auf "Impova <info@impova.de>" umstellen.
+  // TODO: Sobald die Domain impova.de bei Resend verifiziert ist:
+  // - "from" auf "Impova <info@impova.de>" umstellen
+  // - "to" auf "info@impova.de" umstellen
   const emailRes = await fetch("https://api.resend.com/emails", {
     method: "POST",
     headers: {
@@ -42,7 +43,7 @@ export async function POST(request: NextRequest) {
     },
     body: JSON.stringify({
       from: "Impova <onboarding@resend.dev>",
-      to: "info@impova.de",
+      to: "impovamarketing@gmail.com",
       reply_to: email,
       subject: `Neue Projektanfrage von ${name}`,
       text: `Name: ${name}\nE-Mail: ${email}\n\n${details}`,

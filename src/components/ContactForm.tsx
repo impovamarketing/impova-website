@@ -166,7 +166,7 @@ export function ContactForm() {
             {status === "error" && (
               <p className="border-t border-zinc-900 px-6 py-4 font-mono text-xs text-status-red">
                 Fehler beim Senden. Bitte versuch es erneut oder schreib direkt
-                an hallo@impova.de.
+                an info@impova.de.
               </p>
             )}
           </form>
