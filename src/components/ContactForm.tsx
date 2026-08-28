@@ -55,7 +55,7 @@ export function ContactForm() {
     <section id="kontakt" className="border-b border-zinc-900 py-28">
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-16 px-6 lg:grid-cols-12 lg:px-10">
         <Reveal className="lg:col-span-4">
-          <Eyebrow index="05">Kontakt</Eyebrow>
+          <Eyebrow index="06">Kontakt</Eyebrow>
           <h2 className="mt-5 text-3xl font-medium leading-tight tracking-tight text-zinc-50 sm:text-4xl">
             Premium Website erstellen — Projekt anfragen
           </h2>

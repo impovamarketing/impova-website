@@ -29,6 +29,11 @@ export function Footer() {
             </p>
             <ul className="mt-4 flex flex-col gap-2.5 text-sm text-zinc-400">
               <li>
+                <Link href="#referenzen" className="hover:text-zinc-100">
+                  Referenzen
+                </Link>
+              </li>
+              <li>
                 <Link href="#philosophie" className="hover:text-zinc-100">
                   Philosophie
                 </Link>

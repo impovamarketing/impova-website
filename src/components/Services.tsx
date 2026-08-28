@@ -99,7 +99,7 @@ export function Services() {
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:items-end lg:gap-8">
           <Reveal className="lg:col-span-8">
-            <Eyebrow index="02">Leistungen</Eyebrow>
+            <Eyebrow index="03">Leistungen</Eyebrow>
             <h2 className="mt-5 max-w-2xl text-3xl font-medium leading-tight tracking-tight text-zinc-50 sm:text-4xl">
               Custom Web Architecture & Data-Driven SEO aus Landshut
             </h2>

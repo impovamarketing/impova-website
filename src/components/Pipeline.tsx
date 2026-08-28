@@ -40,7 +40,7 @@ export function Pipeline() {
     <section id="prozess" className="border-b border-zinc-900 py-28">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <Reveal>
-          <Eyebrow index="04">Prozess</Eyebrow>
+          <Eyebrow index="05">Prozess</Eyebrow>
           <h2 className="mt-5 max-w-2xl text-3xl font-medium leading-tight tracking-tight text-zinc-50 sm:text-4xl">
             Von Audit zu Launch — der Impova-Prozess
           </h2>

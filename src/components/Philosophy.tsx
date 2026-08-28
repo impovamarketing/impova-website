@@ -32,7 +32,7 @@ export function Philosophy() {
     <section id="philosophie" className="border-b border-zinc-900 py-28">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <Reveal>
-          <Eyebrow index="01">Philosophie</Eyebrow>
+          <Eyebrow index="02">Philosophie</Eyebrow>
           <h2 className="mt-5 max-w-2xl text-3xl font-medium leading-tight tracking-tight text-zinc-50 sm:text-4xl">
             08/15-Baukasten vs. Engineering, das rankt
           </h2>
