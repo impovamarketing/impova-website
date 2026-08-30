@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: "Impova – Webdesign & SEO Agentur Landshut",
   description:
-    "Website erstellen lassen oder Website-Relaunch in Landshut: professionell, bei Google gefunden, mit klarer Nutzerführung zur Anfrage.",
+    "Website erstellen lassen oder Website-Relaunch in Landshut und Niederbayern: professionell, bei Google gefunden, mit klarer Nutzerführung zur Anfrage.",
   keywords: [
     "Webdesign Landshut",
     "Webdesign Agentur Landshut",
@@ -27,6 +27,7 @@ export const metadata: Metadata = {
     "Website Relaunch",
     "Professionelle Website erstellen lassen",
     "High-End Webdesign Landshut",
+    "Webdesign Niederbayern",
   ],
   authors: [{ name: "Impova" }],
   alternates: {
@@ -39,7 +40,7 @@ export const metadata: Metadata = {
     siteName: "Impova",
     title: "Impova – Webdesign & SEO Agentur Landshut",
     description:
-      "Ich baue Websites für Unternehmen in Landshut, die professionell wirken, bei Google gefunden werden und Besucher zur Anfrage führen.",
+      "Ich baue Websites für Unternehmen in Landshut und Umgebung, die professionell wirken, bei Google gefunden werden und Besucher zur Anfrage führen.",
     images: [
       {
         url: "/og-image.png",
@@ -53,7 +54,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Impova – Webdesign & SEO Agentur Landshut",
     description:
-      "Websites für Unternehmen in Landshut, die professionell wirken, bei Google gefunden werden und Anfragen bringen.",
+      "Websites für Unternehmen in Landshut und Umgebung, die professionell wirken, bei Google gefunden werden und Anfragen bringen.",
     images: ["/og-image.png"],
   },
   robots: {
@@ -76,7 +77,7 @@ const jsonLd = {
   url: siteUrl,
   telephone: "+4915123819198",
   description:
-    "Webdesign, SEO und Conversion-Optimierung für Unternehmen in Landshut.",
+    "Webdesign, SEO und Conversion-Optimierung für Unternehmen in Landshut und Niederbayern.",
   areaServed: [
     {
       "@type": "City",

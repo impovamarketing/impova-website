@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from "react";
 import Image from "next/image";
-import { CheckCircle2, Loader2 } from "lucide-react";
+import { CheckCircle2, Loader2, Mail, Phone } from "lucide-react";
 import { Eyebrow } from "./Eyebrow";
 import { Reveal } from "./Reveal";
 
@@ -82,6 +82,23 @@ export function ContactForm() {
                 Gründer, Impova — Landshut
               </p>
             </div>
+          </div>
+
+          <div className="mt-6 flex flex-col gap-3 font-mono text-sm text-zinc-400">
+            <a
+              href="tel:+4915123819198"
+              className="flex items-center gap-3 hover:text-accent"
+            >
+              <Phone className="size-4 shrink-0 text-zinc-600" />
+              0151 23819198
+            </a>
+            <a
+              href="mailto:info@impova.de"
+              className="flex items-center gap-3 hover:text-accent"
+            >
+              <Mail className="size-4 shrink-0 text-zinc-600" />
+              info@impova.de
+            </a>
           </div>
         </Reveal>
 

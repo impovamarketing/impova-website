@@ -22,7 +22,6 @@ const COMPARISON = [
 
 const METRICS = [
   { label: "Ladezeit", value: "< 1.2s" },
-  { label: "Lighthouse Score", value: "100/100" },
   { label: "Serverantwort", value: "< 200ms" },
   { label: "Stabilität", value: "0.00" },
 ];
@@ -32,7 +31,7 @@ export function Philosophy() {
     <section id="philosophie" className="border-b border-zinc-900 py-28">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <Reveal>
-          <Eyebrow index="02">Philosophie</Eyebrow>
+          <Eyebrow index="01">Philosophie</Eyebrow>
           <h2 className="mt-5 max-w-2xl text-3xl font-medium leading-tight tracking-tight text-zinc-50 sm:text-4xl">
             08/15-Baukasten vs. Engineering, das rankt
           </h2>
@@ -75,7 +74,7 @@ export function Philosophy() {
             Was das für dich heißt: keine Ladebalken, keine wackelnde Seite,
             keine Besucher, die abspringen, bevor sie was gesehen haben.
           </p>
-          <div className="mt-6 grid grid-cols-2 gap-8 border-t border-zinc-900 pt-10 font-mono sm:grid-cols-4">
+          <div className="mt-6 grid grid-cols-3 gap-8 border-t border-zinc-900 pt-10 font-mono">
             {METRICS.map((m) => (
               <div key={m.label}>
                 <div className="text-2xl text-zinc-50">{m.value}</div>

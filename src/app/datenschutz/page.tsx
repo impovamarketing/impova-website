@@ -462,8 +462,8 @@ export default function DatenschutzPage() {
             Anfrageformular:
           </strong>{" "}
           Wenn du unser Kontaktformular nutzt, verarbeiten wir die von dir
-          angegebenen Daten (Name, E-Mail-Adresse, Budget-Rahmen,
-          Projekt-Details) ausschließlich zur Bearbeitung deiner Anfrage auf
+          angegebenen Daten (Name, E-Mail-Adresse, Projekt-Details)
+          ausschließlich zur Bearbeitung deiner Anfrage auf
           Grundlage von Art. 6 Abs. 1 lit. b DSGVO. Eine Weitergabe an Dritte
           erfolgt nicht.
         </p>

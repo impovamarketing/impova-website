@@ -54,13 +54,13 @@ export function Work() {
     <section id="referenzen" className="border-b border-zinc-900 py-28">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <Reveal>
-          <Eyebrow index="01">Referenzen</Eyebrow>
+          <Eyebrow index="02">Referenzen</Eyebrow>
           <h2 className="mt-5 max-w-2xl text-3xl font-medium leading-tight tracking-tight text-zinc-50 sm:text-4xl">
             Kein Portfolio-Vorlagen-Text. Echte Projekte aus Landshut.
           </h2>
           <p className="mt-5 max-w-xl text-zinc-400">
-            Vier Betriebe, vier Branchen, ein gemeinsamer Nenner: keine
-            Website von der Stange.
+            Vier Handwerksbetriebe und lokale Dienstleister aus Landshut und
+            Umgebung, ein gemeinsamer Nenner: keine Website von der Stange.
           </p>
         </Reveal>
 

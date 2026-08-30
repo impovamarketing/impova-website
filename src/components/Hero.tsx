@@ -68,9 +68,9 @@ export function Hero() {
           className="max-w-xl text-lg leading-relaxed text-zinc-400"
         >
           Zu langsam, zu generisch, bei Google unsichtbar? Ich entwickle
-          Websites für Unternehmen in Landshut, die dich professionell
-          positionieren, gefunden werden und Besucher gezielt zur Anfrage
-          führen.
+          Websites für Unternehmen in Landshut und Umgebung, die dich
+          professionell positionieren, gefunden werden und Besucher gezielt
+          zur Anfrage führen.
         </motion.p>
 
         <motion.div variants={item} className="flex flex-wrap items-center gap-4 pt-4">
@@ -84,12 +84,8 @@ export function Hero() {
 
         <motion.div
           variants={item}
-          className="mt-16 grid max-w-2xl grid-cols-3 gap-6 border-t border-zinc-900 pt-6 font-mono text-xs uppercase tracking-wider text-zinc-600"
+          className="mt-16 grid max-w-2xl grid-cols-2 gap-6 border-t border-zinc-900 pt-6 font-mono text-xs uppercase tracking-wider text-zinc-600"
         >
-          <div>
-            <div className="text-zinc-200">100/100</div>
-            Lighthouse Score
-          </div>
           <div>
             <div className="text-zinc-200">&lt; 1.2s</div>
             Ladezeit

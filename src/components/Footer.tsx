@@ -10,14 +10,30 @@ export function Footer() {
               IMPOVA<span className="text-accent">.</span>
             </p>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-zinc-500">
-              Websites für Unternehmen in Landshut, die professionell
-              wirken, gefunden werden und neue Anfragen bringen.
+              Websites für Unternehmen in Landshut und Umgebung, die
+              professionell wirken, gefunden werden und neue Anfragen
+              bringen.
+            </p>
+            <p className="mt-4 font-mono text-xs uppercase tracking-wider text-zinc-600">
+              Essenbach — Landshut und Umgebung
             </p>
             <div className="mt-6 flex items-center gap-4 font-mono text-xs uppercase tracking-wider text-zinc-600">
-              <a href="#" aria-label="LinkedIn" className="hover:text-accent">
+              <a
+                href="https://www.linkedin.com/in/tobias-springer-4400173b0/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                className="hover:text-accent"
+              >
                 [LinkedIn]
               </a>
-              <a href="#" aria-label="Instagram" className="hover:text-accent">
+              <a
+                href="https://www.instagram.com/tobias.sprngr/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                className="hover:text-accent"
+              >
                 [Instagram]
               </a>
             </div>
@@ -29,32 +45,37 @@ export function Footer() {
             </p>
             <ul className="mt-4 flex flex-col gap-2.5 text-sm text-zinc-400">
               <li>
-                <Link href="#referenzen" className="hover:text-zinc-100">
+                <Link href="/#referenzen" className="hover:text-zinc-100">
                   Referenzen
                 </Link>
               </li>
               <li>
-                <Link href="#philosophie" className="hover:text-zinc-100">
+                <Link href="/#philosophie" className="hover:text-zinc-100">
                   Philosophie
                 </Link>
               </li>
               <li>
-                <Link href="#leistungen" className="hover:text-zinc-100">
+                <Link href="/#leistungen" className="hover:text-zinc-100">
                   Leistungen
                 </Link>
               </li>
               <li>
-                <Link href="#prozess" className="hover:text-zinc-100">
+                <Link href="/#prozess" className="hover:text-zinc-100">
                   Prozess
                 </Link>
               </li>
               <li>
-                <Link href="#automatisierung" className="hover:text-zinc-100">
+                <Link href="/#automatisierung" className="hover:text-zinc-100">
                   Automatisierung
                 </Link>
               </li>
               <li>
-                <Link href="#kontakt" className="hover:text-zinc-100">
+                <Link href="/ueber-mich" className="hover:text-zinc-100">
+                  Über mich
+                </Link>
+              </li>
+              <li>
+                <Link href="/#kontakt" className="hover:text-zinc-100">
                   Kontakt
                 </Link>
               </li>
