@@ -65,6 +65,11 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/standorte/landshut" className="hover:text-zinc-100">
+                  Webdesign Landshut
+                </Link>
+              </li>
+              <li>
                 <Link href="/#prozess" className="hover:text-zinc-100">
                   Prozess
                 </Link>

@@ -27,6 +27,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.7,
     },
+    {
+      url: "https://www.impova.de/standorte/landshut",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
     ...CASE_STUDIES.map((c) => ({
       url: `https://www.impova.de/referenzen/${c.slug}`,
       lastModified: new Date(),

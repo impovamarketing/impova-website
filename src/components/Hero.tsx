@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { motion, type Variants } from "framer-motion";
 import { StatusDot } from "./StatusDot";
 import { MagneticButton } from "./MagneticButton";
@@ -84,8 +85,13 @@ export function Hero() {
             Ladezeit
           </div>
           <div>
-            <div className="text-zinc-200">Landshut</div>
-            Standort
+            <Link
+              href="/standorte/landshut"
+              className="text-zinc-200 hover:text-accent"
+            >
+              Landshut
+            </Link>
+            <div>Standort</div>
           </div>
         </motion.div>
       </motion.div>
