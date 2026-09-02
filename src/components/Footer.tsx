@@ -70,6 +70,11 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/website-relaunch" className="hover:text-zinc-100">
+                  Website-Relaunch
+                </Link>
+              </li>
+              <li>
                 <Link href="/#prozess" className="hover:text-zinc-100">
                   Prozess
                 </Link>

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Reveal } from "./Reveal";
 
 const PROBLEMS = [
@@ -45,6 +46,15 @@ export function Problem() {
             </Reveal>
           ))}
         </div>
+
+        <Reveal delay={0.3}>
+          <Link
+            href="/website-relaunch"
+            className="mt-6 inline-block font-mono text-xs uppercase tracking-wider text-accent hover:underline"
+          >
+            Mehr zum Website-Relaunch →
+          </Link>
+        </Reveal>
       </div>
     </section>
   );
