@@ -2,6 +2,7 @@
 
 import { useRef } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import type { LucideIcon } from "lucide-react";
 import { Blocks, Code2, Edit3, Gauge, SearchCode } from "lucide-react";
 import { Eyebrow } from "./Eyebrow";
@@ -12,6 +13,7 @@ type Service = {
   title: string;
   description: string;
   icon: LucideIcon;
+  href?: string;
 };
 
 type Path = {
@@ -42,6 +44,7 @@ const SERVICES: Service[] = [
     description:
       "Ein moderner Auftritt, der zu dir und deiner Zielgruppe passt: individuell entwickelt statt auf ein fertiges Template gesetzt. Das gibt dir volle Kontrolle und eine Seite, die du in fünf Jahren noch problemlos erweitern kannst.",
     icon: Blocks,
+    href: "/webdesign",
   },
   {
     index: "02",
@@ -84,7 +87,17 @@ function ServiceRow({ service }: { service: Service }) {
           {service.title}
         </h3>
       </div>
-      <p className="text-zinc-400 md:col-span-6">{service.description}</p>
+      <div className="md:col-span-6">
+        <p className="text-zinc-400">{service.description}</p>
+        {service.href && (
+          <Link
+            href={service.href}
+            className="mt-3 inline-block font-mono text-xs uppercase tracking-wider text-accent hover:underline"
+          >
+            Mehr zu Webdesign →
+          </Link>
+        )}
+      </div>
       <Icon
         strokeWidth={1}
         className="size-8 text-zinc-600 transition-colors duration-300 group-hover:text-accent md:col-span-1 md:justify-self-end"
