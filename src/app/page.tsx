@@ -7,6 +7,7 @@ import { Philosophy } from "@/components/Philosophy";
 import { Services } from "@/components/Services";
 import { Pipeline } from "@/components/Pipeline";
 import { AIAutomation } from "@/components/AIAutomation";
+import { FAQ } from "@/components/FAQ";
 import { ContactForm } from "@/components/ContactForm";
 import { Footer } from "@/components/Footer";
 
@@ -23,6 +24,7 @@ export default function Home() {
         <Services />
         <Pipeline />
         <AIAutomation />
+        <FAQ />
         <ContactForm />
       </main>
       <Footer />
