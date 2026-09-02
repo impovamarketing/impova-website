@@ -7,9 +7,8 @@ import { MagneticButton } from "./MagneticButton";
 const EASE = [0.16, 1, 0.3, 1] as const;
 
 const container: Variants = {
-  hidden: { opacity: 0 },
+  hidden: {},
   show: {
-    opacity: 1,
     transition: { staggerChildren: 0.08, delayChildren: 0.1 },
   },
 };
@@ -50,10 +49,7 @@ export function Hero() {
           <StatusDot label="PROJECT_SLOTS: 2/3 AVAILABLE" tone="green" />
         </motion.div>
 
-        <motion.h1
-          variants={item}
-          className="max-w-4xl text-5xl font-medium leading-[0.98] tracking-tight text-zinc-50 sm:text-6xl lg:text-7xl"
-        >
+        <h1 className="max-w-4xl text-5xl font-medium leading-[0.98] tracking-tight text-zinc-50 sm:text-6xl lg:text-7xl">
           Webdesign & SEO
           <br />
           aus Landshut.
@@ -61,7 +57,7 @@ export function Hero() {
           Websites, die neue
           <br />
           Kunden bringen.
-        </motion.h1>
+        </h1>
 
         <motion.p
           variants={item}
