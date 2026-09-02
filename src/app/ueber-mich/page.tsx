@@ -16,9 +16,27 @@ export const metadata: Metadata = {
   },
 };
 
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Impova", item: "https://www.impova.de" },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Über mich",
+      item: "https://www.impova.de/ueber-mich",
+    },
+  ],
+};
+
 export default function UeberMichPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <Header />
       <main>
         <section className="border-b border-zinc-900 pb-20 pt-40">

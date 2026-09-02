@@ -69,34 +69,67 @@ export const metadata: Metadata = {
   },
 };
 
+const organizationId = `${siteUrl}/#organization`;
+const websiteId = `${siteUrl}/#website`;
+const personId = `${siteUrl}/#person-tobias-springer`;
+
+const sameAs = [
+  "https://www.linkedin.com/in/tobias-springer-4400173b0/",
+  "https://www.instagram.com/tobias.sprngr/",
+];
+
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  name: "Impova",
-  image: `${siteUrl}/og-image.png`,
-  url: siteUrl,
-  telephone: "+4915123819198",
-  description:
-    "Webdesign, SEO und Conversion-Optimierung für Unternehmen in Landshut und Niederbayern.",
-  areaServed: [
+  "@graph": [
     {
-      "@type": "City",
-      name: "Landshut",
+      "@type": "ProfessionalService",
+      "@id": organizationId,
+      name: "Impova",
+      image: `${siteUrl}/og-image.png`,
+      url: siteUrl,
+      telephone: "+4915123819198",
+      description:
+        "Webdesign, SEO und Conversion-Optimierung für Unternehmen in Landshut und Niederbayern.",
+      areaServed: [
+        {
+          "@type": "City",
+          name: "Landshut",
+        },
+        {
+          "@type": "City",
+          name: "Essenbach",
+        },
+      ],
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "Hauptstraße 21a",
+        postalCode: "84051",
+        addressLocality: "Essenbach",
+        addressRegion: "Bayern",
+        addressCountry: "DE",
+      },
+      priceRange: "€€€€",
+      founder: { "@id": personId },
+      sameAs,
     },
     {
-      "@type": "City",
-      name: "Essenbach",
+      "@type": "WebSite",
+      "@id": websiteId,
+      name: "Impova",
+      url: siteUrl,
+      inLanguage: "de-DE",
+      publisher: { "@id": organizationId },
+    },
+    {
+      "@type": "Person",
+      "@id": personId,
+      name: "Tobias Springer",
+      url: `${siteUrl}/ueber-mich`,
+      jobTitle: "Gründer",
+      worksFor: { "@id": organizationId },
+      sameAs,
     },
   ],
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "Hauptstraße 21a",
-    postalCode: "84051",
-    addressLocality: "Essenbach",
-    addressRegion: "Bayern",
-    addressCountry: "DE",
-  },
-  priceRange: "€€€€",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
