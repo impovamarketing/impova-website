@@ -59,15 +59,12 @@ export function Hero() {
           Kunden bringen.
         </h1>
 
-        <motion.p
-          variants={item}
-          className="max-w-xl text-lg leading-relaxed text-zinc-400"
-        >
+        <p className="max-w-xl text-lg leading-relaxed text-zinc-400">
           Zu langsam, zu generisch, bei Google unsichtbar? Ich entwickle
           Websites für Unternehmen in Landshut und Umgebung, die dich
           professionell positionieren, gefunden werden und Besucher gezielt
           zur Anfrage führen.
-        </motion.p>
+        </p>
 
         <motion.div variants={item} className="flex flex-wrap items-center gap-4 pt-4">
           <MagneticButton href="#kontakt">
