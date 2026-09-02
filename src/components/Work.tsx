@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Eyebrow } from "./Eyebrow";
 import { Reveal } from "./Reveal";
 
@@ -8,6 +9,7 @@ type Project = {
   challenge: string;
   solution: string;
   image: string;
+  slug: string;
 };
 
 const PROJECTS: Project[] = [
@@ -19,6 +21,7 @@ const PROJECTS: Project[] = [
     solution:
       "Terminbuchung direkt per WhatsApp, Bewertungen im Header statt versteckt, dunkles Editorial-Design statt Standard-Vorlage.",
     image: "/images/work/seros-barbershop.png",
+    slug: "barbershop-projekt-landshut",
   },
   {
     title: "Nox Aeterna",
@@ -28,6 +31,7 @@ const PROJECTS: Project[] = [
     solution:
       "Editorial-Typografie statt Tattoo-Klischee, Portfolio als Herzstück der Seite, Terminanfrage ohne Reibungsverlust.",
     image: "/images/work/nox-aeterna.png",
+    slug: "tattoo-studio-projekt-landshut",
   },
   {
     title: "MA Hausmeisterei & Gebäudeservice",
@@ -37,6 +41,7 @@ const PROJECTS: Project[] = [
     solution:
       "Vertrauenssignale (Erfahrung, fester Ansprechpartner) direkt im ersten Blick, klare Leistungsübersicht für Gewerbe.",
     image: "/images/work/ma-gebaeudeservice.png",
+    slug: "gebaeudeservice-projekt-landshut",
   },
   {
     title: "Dugalić Baum- & Gartenpflege",
@@ -46,6 +51,7 @@ const PROJECTS: Project[] = [
     solution:
       "Persönliche Ansprache direkt im Hero, Angebotsanfrage in einem Klick, Erfahrung als sichtbares Vertrauenssignal statt Textzeile.",
     image: "/images/work/baumpflege-dugalic.png",
+    slug: "baumpflege-projekt-landshut",
   },
 ];
 
@@ -96,6 +102,12 @@ export function Work() {
                   <p className="mt-1.5 text-sm leading-relaxed text-zinc-300">
                     {project.solution}
                   </p>
+                  <Link
+                    href={`/referenzen/${project.slug}`}
+                    className="mt-5 inline-block font-mono text-xs uppercase tracking-wider text-accent hover:underline"
+                  >
+                    Case Study lesen →
+                  </Link>
                 </div>
               </div>
             </Reveal>
