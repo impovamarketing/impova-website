@@ -6,6 +6,7 @@ export type CaseStudy = {
   liveUrl: string;
   challenge: string;
   solution: string;
+  branche: { slug: string; label: string };
 };
 
 export const CASE_STUDIES: CaseStudy[] = [
@@ -19,6 +20,7 @@ export const CASE_STUDIES: CaseStudy[] = [
       "Bewertungen und Terminbuchung waren für Kunden schwer zu finden, die Seite wirkte wie jeder andere Friseur-Baukasten.",
     solution:
       "Terminbuchung direkt per WhatsApp, Bewertungen im Header statt versteckt, dunkles Editorial-Design statt Standard-Vorlage.",
+    branche: { slug: "dienstleister", label: "Dienstleister" },
   },
   {
     slug: "tattoo-studio-projekt-landshut",
@@ -30,6 +32,7 @@ export const CASE_STUDIES: CaseStudy[] = [
       "Ein Tattoo-Studio, das sich optisch kaum von jedem anderen im Stadtbild unterschied.",
     solution:
       "Editorial-Typografie statt Tattoo-Klischee, Portfolio als Herzstück der Seite, Terminanfrage ohne Reibungsverlust.",
+    branche: { slug: "dienstleister", label: "Dienstleister" },
   },
   {
     slug: "gebaeudeservice-projekt-landshut",
@@ -41,6 +44,7 @@ export const CASE_STUDIES: CaseStudy[] = [
       "20 Jahre Erfahrung, aber online für Hausverwaltungen kaum als vertrauenswürdiger Ansprechpartner erkennbar.",
     solution:
       "Vertrauenssignale (Erfahrung, fester Ansprechpartner) direkt im ersten Blick, klare Leistungsübersicht für Gewerbe.",
+    branche: { slug: "handwerker", label: "Handwerker" },
   },
   {
     slug: "baumpflege-projekt-landshut",
@@ -52,6 +56,7 @@ export const CASE_STUDIES: CaseStudy[] = [
       "Ein Ein-Mann-Betrieb, der online genauso unpersönlich wirkte wie jeder große Anbieter.",
     solution:
       "Persönliche Ansprache direkt im Hero, Angebotsanfrage in einem Klick, Erfahrung als sichtbares Vertrauenssignal statt Textzeile.",
+    branche: { slug: "handwerker", label: "Handwerker" },
   },
 ];
 

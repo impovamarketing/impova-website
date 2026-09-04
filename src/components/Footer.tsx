@@ -75,6 +75,16 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/branchen/handwerker" className="hover:text-zinc-100">
+                  Webdesign für Handwerker
+                </Link>
+              </li>
+              <li>
+                <Link href="/branchen/dienstleister" className="hover:text-zinc-100">
+                  Webdesign für Dienstleister
+                </Link>
+              </li>
+              <li>
                 <Link href="/#prozess" className="hover:text-zinc-100">
                   Prozess
                 </Link>

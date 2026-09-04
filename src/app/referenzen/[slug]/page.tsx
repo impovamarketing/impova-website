@@ -139,6 +139,12 @@ export default async function CaseStudyPage({
                 Die Website ist seitdem live — wirf oben über die
                 Live-Vorschau selbst einen Blick drauf.
               </p>
+              <Link
+                href={`/branchen/${caseStudy.branche.slug}`}
+                className="mt-6 inline-block font-mono text-xs uppercase tracking-wider text-accent hover:underline"
+              >
+                Weitere Projekte für {caseStudy.branche.label} →
+              </Link>
             </Reveal>
           </div>
         </section>
