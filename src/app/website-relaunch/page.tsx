@@ -126,9 +126,9 @@ export default function WebsiteRelaunchPage() {
               <p className="mt-6 max-w-2xl text-lg leading-relaxed text-zinc-400">
                 Ob WordPress mit Oxygen Builder oder handgeschriebener
                 Next.js-Code — welcher Weg zu deinem Relaunch passt, bespreche
-                ich ehrlich mit dir. Details dazu, Ablauf und Preis (ab 999 €
-                für einen einfachen Onepager, je nach Umfang mehr), findest du
-                auf der{" "}
+                ich ehrlich mit dir. Es gibt keine Festpreis-Pakete, jedes
+                Projekt wird individuell kalkuliert. Details dazu und den
+                genauen Ablauf findest du auf der{" "}
                 <Link href="/webdesign" className="text-accent hover:underline">
                   Webdesign-Seite
                 </Link>

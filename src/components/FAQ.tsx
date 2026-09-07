@@ -8,35 +8,39 @@ type FaqItem = {
 
 const FAQS: FaqItem[] = [
   {
-    question: "Was kostet eine Website bei Impova?",
+    question: "Was kostet eine Website bei IMPOVA?",
     answer:
-      "Ein einfacher Onepager startet ab 999 €. Der genaue Preis hängt vom Umfang deines Projekts ab — nach dem ersten Gespräch bekommst du ein klares Angebot, keine versteckten Zusatzkosten.",
+      "Es gibt keine Festpreis-Pakete, jedes Projekt wird individuell kalkuliert, abhängig von Umfang, Funktionsumfang und ob WordPress oder eine Custom-Next.js-Lösung passt. Im ersten Gespräch bekommst du ein konkretes, unverbindliches Angebot.",
   },
   {
-    question: "Wie lange dauert ein Projekt von Anfang bis Launch?",
+    question: "Wie lange dauert der Bau einer Website?",
     answer:
-      "Je nach Umfang zwischen 1 und 4 Wochen — von der Analyse bis zum Go-Live.",
+      "In der Regel 2 bis 4 Wochen, je nach Umfang und Funktionsumfang des Projekts.",
   },
   {
-    question: "WordPress oder Next.js — was ist der Unterschied für mich?",
+    question: "Wie läuft ein Projekt konkret ab?",
     answer:
-      "Willst du Texte und Bilder später selbst ändern können? Dann WordPress mit Oxygen Builder, sauber und ohne Page-Builder-Ballast. Willst du, dass ich mich laufend um deine Seite kümmere? Dann handgeschriebener Next.js-Code.",
+      "In vier Schritten: Erstgespräch zum Kennenlernen und Klären der Anforderungen, dann Konzept und Design, anschließend die technische Umsetzung, und zum Abschluss die Übergabe. Live geht die Seite erst nach 100% Zufriedenheit und finaler Abstimmung mit dir.",
   },
   {
-    question: "Ist SEO im Preis enthalten?",
+    question: "WordPress oder Next.js, was ist der Unterschied und was passt zu mir?",
     answer:
-      "Ja. SEO ist bei mir Teil der Konzeption von Anfang an, kein nachträgliches Extra, das du separat dazubuchen musst.",
+      "WordPress mit Oxygen Builder eignet sich, wenn du Inhalte später selbst pflegen willst, ohne Entwickler-Wissen. Handgeschriebener Next.js-Code eignet sich, wenn Performance und Individualität im Vordergrund stehen und eine laufende Betreuung durch IMPOVA gewünscht ist. Die Entscheidung wird im Erstgespräch gemeinsam getroffen.",
   },
   {
-    question: "Wie schnell bekomme ich eine Antwort auf meine Anfrage?",
+    question: "Arbeitest du auch mit Kunden außerhalb von Landshut?",
     answer:
-      "Innerhalb von 24 Stunden, persönlich von mir — kein Callcenter, kein Ticketsystem.",
+      "Ja. Der Standort ist Landshut/Niederbayern, gearbeitet wird komplett remote, deutschlandweit. Vor-Ort-Termine sind bei Bedarf im Raum Landshut möglich, für alle anderen läuft die Zusammenarbeit vollständig digital.",
   },
   {
-    question:
-      "Baust du auch bestehende Websites neu, oder nur komplett neue Projekte?",
+    question: "Bekomme ich nach dem Launch weiter Unterstützung?",
     answer:
-      "Beides. Ob Neubau oder Website-Relaunch einer bestehenden Seite, der Ablauf ist derselbe: Analyse, Strategie, Entwicklung, Launch.",
+      "Ja. Neben laufender Wartung gibt es einen SEO-Retainer für kontinuierliche Sichtbarkeitsarbeit, und du hast einen festen Ansprechpartner mit einer Antwort innerhalb von 24 Stunden, kein Ticket-System, kein Wechsel zwischen Teammitgliedern.",
+  },
+  {
+    question: "Wer betreut mein Projekt konkret?",
+    answer:
+      "Ein fester Ansprechpartner von der ersten Anfrage bis zum Launch und darüber hinaus, kein Agentur-Wasserkopf.",
   },
 ];
 

@@ -195,17 +195,19 @@ export default function WebdesignPage() {
               </h2>
               <div className="mt-6 flex max-w-2xl flex-col gap-4 text-zinc-400">
                 <p>
-                  Analyse deiner Ausgangssituation, Strategie und
-                  Seitenstruktur, Entwicklung, Launch mit Tracking und
-                  Monitoring — danach bin ich noch da, kein
-                  Abschieds-Handshake. Je nach Umfang dauert das zwischen 1
-                  und 4 Wochen.
+                  Vier Schritte: Erstgespräch zum Kennenlernen und Klären
+                  der Anforderungen, dann Konzept und Design, anschließend
+                  die technische Umsetzung, zum Abschluss die Übergabe. Live
+                  geht die Seite erst nach 100% Zufriedenheit und finaler
+                  Abstimmung mit dir. In der Regel dauert das 2 bis 4
+                  Wochen, je nach Umfang.
                 </p>
                 <p>
-                  Ein einfacher Onepager startet ab 999 €. Der genaue Preis
-                  hängt vom Umfang deines Projekts ab — nach dem ersten
-                  Gespräch bekommst du ein klares Angebot, keine versteckten
-                  Zusatzkosten.
+                  Es gibt keine Festpreis-Pakete — jedes Projekt wird
+                  individuell kalkuliert, abhängig von Umfang,
+                  Funktionsumfang und ob WordPress oder eine
+                  Custom-Next.js-Lösung passt. Im ersten Gespräch bekommst
+                  du ein konkretes, unverbindliches Angebot.
                 </p>
               </div>
             </Reveal>
