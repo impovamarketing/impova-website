@@ -82,7 +82,7 @@ export function FAQ() {
               <details className="group border-b border-zinc-900 py-6">
                 <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-medium text-zinc-50 marker:content-none [&::-webkit-details-marker]:hidden">
                   {faq.question}
-                  <span className="shrink-0 font-mono text-xl text-zinc-600 transition-transform duration-300 group-open:rotate-45">
+                  <span className="shrink-0 font-mono text-xl text-muted motion-safe:transition-transform motion-safe:duration-300 group-open:rotate-45">
                     +
                   </span>
                 </summary>

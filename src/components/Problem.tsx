@@ -29,7 +29,7 @@ export function Problem() {
     <section className="border-b border-zinc-900 py-20">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <Reveal>
-          <p className="font-mono text-xs uppercase tracking-wider text-zinc-600">
+          <p className="font-mono text-xs uppercase tracking-wider text-muted">
             Vielleicht kennst du eines dieser Probleme
           </p>
         </Reveal>
@@ -41,7 +41,7 @@ export function Problem() {
               delay={i * 0.05}
               className="grid grid-cols-1 gap-2 border-b border-zinc-900 py-6 sm:grid-cols-2 sm:gap-8"
             >
-              <p className="text-zinc-500">„{row.problem}“</p>
+              <p className="text-muted">„{row.problem}“</p>
               <p className="text-zinc-100">{row.solution}</p>
             </Reveal>
           ))}

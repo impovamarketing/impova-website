@@ -6,14 +6,19 @@ import { Eyebrow } from "@/components/Eyebrow";
 import { Reveal } from "@/components/Reveal";
 import { MagneticButton } from "@/components/MagneticButton";
 import { CASE_STUDIES } from "@/app/referenzen/case-studies";
+import { pageOpenGraph } from "@/lib/seo";
+
+const TITLE = "Webdesign Agentur Landshut – Website erstellen lassen | Impova";
+const DESCRIPTION =
+  "Webdesign und SEO für Unternehmen in Landshut: mit Sitz in Essenbach, direkt vor Ort erreichbar. Individuell entwickelt statt Baukasten, mit echten Referenzen aus der Region.";
 
 export const metadata: Metadata = {
-  title: "Webdesign Agentur Landshut – Website erstellen lassen | Impova",
-  description:
-    "Webdesign und SEO für Unternehmen in Landshut: mit Sitz in Essenbach, direkt vor Ort erreichbar. Individuell entwickelt statt Baukasten, mit echten Referenzen aus der Region.",
+  title: TITLE,
+  description: DESCRIPTION,
   alternates: {
     canonical: "https://www.impova.de/standorte/landshut",
   },
+  ...pageOpenGraph({ title: TITLE, description: DESCRIPTION, path: "/standorte/landshut" }),
 };
 
 const breadcrumbJsonLd = {
@@ -42,7 +47,7 @@ export default function LandshutPage() {
         <section className="border-b border-zinc-900 pb-20 pt-40">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <Reveal>
-              <p className="font-mono text-xs uppercase tracking-wider text-zinc-600">
+              <p className="font-mono text-xs uppercase tracking-wider text-muted">
                 Standort
               </p>
               <h1 className="mt-5 max-w-3xl text-4xl font-medium leading-tight tracking-tight text-zinc-50 sm:text-5xl">
@@ -113,7 +118,7 @@ export default function LandshutPage() {
                     <h3 className="mt-2 text-lg font-medium text-zinc-50 group-hover:text-accent">
                       {caseStudy.title}
                     </h3>
-                    <span className="mt-3 inline-block font-mono text-xs uppercase tracking-wider text-zinc-500 group-hover:text-accent">
+                    <span className="mt-3 inline-block font-mono text-xs uppercase tracking-wider text-muted group-hover:text-accent">
                       Case Study lesen →
                     </span>
                   </Link>

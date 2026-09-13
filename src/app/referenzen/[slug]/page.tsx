@@ -8,6 +8,7 @@ import { Eyebrow } from "@/components/Eyebrow";
 import { Reveal } from "@/components/Reveal";
 import { MagneticButton } from "@/components/MagneticButton";
 import { LivePreview } from "@/components/LivePreview";
+import { pageOpenGraph } from "@/lib/seo";
 import { CASE_STUDIES, getCaseStudy } from "../case-studies";
 
 export function generateStaticParams() {
@@ -21,12 +22,17 @@ export async function generateMetadata({
   const caseStudy = getCaseStudy(slug);
   if (!caseStudy) return {};
 
+  const title = `${caseStudy.title} – Impova`;
+  const description = `${caseStudy.challenge} ${caseStudy.solution}`;
+  const path = `/referenzen/${caseStudy.slug}`;
+
   return {
-    title: `${caseStudy.title} – Impova`,
-    description: `${caseStudy.challenge} ${caseStudy.solution}`,
+    title,
+    description,
     alternates: {
-      canonical: `https://www.impova.de/referenzen/${caseStudy.slug}`,
+      canonical: `https://www.impova.de${path}`,
     },
+    ...pageOpenGraph({ title, description, path, image: caseStudy.image }),
   };
 }
 
@@ -70,7 +76,7 @@ export default async function CaseStudyPage({
             <Reveal>
               <Link
                 href="/referenzen"
-                className="font-mono text-xs uppercase tracking-wider text-zinc-500 hover:text-accent"
+                className="font-mono text-xs uppercase tracking-wider text-muted hover:text-accent"
               >
                 ← Alle Referenzen
               </Link>

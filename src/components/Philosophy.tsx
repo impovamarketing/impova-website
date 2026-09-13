@@ -1,5 +1,6 @@
 import { Eyebrow } from "./Eyebrow";
 import { Reveal } from "./Reveal";
+import { CountUp } from "./CountUp";
 
 const COMPARISON = [
   {
@@ -21,9 +22,9 @@ const COMPARISON = [
 ];
 
 const METRICS = [
-  { label: "Ladezeit", value: "< 1.2s" },
-  { label: "Serverantwort", value: "< 200ms" },
-  { label: "Stabilität", value: "0.00" },
+  { label: "Ladezeit", to: 1.2, decimals: 1, prefix: "< ", suffix: "s" },
+  { label: "Serverantwort", to: 200, decimals: 0, prefix: "< ", suffix: "ms" },
+  { label: "Stabilität", to: 0, decimals: 2, prefix: "", suffix: "" },
 ];
 
 export function Philosophy() {
@@ -40,7 +41,7 @@ export function Philosophy() {
         <div className="mt-16 flex flex-col border border-zinc-900">
           <div className="grid grid-cols-2 border-b border-zinc-900">
             <div className="p-8">
-              <p className="font-mono text-xs uppercase tracking-wider text-zinc-600">
+              <p className="font-mono text-xs uppercase tracking-wider text-muted">
                 08/15 Baukasten
               </p>
             </div>
@@ -59,7 +60,7 @@ export function Philosophy() {
                 i < COMPARISON.length - 1 ? "border-b border-zinc-900" : ""
               }`}
             >
-              <div className="p-8 text-zinc-600 line-through decoration-zinc-800">
+              <div className="p-8 text-muted line-through decoration-zinc-800">
                 {row.baukasten}
               </div>
               <div className="border-l border-zinc-900 p-8 text-zinc-200">
@@ -70,15 +71,22 @@ export function Philosophy() {
         </div>
 
         <Reveal delay={0.1}>
-          <p className="mt-16 text-sm text-zinc-500">
+          <p className="mt-16 text-sm text-muted">
             Was das für dich heißt: keine Ladebalken, keine wackelnde Seite,
             keine Besucher, die abspringen, bevor sie was gesehen haben.
           </p>
           <div className="mt-6 grid grid-cols-3 gap-8 border-t border-zinc-900 pt-10 font-mono">
             {METRICS.map((m) => (
               <div key={m.label}>
-                <div className="text-2xl text-zinc-50">{m.value}</div>
-                <div className="mt-1 text-xs uppercase tracking-wider text-zinc-600">
+                <div className="text-2xl text-zinc-50">
+                  <CountUp
+                    to={m.to}
+                    decimals={m.decimals}
+                    prefix={m.prefix}
+                    suffix={m.suffix}
+                  />
+                </div>
+                <div className="mt-1 text-xs uppercase tracking-wider text-muted">
                   {m.label}
                 </div>
               </div>

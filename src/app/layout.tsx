@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { MotionConfig } from "framer-motion";
+import { ORGANIZATION_ID } from "@/lib/seo";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -69,7 +71,7 @@ export const metadata: Metadata = {
   },
 };
 
-const organizationId = `${siteUrl}/#organization`;
+const organizationId = ORGANIZATION_ID;
 const websiteId = `${siteUrl}/#website`;
 const personId = `${siteUrl}/#person-tobias-springer`;
 
@@ -86,6 +88,7 @@ const jsonLd = {
       "@id": organizationId,
       name: "Impova",
       image: `${siteUrl}/og-image.png`,
+      logo: `${siteUrl}/images/brand/logo-impova.png`,
       url: siteUrl,
       telephone: "+4915123819198",
       description:
@@ -145,7 +148,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         />
       </head>
       <body className="min-h-full flex flex-col bg-base text-foreground">
-        {children}
+        <MotionConfig reducedMotion="user">{children}</MotionConfig>
       </body>
     </html>
   );

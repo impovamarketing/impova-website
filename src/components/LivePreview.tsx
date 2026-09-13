@@ -45,7 +45,7 @@ export function LivePreview({
             onClick={(e) => e.stopPropagation()}
           >
             <div className="flex items-center justify-between border-b border-zinc-800 px-4 py-3">
-              <span className="truncate font-mono text-xs uppercase tracking-wider text-zinc-500">
+              <span className="truncate font-mono text-xs uppercase tracking-wider text-muted">
                 {url.replace(/^https?:\/\//, "")}
               </span>
               <div className="flex items-center gap-4 pl-4">

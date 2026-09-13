@@ -9,6 +9,10 @@
   --color-base: #050505;
   --color-surface: #0a0a0a;
   --color-surface-2: #111113;
+  /* Muted label/caption text. Dimmer than --color-muted-foreground (zinc-400)
+     but still ≥4.5:1 against --color-base — zinc-500/600/700 all fail WCAG AA
+     here (2.6–4.2:1), so this replaces them for anything that renders text. */
+  --color-muted: #7f7f88;
   --color-accent: #c6ff00;
   --color-accent-dim: #c6ff001f;
   --color-status-green: #22c55e;
@@ -95,4 +99,16 @@ body {
 ::selection {
   background: var(--color-accent);
   color: #050505;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .animate-marquee-left,
+  .animate-marquee-right,
+  .animate-pulse-dot {
+    animation: none;
+  }
 }

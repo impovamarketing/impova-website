@@ -11,7 +11,7 @@ export function LegalPage({
     <main className="mx-auto max-w-3xl px-6 py-32 lg:px-10">
       <Link
         href="/"
-        className="font-mono text-xs uppercase tracking-wider text-zinc-500 hover:text-accent"
+        className="font-mono text-xs uppercase tracking-wider text-muted hover:text-accent"
       >
         ← Zurück zu Impova
       </Link>

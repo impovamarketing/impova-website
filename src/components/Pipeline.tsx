@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Eyebrow } from "./Eyebrow";
 import { Reveal } from "./Reveal";
+import { EASE_OUT_EXPO } from "@/lib/motion";
 
 const STEPS = [
   {
@@ -56,7 +57,7 @@ export function Pipeline() {
             initial={{ scaleX: 0 }}
             whileInView={{ scaleX: 1 }}
             viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 1.2, ease: EASE_OUT_EXPO }}
             style={{ transformOrigin: "left" }}
             className="absolute left-0 right-0 top-5 hidden h-px bg-accent lg:block"
           />

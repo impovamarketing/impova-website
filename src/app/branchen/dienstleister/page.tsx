@@ -6,14 +6,19 @@ import { Eyebrow } from "@/components/Eyebrow";
 import { Reveal } from "@/components/Reveal";
 import { MagneticButton } from "@/components/MagneticButton";
 import { CASE_STUDIES } from "@/app/referenzen/case-studies";
+import { pageOpenGraph } from "@/lib/seo";
+
+const TITLE = "Webdesign für Dienstleister – Website für lokale Dienstleistungen | Impova";
+const DESCRIPTION =
+  "Website für lokale Dienstleister: individuelles Design statt Wix-Vorlage, Terminbuchung ohne Reibungsverlust. Mit echten Referenzen aus Landshut.";
 
 export const metadata: Metadata = {
-  title: "Webdesign für Dienstleister – Website für lokale Dienstleistungen | Impova",
-  description:
-    "Website für lokale Dienstleister: individuelles Design statt Wix-Vorlage, Terminbuchung ohne Reibungsverlust. Mit echten Referenzen aus Landshut.",
+  title: TITLE,
+  description: DESCRIPTION,
   alternates: {
     canonical: "https://www.impova.de/branchen/dienstleister",
   },
+  ...pageOpenGraph({ title: TITLE, description: DESCRIPTION, path: "/branchen/dienstleister" }),
 };
 
 const breadcrumbJsonLd = {
@@ -46,7 +51,7 @@ export default function DienstleisterPage() {
         <section className="border-b border-zinc-900 pb-20 pt-40">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <Reveal>
-              <p className="font-mono text-xs uppercase tracking-wider text-zinc-600">
+              <p className="font-mono text-xs uppercase tracking-wider text-muted">
                 Branche
               </p>
               <h1 className="mt-5 max-w-3xl text-4xl font-medium leading-tight tracking-tight text-zinc-50 sm:text-5xl">
@@ -110,10 +115,10 @@ export default function DienstleisterPage() {
                     <h3 className="mt-2 text-lg font-medium text-zinc-50 group-hover:text-accent">
                       {caseStudy.title}
                     </h3>
-                    <p className="mt-3 text-sm leading-relaxed text-zinc-500">
+                    <p className="mt-3 text-sm leading-relaxed text-muted">
                       {caseStudy.challenge}
                     </p>
-                    <span className="mt-4 inline-block font-mono text-xs uppercase tracking-wider text-zinc-500 group-hover:text-accent">
+                    <span className="mt-4 inline-block font-mono text-xs uppercase tracking-wider text-muted group-hover:text-accent">
                       Case Study lesen →
                     </span>
                   </Link>

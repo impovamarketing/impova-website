@@ -78,7 +78,7 @@ export function ContactForm() {
             </div>
             <div>
               <p className="text-sm text-zinc-200">Persönlicher Ansprechpartner</p>
-              <p className="font-mono text-xs uppercase tracking-wider text-zinc-600">
+              <p className="font-mono text-xs uppercase tracking-wider text-muted">
                 Gründer, Impova — Landshut
               </p>
             </div>
@@ -107,7 +107,7 @@ export function ContactForm() {
             onSubmit={handleSubmit}
             className="border border-zinc-900 bg-surface"
           >
-            <div className="flex items-center justify-between border-b border-zinc-900 px-6 py-4 font-mono text-xs uppercase tracking-wider text-zinc-600">
+            <div className="flex items-center justify-between border-b border-zinc-900 px-6 py-4 font-mono text-xs uppercase tracking-wider text-muted">
               <span>Projektanfrage</span>
               <span>
                 FORM_STATUS: {fieldsComplete}/3 FIELDS COMPLETE
@@ -148,7 +148,7 @@ export function ContactForm() {
             <div className="border-t border-zinc-900 px-6 py-6">
               <label
                 htmlFor="details"
-                className="font-mono text-xs uppercase tracking-wider text-zinc-600"
+                className="font-mono text-xs uppercase tracking-wider text-muted"
               >
                 [03] Projekt-Details
               </label>
@@ -165,7 +165,7 @@ export function ContactForm() {
             </div>
 
             <div className="flex items-center justify-between border-t border-zinc-900 px-6 py-6">
-              <p className="font-mono text-xs text-zinc-700">
+              <p className="font-mono text-xs text-muted">
                 Kein Spam. Keine Weitergabe an Dritte.
               </p>
               <button
@@ -214,7 +214,7 @@ function Field({
     <div className="bg-surface px-6 py-6">
       <label
         htmlFor={name}
-        className="font-mono text-xs uppercase tracking-wider text-zinc-600"
+        className="font-mono text-xs uppercase tracking-wider text-muted"
       >
         [{index}] {label}
       </label>

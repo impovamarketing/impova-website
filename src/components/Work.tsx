@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Eyebrow } from "./Eyebrow";
 import { Reveal } from "./Reveal";
+import { Reticle } from "./Reticle";
 
 type Project = {
   title: string;
@@ -79,9 +80,10 @@ export function Work() {
                     src={project.image}
                     alt={`Website-Projekt für ${project.title}, ${project.category}`}
                     fill
-                    className="object-cover"
+                    className="object-cover transition-transform duration-500 motion-safe:group-hover:scale-105"
                     sizes="(min-width: 768px) 50vw, 100vw"
                   />
+                  <Reticle />
                 </div>
                 <div className="p-6">
                   <p className="font-mono text-[11px] uppercase tracking-wider text-accent">
@@ -90,13 +92,13 @@ export function Work() {
                   <h3 className="mt-2 text-lg font-medium text-zinc-50">
                     {project.title}
                   </h3>
-                  <p className="mt-4 font-mono text-[11px] uppercase tracking-wider text-zinc-600">
+                  <p className="mt-4 font-mono text-[11px] uppercase tracking-wider text-muted">
                     Herausforderung
                   </p>
-                  <p className="mt-1.5 text-sm leading-relaxed text-zinc-500">
+                  <p className="mt-1.5 text-sm leading-relaxed text-muted">
                     {project.challenge}
                   </p>
-                  <p className="mt-4 font-mono text-[11px] uppercase tracking-wider text-zinc-600">
+                  <p className="mt-4 font-mono text-[11px] uppercase tracking-wider text-muted">
                     Lösung
                   </p>
                   <p className="mt-1.5 text-sm leading-relaxed text-zinc-300">

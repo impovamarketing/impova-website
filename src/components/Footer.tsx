@@ -9,15 +9,15 @@ export function Footer() {
             <p className="font-mono text-sm uppercase tracking-[0.2em] text-zinc-100">
               IMPOVA<span className="text-accent">.</span>
             </p>
-            <p className="mt-4 max-w-xs text-sm leading-relaxed text-zinc-500">
+            <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted">
               Websites für Unternehmen in Landshut und Umgebung, die
               professionell wirken, gefunden werden und neue Anfragen
               bringen.
             </p>
-            <p className="mt-4 font-mono text-xs uppercase tracking-wider text-zinc-600">
+            <p className="mt-4 font-mono text-xs uppercase tracking-wider text-muted">
               Essenbach — Landshut und Umgebung
             </p>
-            <div className="mt-6 flex items-center gap-4 font-mono text-xs uppercase tracking-wider text-zinc-600">
+            <div className="mt-6 flex items-center gap-4 font-mono text-xs uppercase tracking-wider text-muted">
               <a
                 href="https://www.linkedin.com/in/tobias-springer-4400173b0/"
                 target="_blank"
@@ -40,7 +40,7 @@ export function Footer() {
           </div>
 
           <div>
-            <p className="font-mono text-xs uppercase tracking-wider text-zinc-600">
+            <p className="font-mono text-xs uppercase tracking-wider text-muted">
               Navigation
             </p>
             <ul className="mt-4 flex flex-col gap-2.5 text-sm text-zinc-400">
@@ -113,7 +113,7 @@ export function Footer() {
           </div>
 
           <div>
-            <p className="font-mono text-xs uppercase tracking-wider text-zinc-600">
+            <p className="font-mono text-xs uppercase tracking-wider text-muted">
               Rechtliches
             </p>
             <ul className="mt-4 flex flex-col gap-2.5 text-sm text-zinc-400">
@@ -131,7 +131,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-16 flex flex-col gap-3 border-t border-zinc-900 pt-6 font-mono text-[11px] uppercase tracking-wider text-zinc-700 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-16 flex flex-col gap-3 border-t border-zinc-900 pt-6 font-mono text-[11px] uppercase tracking-wider text-muted sm:flex-row sm:items-center sm:justify-between">
           <span>IMPOVA © 2026 — BUILT WITH NEXT.JS</span>
           <span>DEPLOYED ON VERCEL — LANDSHUT, DE</span>
         </div>

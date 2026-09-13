@@ -1,0 +1,48 @@
+# Impova
+
+> Impova ist eine Webdesign- & SEO-Agentur von Tobias Springer mit Sitz in Essenbach bei Landshut (Niederbayern, Deutschland). Individuell entwickelte Websites — wahlweise WordPress mit Oxygen Builder oder handgeschriebener Next.js-Code — für kleine und mittlere Unternehmen. SEO ist Teil der Konzeption, nicht nachträglich aufgesetzt. Ein fester Ansprechpartner betreut jedes Projekt von der ersten Anfrage bis zum Launch und darüber hinaus, kein Agentur-Wasserkopf.
+
+Zielgruppe: kleine und mittlere Unternehmen, Handwerksbetriebe und lokale Dienstleister in Landshut und Niederbayern. Zusammenarbeit ist deutschlandweit remote möglich, persönliche Termine im Raum Landshut auf Wunsch.
+
+## Leistungen
+
+- [Webdesign](https://www.impova.de/webdesign): Individuell entwickelte Websites statt Theme von der Stange. Zwei Wege: WordPress mit Oxygen Builder (Inhalte selbst pflegbar) oder handgeschriebener Next.js-Code (maximale Performance und Individualität).
+- SEO: Technisch und inhaltlich von Anfang an Teil der Konzeption, nicht nachträgliches Plugin.
+- Conversion & Nutzerführung: Struktur, Inhalte und Buttons so gebaut, dass Besucher gezielt zur Anfrage geführt werden.
+- KI-Integration & Workflow-Automatisierung (optional): Chatbots zur Lead-Erfassung, CRM-Anbindung, Automatisierung wiederkehrender Aufgaben.
+
+## Referenzen
+
+Vier umgesetzte Projekte für Handwerksbetriebe und lokale Dienstleister in Landshut:
+
+- [Sero's Barbershop](https://www.impova.de/referenzen/barbershop-projekt-landshut) — Barbershop, Landshut. Terminbuchung per WhatsApp, Bewertungen im Header.
+- [Nox Aeterna](https://www.impova.de/referenzen/tattoo-studio-projekt-landshut) — Tattoo-Studio, Landshut. Editorial-Typografie, Portfolio als Herzstück.
+- [MA Hausmeisterei & Gebäudeservice](https://www.impova.de/referenzen/gebaeudeservice-projekt-landshut) — Gebäudeservice, Landshut. Vertrauenssignale für Hausverwaltungen im ersten Blick.
+- [Dugalić Baum- & Gartenpflege](https://www.impova.de/referenzen/baumpflege-projekt-landshut) — Baum- & Gartenpflege, Landshut. Persönliche Ansprache, Angebotsanfrage in einem Klick.
+
+Alle Referenzprojekte sind live und über die jeweilige Case-Study-Seite direkt verlinkt.
+
+## Prozess
+
+1. Erstgespräch — Kennenlernen, Anforderungen klären
+2. Konzept & Design — Positionierung, Seitenstruktur, SEO-Ziele
+3. Technische Umsetzung — Entwicklung, performance-optimiert
+4. Übergabe — Live-Schaltung erst nach vollständiger Abstimmung mit dem Kunden
+
+Dauer: in der Regel 2–4 Wochen, je nach Umfang. Preise werden individuell je nach Umfang und gewähltem System kalkuliert, es gibt keine Festpreis-Pakete. Das Erstgespräch ist unverbindlich.
+
+## Kontakt
+
+- Ansprechpartner: Tobias Springer, Gründer
+- E-Mail: info@impova.de
+- Telefon: +49 151 23819198
+- Adresse: Hauptstraße 21a, 84051 Essenbach (Landshut und Umgebung), Deutschland
+
+## Weitere Seiten
+
+- [Über mich](https://www.impova.de/ueber-mich)
+- [Website-Relaunch](https://www.impova.de/website-relaunch)
+- [Webdesign für Handwerker](https://www.impova.de/branchen/handwerker)
+- [Webdesign für Dienstleister](https://www.impova.de/branchen/dienstleister)
+- [Webdesign Agentur Landshut](https://www.impova.de/standorte/landshut)
+- [Alle Referenzen](https://www.impova.de/referenzen)

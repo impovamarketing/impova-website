@@ -4,8 +4,9 @@ import Link from "next/link";
 import { motion, type Variants } from "framer-motion";
 import { StatusDot } from "./StatusDot";
 import { MagneticButton } from "./MagneticButton";
-
-const EASE = [0.16, 1, 0.3, 1] as const;
+import { HeroSignalField } from "./HeroSignalField";
+import { CountUp } from "./CountUp";
+import { DURATION, EASE_OUT_EXPO } from "@/lib/motion";
 
 const container: Variants = {
   hidden: {},
@@ -19,7 +20,7 @@ const item: Variants = {
   show: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.7, ease: EASE },
+    transition: { duration: DURATION.base, ease: EASE_OUT_EXPO },
   },
 };
 
@@ -27,14 +28,7 @@ export function Hero() {
   return (
     <section className="relative flex min-h-screen items-center overflow-hidden border-b border-zinc-900 pt-16">
       <div className="bg-noise pointer-events-none absolute inset-0 opacity-[0.03]" />
-      <div
-        className="pointer-events-none absolute inset-0 opacity-[0.4]"
-        style={{
-          backgroundImage:
-            "linear-gradient(to right, #ffffff08 1px, transparent 1px), linear-gradient(to bottom, #ffffff08 1px, transparent 1px)",
-          backgroundSize: "64px 64px",
-        }}
-      />
+      <HeroSignalField />
       <div
         className="pointer-events-none absolute -top-40 right-[-10%] h-[560px] w-[560px] rounded-full opacity-20 blur-[140px]"
         style={{ background: "var(--color-accent)" }}
@@ -78,10 +72,12 @@ export function Hero() {
 
         <motion.div
           variants={item}
-          className="mt-16 grid max-w-2xl grid-cols-2 gap-6 border-t border-zinc-900 pt-6 font-mono text-xs uppercase tracking-wider text-zinc-600"
+          className="mt-16 grid max-w-2xl grid-cols-2 gap-6 border-t border-zinc-900 pt-6 font-mono text-xs uppercase tracking-wider text-muted"
         >
           <div>
-            <div className="text-zinc-200">&lt; 1.2s</div>
+            <div className="text-zinc-200">
+              <CountUp to={1.2} decimals={1} prefix="< " suffix="s" />
+            </div>
             Ladezeit
           </div>
           <div>

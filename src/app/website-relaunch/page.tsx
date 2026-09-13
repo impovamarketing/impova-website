@@ -5,14 +5,19 @@ import { Footer } from "@/components/Footer";
 import { Eyebrow } from "@/components/Eyebrow";
 import { Reveal } from "@/components/Reveal";
 import { MagneticButton } from "@/components/MagneticButton";
+import { pageOpenGraph } from "@/lib/seo";
+
+const TITLE = "Website-Relaunch – Alte Website modernisieren | Impova";
+const DESCRIPTION =
+  "Website-Relaunch für Unternehmen, deren aktuelle Seite nicht mehr überzeugt: neu gebaut statt geflickt, mit SEO-Absicherung für bestehende Rankings.";
 
 export const metadata: Metadata = {
-  title: "Website-Relaunch – Alte Website modernisieren | Impova",
-  description:
-    "Website-Relaunch für Unternehmen, deren aktuelle Seite nicht mehr überzeugt: neu gebaut statt geflickt, mit SEO-Absicherung für bestehende Rankings.",
+  title: TITLE,
+  description: DESCRIPTION,
   alternates: {
     canonical: "https://www.impova.de/website-relaunch",
   },
+  ...pageOpenGraph({ title: TITLE, description: DESCRIPTION, path: "/website-relaunch" }),
 };
 
 const breadcrumbJsonLd = {
@@ -49,7 +54,7 @@ export default function WebsiteRelaunchPage() {
         <section className="border-b border-zinc-900 pb-20 pt-40">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <Reveal>
-              <p className="font-mono text-xs uppercase tracking-wider text-zinc-600">
+              <p className="font-mono text-xs uppercase tracking-wider text-muted">
                 Website-Relaunch
               </p>
               <h1 className="mt-5 max-w-3xl text-4xl font-medium leading-tight tracking-tight text-zinc-50 sm:text-5xl">

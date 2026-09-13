@@ -7,14 +7,19 @@ import { Footer } from "@/components/Footer";
 import { Eyebrow } from "@/components/Eyebrow";
 import { Reveal } from "@/components/Reveal";
 import { MagneticButton } from "@/components/MagneticButton";
+import { ORGANIZATION_ID, SITE_URL, pageOpenGraph } from "@/lib/seo";
+
+const TITLE = "Webdesign Agentur – Individuelle Websites statt Baukasten | Impova";
+const DESCRIPTION =
+  "Webdesign Agentur für Unternehmen, die online professionell wirken wollen: individuell entwickelt, mit SEO von Anfang an. Aus Landshut, für Kunden in ganz Deutschland.";
 
 export const metadata: Metadata = {
-  title: "Webdesign Agentur – Individuelle Websites statt Baukasten | Impova",
-  description:
-    "Webdesign Agentur für Unternehmen, die online professionell wirken wollen: individuell entwickelt, mit SEO von Anfang an. Aus Landshut, für Kunden in ganz Deutschland.",
+  title: TITLE,
+  description: DESCRIPTION,
   alternates: {
     canonical: "https://www.impova.de/webdesign",
   },
+  ...pageOpenGraph({ title: TITLE, description: DESCRIPTION, path: "/webdesign" }),
 };
 
 const breadcrumbJsonLd = {
@@ -27,6 +32,50 @@ const breadcrumbJsonLd = {
       position: 2,
       name: "Webdesign",
       item: "https://www.impova.de/webdesign",
+    },
+  ],
+};
+
+const areaServed = [
+  { "@type": "City", name: "Landshut" },
+  { "@type": "AdministrativeArea", name: "Niederbayern" },
+];
+
+const servicesJsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": `${SITE_URL}/webdesign#service-webdesign`,
+      name: "Webdesign",
+      serviceType: "Webdesign",
+      description:
+        "Individuell entwickelte Websites statt Theme von der Stange — für Unternehmen, die online professionell wirken wollen.",
+      provider: { "@id": ORGANIZATION_ID },
+      areaServed,
+      url: `${SITE_URL}/webdesign`,
+    },
+    {
+      "@type": "Service",
+      "@id": `${SITE_URL}/webdesign#service-seo`,
+      name: "SEO",
+      serviceType: "Suchmaschinenoptimierung",
+      description:
+        "SEO als Teil der Konzeption statt nachträglichem Plugin: technisch sauber und inhaltlich auf relevante Suchbegriffe ausgerichtet.",
+      provider: { "@id": ORGANIZATION_ID },
+      areaServed,
+      url: `${SITE_URL}/webdesign`,
+    },
+    {
+      "@type": "Service",
+      "@id": `${SITE_URL}/webdesign#service-conversion`,
+      name: "Conversion & Nutzerführung",
+      serviceType: "Conversion-Optimierung",
+      description:
+        "Struktur, Inhalte und Buttons so aufgebaut, dass Besucher gezielt zur Anfrage geführt werden statt abzuspringen.",
+      provider: { "@id": ORGANIZATION_ID },
+      areaServed,
+      url: `${SITE_URL}/webdesign`,
     },
   ],
 };
@@ -90,12 +139,16 @@ export default function WebdesignPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesJsonLd) }}
+      />
       <Header />
       <main>
         <section className="border-b border-zinc-900 pb-20 pt-40">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <Reveal>
-              <p className="font-mono text-xs uppercase tracking-wider text-zinc-600">
+              <p className="font-mono text-xs uppercase tracking-wider text-muted">
                 Webdesign
               </p>
               <h1 className="mt-5 max-w-3xl text-4xl font-medium leading-tight tracking-tight text-zinc-50 sm:text-5xl">
@@ -128,8 +181,8 @@ export default function WebdesignPage() {
                 const Icon = pillar.icon;
                 return (
                   <Reveal key={pillar.title} delay={i * 0.06}>
-                    <div className="grid grid-cols-1 gap-6 border-t border-zinc-900 px-2 py-10 md:grid-cols-12 md:items-center md:gap-8">
-                      <div className="font-mono text-sm text-zinc-700 md:col-span-1">
+                    <div className="group grid grid-cols-1 gap-6 border-t border-zinc-900 px-2 py-10 transition-colors duration-300 hover:border-zinc-700 md:grid-cols-12 md:items-center md:gap-8">
+                      <div className="font-mono text-sm text-muted md:col-span-1">
                         {pillar.index}
                       </div>
                       <div className="md:col-span-4">
@@ -142,7 +195,7 @@ export default function WebdesignPage() {
                       </p>
                       <Icon
                         strokeWidth={1}
-                        className="size-8 text-zinc-600 md:col-span-1 md:justify-self-end"
+                        className="size-8 text-zinc-600 transition-all duration-300 group-hover:text-accent motion-safe:group-hover:scale-110 md:col-span-1 md:justify-self-end"
                       />
                     </div>
                   </Reveal>
@@ -168,10 +221,10 @@ export default function WebdesignPage() {
               {PATHS.map((path, i) => {
                 const Icon = path.icon;
                 return (
-                  <Reveal key={path.title} delay={i * 0.08} className="bg-base p-8">
+                  <Reveal key={path.title} delay={i * 0.08} className="group bg-base p-8">
                     <Icon
                       strokeWidth={1}
-                      className="size-8 text-zinc-600 transition-colors duration-300 hover:text-accent"
+                      className="size-8 text-zinc-600 transition-all duration-300 group-hover:text-accent motion-safe:group-hover:scale-110"
                     />
                     <h3 className="mt-6 text-lg font-medium text-zinc-50">
                       {path.title}

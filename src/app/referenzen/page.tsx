@@ -4,15 +4,21 @@ import Link from "next/link";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Reveal } from "@/components/Reveal";
+import { Reticle } from "@/components/Reticle";
+import { pageOpenGraph } from "@/lib/seo";
 import { CASE_STUDIES } from "./case-studies";
 
+const TITLE = "Referenzen – Webdesign-Projekte aus Landshut | Impova";
+const DESCRIPTION =
+  "Echte Webdesign-Projekte für Handwerksbetriebe und lokale Dienstleister aus Landshut und Umgebung — mit Herausforderung, Lösung und Live-Vorschau.";
+
 export const metadata: Metadata = {
-  title: "Referenzen – Webdesign-Projekte aus Landshut | Impova",
-  description:
-    "Echte Webdesign-Projekte für Handwerksbetriebe und lokale Dienstleister aus Landshut und Umgebung — mit Herausforderung, Lösung und Live-Vorschau.",
+  title: TITLE,
+  description: DESCRIPTION,
   alternates: {
     canonical: "https://www.impova.de/referenzen",
   },
+  ...pageOpenGraph({ title: TITLE, description: DESCRIPTION, path: "/referenzen" }),
 };
 
 const breadcrumbJsonLd = {
@@ -41,7 +47,7 @@ export default function ReferenzenPage() {
         <section className="border-b border-zinc-900 pb-20 pt-40">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <Reveal>
-              <p className="font-mono text-xs uppercase tracking-wider text-zinc-600">
+              <p className="font-mono text-xs uppercase tracking-wider text-muted">
                 Referenzen
               </p>
               <h1 className="mt-5 max-w-2xl text-4xl font-medium leading-tight tracking-tight text-zinc-50 sm:text-5xl">
@@ -70,9 +76,10 @@ export default function ReferenzenPage() {
                         src={caseStudy.image}
                         alt={`Website-Projekt: ${caseStudy.title}`}
                         fill
-                        className="object-cover"
+                        className="object-cover transition-transform duration-500 motion-safe:group-hover:scale-105"
                         sizes="(min-width: 768px) 50vw, 100vw"
                       />
+                      <Reticle />
                     </div>
                     <div className="p-6">
                       <p className="font-mono text-[11px] uppercase tracking-wider text-accent">
@@ -81,7 +88,7 @@ export default function ReferenzenPage() {
                       <h2 className="mt-2 text-lg font-medium text-zinc-50">
                         {caseStudy.title}
                       </h2>
-                      <p className="mt-4 text-sm leading-relaxed text-zinc-500">
+                      <p className="mt-4 text-sm leading-relaxed text-muted">
                         {caseStudy.challenge}
                       </p>
                       <span className="mt-4 inline-block font-mono text-xs uppercase tracking-wider text-zinc-400 group-hover:text-accent">

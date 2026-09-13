@@ -79,7 +79,7 @@ function ServiceRow({ service }: { service: Service }) {
       onMouseMove={handleMouseMove}
       className="spotlight group relative grid grid-cols-1 gap-6 border-t border-zinc-900 px-2 py-10 transition-colors duration-300 hover:border-zinc-700 md:grid-cols-12 md:items-center md:gap-8"
     >
-      <div className="font-mono text-sm text-zinc-700 md:col-span-1">
+      <div className="font-mono text-sm text-muted md:col-span-1">
         {service.index}
       </div>
       <div className="md:col-span-4">
@@ -100,7 +100,7 @@ function ServiceRow({ service }: { service: Service }) {
       </div>
       <Icon
         strokeWidth={1}
-        className="size-8 text-zinc-600 transition-colors duration-300 group-hover:text-accent md:col-span-1 md:justify-self-end"
+        className="size-8 text-zinc-600 transition-all duration-300 group-hover:text-accent motion-safe:group-hover:scale-110 md:col-span-1 md:justify-self-end"
       />
     </div>
   );
@@ -163,10 +163,10 @@ export function Services() {
             {PATHS.map((path, i) => {
               const Icon = path.icon;
               return (
-                <Reveal key={path.title} delay={i * 0.08} className="bg-base p-8">
+                <Reveal key={path.title} delay={i * 0.08} className="group bg-base p-8">
                   <Icon
                     strokeWidth={1}
-                    className="size-8 text-zinc-600 transition-colors duration-300 hover:text-accent"
+                    className="size-8 text-zinc-600 transition-all duration-300 group-hover:text-accent motion-safe:group-hover:scale-110"
                   />
                   <h4 className="mt-6 text-lg font-medium text-zinc-50">
                     {path.title}

@@ -6,14 +6,19 @@ import { Footer } from "@/components/Footer";
 import { Eyebrow } from "@/components/Eyebrow";
 import { Reveal } from "@/components/Reveal";
 import { MagneticButton } from "@/components/MagneticButton";
+import { pageOpenGraph } from "@/lib/seo";
+
+const TITLE = "Über mich – Impova";
+const DESCRIPTION =
+  "Tobias Springer, Gründer von Impova: warum ich Webdesign & SEO für Unternehmen in Landshut und Umgebung persönlich umsetze, statt als Agentur mit Baukastensystem.";
 
 export const metadata: Metadata = {
-  title: "Über mich – Impova",
-  description:
-    "Tobias Springer, Gründer von Impova: warum ich Webdesign & SEO für Unternehmen in Landshut und Umgebung persönlich umsetze, statt als Agentur mit Baukastensystem.",
+  title: TITLE,
+  description: DESCRIPTION,
   alternates: {
     canonical: "https://www.impova.de/ueber-mich",
   },
+  ...pageOpenGraph({ title: TITLE, description: DESCRIPTION, path: "/ueber-mich" }),
 };
 
 const breadcrumbJsonLd = {
@@ -43,7 +48,7 @@ export default function UeberMichPage() {
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:items-center">
               <Reveal className="lg:col-span-7">
-                <p className="font-mono text-xs uppercase tracking-wider text-zinc-600">
+                <p className="font-mono text-xs uppercase tracking-wider text-muted">
                   Über mich
                 </p>
                 <h1 className="mt-5 max-w-xl text-4xl font-medium leading-tight tracking-tight text-zinc-50 sm:text-5xl">

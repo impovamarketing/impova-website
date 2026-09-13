@@ -2,7 +2,7 @@
 
 import { ArrowRight } from "lucide-react";
 import { useRef } from "react";
-import { motion, useMotionValue, useSpring } from "framer-motion";
+import { motion, useMotionValue, useReducedMotion, useSpring } from "framer-motion";
 
 type MagneticButtonProps = {
   href: string;
@@ -16,12 +16,14 @@ export function MagneticButton({
   variant = "solid",
 }: MagneticButtonProps) {
   const ref = useRef<HTMLAnchorElement>(null);
+  const shouldReduceMotion = useReducedMotion();
   const x = useMotionValue(0);
   const y = useMotionValue(0);
   const springX = useSpring(x, { stiffness: 300, damping: 20, mass: 0.4 });
   const springY = useSpring(y, { stiffness: 300, damping: 20, mass: 0.4 });
 
   function handleMouseMove(e: React.MouseEvent<HTMLAnchorElement>) {
+    if (shouldReduceMotion) return;
     const rect = ref.current?.getBoundingClientRect();
     if (!rect) return;
     const relX = e.clientX - rect.left - rect.width / 2;

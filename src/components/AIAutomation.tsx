@@ -50,10 +50,10 @@ export function AIAutomation() {
           {FEATURES.map((feature, i) => {
             const Icon = feature.icon;
             return (
-              <Reveal key={feature.title} delay={i * 0.08} className="bg-base p-8">
+              <Reveal key={feature.title} delay={i * 0.08} className="group bg-base p-8">
                 <Icon
                   strokeWidth={1}
-                  className="size-8 text-zinc-600 transition-colors duration-300 hover:text-accent"
+                  className="size-8 text-zinc-600 transition-all duration-300 group-hover:text-accent motion-safe:group-hover:scale-110"
                 />
                 <h3 className="mt-6 text-lg font-medium text-zinc-50">
                   {feature.title}

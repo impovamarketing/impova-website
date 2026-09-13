@@ -7,6 +7,10 @@ const LOGOS = [
   { src: "/images/logos/logo-zentarak.png", name: "Zen Tara K" },
   { src: "/images/logos/logo-eke.png", name: "EKE" },
   { src: "/images/logos/logo-nikolli.png", name: "Nikolli" },
+  { src: "/images/logos/logo-baumpflege-dugalic.png", name: "Baumpflege Dugalić" },
+  { src: "/images/logos/logo-niederbayern-raeumt.png", name: "Niederbayern räumt" },
+  { src: "/images/logos/logo-tonis-grillhaus.png", name: "Toni's Balkan Grillhaus" },
+  { src: "/images/logos/logo-matthias-tattooz.png", name: "Matthias Tattooz" },
 ];
 
 function LogoRow({ reverse = false }: { reverse?: boolean }) {
@@ -40,7 +44,7 @@ export function Marquee() {
   return (
     <section className="border-b border-zinc-900 py-14">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
-        <p className="mb-10 text-center font-mono text-xs uppercase tracking-[0.2em] text-zinc-600">
+        <p className="mb-10 text-center font-mono text-xs uppercase tracking-[0.2em] text-muted">
           Trusted By / System Integrations
         </p>
       </div>

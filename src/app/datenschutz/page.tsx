@@ -53,7 +53,7 @@ export default function DatenschutzPage() {
           &bdquo;Onlineangebot&ldquo;).
         </p>
         <p className="mt-4">Die verwendeten Begriffe sind nicht geschlechtsspezifisch.</p>
-        <p className="mt-4 font-mono text-xs uppercase tracking-wider text-zinc-600">
+        <p className="mt-4 font-mono text-xs uppercase tracking-wider text-muted">
           Stand: 26. August 2026
         </p>
       </section>
@@ -537,7 +537,7 @@ export default function DatenschutzPage() {
         </List>
       </section>
 
-      <p className="border-t border-zinc-900 pt-6 text-xs text-zinc-600">
+      <p className="border-t border-zinc-900 pt-6 text-xs text-muted">
         <a
           href="https://datenschutz-generator.de/"
           target="_blank"
