@@ -23,7 +23,6 @@
   --font-mono: var(--font-geist-mono);
 
   --animate-marquee-left: marquee-left 42s linear infinite;
-  --animate-marquee-right: marquee-right 42s linear infinite;
   --animate-pulse-dot: pulse-dot 2.4s ease-in-out infinite;
 }
 
@@ -33,15 +32,6 @@
   }
   to {
     transform: translateX(-50%);
-  }
-}
-
-@keyframes marquee-right {
-  from {
-    transform: translateX(-50%);
-  }
-  to {
-    transform: translateX(0);
   }
 }
 
@@ -107,7 +97,6 @@ body {
   }
 
   .animate-marquee-left,
-  .animate-marquee-right,
   .animate-pulse-dot {
     animation: none;
   }

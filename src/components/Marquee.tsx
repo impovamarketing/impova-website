@@ -1,30 +1,26 @@
 import Image from "next/image";
 
 const LOGOS = [
-  { src: "/images/logos/logo-noxaeterna.png", name: "Nox Aeterna" },
-  { src: "/images/logos/logo-seros.png", name: "Seros" },
-  { src: "/images/logos/logo-ma.png", name: "MA" },
-  { src: "/images/logos/logo-zentarak.png", name: "Zen Tara K" },
-  { src: "/images/logos/logo-eke.png", name: "EKE" },
-  { src: "/images/logos/logo-nikolli.png", name: "Nikolli" },
-  { src: "/images/logos/logo-baumpflege-dugalic.png", name: "Baumpflege Dugalić" },
-  { src: "/images/logos/logo-niederbayern-raeumt.png", name: "Niederbayern räumt" },
-  { src: "/images/logos/logo-tonis-grillhaus.png", name: "Toni's Balkan Grillhaus" },
-  { src: "/images/logos/logo-matthias-tattooz.png", name: "Matthias Tattooz" },
+  { src: "/images/logos/logo-noxaeterna-white.png", name: "Nox Aeterna" },
+  { src: "/images/logos/logo-seros-white.png", name: "Seros" },
+  { src: "/images/logos/logo-ma-white.png", name: "MA" },
+  { src: "/images/logos/logo-zentarak-white.png", name: "Zen Tara K" },
+  { src: "/images/logos/logo-eke-white.png", name: "EKE" },
+  { src: "/images/logos/logo-nikolli-white.png", name: "Nikolli" },
+  { src: "/images/logos/logo-baumpflege-dugalic-white.png", name: "Baumpflege Dugalić" },
+  { src: "/images/logos/logo-niederbayern-raeumt-white.png", name: "Niederbayern räumt" },
+  { src: "/images/logos/logo-tonis-grillhaus-white.png", name: "Toni's Balkan Grillhaus" },
+  { src: "/images/logos/logo-matthias-tattooz-white.png", name: "Matthias Tattooz" },
 ];
 
-function LogoRow({ reverse = false }: { reverse?: boolean }) {
+function LogoRow() {
   const items = [...LOGOS, ...LOGOS];
   return (
-    <div
-      className={`flex w-max shrink-0 items-center gap-20 pr-20 ${
-        reverse ? "animate-marquee-right" : "animate-marquee-left"
-      }`}
-    >
+    <div className="animate-marquee-left flex w-max shrink-0 items-center gap-24 pr-24">
       {items.map((logo, i) => (
         <div
           key={`${logo.name}-${i}`}
-          className="relative h-10 w-28 shrink-0 grayscale opacity-40 transition-all duration-500 hover:scale-105 hover:opacity-100 hover:grayscale-0"
+          className="relative h-16 w-44 shrink-0 opacity-80 transition-all duration-500 hover:scale-105 hover:opacity-100"
         >
           <Image
             src={logo.src}
@@ -32,7 +28,7 @@ function LogoRow({ reverse = false }: { reverse?: boolean }) {
             fill
             loading="eager"
             className="object-contain"
-            sizes="112px"
+            sizes="176px"
           />
         </div>
       ))}
@@ -49,12 +45,9 @@ export function Marquee() {
         </p>
       </div>
 
-      <div className="mask-fade-x flex flex-col gap-10 overflow-hidden border-y border-zinc-900/80 py-10">
+      <div className="mask-fade-x overflow-hidden border-y border-zinc-900/80 py-10">
         <div className="flex overflow-hidden">
           <LogoRow />
-        </div>
-        <div className="flex overflow-hidden">
-          <LogoRow reverse />
         </div>
       </div>
     </section>
