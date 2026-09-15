@@ -1,7 +1,15 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  async redirects() {
+    return [
+      {
+        source: "/referenzen/baumpflege-projekt-landshut",
+        destination: "/referenzen",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

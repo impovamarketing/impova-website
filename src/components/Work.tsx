@@ -45,14 +45,14 @@ const PROJECTS: Project[] = [
     slug: "gebaeudeservice-projekt-landshut",
   },
   {
-    title: "Dugalić Baum- & Gartenpflege",
-    category: "Baum- & Gartenpflege — Landshut",
+    title: "Matthias Tattooz",
+    category: "Tattoo-Studio — Landshut",
     challenge:
-      "Ein Ein-Mann-Betrieb, der online genauso unpersönlich wirkte wie jeder große Anbieter.",
+      "Ein Tattoo-Studio mit sechs verschiedenen Stilen unter einer Nadel — das sollte sich auch auf der Website widerspiegeln, statt in einem austauschbaren Portfolio-Theme unterzugehen.",
     solution:
-      "Persönliche Ansprache direkt im Hero, Angebotsanfrage in einem Klick, Erfahrung als sichtbares Vertrauenssignal statt Textzeile.",
-    image: "/images/work/baumpflege-dugalic.png",
-    slug: "baumpflege-projekt-landshut",
+      "Editorial-Typografie und ruhiges Layout statt Tattoo-Klischee, große Portfolio-Präsenz direkt im Header, Terminanfrage in einem Klick.",
+    image: "/images/work/matthias-tattooz.png",
+    slug: "custom-tattoo-studio-projekt-landshut",
   },
 ];
 

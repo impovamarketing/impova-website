@@ -55,8 +55,8 @@ export default function ReferenzenPage() {
               </h1>
               <p className="mt-6 max-w-xl text-lg leading-relaxed text-zinc-400">
                 Handwerksbetriebe und lokale Dienstleister aus Landshut und
-                Umgebung — jedes Projekt mit echter Herausforderung, echter
-                Lösung und einer Live-Vorschau der fertigen Seite.
+                Umgebung — jedes Projekt mit echter Herausforderung und
+                echter Lösung, teils mit Live-Vorschau der fertigen Seite.
               </p>
             </Reveal>
           </div>

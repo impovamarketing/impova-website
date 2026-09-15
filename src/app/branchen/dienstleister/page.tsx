@@ -35,7 +35,11 @@ const breadcrumbJsonLd = {
   ],
 };
 
-const REFERENCE_SLUGS = ["barbershop-projekt-landshut", "tattoo-studio-projekt-landshut"];
+const REFERENCE_SLUGS = [
+  "barbershop-projekt-landshut",
+  "tattoo-studio-projekt-landshut",
+  "custom-tattoo-studio-projekt-landshut",
+];
 
 export default function DienstleisterPage() {
   const references = CASE_STUDIES.filter((c) => REFERENCE_SLUGS.includes(c.slug));

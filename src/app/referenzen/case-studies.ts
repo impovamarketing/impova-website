@@ -3,7 +3,7 @@ export type CaseStudy = {
   title: string;
   category: string;
   image: string;
-  liveUrl: string;
+  liveUrl?: string;
   challenge: string;
   solution: string;
   branche: { slug: string; label: string };
@@ -47,16 +47,15 @@ export const CASE_STUDIES: CaseStudy[] = [
     branche: { slug: "handwerker", label: "Handwerker" },
   },
   {
-    slug: "baumpflege-projekt-landshut",
-    title: "Baumpflege-Projekt in Landshut",
-    category: "Baum- & Gartenpflege — Landshut",
-    image: "/images/work/baumpflege-dugalic.png",
-    liveUrl: "https://baumpflege-dugalic.de",
+    slug: "custom-tattoo-studio-projekt-landshut",
+    title: "Custom-Tattoo-Studio-Projekt in Landshut",
+    category: "Tattoo-Studio — Landshut",
+    image: "/images/work/matthias-tattooz.png",
     challenge:
-      "Ein Ein-Mann-Betrieb, der online genauso unpersönlich wirkte wie jeder große Anbieter.",
+      "Ein Tattoo-Studio mit sechs verschiedenen Stilen unter einer Nadel — das sollte sich auch auf der Website widerspiegeln, statt in einem austauschbaren Portfolio-Theme unterzugehen.",
     solution:
-      "Persönliche Ansprache direkt im Hero, Angebotsanfrage in einem Klick, Erfahrung als sichtbares Vertrauenssignal statt Textzeile.",
-    branche: { slug: "handwerker", label: "Handwerker" },
+      "Editorial-Typografie und ruhiges Layout statt Tattoo-Klischee, große Portfolio-Präsenz direkt im Header, Terminanfrage in einem Klick.",
+    branche: { slug: "dienstleister", label: "Dienstleister" },
   },
 ];
 

@@ -35,7 +35,7 @@ const breadcrumbJsonLd = {
   ],
 };
 
-const REFERENCE_SLUGS = ["gebaeudeservice-projekt-landshut", "baumpflege-projekt-landshut"];
+const REFERENCE_SLUGS = ["gebaeudeservice-projekt-landshut"];
 
 export default function HandwerkerPage() {
   const references = CASE_STUDIES.filter((c) => REFERENCE_SLUGS.includes(c.slug));
@@ -104,7 +104,7 @@ export default function HandwerkerPage() {
                 Echte Handwerksbetriebe, echte Projekte
               </h2>
             </Reveal>
-            <div className="mt-12 grid grid-cols-1 gap-px overflow-hidden border border-zinc-900 bg-zinc-900 sm:grid-cols-2">
+            <div className="mt-12 grid max-w-md grid-cols-1 gap-px overflow-hidden border border-zinc-900 bg-zinc-900">
               {references.map((caseStudy, i) => (
                 <Reveal key={caseStudy.slug} delay={i * 0.06} className="bg-base p-6">
                   <Link href={`/referenzen/${caseStudy.slug}`} className="group block">

@@ -86,9 +86,11 @@ export default async function CaseStudyPage({
               <h1 className="mt-3 max-w-2xl text-4xl font-medium leading-tight tracking-tight text-zinc-50 sm:text-5xl">
                 {caseStudy.title}
               </h1>
-              <div className="mt-8">
-                <LivePreview url={caseStudy.liveUrl} label="Website live ansehen" />
-              </div>
+              {caseStudy.liveUrl && (
+                <div className="mt-8">
+                  <LivePreview url={caseStudy.liveUrl} label="Website live ansehen" />
+                </div>
+              )}
             </Reveal>
 
             <Reveal delay={0.1}>
@@ -142,8 +144,9 @@ export default async function CaseStudyPage({
                 Live im Einsatz
               </h2>
               <p className="mt-6 max-w-2xl text-lg leading-relaxed text-zinc-400">
-                Die Website ist seitdem live — wirf oben über die
-                Live-Vorschau selbst einen Blick drauf.
+                {caseStudy.liveUrl
+                  ? "Die Website ist seitdem live — wirf oben über die Live-Vorschau selbst einen Blick drauf."
+                  : "Die Website ist seitdem live im Einsatz."}
               </p>
               <Link
                 href={`/branchen/${caseStudy.branche.slug}`}
