@@ -45,14 +45,14 @@ const PROJECTS: Project[] = [
     slug: "gebaeudeservice-projekt-landshut",
   },
   {
-    title: "Matthias Tattooz",
-    category: "Tattoo-Studio — Landshut",
+    title: "Dugalić Baum- & Gartenpflege",
+    category: "Baum- & Gartenpflege — Landshut",
     challenge:
-      "Kein eigener Webauftritt — nur Instagram als Anlaufpunkt, dazu keine lokale Sichtbarkeit für sechs verschiedene Tattoo-Stile.",
+      "Ein Ein-Mann-Betrieb, der online genauso unpersönlich wirkte wie jeder große Anbieter.",
     solution:
-      "Eigene Landingpage pro Stil (Realistic, Black & Grey, Fine Line, Porträt, Lettering, Mandala) für die lokale Suche, Terminanfrage per WhatsApp, Anruf oder Formular ohne Umweg.",
-    image: "/images/work/matthias-tattooz.png",
-    slug: "tattoo-studio-projekt-matthias-landshut",
+      "Persönliche Ansprache direkt im Hero, Angebotsanfrage in einem Klick, Erfahrung als sichtbares Vertrauenssignal statt Textzeile.",
+    image: "/images/work/baumpflege-dugalic.png",
+    slug: "baumpflege-projekt-landshut",
   },
 ];
 
