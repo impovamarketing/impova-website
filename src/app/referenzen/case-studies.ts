@@ -47,16 +47,16 @@ export const CASE_STUDIES: CaseStudy[] = [
     branche: { slug: "handwerker", label: "Handwerker" },
   },
   {
-    slug: "baumpflege-projekt-landshut",
-    title: "Baumpflege-Projekt in Landshut",
-    category: "Baum- & Gartenpflege — Landshut",
-    image: "/images/work/baumpflege-dugalic.png",
-    liveUrl: "https://baumpflege-dugalic.de",
+    slug: "tattoo-studio-projekt-matthias-landshut",
+    title: "Matthias Tattooz",
+    category: "Tattoo-Studio — Landshut",
+    image: "/images/work/matthias-tattooz.png",
+    liveUrl: "https://matthias-tattooz.com",
     challenge:
-      "Ein Ein-Mann-Betrieb, der online genauso unpersönlich wirkte wie jeder große Anbieter.",
+      "Kein eigener Webauftritt — nur Instagram als Anlaufpunkt, dazu keine lokale Sichtbarkeit für sechs verschiedene Tattoo-Stile.",
     solution:
-      "Persönliche Ansprache direkt im Hero, Angebotsanfrage in einem Klick, Erfahrung als sichtbares Vertrauenssignal statt Textzeile.",
-    branche: { slug: "handwerker", label: "Handwerker" },
+      "Eigene Landingpage pro Stil (Realistic, Black & Grey, Fine Line, Porträt, Lettering, Mandala) für die lokale Suche, Terminanfrage per WhatsApp, Anruf oder Formular ohne Umweg.",
+    branche: { slug: "dienstleister", label: "Dienstleister" },
   },
 ];
 

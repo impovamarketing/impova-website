@@ -35,7 +35,7 @@ const breadcrumbJsonLd = {
   ],
 };
 
-const REFERENCE_SLUGS = ["gebaeudeservice-projekt-landshut", "baumpflege-projekt-landshut"];
+const REFERENCE_SLUGS = ["gebaeudeservice-projekt-landshut"];
 
 export default function HandwerkerPage() {
   const references = CASE_STUDIES.filter((c) => REFERENCE_SLUGS.includes(c.slug));
