@@ -45,7 +45,7 @@ export function Hero() {
         </motion.div>
 
         <h1 className="max-w-4xl text-5xl font-medium leading-[0.98] tracking-tight text-zinc-50 sm:text-6xl lg:text-7xl">
-          Webdesign & SEO
+          Online Marketing
           <br />
           aus Landshut.
           <br />

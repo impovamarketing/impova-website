@@ -18,13 +18,17 @@ const siteUrl = "https://www.impova.de";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "Impova – Webdesign & SEO Agentur Landshut",
+  title: "Impova – Online Marketing Agentur Landshut",
   description:
-    "Website erstellen lassen oder Website-Relaunch in Landshut und Niederbayern: professionell, bei Google gefunden, mit klarer Nutzerführung zur Anfrage.",
+    "Online Marketing Agentur aus Landshut: Webdesign, SEO, Google Ads und Content Marketing aus einer Hand, mit klarer Nutzerführung zur Anfrage — für Unternehmen in Landshut, Niederbayern und deutschlandweit.",
   keywords: [
+    "Online Marketing Agentur Landshut",
+    "Marketing Agentur Landshut",
     "Webdesign Landshut",
     "Webdesign Agentur Landshut",
     "SEO Agentur Landshut",
+    "Google Ads Landshut",
+    "Content Marketing Landshut",
     "Website erstellen lassen Landshut",
     "Website Relaunch",
     "Professionelle Website erstellen lassen",
@@ -40,23 +44,23 @@ export const metadata: Metadata = {
     locale: "de_DE",
     url: siteUrl,
     siteName: "Impova",
-    title: "Impova – Webdesign & SEO Agentur Landshut",
+    title: "Impova – Online Marketing Agentur Landshut",
     description:
-      "Ich baue Websites für Unternehmen in Landshut und Umgebung, die professionell wirken, bei Google gefunden werden und Besucher zur Anfrage führen.",
+      "Webdesign, SEO, Google Ads und Content Marketing für Unternehmen in Landshut und Umgebung — professionell umgesetzt, bei Google gefunden, mit klarer Nutzerführung zur Anfrage.",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Impova – Webdesign & SEO Agentur Landshut",
+        alt: "Impova – Online Marketing Agentur Landshut",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Impova – Webdesign & SEO Agentur Landshut",
+    title: "Impova – Online Marketing Agentur Landshut",
     description:
-      "Websites für Unternehmen in Landshut und Umgebung, die professionell wirken, bei Google gefunden werden und Anfragen bringen.",
+      "Webdesign, SEO, Google Ads und Content Marketing für Unternehmen in Landshut und Umgebung — professionell umgesetzt, bei Google gefunden.",
     images: ["/og-image.png"],
   },
   robots: {
@@ -92,7 +96,7 @@ const jsonLd = {
       url: siteUrl,
       telephone: "+4915123819198",
       description:
-        "Webdesign, SEO und Conversion-Optimierung für Unternehmen in Landshut und Niederbayern.",
+        "Webdesign, SEO, Google Ads und Content Marketing für Unternehmen in Landshut, Niederbayern und deutschlandweit.",
       areaServed: [
         {
           "@type": "City",

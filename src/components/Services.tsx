@@ -4,7 +4,7 @@ import { useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import type { LucideIcon } from "lucide-react";
-import { Blocks, Code2, Edit3, Gauge, SearchCode } from "lucide-react";
+import { Blocks, Code2, Edit3, Gauge, PenTool, SearchCode, Target } from "lucide-react";
 import { Eyebrow } from "./Eyebrow";
 import { Reveal } from "./Reveal";
 
@@ -60,6 +60,20 @@ const SERVICES: Service[] = [
       "Rankst du aktuell auf Seite 3? SEO ist bei mir Teil der Konzeption, nicht nachträglich draufgesetzt: technisch sauber und inhaltlich auf deine Suchbegriffe ausgerichtet, damit dich Kunden bei Google finden.",
     icon: SearchCode,
   },
+  {
+    index: "04",
+    title: "Google Ads",
+    description:
+      "SEO braucht Zeit — manchmal brauchst du Anfragen schneller. Ich richte Google-Ads-Kampagnen ein und betreue sie laufend, zielgerichtet auf Suchbegriffe, die wirklich zu Anfragen führen, nicht auf Klicks um der Klicks willen.",
+    icon: Target,
+  },
+  {
+    index: "05",
+    title: "Content Marketing",
+    description:
+      "Guter Content zahlt gleichzeitig auf SEO und auf Vertrauen ein. Ich schreibe Inhalte, die deine Expertise zeigen und auf die Suchbegriffe ausgerichtet sind, die potenzielle Kunden tatsächlich eingeben.",
+    icon: PenTool,
+  },
 ];
 
 function ServiceRow({ service }: { service: Service }) {
@@ -114,7 +128,7 @@ export function Services() {
           <Reveal className="lg:col-span-8">
             <Eyebrow index="03">Leistungen</Eyebrow>
             <h2 className="mt-5 max-w-2xl text-3xl font-medium leading-tight tracking-tight text-zinc-50 sm:text-4xl">
-              Webdesign, SEO und Conversion aus Landshut
+              Webdesign, SEO, Google Ads und Content Marketing
             </h2>
             <p className="mt-5 max-w-lg text-zinc-400">
               Kein Team aus Vertrieb, Projektmanagement und Praktikanten —

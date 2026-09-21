@@ -28,6 +28,11 @@ const FAQS: FaqItem[] = [
       "WordPress mit Oxygen Builder eignet sich, wenn du Inhalte später selbst pflegen willst, ohne Entwickler-Wissen. Handgeschriebener Next.js-Code eignet sich, wenn Performance und Individualität im Vordergrund stehen und eine laufende Betreuung durch IMPOVA gewünscht ist. Die Entscheidung wird im Erstgespräch gemeinsam getroffen.",
   },
   {
+    question: "Bietest du auch Google Ads und Content Marketing an?",
+    answer:
+      "Ja. Neben Webdesign und SEO übernehme ich auch die Einrichtung und laufende Betreuung von Google-Ads-Kampagnen sowie Content Marketing. Auch hier gibt es keine Festpreis-Pakete — im Erstgespräch besprechen wir, was für dein Ziel und Budget sinnvoll ist.",
+  },
+  {
     question: "Arbeitest du auch mit Kunden außerhalb von Landshut?",
     answer:
       "Ja. Der Standort ist Landshut/Niederbayern, gearbeitet wird komplett remote, deutschlandweit. Vor-Ort-Termine sind bei Bedarf im Raum Landshut möglich, für alle anderen läuft die Zusammenarbeit vollständig digital.",
