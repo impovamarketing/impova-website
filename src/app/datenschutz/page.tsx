@@ -85,10 +85,10 @@ export default function DatenschutzPage() {
         <p className="mt-4">
           E-Mail-Adresse:{" "}
           <a
-            href="mailto:impovamarketing@gmail.com"
+            href="mailto:info@impova.de"
             className="text-accent hover:underline"
           >
-            impovamarketing@gmail.com
+            info@impova.de
           </a>
         </p>
       </section>
@@ -493,6 +493,13 @@ export default function DatenschutzPage() {
           auslösen, die ihrerseits Daten erheben. Bei Nutzung solcher Tags
           gelten die hier genannten Angaben entsprechend.
         </p>
+        <p className="mt-4">
+          Ihre Einwilligung ist in zwei Kategorien geteilt, die Sie
+          unabhängig voneinander erteilen können: <em>Statistik</em> (Google
+          Analytics) und <em>Marketing</em> (Messung von Conversions
+          für Google Ads). Ohne Ihre Zustimmung zu mindestens einer Kategorie
+          wird kein Google-Skript geladen.
+        </p>
         <List>
           <li>
             <strong className="font-medium text-zinc-200">
@@ -564,6 +571,24 @@ export default function DatenschutzPage() {
             bleibt unberührt.
           </li>
         </List>
+        <H3>Marketing: Conversion-Messung für Google Ads</H3>
+        <p>
+          Wenn Sie in die Kategorie <em>Marketing</em> einwilligen, kann über
+          den Google Tag Manager die Conversion-Messung von Google Ads
+          (Google Ireland Limited) aktiv werden. Sie zeigt uns, ob eine
+          Anzeige zu einer Kontaktanfrage geführt hat: Wird nach dem Absenden
+          des Kontaktformulars die Bestätigungsseite aufgerufen, meldet der
+          Tag dies an Google. Übermittelt werden dabei Nutzungsdaten (z. B.
+          aufgerufene Seite, Zeitpunkt, Klick-Kennung der Anzeige) und
+          pseudonyme Online-Kennungen. Dabei können die Cookies
+          &bdquo;_gcl_au&ldquo; und &bdquo;_gcl_aw&ldquo; gesetzt werden
+          (Laufzeit in der Regel bis zu 90 Tage). Rechtsgrundlage ist Ihre
+          Einwilligung (Art. 6 Abs. 1 S. 1 lit. a DSGVO, § 25 Abs. 1 TDDDG).
+          Für Drittlandübermittlung und Auftragsverarbeitung gilt das oben
+          Gesagte. Personalisierte Werbung und Remarketing sind dabei nicht
+          aktiviert. Ohne Einwilligung in die Kategorie Marketing findet diese
+          Messung nicht statt.
+        </p>
         <p className="mt-4">
           Weitere Informationen zum Datenschutz bei Google finden Sie unter{" "}
           <a
@@ -579,8 +604,8 @@ export default function DatenschutzPage() {
 
         <H3>Speicherung Ihrer Cookie-Auswahl</H3>
         <p>
-          Ihre Entscheidung im Cookie-Banner (Zustimmung oder Ablehnung) sowie
-          der Zeitpunkt der Entscheidung werden im lokalen Speicher Ihres
+          Ihre Entscheidung im Cookie-Banner (Zustimmung oder Ablehnung je
+          Kategorie) sowie der Zeitpunkt der Entscheidung werden im lokalen Speicher Ihres
           Browsers (localStorage) auf Ihrem Endgerät gespeichert, damit das
           Banner nicht bei jedem Aufruf erneut erscheint und wir Ihre Auswahl
           nachweisen können. Diese Speicherung ist technisch erforderlich

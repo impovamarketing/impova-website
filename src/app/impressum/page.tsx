@@ -32,10 +32,10 @@ export default function ImpressumPage() {
           <br />
           E-Mail-Adresse:{" "}
           <a
-            href="mailto:impovamarketing@gmail.com"
+            href="mailto:info@impova.de"
             className="text-accent hover:underline"
           >
-            impovamarketing@gmail.com
+            info@impova.de
           </a>
         </p>
       </section>
