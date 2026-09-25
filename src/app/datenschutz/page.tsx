@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { LegalPage } from "@/components/LegalPage";
+import { CookieSettingsButton } from "@/components/CookieConsent";
 
 export const metadata: Metadata = {
   title: "Datenschutz – Impova",
@@ -16,6 +17,7 @@ const TOC = [
   { id: "m12", label: "Allgemeine Informationen zur Datenspeicherung und Löschung" },
   { id: "m10", label: "Rechte der betroffenen Personen" },
   { id: "m225", label: "Bereitstellung des Onlineangebots und Webhosting" },
+  { id: "mGA", label: "Webanalyse mit Google Analytics und Einwilligungsverwaltung" },
   { id: "m15", label: "Änderung und Aktualisierung" },
   { id: "m42", label: "Begriffsdefinitionen" },
 ];
@@ -54,7 +56,7 @@ export default function DatenschutzPage() {
         </p>
         <p className="mt-4">Die verwendeten Begriffe sind nicht geschlechtsspezifisch.</p>
         <p className="mt-4 font-mono text-xs uppercase tracking-wider text-muted">
-          Stand: 26. August 2026
+          Stand: 25. September 2026
         </p>
       </section>
 
@@ -122,6 +124,7 @@ export default function DatenschutzPage() {
         <List>
           <li>Sicherheitsmaßnahmen.</li>
           <li>Bereitstellung unseres Onlineangebotes und Nutzerfreundlichkeit.</li>
+          <li>Reichweitenmessung und Webanalyse (nur mit Einwilligung).</li>
           <li>
             Informationstechnische Infrastruktur (Betrieb und Bereitstellung
             von Informationssystemen und technischen Geräten (Computer,
@@ -466,6 +469,111 @@ export default function DatenschutzPage() {
           ausschließlich zur Bearbeitung deiner Anfrage auf
           Grundlage von Art. 6 Abs. 1 lit. b DSGVO. Eine Weitergabe an Dritte
           erfolgt nicht.
+        </p>
+      </section>
+
+      <section id="mGA">
+        <H2 id="mGA-h">
+          Webanalyse mit Google Analytics und Einwilligungsverwaltung
+        </H2>
+        <p>
+          Wir setzen Google Analytics 4 ein, einen Webanalysedienst der Google
+          Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland
+          (&bdquo;Google&ldquo;). Der Dienst hilft uns zu verstehen, wie unser
+          Onlineangebot genutzt wird (z. B. aufgerufene Seiten, Verweildauer,
+          Herkunft der Besucher, verwendete Geräte und Browser), damit wir es
+          verbessern können.
+        </p>
+        <List>
+          <li>
+            <strong className="font-medium text-zinc-200">
+              Einwilligung:
+            </strong>{" "}
+            Google Analytics wird ausschließlich nach Ihrer ausdrücklichen
+            Einwilligung geladen (Art. 6 Abs. 1 S. 1 lit. a DSGVO,
+            § 25 Abs. 1 TDDDG). Solange Sie nicht zugestimmt haben, wird das
+            Analyse-Skript nicht geladen, es werden keine Analyse-Cookies
+            gesetzt und es werden keine Daten zu diesem Zweck an Google
+            übermittelt.
+          </li>
+          <li>
+            <strong className="font-medium text-zinc-200">
+              Verarbeitete Daten:
+            </strong>{" "}
+            Nutzungsdaten (z. B. Seitenaufrufe, Klicks, Verweildauer) sowie
+            Meta- und Kommunikationsdaten (z. B. Geräte- und Browserangaben,
+            ungefährer Standort, pseudonyme Online-Kennungen). Nach Angaben von
+            Google werden IP-Adressen in Google Analytics 4 nicht
+            protokolliert oder gespeichert.
+          </li>
+          <li>
+            <strong className="font-medium text-zinc-200">Cookies:</strong>{" "}
+            Nach Ihrer Einwilligung werden die Cookies &bdquo;_ga&ldquo; und
+            &bdquo;_ga_&lt;ID&gt;&ldquo; gesetzt (Laufzeit bis zu 2 Jahre), um
+            Besucher wiederzuerkennen.
+          </li>
+          <li>
+            <strong className="font-medium text-zinc-200">
+              Speicherdauer:
+            </strong>{" "}
+            Die in Google Analytics gespeicherten Nutzungs- und Ereignisdaten
+            werden nach 2 Monaten automatisch gelöscht.
+          </li>
+          <li>
+            <strong className="font-medium text-zinc-200">
+              Werbefunktionen:
+            </strong>{" "}
+            Die Funktionen für Werbezwecke (Google-Signale, personalisierte
+            Werbung) sind deaktiviert.
+          </li>
+          <li>
+            <strong className="font-medium text-zinc-200">
+              Drittlandübermittlung:
+            </strong>{" "}
+            Google kann Daten an Google LLC in den USA übermitteln. Die
+            Übermittlung stützt sich auf den Angemessenheitsbeschluss der
+            EU-Kommission zum EU-U.S. Data Privacy Framework, dem Google LLC
+            beigetreten ist.
+          </li>
+          <li>
+            <strong className="font-medium text-zinc-200">
+              Auftragsverarbeitung:
+            </strong>{" "}
+            Mit Google besteht ein Vertrag zur Auftragsverarbeitung
+            (Datenverarbeitungsbedingungen von Google).
+          </li>
+          <li>
+            <strong className="font-medium text-zinc-200">Widerruf:</strong>{" "}
+            Sie können Ihre Einwilligung jederzeit mit Wirkung für die Zukunft
+            widerrufen oder erteilen, indem Sie die Cookie-Einstellungen
+            öffnen:{" "}
+            <CookieSettingsButton className="text-accent hover:underline" />.
+            Die Rechtmäßigkeit der bis zum Widerruf erfolgten Verarbeitung
+            bleibt unberührt.
+          </li>
+        </List>
+        <p className="mt-4">
+          Weitere Informationen zum Datenschutz bei Google finden Sie unter{" "}
+          <a
+            href="https://policies.google.com/privacy"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-accent hover:underline"
+          >
+            policies.google.com/privacy
+          </a>
+          .
+        </p>
+
+        <H3>Speicherung Ihrer Cookie-Auswahl</H3>
+        <p>
+          Ihre Entscheidung im Cookie-Banner (Zustimmung oder Ablehnung) sowie
+          der Zeitpunkt der Entscheidung werden im lokalen Speicher Ihres
+          Browsers (localStorage) auf Ihrem Endgerät gespeichert, damit das
+          Banner nicht bei jedem Aufruf erneut erscheint und wir Ihre Auswahl
+          nachweisen können. Diese Speicherung ist technisch erforderlich
+          (§ 25 Abs. 2 Nr. 2 TDDDG); Rechtsgrundlage der Verarbeitung ist
+          Art. 6 Abs. 1 S. 1 lit. c DSGVO i. V. m. Art. 7 Abs. 1 DSGVO.
         </p>
       </section>
 

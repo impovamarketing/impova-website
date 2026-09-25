@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { MotionConfig } from "framer-motion";
 import { ORGANIZATION_ID } from "@/lib/seo";
+import { CookieConsent } from "@/components/CookieConsent";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -153,6 +154,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       </head>
       <body className="min-h-full flex flex-col bg-base text-foreground">
         <MotionConfig reducedMotion="user">{children}</MotionConfig>
+        <CookieConsent />
       </body>
     </html>
   );
