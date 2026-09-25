@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { CheckCircle2, Loader2, Mail, Phone } from "lucide-react";
 import { Eyebrow } from "./Eyebrow";
 import { Reveal } from "./Reveal";
@@ -21,6 +22,7 @@ const INITIAL_STATE: FormState = {
 };
 
 export function ContactForm() {
+  const router = useRouter();
   const [form, setForm] = useState<FormState>(INITIAL_STATE);
   const [status, setStatus] = useState<"idle" | "submitting" | "sent" | "error">(
     "idle"
@@ -46,6 +48,7 @@ export function ContactForm() {
       if (!res.ok) throw new Error("Request failed");
       setStatus("sent");
       setForm(INITIAL_STATE);
+      router.push("/danke");
     } catch {
       setStatus("error");
     }
