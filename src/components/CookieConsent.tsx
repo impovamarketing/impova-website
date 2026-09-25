@@ -6,6 +6,7 @@ import Script from "next/script";
 import {
   CONSENT_CHANGE_EVENT,
   GA_MEASUREMENT_ID,
+  GTM_CONTAINER_ID,
   OPEN_COOKIE_SETTINGS_EVENT,
   deleteAnalyticsCookies,
   readConsent,
@@ -73,6 +74,9 @@ gtag('config', '${GA_MEASUREMENT_ID}', {
   allow_ad_personalization_signals: false
 });`}
           </Script>
+          <Script id="gtm-init" strategy="afterInteractive">
+            {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','${GTM_CONTAINER_ID}');`}
+          </Script>
         </>
       )}
 
@@ -91,10 +95,11 @@ gtag('config', '${GA_MEASUREMENT_ID}', {
                 Cookies &amp; Statistik
               </p>
               <p className="mt-2 text-sm leading-relaxed text-zinc-400">
-                Ich möchte mit Google Analytics verstehen, wie diese Website
-                genutzt wird. Das passiert nur mit deiner Einwilligung — ohne
-                Zustimmung wird Analytics nicht geladen und es werden keine
-                Daten an Google gesendet. Du kannst deine Auswahl jederzeit
+                Ich nutze Google Analytics und den Google Tag Manager, um zu
+                verstehen, wie diese Website genutzt wird. Das passiert nur mit
+                deiner Einwilligung — ohne Zustimmung werden beide nicht
+                geladen und es werden keine Daten an Google gesendet. Du kannst deine
+                Auswahl jederzeit
                 über „Cookie-Einstellungen“ im Footer ändern. Mehr in der{" "}
                 <Link
                   href="/datenschutz"

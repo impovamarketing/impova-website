@@ -1,4 +1,5 @@
 export const GA_MEASUREMENT_ID = "G-3YHZSKMB40";
+export const GTM_CONTAINER_ID = "GTM-582LZZSQ";
 
 export const CONSENT_STORAGE_KEY = "impova-cookie-consent";
 export const CONSENT_CHANGE_EVENT = "impova:consent-change";

@@ -17,7 +17,7 @@ const TOC = [
   { id: "m12", label: "Allgemeine Informationen zur Datenspeicherung und Löschung" },
   { id: "m10", label: "Rechte der betroffenen Personen" },
   { id: "m225", label: "Bereitstellung des Onlineangebots und Webhosting" },
-  { id: "mGA", label: "Webanalyse mit Google Analytics und Einwilligungsverwaltung" },
+  { id: "mGA", label: "Webanalyse mit Google Analytics, Google Tag Manager und Einwilligungsverwaltung" },
   { id: "m15", label: "Änderung und Aktualisierung" },
   { id: "m42", label: "Begriffsdefinitionen" },
 ];
@@ -474,7 +474,7 @@ export default function DatenschutzPage() {
 
       <section id="mGA">
         <H2 id="mGA-h">
-          Webanalyse mit Google Analytics und Einwilligungsverwaltung
+          Webanalyse mit Google Analytics, Google Tag Manager und Einwilligungsverwaltung
         </H2>
         <p>
           Wir setzen Google Analytics 4 ein, einen Webanalysedienst der Google
@@ -484,15 +484,24 @@ export default function DatenschutzPage() {
           Herkunft der Besucher, verwendete Geräte und Browser), damit wir es
           verbessern können.
         </p>
+        <p className="mt-4">
+          Zusätzlich setzen wir den Google Tag Manager ein. Er verwaltet
+          Skript-Tags (z. B. für Analyse- oder Reichweitenmessung) und wird,
+          wie Google Analytics, ausschließlich nach Ihrer Einwilligung geladen.
+          Der Tag Manager selbst setzt keine Cookies und erfasst keine
+          personenbezogenen Daten. Er kann jedoch die Ausführung weiterer Tags
+          auslösen, die ihrerseits Daten erheben. Bei Nutzung solcher Tags
+          gelten die hier genannten Angaben entsprechend.
+        </p>
         <List>
           <li>
             <strong className="font-medium text-zinc-200">
               Einwilligung:
             </strong>{" "}
-            Google Analytics wird ausschließlich nach Ihrer ausdrücklichen
-            Einwilligung geladen (Art. 6 Abs. 1 S. 1 lit. a DSGVO,
-            § 25 Abs. 1 TDDDG). Solange Sie nicht zugestimmt haben, wird das
-            Analyse-Skript nicht geladen, es werden keine Analyse-Cookies
+            Google Analytics und der Google Tag Manager werden ausschließlich
+            nach Ihrer ausdrücklichen Einwilligung geladen (Art. 6 Abs. 1 S. 1 lit. a DSGVO,
+            § 25 Abs. 1 TDDDG). Solange Sie nicht zugestimmt haben, werden diese
+            Skripte nicht geladen, es werden keine Analyse-Cookies
             gesetzt und es werden keine Daten zu diesem Zweck an Google
             übermittelt.
           </li>
