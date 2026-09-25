@@ -533,7 +533,10 @@ export default function DatenschutzPage() {
               Werbefunktionen:
             </strong>{" "}
             Die Funktionen für Werbezwecke (Google-Signale, personalisierte
-            Werbung) sind deaktiviert.
+            Werbung) sind deaktiviert. Technisch bedingt kann Google im
+            Rahmen der Einbindung dennoch eine nicht personalisierte
+            Zielgruppenmessung ausführen; eine Personalisierung von Werbung
+            findet dabei nicht statt.
           </li>
           <li>
             <strong className="font-medium text-zinc-200">
