@@ -75,12 +75,12 @@ export function Work() {
           {PROJECTS.map((project, i) => (
             <Reveal key={project.title} delay={i * 0.08}>
               <div className="group border border-zinc-900 transition-colors duration-300 hover:border-zinc-700">
-                <div className="relative aspect-[3/2] overflow-hidden border-b border-zinc-900 grayscale transition-all duration-500 group-hover:grayscale-0">
+                <div className="relative aspect-[3/2] overflow-hidden border-b border-zinc-900 bg-zinc-950 grayscale transition-all duration-500 group-hover:grayscale-0">
                   <Image
                     src={project.image}
                     alt={`Website-Projekt für ${project.title}, ${project.category}`}
                     fill
-                    className="object-cover transition-transform duration-500 motion-safe:group-hover:scale-105"
+                    className="object-contain"
                     sizes="(min-width: 768px) 50vw, 100vw"
                   />
                   <Reticle />

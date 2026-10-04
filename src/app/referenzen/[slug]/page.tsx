@@ -94,12 +94,12 @@ export default async function CaseStudyPage({
             </Reveal>
 
             <Reveal delay={0.1}>
-              <div className="group relative mt-12 aspect-[16/9] overflow-hidden border border-zinc-900 grayscale transition-all duration-500 hover:grayscale-0">
+              <div className="group relative mt-12 aspect-[16/9] overflow-hidden border border-zinc-900 bg-zinc-950 grayscale transition-all duration-500 hover:grayscale-0">
                 <Image
                   src={caseStudy.image}
                   alt={`Website-Projekt: ${caseStudy.title}`}
                   fill
-                  className="object-cover"
+                  className="object-contain"
                   sizes="(min-width: 1024px) 1200px, 100vw"
                   priority
                 />
