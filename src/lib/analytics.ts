@@ -5,7 +5,7 @@ export const CONSENT_STORAGE_KEY = "impova-cookie-consent";
 export const CONSENT_CHANGE_EVENT = "impova:consent-change";
 export const OPEN_COOKIE_SETTINGS_EVENT = "impova:open-cookie-settings";
 
-export type Consent = { analytics: boolean; marketing: boolean };
+export type Consent = { analytics: boolean; marketing: boolean; meta: boolean };
 
 export function getStoredConsentRaw(): string {
   try {
@@ -24,15 +24,19 @@ export function parseConsent(raw: string): Consent | null {
       status?: string;
       analytics?: unknown;
       marketing?: unknown;
+      meta?: unknown;
     };
     if (typeof parsed.analytics === "boolean") {
       return {
         analytics: parsed.analytics,
         marketing: parsed.marketing === true,
+        meta: parsed.meta === true,
       };
     }
-    if (parsed.status === "granted") return { analytics: true, marketing: false };
-    if (parsed.status === "denied") return { analytics: false, marketing: false };
+    if (parsed.status === "granted")
+      return { analytics: true, marketing: false, meta: false };
+    if (parsed.status === "denied")
+      return { analytics: false, marketing: false, meta: false };
     return null;
   } catch {
     return null;
@@ -53,6 +57,15 @@ export function writeConsent(consent: Consent) {
 
 // Löscht Google-Cookies (Analytics: _ga*, Ads: _gcl_*), die sich von der eigenen Domain aus entfernen lassen.
 export function deleteGoogleCookies() {
+  deleteCookiesMatching(/^_ga|^_gid|^_gat|^_gcl/);
+}
+
+// Löscht die Meta-Pixel-Cookies _fbp und _fbc.
+export function deleteMetaCookies() {
+  deleteCookiesMatching(/^_fbp$|^_fbc$/);
+}
+
+function deleteCookiesMatching(pattern: RegExp) {
   const hostParts = window.location.hostname.split(".");
   const domains = [
     undefined,
@@ -61,7 +74,7 @@ export function deleteGoogleCookies() {
   ];
   for (const rawCookie of document.cookie.split(";")) {
     const name = rawCookie.split("=")[0]?.trim();
-    if (!name || !/^_ga|^_gid|^_gat|^_gcl/.test(name)) continue;
+    if (!name || !pattern.test(name)) continue;
     for (const domain of domains) {
       document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/${
         domain ? `; domain=${domain}` : ""

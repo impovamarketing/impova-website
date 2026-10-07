@@ -9,11 +9,13 @@ import {
   GTM_CONTAINER_ID,
   OPEN_COOKIE_SETTINGS_EVENT,
   deleteGoogleCookies,
+  deleteMetaCookies,
   getStoredConsentRaw,
   parseConsent,
   writeConsent,
   type Consent,
 } from "@/lib/analytics";
+import { MetaPixel } from "@/components/MetaPixel";
 
 function subscribe(onChange: () => void) {
   window.addEventListener(CONSENT_CHANGE_EVENT, onChange);
@@ -107,12 +109,14 @@ export function CookieConsent() {
   const [reopened, setReopened] = useState(false);
   const [analytics, setAnalytics] = useState(false);
   const [marketing, setMarketing] = useState(false);
+  const [meta, setMeta] = useState(false);
 
   useEffect(() => {
     const open = () => {
       const current = parseConsent(getStoredConsentRaw());
       setAnalytics(current?.analytics ?? false);
       setMarketing(current?.marketing ?? false);
+      setMeta(current?.meta ?? false);
       setReopened(true);
     };
     window.addEventListener(OPEN_COOKIE_SETTINGS_EVENT, open);
@@ -128,10 +132,11 @@ export function CookieConsent() {
       ] = true;
     }
     if (hadGoogle && (!next.analytics || !next.marketing)) deleteGoogleCookies();
+    if (previous?.meta && !next.meta) deleteMetaCookies();
     writeConsent(next);
     setReopened(false);
-    // Bereits geladene Google-Skripte lassen sich nicht sauber entladen oder umstellen.
-    if (hadGoogle) window.location.reload();
+    // Bereits geladene Google- oder Meta-Skripte lassen sich nicht sauber entladen oder umstellen.
+    if (hadGoogle || (previous?.meta && !next.meta)) window.location.reload();
   }
 
   const bannerVisible = consent === null || (reopened && consent !== "pending");
@@ -143,6 +148,7 @@ export function CookieConsent() {
   return (
     <>
       {googleActive && <GoogleScripts consent={consent} />}
+      {consent !== null && consent !== "pending" && consent.meta && <MetaPixel />}
 
       {bannerVisible && (
         <section
@@ -159,8 +165,8 @@ export function CookieConsent() {
                 Cookies &amp; Einwilligung
               </p>
               <p className="mt-2 text-sm leading-relaxed text-zinc-400">
-                Ohne deine Zustimmung wird nichts von Google geladen und es
-                werden keine Daten gesendet. Du entscheidest getrennt und
+                Ohne deine Zustimmung wird nichts von Google oder Meta geladen
+                und es werden keine Daten gesendet. Du entscheidest getrennt und
                 kannst deine Auswahl jederzeit über „Cookie-Einstellungen“ im
                 Footer ändern. Mehr in der{" "}
                 <Link
@@ -186,26 +192,37 @@ export function CookieConsent() {
                   checked={marketing}
                   onChange={setMarketing}
                 />
+                <Choice
+                  id="consent-meta"
+                  label="Meta"
+                  text="Das Meta-Pixel (Facebook/Instagram) misst, ob dortige Anzeigen zu Anfragen führen."
+                  checked={meta}
+                  onChange={setMeta}
+                />
               </div>
             </div>
             <div className="flex shrink-0 flex-wrap gap-3">
               <button
                 type="button"
-                onClick={() => decide({ analytics: false, marketing: false })}
+                onClick={() =>
+                  decide({ analytics: false, marketing: false, meta: false })
+                }
                 className={buttonClass}
               >
                 Alle ablehnen
               </button>
               <button
                 type="button"
-                onClick={() => decide({ analytics, marketing })}
+                onClick={() => decide({ analytics, marketing, meta })}
                 className={buttonClass}
               >
                 Auswahl speichern
               </button>
               <button
                 type="button"
-                onClick={() => decide({ analytics: true, marketing: true })}
+                onClick={() =>
+                  decide({ analytics: true, marketing: true, meta: true })
+                }
                 className={buttonClass}
               >
                 Alle akzeptieren

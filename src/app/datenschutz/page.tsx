@@ -18,6 +18,7 @@ const TOC = [
   { id: "m10", label: "Rechte der betroffenen Personen" },
   { id: "m225", label: "Bereitstellung des Onlineangebots und Webhosting" },
   { id: "mGA", label: "Webanalyse mit Google Analytics, Google Tag Manager und Einwilligungsverwaltung" },
+  { id: "mMeta", label: "Meta-Pixel und Conversions API (Meta Platforms)" },
   { id: "m15", label: "Änderung und Aktualisierung" },
   { id: "m42", label: "Begriffsdefinitionen" },
 ];
@@ -125,6 +126,7 @@ export default function DatenschutzPage() {
           <li>Sicherheitsmaßnahmen.</li>
           <li>Bereitstellung unseres Onlineangebotes und Nutzerfreundlichkeit.</li>
           <li>Reichweitenmessung und Webanalyse (nur mit Einwilligung).</li>
+          <li>Marketing und Conversion-Messung (nur mit Einwilligung).</li>
           <li>
             Informationstechnische Infrastruktur (Betrieb und Bereitstellung
             von Informationssystemen und technischen Geräten (Computer,
@@ -498,7 +500,8 @@ export default function DatenschutzPage() {
           unabhängig voneinander erteilen können: <em>Statistik</em> (Google
           Analytics) und <em>Marketing</em> (Messung von Conversions
           für Google Ads). Ohne Ihre Zustimmung zu mindestens einer Kategorie
-          wird kein Google-Skript geladen.
+          wird kein Google-Skript geladen. Das Meta-Pixel (siehe unten) ist
+          eine eigene dritte Kategorie.
         </p>
         <List>
           <li>
@@ -611,6 +614,103 @@ export default function DatenschutzPage() {
           nachweisen können. Diese Speicherung ist technisch erforderlich
           (§ 25 Abs. 2 Nr. 2 TDDDG); Rechtsgrundlage der Verarbeitung ist
           Art. 6 Abs. 1 S. 1 lit. c DSGVO i. V. m. Art. 7 Abs. 1 DSGVO.
+        </p>
+      </section>
+
+      <section id="mMeta">
+        <H2 id="mMeta-h">Meta-Pixel und Conversions API (Meta Platforms)</H2>
+        <p>
+          Wenn Sie in die Kategorie <em>Meta</em> einwilligen, setzen wir
+          das Meta-Pixel und die Conversions API der Meta Platforms Ireland
+          Limited, Merrion Road, Dublin 4, Irland (&bdquo;Meta&ldquo;) ein.
+          Sie zeigen uns, ob eine auf Facebook oder Instagram geschaltete
+          Anzeige zu einer Kontaktanfrage geführt hat, und helfen uns, die
+          Anzeigenauslieferung zu optimieren. Diese Einwilligung erteilen Sie
+          unabhängig von den Kategorien Statistik und Marketing. Ohne Ihre
+          Einwilligung in die Kategorie Meta wird das Meta-Pixel nicht
+          geladen und es werden keine Daten an Meta übermittelt.
+        </p>
+        <List>
+          <li>
+            <strong className="font-medium text-zinc-200">
+              Rechtsgrundlage:
+            </strong>{" "}
+            Ihre Einwilligung (Art. 6 Abs. 1 S. 1 lit. a DSGVO, § 25 Abs. 1
+            TDDDG).
+          </li>
+          <li>
+            <strong className="font-medium text-zinc-200">
+              Verarbeitete Daten (Browser):
+            </strong>{" "}
+            Nach Ihrer Einwilligung lädt Ihr Browser Skripte von
+            connect.facebook.net. Übermittelt werden die aufgerufene Seite,
+            Zeitpunkt, Browser- und Geräteangaben, Ihre IP-Adresse sowie
+            pseudonyme Online-Kennungen. Dabei werden die Cookies
+            &bdquo;_fbp&ldquo; und, wenn Sie über eine Facebook- oder
+            Instagram-Anzeige zu uns gelangen, &bdquo;_fbc&ldquo; gesetzt
+            (Laufzeit in der Regel bis zu 90 Tage). Die automatische
+            Erfassung von Klicks und Seiteninhalten ist deaktiviert.
+          </li>
+          <li>
+            <strong className="font-medium text-zinc-200">
+              Ereignisse:
+            </strong>{" "}
+            Wir übermitteln den Seitenaufruf sowie das Ereignis
+            &bdquo;Lead&ldquo;, wenn Sie das Kontaktformular absenden oder
+            auf unsere Telefonnummer tippen bzw. klicken.
+          </li>
+          <li>
+            <strong className="font-medium text-zinc-200">
+              Conversions API (Server):
+            </strong>{" "}
+            Zusätzlich übermittelt unser Server das Ereignis
+            &bdquo;Lead&ldquo; direkt an Meta, damit die Messung auch bei
+            Browser-Einschränkungen funktioniert. Dabei werden Ihre
+            E-Mail-Adresse bzw. Telefonnummer (sofern angegeben) nur in
+            gehashter Form (SHA-256), Ihre IP-Adresse, Ihr User-Agent, die
+            genannten Cookie-Kennungen sowie Zeitpunkt und Art des Ereignisses
+            übermittelt. Der Inhalt Ihrer Nachricht wird nicht übermittelt.
+            Auch dies geschieht nur mit Ihrer Einwilligung.
+          </li>
+          <li>
+            <strong className="font-medium text-zinc-200">
+              Verantwortlichkeit:
+            </strong>{" "}
+            Für die Erhebung der Daten auf unserer Website und deren
+            Übermittlung an Meta sind wir gemeinsam mit Meta verantwortlich
+            (Art. 26 DSGVO; Zusatzvereinbarung von Meta für Verantwortliche).
+            Für die weitere Verarbeitung durch Meta ist Meta allein
+            verantwortlich.
+          </li>
+          <li>
+            <strong className="font-medium text-zinc-200">
+              Drittlandübermittlung:
+            </strong>{" "}
+            Meta kann Daten an Meta Platforms, Inc. in den USA übermitteln. Die
+            Übermittlung stützt sich auf den Angemessenheitsbeschluss der
+            EU-Kommission zum EU-U.S. Data Privacy Framework, dem Meta
+            Platforms, Inc. beigetreten ist.
+          </li>
+          <li>
+            <strong className="font-medium text-zinc-200">Widerruf:</strong>{" "}
+            Sie können Ihre Einwilligung jederzeit mit Wirkung für die Zukunft
+            widerrufen, indem Sie die Cookie-Einstellungen öffnen:{" "}
+            <CookieSettingsButton className="text-accent hover:underline" />.
+            Die Rechtmäßigkeit der bis zum Widerruf erfolgten Verarbeitung
+            bleibt unberührt.
+          </li>
+        </List>
+        <p className="mt-4">
+          Weitere Informationen zum Datenschutz bei Meta finden Sie unter{" "}
+          <a
+            href="https://www.facebook.com/privacy/policy"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-accent hover:underline"
+          >
+            facebook.com/privacy/policy
+          </a>
+          .
         </p>
       </section>
 

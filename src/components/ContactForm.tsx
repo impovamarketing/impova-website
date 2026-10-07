@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import { CheckCircle2, Loader2, Mail, Phone } from "lucide-react";
 import { Eyebrow } from "./Eyebrow";
 import { Reveal } from "./Reveal";
+import { trackLead } from "@/lib/meta";
 
 type FormState = {
   name: string;
@@ -46,6 +47,7 @@ export function ContactForm() {
         body: JSON.stringify(form),
       });
       if (!res.ok) throw new Error("Request failed");
+      trackLead("contact_form", { email: form.email });
       setStatus("sent");
       setForm(INITIAL_STATE);
       router.push("/danke");
