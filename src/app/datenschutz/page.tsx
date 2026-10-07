@@ -466,11 +466,15 @@ export default function DatenschutzPage() {
           <strong className="font-medium text-zinc-200">
             Anfrageformular:
           </strong>{" "}
-          Wenn du unser Kontaktformular nutzt, verarbeiten wir die von dir
-          angegebenen Daten (Name, E-Mail-Adresse, Projekt-Details)
-          ausschließlich zur Bearbeitung deiner Anfrage auf
+          Wenn du eines unserer Anfrageformulare nutzt, verarbeiten wir die
+          von dir angegebenen Daten (Name, E-Mail-Adresse, Projekt-Details
+          sowie, je nach Formular, Branche, Budget-Rahmen und freiwillig deine
+          Telefonnummer) ausschließlich zur Bearbeitung deiner Anfrage auf
           Grundlage von Art. 6 Abs. 1 lit. b DSGVO. Eine Weitergabe an Dritte
-          erfolgt nicht.
+          zu anderen Zwecken erfolgt nicht. Nur wenn du in die Kategorie
+          &bdquo;Meta&ldquo; eingewilligt hast, übermitteln wir deine
+          E-Mail-Adresse und Telefonnummer zusätzlich in gehashter Form an
+          Meta (siehe Abschnitt Meta-Pixel und Conversions API).
         </p>
       </section>
 
@@ -656,7 +660,7 @@ export default function DatenschutzPage() {
               Ereignisse:
             </strong>{" "}
             Wir übermitteln den Seitenaufruf sowie das Ereignis
-            &bdquo;Lead&ldquo;, wenn Sie das Kontaktformular absenden oder
+            &bdquo;Lead&ldquo;, wenn Sie ein Anfrageformular absenden oder
             auf unsere Telefonnummer tippen bzw. klicken.
           </li>
           <li>

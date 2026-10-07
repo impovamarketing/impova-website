@@ -8,7 +8,7 @@ declare global {
   }
 }
 
-export type LeadSource = "contact_form" | "phone_click";
+export type LeadSource = "contact_form" | "landing_form" | "phone_click";
 export type LeadUserData = { email?: string; phone?: string };
 
 function hasMetaConsent(): boolean {

@@ -1,13 +1,21 @@
 import { NextRequest, NextResponse } from "next/server";
+import { BRANCHEN, BUDGETS } from "@/lib/lead-options";
 
 type ContactPayload = {
   name: string;
   email: string;
   details: string;
   company?: string; // honeypot — must stay empty
+  phone?: string;
+  branche?: string;
+  budget?: string;
 };
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+function optionalChoice(value: unknown, allowed: readonly string[]) {
+  return typeof value === "string" && allowed.includes(value) ? value : undefined;
+}
 
 export async function POST(request: NextRequest) {
   const body = (await request.json()) as Partial<ContactPayload>;
@@ -32,6 +40,17 @@ export async function POST(request: NextRequest) {
     );
   }
 
+  const phone =
+    typeof body.phone === "string" ? body.phone.trim().slice(0, 40) : "";
+  const branche = optionalChoice(body.branche, BRANCHEN);
+  const budget = optionalChoice(body.budget, BUDGETS);
+
+  const extraLines = [
+    phone && `Telefon: ${phone}`,
+    branche && `Branche: ${branche}`,
+    budget && `Budget: ${budget}`,
+  ].filter(Boolean);
+
   const emailRes = await fetch("https://api.resend.com/emails", {
     method: "POST",
     headers: {
@@ -42,8 +61,8 @@ export async function POST(request: NextRequest) {
       from: "Impova <info@impova.de>",
       to: "info@impova.de",
       reply_to: email,
-      subject: `Neue Projektanfrage von ${name}`,
-      text: `Name: ${name}\nE-Mail: ${email}\n\n${details}`,
+      subject: `Neue Projektanfrage von ${name}${budget ? ` (${budget})` : ""}`,
+      text: [`Name: ${name}`, `E-Mail: ${email}`, ...extraLines, "", details].join("\n"),
     }),
   });
 

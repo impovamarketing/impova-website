@@ -13,7 +13,7 @@ type Project = {
   slug: string;
 };
 
-const PROJECTS: Project[] = [
+export const PROJECTS: Project[] = [
   {
     title: "Sero's Barbershop",
     category: "Barbershop — Landshut",
