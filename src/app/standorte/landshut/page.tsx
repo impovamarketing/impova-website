@@ -8,7 +8,7 @@ import { MagneticButton } from "@/components/MagneticButton";
 import { CASE_STUDIES } from "@/app/referenzen/case-studies";
 import { pageOpenGraph } from "@/lib/seo";
 
-const TITLE = "Webdesign Agentur Landshut – Website erstellen lassen | Impova";
+const TITLE = "Webdesign Landshut: Website erstellen lassen | Impova";
 const DESCRIPTION =
   "Webdesign und SEO für Unternehmen in Landshut: mit Sitz in Essenbach, direkt vor Ort erreichbar. Individuell entwickelt statt Baukasten, mit echten Referenzen aus der Region.";
 
@@ -51,11 +51,11 @@ export default function LandshutPage() {
                 Standort
               </p>
               <h1 className="mt-5 max-w-3xl text-4xl font-medium leading-tight tracking-tight text-zinc-50 sm:text-5xl">
-                Webdesign Agentur Landshut
+                Webdesign in Landshut
               </h1>
               <p className="mt-6 max-w-xl text-lg leading-relaxed text-zinc-400">
                 Mit Sitz in Essenbach, direkt vor den Toren Landshuts. Websites
-                für Unternehmen aus der Region — individuell entwickelt,
+                für Unternehmen aus der Region, individuell entwickelt,
                 nicht aus dem Baukasten.
               </p>
               <div className="mt-10">
@@ -76,15 +76,15 @@ export default function LandshutPage() {
               </h2>
               <div className="mt-6 flex max-w-2xl flex-col gap-4 text-zinc-400">
                 <p>
-                  Du sprichst nicht mit einer Agentur irgendwo in
-                  Deutschland, die deine Region nicht kennt. Ein persönliches
+                  Du sprichst mit jemandem, der die Region kennt, nicht mit
+                  einem Anbieter irgendwo in Deutschland. Ein persönliches
                   Treffen in oder um Landshut ist möglich, wenn es für dein
-                  Projekt hilft — und die Betriebe, die ich bisher umgesetzt
+                  Projekt hilft, und die Betriebe, die ich bisher umgesetzt
                   habe, kommen aus genau dieser Region.
                 </p>
                 <p>
                   Gleichzeitig arbeite ich remote genauso zuverlässig mit
-                  Kunden außerhalb von Landshut — die lokale Nähe ist ein
+                  Kunden außerhalb von Landshut. Die lokale Nähe ist ein
                   Plus, keine Voraussetzung.
                 </p>
               </div>
@@ -100,7 +100,7 @@ export default function LandshutPage() {
                 Echte Projekte aus Landshut
               </h2>
               <p className="mt-5 max-w-lg text-zinc-400">
-                Vier Betriebe aus der Region, vier Branchen — mit echter
+                Betriebe aus der Region und ihre Branchen, mit echter
                 Herausforderung, echter Lösung und Live-Vorschau der
                 fertigen Seite.
               </p>
@@ -136,8 +136,8 @@ export default function LandshutPage() {
                 Webdesign, SEO und Conversion
               </h2>
               <p className="mt-5 max-w-lg text-zinc-400">
-                Wie das im Detail aussieht — inklusive Ablauf, Preis und der
-                Wahl zwischen WordPress und Next.js — steht auf der{" "}
+                Wie das im Detail aussieht, inklusive Ablauf, den Bausteinen
+                Bau und Pflege und dem CMS zum Selbstpflegen, steht auf der{" "}
                 <Link href="/webdesign" className="text-accent hover:underline">
                   Webdesign-Seite
                 </Link>

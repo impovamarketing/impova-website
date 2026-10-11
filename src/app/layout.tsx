@@ -17,51 +17,36 @@ const geistMono = Geist_Mono({
 
 const siteUrl = "https://www.impova.de";
 
+const TITLE = "Webdesign und lokale Sichtbarkeit in Landshut | Impova";
+const DESCRIPTION =
+  "Websites für lokale Unternehmen in Landshut und Niederbayern, die bei Google gefunden werden und Anfragen bringen. Persönlich betreut, 5,0 bei Google.";
+
+// Kein Canonical im Layout: sonst erben Unterseiten ohne eigenen Canonical den der Startseite.
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "Impova – Online Marketing Agentur Landshut",
-  description:
-    "Online Marketing Agentur aus Landshut: Webdesign, SEO, Google Ads und Content Marketing aus einer Hand, mit klarer Nutzerführung zur Anfrage — für Unternehmen in Landshut, Niederbayern und deutschlandweit.",
-  keywords: [
-    "Online Marketing Agentur Landshut",
-    "Marketing Agentur Landshut",
-    "Webdesign Landshut",
-    "Webdesign Agentur Landshut",
-    "SEO Agentur Landshut",
-    "Google Ads Landshut",
-    "Content Marketing Landshut",
-    "Website erstellen lassen Landshut",
-    "Website Relaunch",
-    "Professionelle Website erstellen lassen",
-    "High-End Webdesign Landshut",
-    "Webdesign Niederbayern",
-  ],
-  authors: [{ name: "Impova" }],
-  alternates: {
-    canonical: siteUrl,
-  },
+  title: TITLE,
+  description: DESCRIPTION,
+  authors: [{ name: "Tobias Springer" }],
   openGraph: {
     type: "website",
     locale: "de_DE",
     url: siteUrl,
     siteName: "Impova",
-    title: "Impova – Online Marketing Agentur Landshut",
-    description:
-      "Webdesign, SEO, Google Ads und Content Marketing für Unternehmen in Landshut und Umgebung — professionell umgesetzt, bei Google gefunden, mit klarer Nutzerführung zur Anfrage.",
+    title: TITLE,
+    description: DESCRIPTION,
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Impova – Online Marketing Agentur Landshut",
+        alt: "Impova: Webdesign und lokale Sichtbarkeit in Landshut",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Impova – Online Marketing Agentur Landshut",
-    description:
-      "Webdesign, SEO, Google Ads und Content Marketing für Unternehmen in Landshut und Umgebung — professionell umgesetzt, bei Google gefunden.",
+    title: TITLE,
+    description: DESCRIPTION,
     images: ["/og-image.png"],
   },
   robots: {
@@ -97,7 +82,7 @@ const jsonLd = {
       url: siteUrl,
       telephone: "+4915123819198",
       description:
-        "Webdesign, SEO, Google Ads und Content Marketing für Unternehmen in Landshut, Niederbayern und deutschlandweit.",
+        "Webdesign und lokale Sichtbarkeit für Unternehmen in Landshut und Niederbayern: Websites, die bei Google gefunden werden und Anfragen bringen.",
       areaServed: [
         {
           "@type": "City",

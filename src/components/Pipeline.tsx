@@ -25,14 +25,14 @@ const STEPS = [
     title: "Entwicklung",
     status: "Umsetzung",
     description:
-      "Ich schreib jede Zeile Code selbst, performance-optimiert, mit sauberer Struktur, kein Copy-Paste-Template, das halb passt.",
+      "Deine Website entsteht: schnell geladen, sauber strukturiert, mit SEO-Grundlagen von Anfang an und einem CMS, in dem du Inhalte selbst pflegst.",
   },
   {
     index: "04",
     title: "Launch",
     status: "Go-Live",
     description:
-      "Deine Seite geht live, mit Tracking und Monitoring, damit Probleme auffallen, bevor Kunden sie merken. Und danach bin ich noch da, kein Abschieds-Handshake.",
+      "Deine Seite geht live, mit Monitoring, damit Probleme auffallen, bevor Kunden sie merken. Danach bleibe ich dein Ansprechpartner, auf Wunsch mit monatlicher Pflege.",
   },
 ];
 
@@ -41,7 +41,7 @@ export function Pipeline() {
     <section id="prozess" className="border-b border-zinc-900 py-28">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <Reveal>
-          <Eyebrow index="05">Prozess</Eyebrow>
+          <Eyebrow index="07">Prozess</Eyebrow>
           <h2 className="mt-5 max-w-2xl text-3xl font-medium leading-tight tracking-tight text-zinc-50 sm:text-4xl">
             So läuft die Zusammenarbeit ab
           </h2>

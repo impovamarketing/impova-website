@@ -10,7 +10,7 @@ import { pageOpenGraph } from "@/lib/seo";
 
 const TITLE = "Über mich – Impova";
 const DESCRIPTION =
-  "Tobias Springer, Gründer von Impova: warum ich Webdesign & SEO für Unternehmen in Landshut und Umgebung persönlich umsetze, statt als Agentur mit Baukastensystem.";
+  "Tobias Springer, Gründer von Impova: warum ich Webdesign & SEO für Unternehmen in Landshut und Umgebung persönlich umsetze, statt mit Baukastensystem.";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -52,23 +52,21 @@ export default function UeberMichPage() {
                   Über mich
                 </p>
                 <h1 className="mt-5 max-w-xl text-4xl font-medium leading-tight tracking-tight text-zinc-50 sm:text-5xl">
-                  Ich bin Tobias — dein einziger Ansprechpartner bei Impova.
+                  Ich bin Tobias, dein fester Ansprechpartner bei Impova.
                 </h1>
                 <div className="mt-6 flex max-w-lg flex-col gap-4 text-lg leading-relaxed text-zinc-400">
                   <p>
                     Seit November 2025 baue ich Websites für Unternehmen in
                     Landshut und Umgebung. Die Grundlagen im
                     Online-Marketing habe ich mir über eine Weiterbildung
-                    bei HeyFreiheit angeeignet — von dort kommt mein Blick
+                    bei HeyFreiheit angeeignet. Von dort kommt mein Blick
                     auf SEO, Conversion und Nutzerführung, nicht nur auf
                     Design.
                   </p>
                   <p>
-                    Umgesetzt wird jedes Projekt so, wie es für dich am
-                    meisten Sinn ergibt: WordPress mit Oxygen Builder, wenn
-                    du schnell live gehen und Inhalte später selbst pflegen
-                    willst, oder handgeschriebener Next.js-Code, wenn
-                    Design und Ladezeit ganz vorne mitspielen sollen. Wie
+                    Jede Website wird individuell für dein Unternehmen
+                    entwickelt und bekommt ein einfaches CMS, in dem du
+                    Texte, Bilder und Öffnungszeiten selbst pflegst. Wie
                     das konkret aussieht, siehst du an den{" "}
                     <Link
                       href="/#referenzen"
@@ -101,7 +99,7 @@ export default function UeberMichPage() {
             <Reveal>
               <Eyebrow index="01">Warum Impova</Eyebrow>
               <h2 className="mt-5 max-w-2xl text-3xl font-medium leading-tight tracking-tight text-zinc-50 sm:text-4xl">
-                Was mich an typischen Agentur-Websites stört
+                Was mich an vielen Websites stört
               </h2>
               <div className="mt-6 flex max-w-2xl flex-col gap-4 text-zinc-400">
                 <p>
@@ -113,7 +111,7 @@ export default function UeberMichPage() {
                 </p>
                 <p>
                   Genau das wollte ich anders machen: eine Website, die
-                  wirklich individuell gebaut ist — und ein Ansprechpartner,
+                  wirklich individuell gebaut ist, und ein Ansprechpartner,
                   der dein Projekt von Anfang bis Ende selbst betreut.
                 </p>
               </div>
@@ -131,10 +129,10 @@ export default function UeberMichPage() {
               <div className="mt-6 max-w-2xl text-zinc-400">
                 <p>
                   Du schreibst mir dein Anliegen über das Kontaktformular oder
-                  rufst direkt an — ich melde mich innerhalb von 24 Stunden
+                  rufst direkt an. Ich melde mich innerhalb von 24 Stunden
                   persönlich zurück. Kein Callcenter, kein Projektmanager
                   dazwischen: Fragen zu deinem Projekt beantworte ich selbst,
-                  weil ich es auch selbst umsetze.
+                  weil ich dein Projekt von Anfang bis Ende verantworte.
                 </p>
               </div>
               <div className="mt-10">

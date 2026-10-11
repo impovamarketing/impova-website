@@ -10,7 +10,7 @@ import { CASE_STUDIES } from "./case-studies";
 
 const TITLE = "Referenzen – Webdesign-Projekte aus Landshut | Impova";
 const DESCRIPTION =
-  "Echte Webdesign-Projekte für Handwerksbetriebe und lokale Dienstleister aus Landshut und Umgebung — mit Herausforderung, Lösung und Live-Vorschau.";
+  "Echte Webdesign-Projekte für Handwerksbetriebe und lokale Dienstleister aus Landshut und Umgebung: mit Herausforderung, Lösung und Live-Vorschau.";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -55,7 +55,7 @@ export default function ReferenzenPage() {
               </h1>
               <p className="mt-6 max-w-xl text-lg leading-relaxed text-zinc-400">
                 Handwerksbetriebe und lokale Dienstleister aus Landshut und
-                Umgebung — jedes Projekt mit echter Herausforderung und
+                Umgebung, jedes Projekt mit echter Herausforderung und
                 echter Lösung, teils mit Live-Vorschau der fertigen Seite.
               </p>
             </Reveal>

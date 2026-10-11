@@ -145,7 +145,7 @@ export default async function CaseStudyPage({
               </h2>
               <p className="mt-6 max-w-2xl text-lg leading-relaxed text-zinc-400">
                 {caseStudy.liveUrl
-                  ? "Die Website ist seitdem live — wirf oben über die Live-Vorschau selbst einen Blick drauf."
+                  ? "Die Website ist seitdem live. Wirf oben über die Live-Vorschau selbst einen Blick drauf."
                   : "Die Website ist seitdem live im Einsatz."}
               </p>
               <Link

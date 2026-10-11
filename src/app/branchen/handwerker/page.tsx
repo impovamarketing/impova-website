@@ -58,7 +58,7 @@ export default function HandwerkerPage() {
                 Webdesign für Handwerksbetriebe
               </h1>
               <p className="mt-6 max-w-xl text-lg leading-relaxed text-zinc-400">
-                Deine Arbeit spricht für sich — deine Website oft nicht. Ich
+                Deine Arbeit spricht für sich, deine Website oft nicht. Ich
                 baue Websites, die zeigen, was du kannst, statt es zu
                 verstecken.
               </p>
@@ -81,7 +81,7 @@ export default function HandwerkerPage() {
               <div className="mt-6 flex max-w-2xl flex-col gap-4 text-zinc-400">
                 <p>
                   Viele Handwerksbetriebe haben jahrelange Erfahrung und
-                  zufriedene Kunden — aber online ist davon nichts zu sehen.
+                  zufriedene Kunden, aber online ist davon nichts zu sehen.
                   Die Website wirkt wie ein digitales Visitenkärtchen statt
                   wie ein Beweis für Kompetenz.
                 </p>
@@ -135,7 +135,7 @@ export default function HandwerkerPage() {
                 Wie deine Website aussehen könnte
               </h2>
               <p className="mt-5 max-w-lg text-zinc-400">
-                Ablauf, Preis und die Wahl zwischen WordPress und Next.js
+                Ablauf, die Bausteine Bau und Pflege sowie das CMS zum Selbstpflegen
                 stehen auf der{" "}
                 <Link href="/webdesign" className="text-accent hover:underline">
                   Webdesign-Seite

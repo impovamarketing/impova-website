@@ -8,9 +8,19 @@ type FaqItem = {
 
 const FAQS: FaqItem[] = [
   {
-    question: "Was kostet eine Website bei IMPOVA?",
+    question: "Was kostet eine Website bei Impova?",
     answer:
-      "Es gibt keine Festpreis-Pakete, jedes Projekt wird individuell kalkuliert, abhängig von Umfang, Funktionsumfang und ob WordPress oder eine Custom-Next.js-Lösung passt. Im ersten Gespräch bekommst du ein konkretes, unverbindliches Angebot.",
+      "Es gibt zwei Bausteine: einen Einmalpreis für den Bau deiner Website und, getrennt davon, eine monatliche Pflege. Den Einmalpreis kalkuliere ich individuell nach Umfang. Im ersten Gespräch bekommst du ein konkretes, unverbindliches Angebot.",
+  },
+  {
+    question: "Was ist in der monatlichen Pflege enthalten?",
+    answer:
+      "Content-Änderungen, die du nicht selbst machen willst, technische Updates und Monitoring, damit Probleme auffallen, bevor Kunden sie merken. Wer zusätzlich laufend an seiner Sichtbarkeit bei Google arbeiten will, bucht darauf aufbauend die SEO-Betreuung, auf Wunsch mit Inhalten als Zusatz.",
+  },
+  {
+    question: "Kann ich Inhalte selbst ändern?",
+    answer:
+      "Ja. Deine Website bekommt ein einfaches Redaktionssystem (Sanity). Texte, Bilder und Öffnungszeiten änderst du selbst, ohne mich anrufen zu müssen. Für größere Änderungen ist die monatliche Pflege da.",
   },
   {
     question: "Wie lange dauert der Bau einer Website?",
@@ -20,32 +30,27 @@ const FAQS: FaqItem[] = [
   {
     question: "Wie läuft ein Projekt konkret ab?",
     answer:
-      "In vier Schritten: Erstgespräch zum Kennenlernen und Klären der Anforderungen, dann Konzept und Design, anschließend die technische Umsetzung, und zum Abschluss die Übergabe. Live geht die Seite erst nach 100% Zufriedenheit und finaler Abstimmung mit dir.",
+      "In vier Schritten: Erstgespräch zum Kennenlernen und Klären der Anforderungen, dann Konzept und Design, anschließend die Umsetzung und zum Abschluss die Übergabe. Live geht die Seite erst nach finaler Abstimmung mit dir.",
   },
   {
-    question: "WordPress oder Next.js, was ist der Unterschied und was passt zu mir?",
+    question: "Was ist der kostenlose Sichtbarkeits-Check?",
     answer:
-      "WordPress mit Oxygen Builder eignet sich, wenn du Inhalte später selbst pflegen willst, ohne Entwickler-Wissen. Handgeschriebener Next.js-Code eignet sich, wenn Performance und Individualität im Vordergrund stehen und eine laufende Betreuung durch IMPOVA gewünscht ist. Die Entscheidung wird im Erstgespräch gemeinsam getroffen.",
+      "Du nennst mir deine Website, deine Branche und deinen Ort. Ich schaue mir persönlich an, wie gut dich Kunden in deiner Region bei Google finden, und schicke dir innerhalb von 24 Stunden eine kurze Einschätzung mit den wichtigsten Hebeln. Unverbindlich.",
   },
   {
-    question: "Bietest du auch Google Ads und Content Marketing an?",
+    question: "Bietest du auch Google- und Meta-Anzeigen an?",
     answer:
-      "Ja. Neben Webdesign und SEO übernehme ich auch die Einrichtung und laufende Betreuung von Google-Ads-Kampagnen sowie Content Marketing. Auch hier gibt es keine Festpreis-Pakete — im Erstgespräch besprechen wir, was für dein Ziel und Budget sinnvoll ist.",
+      "Ja, aber als Pilot: Anzeigen sind für mich neu, ich teste sie gerade mit wenigen Kunden und kleinen Budgets. Deshalb gibt es keine Versprechen zu Kosten pro Anfrage, sondern einen ehrlichen Test mit offenen Zahlen. Die Plätze sind begrenzt.",
   },
   {
     question: "Arbeitest du auch mit Kunden außerhalb von Landshut?",
     answer:
-      "Ja. Der Standort ist Landshut/Niederbayern, gearbeitet wird komplett remote, deutschlandweit. Vor-Ort-Termine sind bei Bedarf im Raum Landshut möglich, für alle anderen läuft die Zusammenarbeit vollständig digital.",
-  },
-  {
-    question: "Bekomme ich nach dem Launch weiter Unterstützung?",
-    answer:
-      "Ja. Neben laufender Wartung gibt es einen SEO-Retainer für kontinuierliche Sichtbarkeitsarbeit, und du hast einen festen Ansprechpartner mit einer Antwort innerhalb von 24 Stunden, kein Ticket-System, kein Wechsel zwischen Teammitgliedern.",
+      "Mein Schwerpunkt sind Unternehmen in Landshut und Niederbayern, Vor-Ort-Termine sind hier möglich. Darüber hinaus arbeite ich auch komplett digital zusammen.",
   },
   {
     question: "Wer betreut mein Projekt konkret?",
     answer:
-      "Ein fester Ansprechpartner von der ersten Anfrage bis zum Launch und darüber hinaus, kein Agentur-Wasserkopf.",
+      "Ich, Tobias Springer. Ein fester Ansprechpartner von der ersten Anfrage bis nach dem Launch, Antwort innerhalb von 24 Stunden, kein Ticket-System und keine Weitergabe an Dritte.",
   },
 ];
 
@@ -71,7 +76,7 @@ export function FAQ() {
       />
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <Reveal>
-          <Eyebrow index="07">FAQ</Eyebrow>
+          <Eyebrow index="09">FAQ</Eyebrow>
           <h2 className="mt-5 max-w-2xl text-3xl font-medium leading-tight tracking-tight text-zinc-50 sm:text-4xl">
             Häufige Fragen
           </h2>

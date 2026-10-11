@@ -1,124 +1,64 @@
-"use client";
-
-import { useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import type { LucideIcon } from "lucide-react";
-import { Blocks, Code2, Edit3, Gauge, PenTool, SearchCode, Target } from "lucide-react";
+import { Clock, Image as ImageIcon, MapPin, MousePointerClick, PenLine, Search } from "lucide-react";
 import { Eyebrow } from "./Eyebrow";
 import { Reveal } from "./Reveal";
 
-type Service = {
+type Outcome = {
   index: string;
   title: string;
   description: string;
   icon: LucideIcon;
-  href?: string;
+  href?: { label: string; url: string };
 };
 
-type Path = {
-  title: string;
-  description: string;
-  icon: LucideIcon;
-};
-
-const PATHS: Path[] = [
-  {
-    title: "WordPress — individuell aufgesetzt",
-    description:
-      "Du willst Texte und Bilder selbst ändern können, ohne mich anzurufen? Dann bau ich dir WordPress sauber und ohne Page-Builder-Ballast auf — schneller umsetzbar, trotzdem kein Baukasten-Look.",
-    icon: Edit3,
-  },
-  {
-    title: "Custom UI/UX & Next.js-Code",
-    description:
-      "Reicht dir WordPress nicht mehr, weil du bei Design und Ladezeit ganz vorne mitspielen willst? Dann schreib ich dir jede Zeile Code von Hand — für Performance, die man tatsächlich misst, nicht nur behauptet.",
-    icon: Code2,
-  },
-];
-
-const SERVICES: Service[] = [
+const OUTCOMES: Outcome[] = [
   {
     index: "01",
-    title: "Webdesign",
+    title: "Eine Website, die überzeugt",
     description:
-      "Ein moderner Auftritt, der zu dir und deiner Zielgruppe passt: individuell entwickelt statt auf ein fertiges Template gesetzt. Das gibt dir volle Kontrolle und eine Seite, die du in fünf Jahren noch problemlos erweitern kannst.",
-    icon: Blocks,
-    href: "/webdesign",
+      "Ein Auftritt, der zu deinem Unternehmen passt und in wenigen Sekunden zeigt, was du anbietest und warum man dich wählen sollte. Individuell entwickelt, nicht aus einer Vorlage.",
+    icon: MousePointerClick,
+    href: { label: "Mehr zu Webdesign", url: "/webdesign" },
   },
   {
     index: "02",
-    title: "Conversion & Nutzerführung",
+    title: "Gefunden werden, wo deine Kunden suchen",
     description:
-      "Merkt ein Besucher in den ersten drei Sekunden nicht, was du anbietest, klickt er weg. Ich baue jede Seite so, dass Inhalte, Struktur und Buttons Besucher gezielt zur Anfrage führen.",
-    icon: Gauge,
+      "Lokale Sichtbarkeit bei Google: die Suchbegriffe, die Kunden in deiner Region wirklich eingeben, ein gepflegtes Google-Unternehmensprofil und saubere technische Grundlagen.",
+    icon: MapPin,
+    href: { label: "Webdesign in Landshut", url: "/standorte/landshut" },
   },
   {
     index: "03",
-    title: "SEO",
+    title: "Besucher, die anfragen",
     description:
-      "Rankst du aktuell auf Seite 3? SEO ist bei mir Teil der Konzeption, nicht nachträglich draufgesetzt: technisch sauber und inhaltlich auf deine Suchbegriffe ausgerichtet, damit dich Kunden bei Google finden.",
-    icon: SearchCode,
-  },
-  {
-    index: "04",
-    title: "Google Ads",
-    description:
-      "SEO braucht Zeit — manchmal brauchst du Anfragen schneller. Ich richte Google-Ads-Kampagnen ein und betreue sie laufend, zielgerichtet auf Suchbegriffe, die wirklich zu Anfragen führen, nicht auf Klicks um der Klicks willen.",
-    icon: Target,
-  },
-  {
-    index: "05",
-    title: "Content Marketing",
-    description:
-      "Guter Content zahlt gleichzeitig auf SEO und auf Vertrauen ein. Ich schreibe Inhalte, die deine Expertise zeigen und auf die Suchbegriffe ausgerichtet sind, die potenzielle Kunden tatsächlich eingeben.",
-    icon: PenTool,
+      "Klare Kontaktwege auf jeder Seite, Formulare, die nicht abschrecken, und Inhalte, die Fragen beantworten, bevor sie gestellt werden. Damit aus Besuchen Anfragen werden.",
+    icon: Search,
   },
 ];
 
-function ServiceRow({ service }: { service: Service }) {
-  const ref = useRef<HTMLDivElement>(null);
-  const Icon = service.icon;
+const CMS_POINTS = [
+  { icon: PenLine, text: "Texte und Angebote selbst ändern" },
+  { icon: ImageIcon, text: "Bilder austauschen, ohne etwas kaputt zu machen" },
+  { icon: Clock, text: "Öffnungszeiten und Termine aktuell halten" },
+];
 
-  function handleMouseMove(e: React.MouseEvent<HTMLDivElement>) {
-    const rect = ref.current?.getBoundingClientRect();
-    if (!rect) return;
-    ref.current?.style.setProperty("--x", `${e.clientX - rect.left}px`);
-    ref.current?.style.setProperty("--y", `${e.clientY - rect.top}px`);
-  }
-
-  return (
-    <div
-      ref={ref}
-      onMouseMove={handleMouseMove}
-      className="spotlight group relative grid grid-cols-1 gap-6 border-t border-zinc-900 px-2 py-10 transition-colors duration-300 hover:border-zinc-700 md:grid-cols-12 md:items-center md:gap-8"
-    >
-      <div className="font-mono text-sm text-muted md:col-span-1">
-        {service.index}
-      </div>
-      <div className="md:col-span-4">
-        <h3 className="text-xl font-medium tracking-tight text-zinc-50 sm:text-2xl">
-          {service.title}
-        </h3>
-      </div>
-      <div className="md:col-span-6">
-        <p className="text-zinc-400">{service.description}</p>
-        {service.href && (
-          <Link
-            href={service.href}
-            className="mt-3 inline-block font-mono text-xs uppercase tracking-wider text-accent hover:underline"
-          >
-            Mehr zu Webdesign →
-          </Link>
-        )}
-      </div>
-      <Icon
-        strokeWidth={1}
-        className="size-8 text-zinc-600 transition-all duration-300 group-hover:text-accent motion-safe:group-hover:scale-110 md:col-span-1 md:justify-self-end"
-      />
-    </div>
-  );
-}
+const MODULES = [
+  {
+    title: "Bau deiner Website",
+    text: "Einmalpreis, individuell kalkuliert nach Umfang. Du bekommst vorab ein konkretes, unverbindliches Angebot.",
+  },
+  {
+    title: "Monatliche Pflege",
+    text: "Getrennt vom Bau: Content-Änderungen, die du nicht selbst machen willst, technische Updates und Monitoring.",
+  },
+  {
+    title: "SEO-Betreuung",
+    text: "Baut auf der Pflege auf: laufende Arbeit an deiner Sichtbarkeit bei Google. Auf Wunsch mit Inhalten als Zusatz.",
+  },
+];
 
 export function Services() {
   return (
@@ -126,73 +66,106 @@ export function Services() {
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:items-end lg:gap-8">
           <Reveal className="lg:col-span-8">
-            <Eyebrow index="04">Leistungen</Eyebrow>
+            <Eyebrow index="05">Leistungen</Eyebrow>
             <h2 className="mt-5 max-w-2xl text-3xl font-medium leading-tight tracking-tight text-zinc-50 sm:text-4xl">
-              Webdesign, SEO, Google Ads und Content Marketing
+              Was du von mir bekommst: mehr Anfragen aus deiner Region
             </h2>
             <p className="mt-5 max-w-lg text-zinc-400">
-              Kein Team aus Vertrieb, Projektmanagement und Praktikanten —
-              dein Ansprechpartner ist auch der, der den Code schreibt.
+              Ein fester Ansprechpartner von der ersten Anfrage bis nach dem
+              Launch. Antwort innerhalb von 24 Stunden, keine Weitergabe an
+              Dritte.
             </p>
           </Reveal>
 
           <Reveal delay={0.1} className="lg:col-span-4">
-            <div className="group relative aspect-[4/5] w-full max-w-xs overflow-hidden border border-zinc-800 grayscale transition-all duration-500 hover:grayscale-0 lg:ml-auto">
+            <div className="relative aspect-[4/5] w-full max-w-xs overflow-hidden border border-zinc-800 grayscale lg:ml-auto">
               <Image
                 src="/images/portraits/founder-lifestyle.jpeg"
-                alt="Gründer von Impova bei der Arbeit"
+                alt="Tobias Springer, Gründer von Impova, bei der Arbeit"
                 fill
                 className="object-cover object-[50%_25%]"
                 sizes="(min-width: 1024px) 320px, 80vw"
               />
-              <div className="absolute inset-x-0 bottom-0 flex items-center justify-between border-t border-zinc-800/80 bg-base/80 px-4 py-2.5 font-mono text-[11px] uppercase tracking-wider text-zinc-400 backdrop-blur-sm">
-                <span>Operator</span>
-                <span className="text-accent">Online</span>
-              </div>
             </div>
           </Reveal>
         </div>
 
         <div className="mt-16 border-b border-zinc-900">
-          {SERVICES.map((service) => (
-            <Reveal key={service.index}>
-              <ServiceRow service={service} />
-            </Reveal>
-          ))}
-        </div>
-
-        <div className="mt-16">
-          <Reveal>
-            <h3 className="text-xl font-medium text-zinc-100 sm:text-2xl">
-              Zwei Wege, ein Ziel
-            </h3>
-            <p className="mt-3 max-w-lg text-zinc-400">
-              Du musst dich nicht für ein System entscheiden, bevor du weißt,
-              was du brauchst. Ich sag dir ehrlich, welcher Weg zu deinem
-              Budget und deinem Ziel passt.
-            </p>
-          </Reveal>
-
-          <div className="mt-8 grid grid-cols-1 gap-px overflow-hidden border border-zinc-900 bg-zinc-900 md:grid-cols-2">
-            {PATHS.map((path, i) => {
-              const Icon = path.icon;
-              return (
-                <Reveal key={path.title} delay={i * 0.08} className="group bg-base p-8">
+          {OUTCOMES.map((outcome) => {
+            const Icon = outcome.icon;
+            return (
+              <Reveal key={outcome.index}>
+                <div className="grid grid-cols-1 gap-6 border-t border-zinc-900 px-2 py-10 md:grid-cols-12 md:items-center md:gap-8">
+                  <div className="font-mono text-sm text-muted md:col-span-1">
+                    {outcome.index}
+                  </div>
+                  <h3 className="text-xl font-medium tracking-tight text-zinc-50 sm:text-2xl md:col-span-4">
+                    {outcome.title}
+                  </h3>
+                  <div className="md:col-span-6">
+                    <p className="text-zinc-400">{outcome.description}</p>
+                    {outcome.href && (
+                      <Link
+                        href={outcome.href.url}
+                        className="mt-3 inline-block font-mono text-xs uppercase tracking-wider text-accent hover:underline"
+                      >
+                        {outcome.href.label} →
+                      </Link>
+                    )}
+                  </div>
                   <Icon
                     strokeWidth={1}
-                    className="size-8 text-zinc-600 transition-all duration-300 group-hover:text-accent motion-safe:group-hover:scale-110"
+                    aria-hidden="true"
+                    className="size-8 text-zinc-600 md:col-span-1 md:justify-self-end"
                   />
-                  <h4 className="mt-6 text-lg font-medium text-zinc-50">
-                    {path.title}
-                  </h4>
-                  <p className="mt-3 text-sm leading-relaxed text-zinc-400">
-                    {path.description}
-                  </p>
-                </Reveal>
-              );
-            })}
-          </div>
+                </div>
+              </Reveal>
+            );
+          })}
         </div>
+
+        <div className="mt-20 grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-8">
+          <Reveal className="lg:col-span-5">
+            <h3 className="text-2xl font-medium tracking-tight text-zinc-50">
+              Individuell entwickelt, mit CMS zum Selbstpflegen
+            </h3>
+            <p className="mt-4 text-zinc-400">
+              Deine Website wird für dich entwickelt. Kleine Änderungen machst
+              du trotzdem selbst, in einem einfachen Redaktionssystem (Sanity),
+              ohne mich anrufen zu müssen. Für alles Größere ist die Pflege da.
+            </p>
+          </Reveal>
+          <Reveal delay={0.1} className="lg:col-span-7">
+            <ul className="grid grid-cols-1 gap-px border border-zinc-900 bg-zinc-900 sm:grid-cols-3">
+              {CMS_POINTS.map((point) => {
+                const Icon = point.icon;
+                return (
+                  <li key={point.text} className="bg-base p-6">
+                    <Icon strokeWidth={1} aria-hidden="true" className="size-6 text-accent" />
+                    <p className="mt-4 text-sm text-zinc-300">{point.text}</p>
+                  </li>
+                );
+              })}
+            </ul>
+          </Reveal>
+        </div>
+
+        <Reveal className="mt-20">
+          <h3 className="text-2xl font-medium tracking-tight text-zinc-50">
+            Klar getrennt: Bau, Pflege und Sichtbarkeit
+          </h3>
+          <ol className="mt-8 grid grid-cols-1 gap-px border border-zinc-900 bg-zinc-900 md:grid-cols-3">
+            {MODULES.map((module, i) => (
+              <li key={module.title} className="bg-base p-6">
+                <span className="font-mono text-xs text-accent">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <p className="mt-2 font-medium text-zinc-100">{module.title}</p>
+                <p className="mt-2 text-sm leading-relaxed text-zinc-400">{module.text}</p>
+              </li>
+            ))}
+          </ol>
+        </Reveal>
       </div>
     </section>
   );

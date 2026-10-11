@@ -1,12 +1,12 @@
 "use client";
 
-import Link from "next/link";
 import { motion, type Variants } from "framer-motion";
+import { Star } from "lucide-react";
 import { StatusDot } from "./StatusDot";
 import { MagneticButton } from "./MagneticButton";
 import { HeroSignalField } from "./HeroSignalField";
-import { CountUp } from "./CountUp";
 import { DURATION, EASE_OUT_EXPO } from "@/lib/motion";
+import { GOOGLE_REVIEWS, PHONE, PROJECT_SLOTS } from "@/config/site";
 
 const container: Variants = {
   hidden: {},
@@ -40,53 +40,64 @@ export function Hero() {
         animate="show"
         className="relative mx-auto flex w-full max-w-7xl flex-col gap-6 px-6 py-12 sm:gap-8 sm:py-20 lg:py-32 lg:px-10"
       >
-        <motion.div variants={item}>
-          <StatusDot label="Aktuell 2 von 3 Projektplätzen frei" tone="green" />
-        </motion.div>
+        {PROJECT_SLOTS.show && (
+          <motion.div variants={item}>
+            <StatusDot
+              label={`Aktuell ${PROJECT_SLOTS.free} von ${PROJECT_SLOTS.total} Projektplätzen frei`}
+              tone="green"
+            />
+          </motion.div>
+        )}
 
         <div>
           <p className="font-mono text-xs uppercase tracking-wider text-accent">
-            Webdesign &amp; Online Marketing aus Landshut
+            Webdesign und lokale Sichtbarkeit in Landshut und Niederbayern
           </p>
           <h1 className="mt-4 max-w-4xl text-4xl font-medium leading-[1.02] tracking-tight text-zinc-50 [text-wrap:balance] sm:text-6xl lg:text-7xl">
-            Websites für Handwerker und Dienstleister, die neue Kunden bringen.
+            Mehr Anfragen für dein Unternehmen aus der Region.
           </h1>
         </div>
 
-        <p className="max-w-xl text-base leading-relaxed text-zinc-400 sm:text-lg">
-          Zu langsam, zu generisch, bei Google unsichtbar? Ich baue Websites,
-          die dich professionell zeigen, gefunden werden und Besucher gezielt
-          zur Anfrage führen. Persönlich betreut, ohne Agentur-Pingpong.
+        <p className="max-w-2xl text-base leading-relaxed text-zinc-400 sm:text-lg">
+          Ich baue Websites, die bei Google gefunden werden und Besucher zur
+          Anfrage führen. Bewertet mit {GOOGLE_REVIEWS.rating} von 5 bei
+          Google, und Kunden wie Nikolli Gartenbau stehen für ihre wichtigsten
+          Suchbegriffe auf Platz 2 und 3.
         </p>
 
-        <motion.div variants={item} className="flex flex-wrap items-center gap-4 pt-4">
-          <MagneticButton href="#kontakt">
-            Website-Projekt besprechen
+        <motion.div variants={item} className="flex flex-wrap items-center gap-4 pt-2">
+          <MagneticButton href="#sichtbarkeits-check">
+            Kostenlosen Sichtbarkeits-Check anfordern
           </MagneticButton>
-          <MagneticButton href="tel:+4915123819198" variant="outline">
-            Anrufen: 0151 23819198
+          <MagneticButton href={PHONE.href} variant="outline">
+            Anrufen: {PHONE.display}
           </MagneticButton>
         </motion.div>
 
         <motion.div
           variants={item}
-          className="mt-8 grid max-w-2xl sm:mt-16 grid-cols-2 gap-6 border-t border-zinc-900 pt-6 font-mono text-xs uppercase tracking-wider text-muted"
+          className="mt-8 flex flex-wrap gap-x-10 gap-y-4 border-t border-zinc-900 pt-6 font-mono text-xs uppercase tracking-wider text-muted sm:mt-12"
         >
-          <div>
-            <div className="text-zinc-200">
-              <CountUp to={1.2} decimals={1} prefix="< " suffix="s" />
-            </div>
-            Erste Anzeige
-          </div>
-          <div>
-            <Link
-              href="/standorte/landshut"
-              className="text-zinc-200 hover:text-accent"
-            >
-              Landshut
-            </Link>
-            <div>Standort</div>
-          </div>
+          <a
+            href={GOOGLE_REVIEWS.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group flex items-center gap-3 hover:text-zinc-100"
+          >
+            <span className="flex gap-0.5 text-accent" aria-hidden="true">
+              {Array.from({ length: 5 }, (_, i) => (
+                <Star key={i} className="size-3.5 fill-current" />
+              ))}
+            </span>
+            <span>
+              <span className="text-zinc-200">{GOOGLE_REVIEWS.rating}</span> bei{" "}
+              {GOOGLE_REVIEWS.count} Google-Bewertungen
+            </span>
+          </a>
+          <span>
+            <span className="text-zinc-200">Persönlich</span> aus Essenbach bei
+            Landshut
+          </span>
         </motion.div>
       </motion.div>
     </section>

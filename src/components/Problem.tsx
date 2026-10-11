@@ -1,59 +1,63 @@
 import Link from "next/link";
 import { Reveal } from "./Reveal";
+import { MagneticButton } from "./MagneticButton";
 
-const PROBLEMS = [
-  {
-    problem: "Meine Website sieht nicht mehr professionell aus.",
-    solution: "Moderner, individueller Webauftritt statt Theme von der Stange.",
-  },
-  {
-    problem: "Ich werde bei Google kaum gefunden.",
-    solution: "SEO ist Teil der Konzeption, nicht nachträglich draufgesetzt.",
-  },
-  {
-    problem: "Ich bekomme zu wenig Anfragen über meine Website.",
-    solution: "Klare Nutzerführung und Inhalte, die gezielt zur Anfrage führen.",
-  },
-  {
-    problem: "Meine Website sieht aus wie jede andere in meiner Branche.",
-    solution: "Individuelles Design statt austauschbarem Template.",
-  },
-  {
-    problem: "Meine Website lädt spürbar langsam.",
-    solution: "Sauber gebaut, damit Besucher nicht abspringen, bevor sie was sehen.",
-  },
+const PAINS = [
+  "Kunden suchen bei Google nach genau deinem Angebot und landen bei der Konkurrenz.",
+  "Neue Kunden kommen fast nur über Empfehlungen. Bleiben die aus, wird es eng.",
+  "Deine Website zeigst du lieber niemandem, weil sie nicht zu deiner Arbeit passt.",
+  "Wenn doch mal Anfragen kommen, passen sie nicht zu dem, was du eigentlich anbietest.",
+  "Für Website, Google und Co. bleibt neben dem Tagesgeschäft schlicht keine Zeit.",
+  "Für eine Website hast du schon Geld ausgegeben: viel Fachchinesisch, wenig Ergebnis.",
 ];
 
 export function Problem() {
   return (
-    <section className="border-b border-zinc-900 py-20">
+    <section className="border-b border-zinc-900 py-20 sm:py-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <Reveal>
-          <p className="font-mono text-xs uppercase tracking-wider text-muted">
-            Vielleicht kennst du eines dieser Probleme
-          </p>
+          <h2 className="max-w-2xl text-3xl font-medium leading-tight tracking-tight text-zinc-50 sm:text-4xl">
+            Kommt dir das bekannt vor?
+          </h2>
         </Reveal>
 
-        <div className="mt-10 flex flex-col border-t border-zinc-900">
-          {PROBLEMS.map((row, i) => (
-            <Reveal
-              key={i}
-              delay={i * 0.05}
-              className="grid grid-cols-1 gap-2 border-b border-zinc-900 py-6 sm:grid-cols-2 sm:gap-8"
-            >
-              <p className="text-muted">„{row.problem}“</p>
-              <p className="text-zinc-100">{row.solution}</p>
+        <div className="mt-10 grid grid-cols-1 gap-px border border-zinc-900 bg-zinc-900 sm:grid-cols-2">
+          {PAINS.map((pain, i) => (
+            <Reveal key={pain} delay={i * 0.05} className="flex gap-4 bg-base p-6">
+              <span className="mt-1 font-mono text-xs text-status-red" aria-hidden="true">
+                ✕
+              </span>
+              <p className="text-zinc-300">{pain}</p>
             </Reveal>
           ))}
         </div>
 
-        <Reveal delay={0.3}>
-          <Link
-            href="/website-relaunch"
-            className="mt-6 inline-block font-mono text-xs uppercase tracking-wider text-accent hover:underline"
-          >
-            Mehr zum Website-Relaunch →
-          </Link>
+        <Reveal delay={0.2}>
+          <div className="mt-14 max-w-3xl">
+            <p className="text-2xl font-medium leading-snug tracking-tight text-zinc-50 sm:text-3xl">
+              Das Problem ist nicht deine Arbeit. Es ist, dass die richtigen
+              Kunden dich nicht finden oder auf deiner Website nicht überzeugt
+              werden.
+            </p>
+            <p className="mt-5 text-lg leading-relaxed text-zinc-400">
+              Genau da setze ich an: eine Website, die bei Google in deiner
+              Region gefunden wird, in wenigen Sekunden zeigt, warum man dich
+              kontaktieren sollte, und Besucher zur Anfrage führt. Du kümmerst
+              dich um dein Geschäft, ich mich um den Rest. Persönlich und auf
+              Augenhöhe.
+            </p>
+            <div className="mt-8 flex flex-wrap items-center gap-4">
+              <MagneticButton href="#sichtbarkeits-check">
+                Kostenlosen Sichtbarkeits-Check anfordern
+              </MagneticButton>
+              <Link
+                href="/website-relaunch"
+                className="font-mono text-xs uppercase tracking-wider text-accent hover:underline"
+              >
+                Du hast schon eine Website? Zum Relaunch →
+              </Link>
+            </div>
+          </div>
         </Reveal>
       </div>
     </section>

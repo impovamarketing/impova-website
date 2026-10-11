@@ -1,7 +1,10 @@
+import type { Metadata } from "next";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { Problem } from "@/components/Problem";
 import { Marquee } from "@/components/Marquee";
+import { VisibilityCheck } from "@/components/VisibilityCheck";
+import { AdsPilot } from "@/components/AdsPilot";
 import { Work } from "@/components/Work";
 import { Testimonials } from "@/components/Testimonials";
 import { Philosophy } from "@/components/Philosophy";
@@ -11,6 +14,10 @@ import { AIAutomation } from "@/components/AIAutomation";
 import { FAQ } from "@/components/FAQ";
 import { ContactForm } from "@/components/ContactForm";
 import { Footer } from "@/components/Footer";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "https://www.impova.de" },
+};
 
 const breadcrumbJsonLd = {
   "@context": "https://schema.org",
@@ -31,11 +38,13 @@ export default function Home() {
       <main>
         <Hero />
         <Problem />
+        <VisibilityCheck />
         <Philosophy />
         <Marquee />
         <Work />
-        <Testimonials />
+        <Testimonials index="04" />
         <Services />
+        <AdsPilot />
         <Pipeline />
         <AIAutomation />
         <FAQ />

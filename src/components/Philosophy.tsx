@@ -1,30 +1,30 @@
 import { Eyebrow } from "./Eyebrow";
 import { Reveal } from "./Reveal";
-import { CountUp } from "./CountUp";
+import { MEASURED } from "@/config/site";
 
 const COMPARISON = [
   {
-    baukasten: "Theme von der Stange, generisch angepasst",
-    impova: "Individuelle Architektur, für dein Geschäftsmodell gebaut",
+    baukasten: "Eine Vorlage, die an dein Unternehmen angepasst wird",
+    impova: "Struktur und Design, die für dein Unternehmen entwickelt werden",
   },
   {
-    baukasten: "5–8s Ladezeit, aufgeblähter Page-Builder-Code",
-    impova: "Schlanker, individueller Code, der spürbar schneller lädt",
+    baukasten: "Du kümmerst dich selbst um Texte, Technik und Google",
+    impova: "Ein fester Ansprechpartner kümmert sich, du pflegst nur, was du willst",
   },
   {
-    baukasten: "SEO als nachträgliches Plugin",
-    impova: "SEO als Architekturprinzip von Tag eins",
+    baukasten: "SEO-Grundlagen hängen davon ab, was die Vorlage mitbringt",
+    impova: "SEO-Grundlagen von Anfang an eingeplant: Struktur, Metadaten, lokale Signale",
   },
   {
-    baukasten: "Sieht aus wie jede zweite Wix-Seite in der Branche",
-    impova: "Visuell differenziert, technisch überlegen",
+    baukasten: "Ladezeit hängt von Vorlage und Erweiterungen ab",
+    impova: "Ladezeit wird gemessen, nicht geschätzt",
   },
 ];
 
 const METRICS = [
-  { label: "Erste Anzeige", to: 1.2, decimals: 1, prefix: "< ", suffix: "s" },
-  { label: "Serverantwort", to: 200, decimals: 0, prefix: "< ", suffix: "ms" },
-  { label: "Stabilität", to: 0, decimals: 2, prefix: "", suffix: "" },
+  { value: MEASURED.firstPaint, label: "bis zur ersten Anzeige auf dem Handy" },
+  { value: MEASURED.serverResponse, label: "Antwortzeit des Servers" },
+  { value: MEASURED.layoutShift, label: "verrutschte Elemente beim Laden (CLS)" },
 ];
 
 export function Philosophy() {
@@ -32,20 +32,25 @@ export function Philosophy() {
     <section id="philosophie" className="border-b border-zinc-900 py-28">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <Reveal>
-          <Eyebrow index="01">Philosophie</Eyebrow>
+          <Eyebrow index="02">Philosophie</Eyebrow>
           <h2 className="mt-5 max-w-2xl text-3xl font-medium leading-tight tracking-tight text-zinc-50 sm:text-4xl">
             Baukasten-Website vs. individuell gebaut
           </h2>
+          <p className="mt-5 max-w-xl text-zinc-400">
+            Ein Baukasten ist für viele ein guter Start. Wenn deine Website
+            aber regelmäßig Anfragen bringen soll, machen diese Unterschiede
+            sich bemerkbar.
+          </p>
         </Reveal>
 
         <div className="mt-16 flex flex-col border border-zinc-900">
           <div className="grid grid-cols-2 border-b border-zinc-900">
-            <div className="p-8">
+            <div className="p-6 sm:p-8">
               <p className="font-mono text-xs uppercase tracking-wider text-muted">
                 Baukasten-Website
               </p>
             </div>
-            <div className="border-l border-zinc-900 p-8">
+            <div className="border-l border-zinc-900 p-6 sm:p-8">
               <p className="font-mono text-xs uppercase tracking-wider text-accent">
                 Impova
               </p>
@@ -54,16 +59,14 @@ export function Philosophy() {
 
           {COMPARISON.map((row, i) => (
             <Reveal
-              key={i}
+              key={row.impova}
               delay={i * 0.05}
               className={`grid grid-cols-2 ${
                 i < COMPARISON.length - 1 ? "border-b border-zinc-900" : ""
               }`}
             >
-              <div className="p-8 text-muted line-through decoration-zinc-800">
-                {row.baukasten}
-              </div>
-              <div className="border-l border-zinc-900 p-8 text-zinc-200">
+              <div className="p-6 text-muted sm:p-8">{row.baukasten}</div>
+              <div className="border-l border-zinc-900 p-6 text-zinc-200 sm:p-8">
                 {row.impova}
               </div>
             </Reveal>
@@ -72,26 +75,19 @@ export function Philosophy() {
 
         <Reveal delay={0.1}>
           <p className="mt-16 text-sm text-muted">
-            Was das für dich heißt: keine Ladebalken, keine wackelnde Seite,
-            keine Besucher, die abspringen, bevor sie was gesehen haben.
+            Was das für dich heißt: Besucher sehen sofort etwas und springen
+            nicht ab, bevor sie dein Angebot kennen. Gemessen an dieser Website:
           </p>
-          <div className="mt-6 grid grid-cols-3 gap-8 border-t border-zinc-900 pt-10 font-mono">
+          <dl className="mt-6 grid grid-cols-1 gap-8 border-t border-zinc-900 pt-10 sm:grid-cols-3">
             {METRICS.map((m) => (
               <div key={m.label}>
-                <div className="text-2xl text-zinc-50">
-                  <CountUp
-                    to={m.to}
-                    decimals={m.decimals}
-                    prefix={m.prefix}
-                    suffix={m.suffix}
-                  />
-                </div>
-                <div className="mt-1 text-xs uppercase tracking-wider text-muted">
-                  {m.label}
-                </div>
+                <dt className="sr-only">{m.label}</dt>
+                <dd className="font-mono text-2xl text-zinc-50">{m.value}</dd>
+                <dd className="mt-1 text-sm text-zinc-400">{m.label}</dd>
               </div>
             ))}
-          </div>
+          </dl>
+          <p className="mt-6 font-mono text-[11px] text-muted">{MEASURED.source}</p>
         </Reveal>
       </div>
     </section>

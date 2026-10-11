@@ -11,7 +11,7 @@ import { Testimonials } from "@/components/Testimonials";
 export const metadata: Metadata = {
   title: "Website, die Anfragen bringt – Impova",
   description:
-    "Individuelle Websites für Handwerker und Dienstleister, persönlich betreut. Jetzt unverbindlich anfragen.",
+    "Websites für lokale Unternehmen in Landshut und Niederbayern, die Anfragen bringen. Persönlich betreut. Jetzt unverbindlich anfragen.",
   robots: { index: false, follow: false },
 };
 
@@ -32,7 +32,7 @@ const STEPS = [
 
 const POINTS = [
   "Individuell entwickelt statt Baukasten-Vorlage",
-  "Ein fester Ansprechpartner, kein Agentur-Pingpong",
+  "Ein fester Ansprechpartner von der Anfrage bis nach dem Launch",
   "Aufgebaut, um Anfragen zu bringen, nicht nur um gut auszusehen",
 ];
 
@@ -61,7 +61,7 @@ export default function AnfragePage() {
           <div className="mx-auto grid max-w-6xl grid-cols-1 gap-12 px-6 lg:grid-cols-12 lg:px-10">
             <div className="lg:col-span-8">
               <p className="font-mono text-xs uppercase tracking-wider text-accent">
-                Webdesign für Handwerker &amp; Dienstleister
+                Webdesign für lokale Unternehmen in Landshut und Niederbayern
               </p>
               <h1 className="mt-5 text-4xl font-medium leading-tight tracking-tight text-zinc-50 [text-wrap:balance] sm:text-5xl">
                 Deine Website sollte Anfragen bringen. Nicht nur gut aussehen.

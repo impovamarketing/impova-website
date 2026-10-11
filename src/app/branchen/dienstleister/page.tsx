@@ -93,7 +93,7 @@ export default function DienstleisterPage() {
                 <p>
                   Gerade in sichtbarkeitsgetriebenen Branchen wie Barbershop,
                   Studio oder Praxis zählt ein Design, das sich von der
-                  Konkurrenz im Stadtbild abhebt — nicht ein weiteres Theme,
+                  Konkurrenz im Stadtbild abhebt, nicht ein weiteres Theme,
                   das jeder kennt.
                 </p>
               </div>
@@ -140,7 +140,7 @@ export default function DienstleisterPage() {
                 Wie deine Website aussehen könnte
               </h2>
               <p className="mt-5 max-w-lg text-zinc-400">
-                Ablauf, Preis und die Wahl zwischen WordPress und Next.js
+                Ablauf, die Bausteine Bau und Pflege sowie das CMS zum Selbstpflegen
                 stehen auf der{" "}
                 <Link href="/webdesign" className="text-accent hover:underline">
                   Webdesign-Seite

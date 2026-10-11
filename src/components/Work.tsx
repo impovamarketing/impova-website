@@ -16,7 +16,7 @@ type Project = {
 export const PROJECTS: Project[] = [
   {
     title: "Sero's Barbershop",
-    category: "Barbershop — Landshut",
+    category: "Barbershop, Landshut",
     challenge:
       "Bewertungen und Terminbuchung waren für Kunden schwer zu finden, die Seite wirkte wie jeder andere Friseur-Baukasten.",
     solution:
@@ -26,7 +26,7 @@ export const PROJECTS: Project[] = [
   },
   {
     title: "Nox Aeterna",
-    category: "Tattoo-Studio — Landshut",
+    category: "Tattoo-Studio, Landshut",
     challenge:
       "Ein Tattoo-Studio, das sich optisch kaum von jedem anderen im Stadtbild unterschied.",
     solution:
@@ -36,7 +36,7 @@ export const PROJECTS: Project[] = [
   },
   {
     title: "MA Hausmeisterei & Gebäudeservice",
-    category: "Gebäudeservice — Landshut",
+    category: "Gebäudeservice, Landshut",
     challenge:
       "20 Jahre Erfahrung, aber online für Hausverwaltungen kaum als vertrauenswürdiger Ansprechpartner erkennbar.",
     solution:
@@ -46,9 +46,9 @@ export const PROJECTS: Project[] = [
   },
   {
     title: "Matthias Tattooz",
-    category: "Tattoo-Studio — Landshut",
+    category: "Tattoo-Studio, Landshut",
     challenge:
-      "Ein Tattoo-Studio mit sechs verschiedenen Stilen unter einer Nadel — das sollte sich auch auf der Website widerspiegeln, statt in einem austauschbaren Portfolio-Theme unterzugehen.",
+      "Ein Tattoo-Studio mit sechs verschiedenen Stilen unter einer Nadel: Das sollte sich auch auf der Website widerspiegeln, statt in einem austauschbaren Portfolio-Theme unterzugehen.",
     solution:
       "Editorial-Typografie und ruhiges Layout statt Tattoo-Klischee, große Portfolio-Präsenz direkt im Header, Terminanfrage in einem Klick.",
     image: "/images/work/matthias-tattooz.png",
@@ -61,7 +61,7 @@ export function Work() {
     <section id="referenzen" className="border-b border-zinc-900 py-28">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <Reveal>
-          <Eyebrow index="02">Referenzen</Eyebrow>
+          <Eyebrow index="03">Referenzen</Eyebrow>
           <h2 className="mt-5 max-w-2xl text-3xl font-medium leading-tight tracking-tight text-zinc-50 sm:text-4xl">
             Kein Portfolio-Vorlagen-Text. Echte Projekte aus Landshut.
           </h2>

@@ -13,7 +13,7 @@ export const CASE_STUDIES: CaseStudy[] = [
   {
     slug: "barbershop-projekt-landshut",
     title: "Barbershop-Projekt in Landshut",
-    category: "Barbershop — Landshut",
+    category: "Barbershop, Landshut",
     image: "/images/work/seros-barbershop.png",
     liveUrl: "https://serosbarbershop.de",
     challenge:
@@ -25,7 +25,7 @@ export const CASE_STUDIES: CaseStudy[] = [
   {
     slug: "tattoo-studio-projekt-landshut",
     title: "Tattoo-Studio-Projekt in Landshut",
-    category: "Tattoo-Studio — Landshut",
+    category: "Tattoo-Studio, Landshut",
     image: "/images/work/nox-aeterna.png",
     liveUrl: "https://nox-aeterna.de",
     challenge:
@@ -37,7 +37,7 @@ export const CASE_STUDIES: CaseStudy[] = [
   {
     slug: "gebaeudeservice-projekt-landshut",
     title: "Gebäudeservice-Projekt in Landshut",
-    category: "Gebäudeservice — Landshut",
+    category: "Gebäudeservice, Landshut",
     image: "/images/work/ma-gebaeudeservice.png",
     liveUrl: "https://ma-objektservice.de",
     challenge:
@@ -49,10 +49,10 @@ export const CASE_STUDIES: CaseStudy[] = [
   {
     slug: "custom-tattoo-studio-projekt-landshut",
     title: "Custom-Tattoo-Studio-Projekt in Landshut",
-    category: "Tattoo-Studio — Landshut",
+    category: "Tattoo-Studio, Landshut",
     image: "/images/work/matthias-tattooz.png",
     challenge:
-      "Ein Tattoo-Studio mit sechs verschiedenen Stilen unter einer Nadel — das sollte sich auch auf der Website widerspiegeln, statt in einem austauschbaren Portfolio-Theme unterzugehen.",
+      "Ein Tattoo-Studio mit sechs verschiedenen Stilen unter einer Nadel: Das sollte sich auch auf der Website widerspiegeln, statt in einem austauschbaren Portfolio-Theme unterzugehen.",
     solution:
       "Editorial-Typografie und ruhiges Layout statt Tattoo-Klischee, große Portfolio-Präsenz direkt im Header, Terminanfrage in einem Klick.",
     branche: { slug: "dienstleister", label: "Dienstleister" },

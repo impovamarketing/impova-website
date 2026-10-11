@@ -3,10 +3,11 @@
 import { useMemo, useState } from "react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { CheckCircle2, Loader2, Mail, Phone } from "lucide-react";
+import { CalendarDays, CheckCircle2, Loader2, Mail, Phone } from "lucide-react";
 import { Eyebrow } from "./Eyebrow";
 import { Reveal } from "./Reveal";
 import { trackLead } from "@/lib/meta";
+import { BOOKING_URL, PHONE, PROJECT_SLOTS } from "@/config/site";
 
 type FormState = {
   name: string;
@@ -60,42 +61,44 @@ export function ContactForm() {
     <section id="kontakt" className="border-b border-zinc-900 py-28">
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-16 px-6 lg:grid-cols-12 lg:px-10">
         <Reveal className="lg:col-span-4">
-          <Eyebrow index="08">Kontakt</Eyebrow>
+          <Eyebrow index="10">Kontakt</Eyebrow>
           <h2 className="mt-5 text-3xl font-medium leading-tight tracking-tight text-zinc-50 sm:text-4xl">
             Website-Projekt besprechen
           </h2>
           <p className="mt-5 text-zinc-400">
             Egal ob neue Website, Relaunch oder du erstmal nur wissen willst,
-            wo deine aktuelle Seite Potenzial liegen lässt — beschreib kurz
-            dein Anliegen. Aktuell 2 von 3 Projekt-Slots frei, ich meld mich
-            innerhalb von 24 Stunden persönlich zurück.
+            wo deine aktuelle Seite Potenzial liegen lässt: beschreib kurz
+            dein Anliegen.{" "}
+            {PROJECT_SLOTS.show &&
+              `Aktuell ${PROJECT_SLOTS.free} von ${PROJECT_SLOTS.total} Projektplätzen frei. `}
+            Ich melde mich innerhalb von 24 Stunden persönlich zurück.
           </p>
 
           <div className="mt-12 flex items-center gap-4 border-t border-zinc-900 pt-8">
             <div className="relative h-16 w-14 shrink-0 overflow-hidden border border-zinc-800 grayscale">
               <Image
                 src="/images/portraits/founder-portrait.jpeg"
-                alt="Gründer von Impova"
+                alt="Tobias Springer, Gründer von Impova"
                 fill
                 className="object-cover object-[50%_18%]"
                 sizes="56px"
               />
             </div>
             <div>
-              <p className="text-sm text-zinc-200">Persönlicher Ansprechpartner</p>
+              <p className="text-sm text-zinc-200">Tobias Springer</p>
               <p className="font-mono text-xs uppercase tracking-wider text-muted">
-                Gründer, Impova — Landshut
+                Dein Ansprechpartner, Essenbach bei Landshut
               </p>
             </div>
           </div>
 
           <div className="mt-6 flex flex-col gap-3 font-mono text-sm text-zinc-400">
             <a
-              href="tel:+4915123819198"
+              href={PHONE.href}
               className="flex items-center gap-3 hover:text-accent"
             >
               <Phone className="size-4 shrink-0 text-zinc-600" />
-              0151 23819198
+              {PHONE.display}
             </a>
             <a
               href="mailto:info@impova.de"
@@ -104,6 +107,17 @@ export function ContactForm() {
               <Mail className="size-4 shrink-0 text-zinc-600" />
               info@impova.de
             </a>
+            {BOOKING_URL && (
+              <a
+                href={BOOKING_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 hover:text-accent"
+              >
+                <CalendarDays className="size-4 shrink-0 text-zinc-600" />
+                Termin direkt online buchen
+              </a>
+            )}
           </div>
         </Reveal>
 

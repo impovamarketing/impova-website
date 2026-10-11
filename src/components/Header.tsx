@@ -43,11 +43,13 @@ export function Header() {
             <span className="hidden xl:inline">0151 23819198</span>
           </a>
           <Link
-            href="/#kontakt"
+            href="/#sichtbarkeits-check"
             className="whitespace-nowrap border border-zinc-700 px-4 py-2 font-mono text-xs uppercase tracking-wider text-zinc-100 transition-colors hover:border-accent hover:text-accent"
           >
-            <span className="sm:hidden">Anfragen</span>
-            <span className="hidden sm:inline">Website-Projekt besprechen</span>
+            <span className="sm:hidden lg:inline xl:hidden">Gratis-Check</span>
+            <span className="hidden sm:inline lg:hidden xl:inline">
+              Kostenloser Sichtbarkeits-Check
+            </span>
           </Link>
         </div>
       </div>

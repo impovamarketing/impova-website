@@ -10,6 +10,21 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 };
 
+const CHECK_STEPS = [
+  {
+    title: "Ich schaue mir deine Sichtbarkeit an",
+    text: "Website, Google-Unternehmensprofil und wie du in deiner Region bei Google gefunden wirst.",
+  },
+  {
+    title: "Du bekommst meine Einschätzung",
+    text: "Innerhalb von 24 Stunden per E-Mail, mit den wichtigsten Hebeln für dein Unternehmen.",
+  },
+  {
+    title: "Du entscheidest in Ruhe",
+    text: "Wenn du willst, sprechen wir danach über die Umsetzung. Wenn nicht, ist das völlig in Ordnung.",
+  },
+];
+
 const STEPS = [
   {
     title: "Ich lese deine Anfrage",
@@ -25,7 +40,13 @@ const STEPS = [
   },
 ];
 
-export default function DankePage() {
+export default async function DankePage({
+  searchParams,
+}: {
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+}) {
+  const isCheck = (await searchParams).anfrage === "check";
+  const steps = isCheck ? CHECK_STEPS : STEPS;
   return (
     <>
       <Header />
@@ -33,7 +54,9 @@ export default function DankePage() {
         <div className="mx-auto max-w-3xl px-6 lg:px-10">
           <CheckCircle2 className="size-10 text-accent" aria-hidden="true" />
           <h1 className="mt-6 text-4xl font-medium leading-tight tracking-tight text-zinc-50 sm:text-5xl">
-            Danke, deine Anfrage ist angekommen.
+            {isCheck
+              ? "Danke, dein Sichtbarkeits-Check ist angefragt."
+              : "Danke, deine Anfrage ist angekommen."}
           </h1>
           <p className="mt-5 max-w-xl text-base leading-relaxed text-zinc-400">
             Sie liegt direkt in meinem Postfach, ich melde mich persönlich bei
@@ -41,7 +64,7 @@ export default function DankePage() {
           </p>
 
           <ol className="mt-14 flex flex-col gap-6 border-t border-zinc-900 pt-10">
-            {STEPS.map((step, i) => (
+            {steps.map((step, i) => (
               <li key={step.title} className="flex gap-5">
                 <span className="font-mono text-sm text-accent">
                   {String(i + 1).padStart(2, "0")}

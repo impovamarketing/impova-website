@@ -17,7 +17,7 @@ type PageOpenGraphInput = {
 
 /**
  * Next.js merges `openGraph`/`twitter` per route segment by full
- * replacement, not deep merge — a page that only sets `title`/`description`
+ * replacement, not deep merge: a page that only sets `title`/`description`
  * silently inherits the root layout's homepage OG data (wrong url, wrong
  * preview text when shared). This rebuilds the full block per page instead.
  */

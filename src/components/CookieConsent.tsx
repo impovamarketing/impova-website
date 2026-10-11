@@ -98,7 +98,7 @@ function Choice({
         className="mt-1 size-4 shrink-0 accent-[#c6ff00]"
       />
       <span className="text-sm leading-relaxed text-zinc-400">
-        <span className="font-medium text-zinc-200">{label}</span> — {text}
+        <span className="font-medium text-zinc-200">{label}:</span> {text}
       </span>
     </label>
   );

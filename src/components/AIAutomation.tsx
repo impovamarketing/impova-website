@@ -20,7 +20,7 @@ const FEATURES: Feature[] = [
   {
     title: "Workflow-Automatisierung",
     description:
-      "Tippst du Anfragen von Hand in dein CRM ab? Ich verbinde Formular, Terminbuchung und CRM direkt miteinander, damit die Daten ankommen, ohne dass du sie anfasst.",
+      "Überträgst du Anfragen manuell in dein CRM? Ich verbinde Formular, Terminbuchung und CRM direkt miteinander, damit die Daten ankommen, ohne dass du sie anfasst.",
     icon: Workflow,
   },
   {
@@ -36,7 +36,7 @@ export function AIAutomation() {
     <section id="automatisierung" className="border-b border-zinc-900 py-28">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <Reveal>
-          <Eyebrow index="06">Zusatzoption</Eyebrow>
+          <Eyebrow index="08">Zusatzoption</Eyebrow>
           <h2 className="mt-5 max-w-2xl text-3xl font-medium leading-tight tracking-tight text-zinc-50 sm:text-4xl">
             Wenn deine Website mehr übernehmen soll als nur dastehen
           </h2>
@@ -68,7 +68,7 @@ export function AIAutomation() {
 
         <Reveal delay={0.3} className="mt-12">
           <MagneticButton href="#kontakt">
-            Website-Projekt besprechen
+            Projekt anfragen
           </MagneticButton>
         </Reveal>
       </div>

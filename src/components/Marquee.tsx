@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { SHOW_CLIENT_LOGOS } from "@/config/site";
 
 const LOGOS = [
   { src: "/images/logos/logo-noxaeterna-white.png", name: "Nox Aeterna" },
@@ -24,7 +25,7 @@ function LogoRow() {
         >
           <Image
             src={logo.src}
-            alt={`${logo.name} — Referenz von Impova`}
+            alt={`Logo von ${logo.name}, Kunde von Impova`}
             fill
             loading="eager"
             className="object-contain"
@@ -37,11 +38,14 @@ function LogoRow() {
 }
 
 export function Marquee() {
+  // TODO: Freigabe aller Kunden einholen, dann SHOW_CLIENT_LOGOS in src/config/site.ts auf true setzen.
+  if (!SHOW_CLIENT_LOGOS) return null;
+
   return (
     <section className="border-b border-zinc-900 py-14">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <p className="mb-10 text-center font-mono text-xs uppercase tracking-[0.2em] text-muted">
-          Trusted By / System Integrations
+          Kunden aus der Region
         </p>
       </div>
 

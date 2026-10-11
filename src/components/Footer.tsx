@@ -16,7 +16,7 @@ export function Footer() {
               bringen.
             </p>
             <p className="mt-4 font-mono text-xs uppercase tracking-wider text-muted">
-              Essenbach — Landshut und Umgebung
+              Essenbach bei Landshut, Niederbayern
             </p>
             <div className="mt-6 flex items-center gap-4 font-mono text-xs uppercase tracking-wider text-muted">
               <a
@@ -136,8 +136,8 @@ export function Footer() {
         </div>
 
         <div className="mt-16 flex flex-col gap-3 border-t border-zinc-900 pt-6 font-mono text-[11px] uppercase tracking-wider text-muted sm:flex-row sm:items-center sm:justify-between">
-          <span>IMPOVA © 2026 — BUILT WITH NEXT.JS</span>
-          <span>DEPLOYED ON VERCEL — LANDSHUT, DE</span>
+          <span>© 2026 Impova, Tobias Springer</span>
+          <span>Webdesign und lokale Sichtbarkeit, Landshut</span>
         </div>
       </div>
     </footer>

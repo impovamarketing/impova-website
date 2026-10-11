@@ -61,7 +61,7 @@ export default function WebsiteRelaunchPage() {
                 Wenn deine aktuelle Website dich mehr kostet als sie bringt.
               </h1>
               <p className="mt-6 max-w-xl text-lg leading-relaxed text-zinc-400">
-                Ein Relaunch heißt bei mir: neu gebaut statt geflickt — aber
+                Ein Relaunch heißt bei mir: neu gebaut statt geflickt, aber
                 ohne die Sichtbarkeit zu verlieren, die deine alte Seite sich
                 bei Google schon erarbeitet hat.
               </p>
@@ -106,7 +106,7 @@ export default function WebsiteRelaunchPage() {
               <div className="mt-6 flex max-w-2xl flex-col gap-4 text-zinc-400">
                 <p>
                   Bevor ich etwas Neues baue, schaue ich mir an, was an
-                  deiner aktuellen Seite bereits funktioniert — welche
+                  deiner aktuellen Seite bereits funktioniert: welche
                   Inhalte bei Google ranken, welche Seiten Besucher
                   tatsächlich aufrufen. Das fließt in die neue Struktur ein,
                   statt verloren zu gehen.
@@ -129,11 +129,11 @@ export default function WebsiteRelaunchPage() {
                 Gleiche Transparenz wie bei einem Neubau
               </h2>
               <p className="mt-6 max-w-2xl text-lg leading-relaxed text-zinc-400">
-                Ob WordPress mit Oxygen Builder oder handgeschriebener
-                Next.js-Code — welcher Weg zu deinem Relaunch passt, bespreche
-                ich ehrlich mit dir. Es gibt keine Festpreis-Pakete, jedes
-                Projekt wird individuell kalkuliert. Details dazu und den
-                genauen Ablauf findest du auf der{" "}
+                Auch beim Relaunch gibt es zwei klar getrennte Bausteine:
+                einen Einmalpreis für den Neubau, individuell kalkuliert nach
+                Umfang, und auf Wunsch eine monatliche Pflege. Deine neue Seite
+                bekommt ein CMS, in dem du Inhalte selbst pflegst. Details und
+                den genauen Ablauf findest du auf der{" "}
                 <Link href="/webdesign" className="text-accent hover:underline">
                   Webdesign-Seite
                 </Link>

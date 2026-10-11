@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import type { LucideIcon } from "lucide-react";
-import { Blocks, Code2, Edit3, Gauge, SearchCode } from "lucide-react";
+import { Blocks, Clock, Gauge, Image as ImageIcon, PenLine, SearchCode } from "lucide-react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Eyebrow } from "@/components/Eyebrow";
@@ -9,9 +8,9 @@ import { Reveal } from "@/components/Reveal";
 import { MagneticButton } from "@/components/MagneticButton";
 import { ORGANIZATION_ID, SITE_URL, pageOpenGraph } from "@/lib/seo";
 
-const TITLE = "Webdesign Agentur – Individuelle Websites statt Baukasten | Impova";
+const TITLE = "Webdesign: individuelle Websites statt Baukasten | Impova";
 const DESCRIPTION =
-  "Webdesign Agentur für Unternehmen, die online professionell wirken wollen: individuell entwickelt, mit SEO von Anfang an. Aus Landshut, für Kunden in ganz Deutschland.";
+  "Individuell entwickelte Websites für lokale Unternehmen in Landshut und Niederbayern: SEO-Grundlagen von Anfang an, CMS zum Selbstpflegen, persönlich betreut.";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -50,7 +49,7 @@ const servicesJsonLd = {
       name: "Webdesign",
       serviceType: "Webdesign",
       description:
-        "Individuell entwickelte Websites statt Theme von der Stange — für Unternehmen, die online professionell wirken wollen.",
+        "Individuell entwickelte Websites für Unternehmen, die online professionell wirken und Anfragen gewinnen wollen.",
       provider: { "@id": ORGANIZATION_ID },
       areaServed,
       url: `${SITE_URL}/webdesign`,
@@ -61,7 +60,7 @@ const servicesJsonLd = {
       name: "SEO",
       serviceType: "Suchmaschinenoptimierung",
       description:
-        "SEO als Teil der Konzeption statt nachträglichem Plugin: technisch sauber und inhaltlich auf relevante Suchbegriffe ausgerichtet.",
+        "SEO als Teil der Konzeption: technisch sauber und inhaltlich auf die Suchbegriffe ausgerichtet, die Kunden in der Region eingeben.",
       provider: { "@id": ORGANIZATION_ID },
       areaServed,
       url: `${SITE_URL}/webdesign`,
@@ -99,7 +98,7 @@ const PILLARS: Pillar[] = [
     index: "02",
     title: "Auf Anfragen ausgerichtet",
     description:
-      "Design ist bei mir kein Selbstzweck. Struktur, Texte und Buttons sind so aufgebaut, dass Besucher in den ersten Sekunden verstehen, was du anbietest — und gezielt zur Anfrage geführt werden.",
+      "Design ist bei mir kein Selbstzweck. Struktur, Texte und Buttons sind so aufgebaut, dass Besucher in den ersten Sekunden verstehen, was du anbietest, und gezielt zur Anfrage geführt werden.",
     icon: Gauge,
   },
   {
@@ -111,25 +110,10 @@ const PILLARS: Pillar[] = [
   },
 ];
 
-type Path = {
-  title: string;
-  description: string;
-  icon: LucideIcon;
-};
-
-const PATHS: Path[] = [
-  {
-    title: "WordPress mit Oxygen Builder",
-    description:
-      "Für dich, wenn du Texte und Bilder nach dem Launch selbst ändern willst, ohne mich jedes Mal anzurufen. Sauber aufgesetzt, ohne den Page-Builder-Ballast, den du von typischen WordPress-Seiten kennst.",
-    icon: Edit3,
-  },
-  {
-    title: "Handgeschriebener Next.js-Code",
-    description:
-      "Für dich, wenn du willst, dass ich mich laufend um deine Seite kümmere und Design sowie Ladezeit ganz vorne mitspielen sollen. Jede Zeile Code von Hand geschrieben, für Performance, die sich messen lässt.",
-    icon: Code2,
-  },
+const CMS_POINTS = [
+  { icon: PenLine, text: "Texte und Angebote selbst ändern" },
+  { icon: ImageIcon, text: "Bilder austauschen, ohne etwas kaputt zu machen" },
+  { icon: Clock, text: "Öffnungszeiten und Termine aktuell halten" },
 ];
 
 export default function WebdesignPage() {
@@ -155,9 +139,10 @@ export default function WebdesignPage() {
                 Webdesign, das nicht nach Baukasten aussieht.
               </h1>
               <p className="mt-6 max-w-xl text-lg leading-relaxed text-zinc-400">
-                Ich baue Websites für Unternehmen, die online professionell
-                wirken wollen — ohne Page-Builder-Ballast, ohne Template von
-                der Stange. Ob in Landshut oder bundesweit remote.
+                Ich baue Websites für Unternehmen in Landshut und
+                Niederbayern, die professionell wirken und Anfragen bringen
+                sollen: individuell entwickelt, mit einem CMS, in dem du Inhalte
+                selbst pflegst.
               </p>
               <div className="mt-10">
                 <MagneticButton href="/#kontakt">
@@ -208,34 +193,27 @@ export default function WebdesignPage() {
         <section className="border-b border-zinc-900 py-24">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <Reveal>
-              <Eyebrow index="02">Zwei Wege</Eyebrow>
+              <Eyebrow index="02">Selbst pflegen</Eyebrow>
               <h2 className="mt-5 max-w-2xl text-3xl font-medium leading-tight tracking-tight text-zinc-50 sm:text-4xl">
-                WordPress oder Next.js — je nachdem, was du brauchst
+                Individuell entwickelt, mit CMS zum Selbstpflegen
               </h2>
               <p className="mt-5 max-w-lg text-zinc-400">
-                Du musst dich nicht vorab für ein System entscheiden. Ich sag
-                dir ehrlich, welcher Weg zu deinem Vorhaben passt.
+                Deine Website wird für dich entwickelt. Kleine Änderungen
+                machst du trotzdem selbst, in einem einfachen
+                Redaktionssystem (Sanity), ohne mich anrufen zu müssen.
               </p>
             </Reveal>
-            <div className="mt-10 grid grid-cols-1 gap-px overflow-hidden border border-zinc-900 bg-zinc-900 md:grid-cols-2">
-              {PATHS.map((path, i) => {
-                const Icon = path.icon;
+            <ul className="mt-10 grid grid-cols-1 gap-px overflow-hidden border border-zinc-900 bg-zinc-900 md:grid-cols-3">
+              {CMS_POINTS.map((point) => {
+                const Icon = point.icon;
                 return (
-                  <Reveal key={path.title} delay={i * 0.08} className="group bg-base p-8">
-                    <Icon
-                      strokeWidth={1}
-                      className="size-8 text-zinc-600 transition-all duration-300 group-hover:text-accent motion-safe:group-hover:scale-110"
-                    />
-                    <h3 className="mt-6 text-lg font-medium text-zinc-50">
-                      {path.title}
-                    </h3>
-                    <p className="mt-3 text-sm leading-relaxed text-zinc-400">
-                      {path.description}
-                    </p>
-                  </Reveal>
+                  <li key={point.text} className="bg-base p-8">
+                    <Icon strokeWidth={1} aria-hidden="true" className="size-8 text-accent" />
+                    <p className="mt-6 text-zinc-300">{point.text}</p>
+                  </li>
                 );
               })}
-            </div>
+            </ul>
           </div>
         </section>
 
@@ -250,17 +228,18 @@ export default function WebdesignPage() {
                 <p>
                   Vier Schritte: Erstgespräch zum Kennenlernen und Klären
                   der Anforderungen, dann Konzept und Design, anschließend
-                  die technische Umsetzung, zum Abschluss die Übergabe. Live
-                  geht die Seite erst nach 100% Zufriedenheit und finaler
-                  Abstimmung mit dir. In der Regel dauert das 2 bis 4
-                  Wochen, je nach Umfang.
+                  die Umsetzung, zum Abschluss die Übergabe. Live geht die
+                  Seite erst nach finaler Abstimmung mit dir. In der Regel
+                  dauert das 2 bis 4 Wochen, je nach Umfang.
                 </p>
                 <p>
-                  Es gibt keine Festpreis-Pakete — jedes Projekt wird
-                  individuell kalkuliert, abhängig von Umfang,
-                  Funktionsumfang und ob WordPress oder eine
-                  Custom-Next.js-Lösung passt. Im ersten Gespräch bekommst
-                  du ein konkretes, unverbindliches Angebot.
+                  Die Kosten bestehen aus zwei Bausteinen: einem Einmalpreis
+                  für den Bau, individuell kalkuliert nach Umfang, und
+                  getrennt davon einer monatlichen Pflege mit
+                  Content-Änderungen, Updates und Monitoring. Wer laufend an
+                  seiner Sichtbarkeit bei Google arbeiten will, bucht darauf
+                  aufbauend die SEO-Betreuung. Im ersten Gespräch bekommst du
+                  ein konkretes, unverbindliches Angebot.
                 </p>
               </div>
             </Reveal>
@@ -276,9 +255,8 @@ export default function WebdesignPage() {
               </h2>
               <p className="mt-5 max-w-lg text-zinc-400">
                 Statt generischer Vorlagen-Screenshots zeige ich dir reale
-                Projekte für Handwerksbetriebe und lokale Dienstleister — mit
-                der Herausforderung, die dahinterstand, und der Lösung, die
-                daraus entstanden ist.
+                Projekte für lokale Unternehmen aus der Region, mit der
+                Ausgangslage, dem, was ich gemacht habe, und dem Ergebnis.
               </p>
               <div className="mt-10 flex flex-wrap items-center gap-4">
                 <MagneticButton href="/#referenzen">

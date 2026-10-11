@@ -16,7 +16,7 @@ const PULSE_SPEED = 620; // px/s
 const PULSE_WIDTH = 220;
 const CURSOR_RADIUS = 160;
 const MAX_DPR = 2;
-// Ambient background motion — 24fps reads as smooth here and cuts the
+// Ambient background motion: 24fps reads as smooth here and cuts the
 // per-dot work (measured as the dominant main-thread cost on load) by
 // more than half versus driving it every rAF tick.
 const FRAME_INTERVAL_MS = 1000 / 24;
@@ -24,7 +24,7 @@ const FRAME_INTERVAL_MS = 1000 / 24;
 /**
  * Signature background piece for the hero: a grid of "signal" points that
  * periodically pulses outward from the same corner as the accent glow (a
- * nod to scanning/measuring — the core of the Impova pitch) and brightens
+ * nod to scanning/measuring, the core of the Impova pitch) and brightens
  * near the cursor. Falls back to a static grid when the OS asks for
  * reduced motion, and pauses entirely once the hero scrolls out of view.
  */
