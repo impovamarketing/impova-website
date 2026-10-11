@@ -1,11 +1,29 @@
 import Link from "next/link";
 import { CookieSettingsButton } from "./CookieConsent";
+import { ADDRESS, EMAIL, PHONE } from "@/config/site";
+
+const LEISTUNGEN = [
+  { href: "/webdesign", label: "Webdesign" },
+  { href: "/website-relaunch", label: "Website-Relaunch" },
+  { href: "/standorte/landshut", label: "Webdesign Landshut" },
+  { href: "/branchen/handwerker", label: "Webdesign für Handwerker" },
+  { href: "/branchen/dienstleister", label: "Webdesign für Dienstleister" },
+  { href: "/#sichtbarkeits-check", label: "Sichtbarkeits-Check" },
+];
+
+const IMPOVA = [
+  { href: "/referenzen", label: "Referenzen" },
+  { href: "/ueber-mich", label: "Über mich" },
+  { href: "/#prozess", label: "Ablauf" },
+  { href: "/#faq", label: "FAQ" },
+  { href: "/#kontakt", label: "Kontakt" },
+];
 
 export function Footer() {
   return (
     <footer className="py-16">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
-        <div className="grid grid-cols-1 gap-12 sm:grid-cols-3">
+        <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-4">
           <div>
             <p className="font-mono text-sm uppercase tracking-[0.2em] text-zinc-100">
               IMPOVA<span className="text-accent">.</span>
@@ -15,9 +33,18 @@ export function Footer() {
               professionell wirken, gefunden werden und neue Anfragen
               bringen.
             </p>
-            <p className="mt-4 font-mono text-xs uppercase tracking-wider text-muted">
-              Essenbach bei Landshut, Niederbayern
-            </p>
+            <address className="mt-4 flex flex-col gap-1 text-sm not-italic leading-relaxed text-zinc-400">
+              <span>{ADDRESS.name}</span>
+              <span>
+                {ADDRESS.street}, {ADDRESS.zip} {ADDRESS.city}
+              </span>
+              <a href={PHONE.href} className="inline-flex min-h-6 items-center self-start hover:text-zinc-100">
+                {PHONE.display}
+              </a>
+              <a href={`mailto:${EMAIL}`} className="inline-flex min-h-6 items-center self-start hover:text-zinc-100">
+                {EMAIL}
+              </a>
+            </address>
             <div className="mt-6 flex items-center gap-4 font-mono text-xs uppercase tracking-wider text-muted">
               <a
                 href="https://www.linkedin.com/in/tobias-springer-4400173b0/"
@@ -40,78 +67,35 @@ export function Footer() {
             </div>
           </div>
 
-          <div>
+          <nav aria-label="Leistungen">
             <p className="font-mono text-xs uppercase tracking-wider text-muted">
-              Navigation
+              Leistungen
             </p>
             <ul className="mt-4 flex flex-col gap-2.5 text-sm text-zinc-400">
-              <li>
-                <Link href="/#referenzen" className="hover:text-zinc-100">
-                  Referenzen
-                </Link>
-              </li>
-              <li>
-                <Link href="/#philosophie" className="hover:text-zinc-100">
-                  Philosophie
-                </Link>
-              </li>
-              <li>
-                <Link href="/#leistungen" className="hover:text-zinc-100">
-                  Leistungen
-                </Link>
-              </li>
-              <li>
-                <Link href="/webdesign" className="hover:text-zinc-100">
-                  Webdesign
-                </Link>
-              </li>
-              <li>
-                <Link href="/standorte/landshut" className="hover:text-zinc-100">
-                  Webdesign Landshut
-                </Link>
-              </li>
-              <li>
-                <Link href="/website-relaunch" className="hover:text-zinc-100">
-                  Website-Relaunch
-                </Link>
-              </li>
-              <li>
-                <Link href="/branchen/handwerker" className="hover:text-zinc-100">
-                  Webdesign für Handwerker
-                </Link>
-              </li>
-              <li>
-                <Link href="/branchen/dienstleister" className="hover:text-zinc-100">
-                  Webdesign für Dienstleister
-                </Link>
-              </li>
-              <li>
-                <Link href="/#prozess" className="hover:text-zinc-100">
-                  Prozess
-                </Link>
-              </li>
-              <li>
-                <Link href="/#automatisierung" className="hover:text-zinc-100">
-                  Automatisierung
-                </Link>
-              </li>
-              <li>
-                <Link href="/ueber-mich" className="hover:text-zinc-100">
-                  Über mich
-                </Link>
-              </li>
-              <li>
-                <Link href="/#faq" className="hover:text-zinc-100">
-                  FAQ
-                </Link>
-              </li>
-              <li>
-                <Link href="/#kontakt" className="hover:text-zinc-100">
-                  Kontakt
-                </Link>
-              </li>
+              {LEISTUNGEN.map((link) => (
+                <li key={link.href}>
+                  <Link href={link.href} className="hover:text-zinc-100">
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
-          </div>
+          </nav>
+
+          <nav aria-label="Impova">
+            <p className="font-mono text-xs uppercase tracking-wider text-muted">
+              Impova
+            </p>
+            <ul className="mt-4 flex flex-col gap-2.5 text-sm text-zinc-400">
+              {IMPOVA.map((link) => (
+                <li key={link.href}>
+                  <Link href={link.href} className="hover:text-zinc-100">
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
 
           <div>
             <p className="font-mono text-xs uppercase tracking-wider text-muted">

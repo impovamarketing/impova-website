@@ -19,21 +19,9 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://www.impova.de" },
 };
 
-const breadcrumbJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Impova", item: "https://www.impova.de" },
-  ],
-};
-
 export default function Home() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
-      />
       <Header />
       <main>
         <Hero />

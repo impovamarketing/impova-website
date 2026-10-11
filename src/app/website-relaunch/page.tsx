@@ -2,12 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { RelatedLinks } from "@/components/RelatedLinks";
 import { Eyebrow } from "@/components/Eyebrow";
 import { Reveal } from "@/components/Reveal";
 import { MagneticButton } from "@/components/MagneticButton";
 import { pageOpenGraph } from "@/lib/seo";
 
-const TITLE = "Website-Relaunch – Alte Website modernisieren | Impova";
+const TITLE = "Website-Relaunch: alte Website modernisieren | Impova";
 const DESCRIPTION =
   "Website-Relaunch für Unternehmen, deren aktuelle Seite nicht mehr überzeugt: neu gebaut statt geflickt, mit SEO-Absicherung für bestehende Rankings.";
 
@@ -121,7 +122,7 @@ export default function WebsiteRelaunchPage() {
           </div>
         </section>
 
-        <section className="border-b border-zinc-900 py-24">
+        <section className="py-24">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <Reveal>
               <Eyebrow index="03">Umsetzung &amp; Preis</Eyebrow>
@@ -150,6 +151,7 @@ export default function WebsiteRelaunchPage() {
             </Reveal>
           </div>
         </section>
+        <RelatedLinks current="/website-relaunch" index="04" />
       </main>
       <Footer />
     </>

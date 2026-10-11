@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { RelatedLinks } from "@/components/RelatedLinks";
 import { Reveal } from "@/components/Reveal";
 import { CaseCard } from "@/components/CaseCard";
 import { pageOpenGraph } from "@/lib/seo";
 import { CASE_STUDIES } from "./case-studies";
 
-const TITLE = "Referenzen – Webdesign-Projekte aus Landshut | Impova";
+const TITLE = "Referenzen: Webdesign-Projekte aus Landshut | Impova";
 const DESCRIPTION =
-  "Echte Webdesign-Projekte für Handwerksbetriebe und lokale Dienstleister aus Landshut und Umgebung: mit Herausforderung, Lösung und Live-Vorschau.";
+  "Webdesign-Projekte für lokale Unternehmen aus Landshut und Umgebung: mit Ausgangslage, Maßnahmen und belegten Ergebnissen bei Google, z. B. Platz 2.";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -71,6 +72,7 @@ export default function ReferenzenPage() {
             </div>
           </div>
         </section>
+        <RelatedLinks current="/referenzen" index="01" />
       </main>
       <Footer />
     </>

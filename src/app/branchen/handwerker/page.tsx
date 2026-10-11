@@ -2,15 +2,16 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { RelatedLinks } from "@/components/RelatedLinks";
 import { Eyebrow } from "@/components/Eyebrow";
 import { Reveal } from "@/components/Reveal";
 import { MagneticButton } from "@/components/MagneticButton";
 import { CASE_STUDIES } from "@/app/referenzen/case-studies";
 import { pageOpenGraph } from "@/lib/seo";
 
-const TITLE = "Webdesign für Handwerker – Website für Handwerksbetriebe | Impova";
+const TITLE = "Webdesign für Handwerker in Landshut | Impova";
 const DESCRIPTION =
-  "Website für Handwerksbetriebe: klare Leistungsübersicht, Vertrauenssignale statt Textwüste, direkt zur Anfrage geführt. Mit echten Referenzen aus Landshut.";
+  "Websites für Handwerksbetriebe in Landshut und Niederbayern, die Kompetenz zeigen und bei Google gefunden werden. Persönlich betreut, mit Referenzen.";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -153,6 +154,7 @@ export default function HandwerkerPage() {
             </Reveal>
           </div>
         </section>
+        <RelatedLinks current="/branchen/handwerker" index="04" />
       </main>
       <Footer />
     </>

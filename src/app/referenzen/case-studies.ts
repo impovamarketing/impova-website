@@ -12,6 +12,8 @@ export type CaseStudy = {
   name: string;
   title: string;
   category: string;
+  seoTitle: string;
+  seoDescription: string;
   image?: string;
   logo?: string;
   liveUrl?: string;
@@ -32,6 +34,9 @@ const ALL_CASE_STUDIES: CaseStudy[] = [
     name: "Nikolli Gartenbau",
     title: "Gartenbau-Projekt in Landshut",
     category: "Garten- und Landschaftsbau, Landshut",
+    seoTitle: "Nikolli Gartenbau: Platz 2 bei Google | Impova",
+    seoDescription:
+      "Case Study Nikolli Gartenbau aus Landshut: neue Website und SEO. Laut Kunde Platz 2 und 3 bei Google für „Gartenbau Landshut“ und weitere Begriffe.",
     logo: "/images/logos/logo-nikolli-white.png",
     // TODO: Screenshot der Website (image) und Live-URL (liveUrl) ergänzen.
     situation:
@@ -57,6 +62,9 @@ const ALL_CASE_STUDIES: CaseStudy[] = [
     // TODO: Ort, Ausgangslage, Maßnahmen, Suchbegriff für Platz 1, Screenshots und Live-URL liefern. Danach draft entfernen.
     title: "Thai-Massage-Projekt",
     category: "Thai-Massage",
+    seoTitle: "Zentara Thai Massage: Case Study | Impova",
+    seoDescription:
+      "TODO: Description mit 140 bis 155 Zeichen, sobald Daten vorliegen.",
     logo: "/images/logos/logo-zentarak-white.png",
     situation: "TODO: Ausgangslage von Zentara Thai Massage",
     measures: ["TODO: Was wurde umgesetzt?"],
@@ -75,6 +83,9 @@ const ALL_CASE_STUDIES: CaseStudy[] = [
     name: "MA Hausmeisterei & Gebäudeservice",
     title: "Gebäudeservice-Projekt in Landshut",
     category: "Gebäudeservice, Landshut",
+    seoTitle: "MA Gebäudeservice: Case Study | Impova",
+    seoDescription:
+      "Case Study MA Hausmeisterei & Gebäudeservice aus Landshut: Website mit Vertrauenssignalen und SEO. Laut Kunde Platz 1 bis 2 bei wichtigen Suchbegriffen.",
     image: "/images/work/ma-gebaeudeservice.png",
     liveUrl: "https://ma-objektservice.de",
     situation:
@@ -99,6 +110,9 @@ const ALL_CASE_STUDIES: CaseStudy[] = [
     name: "Sero's Barbershop",
     title: "Barbershop-Projekt in Landshut",
     category: "Barbershop, Landshut",
+    seoTitle: "Sero's Barbershop: Case Study | Impova",
+    seoDescription:
+      "Case Study Sero's Barbershop in Landshut: Terminbuchung per WhatsApp, Bewertungen im Header und ein eigenständiges Design statt Friseur-Baukasten.",
     image: "/images/work/seros-barbershop.png",
     liveUrl: "https://serosbarbershop.de",
     situation:
@@ -117,6 +131,9 @@ const ALL_CASE_STUDIES: CaseStudy[] = [
     name: "Nox Aeterna",
     title: "Tattoo-Studio-Projekt in Landshut",
     category: "Tattoo-Studio, Landshut",
+    seoTitle: "Nox Aeterna Tattoo-Studio: Case Study | Impova",
+    seoDescription:
+      "Case Study Nox Aeterna, Tattoo-Studio in Landshut: Editorial-Typografie statt Klischee, Portfolio im Mittelpunkt und Terminanfrage ohne Umwege.",
     image: "/images/work/nox-aeterna.png",
     liveUrl: "https://nox-aeterna.de",
     situation:
@@ -135,6 +152,9 @@ const ALL_CASE_STUDIES: CaseStudy[] = [
     name: "Matthias Tattooz",
     title: "Custom-Tattoo-Studio-Projekt in Landshut",
     category: "Tattoo-Studio, Landshut",
+    seoTitle: "Matthias Tattooz: Case Study | Impova",
+    seoDescription:
+      "Case Study Matthias Tattooz aus Landshut: sechs Stile unter einer Nadel, ruhiges Layout, große Portfolio-Präsenz und Terminanfrage in einem Klick.",
     image: "/images/work/matthias-tattooz.png",
     // TODO: Live-URL ergänzen.
     situation:

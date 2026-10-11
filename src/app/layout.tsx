@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { MotionConfig } from "framer-motion";
 import { ORGANIZATION_ID } from "@/lib/seo";
+import { GOOGLE_REVIEWS } from "@/config/site";
 import { CookieConsent } from "@/components/CookieConsent";
 import "./globals.css";
 
@@ -81,6 +82,8 @@ const jsonLd = {
       logo: `${siteUrl}/images/brand/logo-impova.png`,
       url: siteUrl,
       telephone: "+4915123819198",
+      email: "info@impova.de",
+      hasMap: GOOGLE_REVIEWS.url,
       description:
         "Webdesign und lokale Sichtbarkeit für Unternehmen in Landshut und Niederbayern: Websites, die bei Google gefunden werden und Anfragen bringen.",
       areaServed: [
@@ -92,6 +95,10 @@ const jsonLd = {
           "@type": "City",
           name: "Essenbach",
         },
+        {
+          "@type": "AdministrativeArea",
+          name: "Niederbayern",
+        },
       ],
       address: {
         "@type": "PostalAddress",
@@ -101,9 +108,9 @@ const jsonLd = {
         addressRegion: "Bayern",
         addressCountry: "DE",
       },
-      priceRange: "€€€€",
+      // TODO: Öffnungszeiten als openingHoursSpecification und Koordinaten (geo) ergänzen, sobald bekannt.
       founder: { "@id": personId },
-      sameAs,
+      sameAs: [...sameAs, GOOGLE_REVIEWS.url],
     },
     {
       "@type": "WebSite",

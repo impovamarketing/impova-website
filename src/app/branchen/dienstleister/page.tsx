@@ -2,15 +2,16 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { RelatedLinks } from "@/components/RelatedLinks";
 import { Eyebrow } from "@/components/Eyebrow";
 import { Reveal } from "@/components/Reveal";
 import { MagneticButton } from "@/components/MagneticButton";
 import { CASE_STUDIES } from "@/app/referenzen/case-studies";
 import { pageOpenGraph } from "@/lib/seo";
 
-const TITLE = "Webdesign für Dienstleister – Website für lokale Dienstleistungen | Impova";
+const TITLE = "Webdesign für Dienstleister in Landshut | Impova";
 const DESCRIPTION =
-  "Website für lokale Dienstleister: individuelles Design statt Wix-Vorlage, Terminbuchung ohne Reibungsverlust. Mit echten Referenzen aus Landshut.";
+  "Websites für lokale Dienstleister in Landshut und Niederbayern: gefunden werden, überzeugen, Anfragen bekommen. Persönlich betreut, mit Referenzen.";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -158,6 +159,7 @@ export default function DienstleisterPage() {
             </Reveal>
           </div>
         </section>
+        <RelatedLinks current="/branchen/dienstleister" index="04" />
       </main>
       <Footer />
     </>

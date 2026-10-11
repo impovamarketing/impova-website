@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { RelatedLinks } from "@/components/RelatedLinks";
 import { Eyebrow } from "@/components/Eyebrow";
 import { Reveal } from "@/components/Reveal";
 import { MagneticButton } from "@/components/MagneticButton";
@@ -10,9 +11,9 @@ import { pageOpenGraph } from "@/lib/seo";
 import { GOOGLE_REVIEWS, PHONE } from "@/config/site";
 import { CASE_STUDIES } from "@/app/referenzen/case-studies";
 
-const TITLE = "Über mich – Impova";
+const TITLE = "Über mich: Tobias Springer, Gründer von Impova";
 const DESCRIPTION =
-  "Tobias Springer, Gründer von Impova: warum ich Webdesign & SEO für Unternehmen in Landshut und Umgebung persönlich umsetze, statt mit Baukastensystem.";
+  "Tobias Springer, Gründer von Impova: vom Lager in die Selbstständigkeit. Webdesign und lokale Sichtbarkeit für Unternehmen in Landshut, persönlich.";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -71,7 +72,7 @@ export default function UeberMichPage() {
                     Texte, Bilder und Öffnungszeiten selbst pflegst. Wie
                     das konkret aussieht, siehst du an den{" "}
                     <Link
-                      href="/#referenzen"
+                      href="/referenzen"
                       className="text-accent hover:underline"
                     >
                       echten Projekten in meinen Referenzen
@@ -146,7 +147,7 @@ export default function UeberMichPage() {
           </div>
         </section>
 
-        <section className="border-b border-zinc-900 py-24">
+        <section className="py-24">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <Reveal>
               <Eyebrow index="02">Zusammenarbeit</Eyebrow>
@@ -178,6 +179,7 @@ export default function UeberMichPage() {
             </Reveal>
           </div>
         </section>
+        <RelatedLinks current="/ueber-mich" index="03" />
       </main>
       <Footer />
     </>

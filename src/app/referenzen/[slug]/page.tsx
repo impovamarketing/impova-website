@@ -23,10 +23,8 @@ export async function generateMetadata({
   const caseStudy = getCaseStudy(slug);
   if (!caseStudy) return {};
 
-  const title = `${caseStudy.name}: ${caseStudy.title} | Impova`;
-  const description = caseStudy.result
-    ? `${caseStudy.situation} Ergebnis: ${caseStudy.result.headline} ${caseStudy.result.detail}`
-    : `${caseStudy.situation} ${caseStudy.measures.join(", ")}.`;
+  const title = caseStudy.seoTitle;
+  const description = caseStudy.seoDescription;
   const path = `/referenzen/${caseStudy.slug}`;
 
   return {

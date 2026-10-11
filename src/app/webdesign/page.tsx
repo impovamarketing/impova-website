@@ -3,6 +3,7 @@ import type { LucideIcon } from "lucide-react";
 import { Blocks, Clock, Gauge, Image as ImageIcon, PenLine, SearchCode } from "lucide-react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { RelatedLinks } from "@/components/RelatedLinks";
 import { Eyebrow } from "@/components/Eyebrow";
 import { Reveal } from "@/components/Reveal";
 import { MagneticButton } from "@/components/MagneticButton";
@@ -10,7 +11,7 @@ import { ORGANIZATION_ID, SITE_URL, pageOpenGraph } from "@/lib/seo";
 
 const TITLE = "Webdesign: individuelle Websites statt Baukasten | Impova";
 const DESCRIPTION =
-  "Individuell entwickelte Websites für lokale Unternehmen in Landshut und Niederbayern: SEO-Grundlagen von Anfang an, CMS zum Selbstpflegen, persönlich betreut.";
+  "Individuell entwickelte Websites für lokale Unternehmen in Landshut und Niederbayern: SEO-Grundlagen von Anfang an und ein CMS zum Selbstpflegen.";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -259,7 +260,7 @@ export default function WebdesignPage() {
                 Ausgangslage, dem, was ich gemacht habe, und dem Ergebnis.
               </p>
               <div className="mt-10 flex flex-wrap items-center gap-4">
-                <MagneticButton href="/#referenzen">
+                <MagneticButton href="/referenzen">
                   Referenzen ansehen
                 </MagneticButton>
                 <MagneticButton href="/#kontakt" variant="outline">
@@ -269,6 +270,7 @@ export default function WebdesignPage() {
             </Reveal>
           </div>
         </section>
+        <RelatedLinks current="/webdesign" index="05" />
       </main>
       <Footer />
     </>

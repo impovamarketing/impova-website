@@ -24,3 +24,12 @@ export const MEASURED = {
   layoutShift: "0",
   source: "Gemessen an impova.de, Oktober 2026: Lighthouse (mobil) und Serverantwortzeit (Median).",
 };
+
+export const EMAIL = "info@impova.de";
+
+export const ADDRESS = {
+  name: "Impova, Tobias Springer",
+  street: "Hauptstraße 21a",
+  zip: "84051",
+  city: "Essenbach",
+};

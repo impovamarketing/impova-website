@@ -5,8 +5,9 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Danke für deine Anfrage – Impova",
-  description: "Deine Anfrage bei Impova ist angekommen.",
+  title: "Danke für deine Anfrage | Impova",
+  description:
+    "Deine Anfrage bei Impova ist angekommen. Ich melde mich innerhalb von 24 Stunden persönlich bei dir, per E-Mail oder Telefon, ohne Standardtext.",
   robots: { index: false, follow: false },
 };
 

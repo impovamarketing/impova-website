@@ -3,7 +3,9 @@ import { LegalPage } from "@/components/LegalPage";
 import { CookieSettingsButton } from "@/components/CookieConsent";
 
 export const metadata: Metadata = {
-  title: "Datenschutz – Impova",
+  title: "Datenschutz | Impova",
+  description:
+    "Datenschutzerklärung von Impova: welche Daten beim Besuch dieser Website und bei Anfragen verarbeitet werden, Rechtsgrundlagen und deine Rechte.",
   robots: { index: false, follow: true },
 };
 
