@@ -46,11 +46,11 @@ export default function UeberMichPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
       <Header />
-      <main>
+      <main id="inhalt">
         <section className="border-b border-zinc-900 pb-20 pt-40">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:items-center">
-              <Reveal className="lg:col-span-7">
+              <Reveal immediate className="lg:col-span-7">
                 <p className="font-mono text-xs uppercase tracking-wider text-muted">
                   Über mich
                 </p>
@@ -73,7 +73,7 @@ export default function UeberMichPage() {
                     das konkret aussieht, siehst du an den{" "}
                     <Link
                       href="/referenzen"
-                      className="text-accent hover:underline"
+                      className="text-accent underline underline-offset-4"
                     >
                       echten Projekten in meinen Referenzen
                     </Link>
@@ -81,7 +81,7 @@ export default function UeberMichPage() {
                   </p>
                 </div>
               </Reveal>
-              <Reveal delay={0.1} className="lg:col-span-5">
+              <Reveal immediate delay={0.1} className="lg:col-span-5">
                 <div className="group relative aspect-[4/5] overflow-hidden border border-zinc-900 grayscale transition-all duration-500 hover:grayscale-0">
                   <Image
                     src="/images/portraits/founder-lifestyle.jpeg"

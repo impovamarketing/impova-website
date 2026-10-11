@@ -57,7 +57,7 @@ export default function AnfragePage() {
         </div>
       </header>
 
-      <main>
+      <main id="inhalt">
         <section className="border-b border-zinc-900 py-20 sm:py-28">
           <div className="mx-auto grid max-w-6xl grid-cols-1 gap-12 px-6 lg:grid-cols-12 lg:px-10">
             <div className="lg:col-span-8">

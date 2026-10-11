@@ -129,10 +129,10 @@ export default function WebdesignPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesJsonLd) }}
       />
       <Header />
-      <main>
+      <main id="inhalt">
         <section className="border-b border-zinc-900 pb-20 pt-40">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
-            <Reveal>
+            <Reveal immediate>
               <p className="font-mono text-xs uppercase tracking-wider text-muted">
                 Webdesign
               </p>

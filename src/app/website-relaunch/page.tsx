@@ -51,10 +51,10 @@ export default function WebsiteRelaunchPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
       <Header />
-      <main>
+      <main id="inhalt">
         <section className="border-b border-zinc-900 pb-20 pt-40">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
-            <Reveal>
+            <Reveal immediate>
               <p className="font-mono text-xs uppercase tracking-wider text-muted">
                 Website-Relaunch
               </p>
@@ -135,7 +135,7 @@ export default function WebsiteRelaunchPage() {
                 Umfang, und auf Wunsch eine monatliche Pflege. Deine neue Seite
                 bekommt ein CMS, in dem du Inhalte selbst pflegst. Details und
                 den genauen Ablauf findest du auf der{" "}
-                <Link href="/webdesign" className="text-accent hover:underline">
+                <Link href="/webdesign" className="text-accent underline underline-offset-4">
                   Webdesign-Seite
                 </Link>
                 .

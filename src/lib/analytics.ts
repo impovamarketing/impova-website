@@ -82,3 +82,9 @@ function deleteCookiesMatching(pattern: RegExp) {
     }
   }
 }
+
+// Schickt ein Ereignis an den Google Tag Manager. Ohne Einwilligung gibt es keinen dataLayer, dann passiert nichts.
+export function trackEvent(event: string, params: Record<string, string> = {}) {
+  const w = window as Window & { dataLayer?: unknown[] };
+  w.dataLayer?.push({ event, ...params });
+}

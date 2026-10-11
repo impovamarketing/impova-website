@@ -52,10 +52,10 @@ export default function DienstleisterPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
       <Header />
-      <main>
+      <main id="inhalt">
         <section className="border-b border-zinc-900 pb-20 pt-40">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
-            <Reveal>
+            <Reveal immediate>
               <p className="font-mono text-xs uppercase tracking-wider text-muted">
                 Branche
               </p>
@@ -143,7 +143,7 @@ export default function DienstleisterPage() {
               <p className="mt-5 max-w-lg text-zinc-400">
                 Ablauf, die Bausteine Bau und Pflege sowie das CMS zum Selbstpflegen
                 stehen auf der{" "}
-                <Link href="/webdesign" className="text-accent hover:underline">
+                <Link href="/webdesign" className="text-accent underline underline-offset-4">
                   Webdesign-Seite
                 </Link>
                 .

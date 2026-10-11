@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { Loader2 } from "lucide-react";
 import { BRANCHEN, BUDGETS } from "@/lib/lead-options";
 import { trackLead } from "@/lib/meta";
+import { trackEvent } from "@/lib/analytics";
 
 const INITIAL = {
   name: "",
@@ -17,7 +18,7 @@ const INITIAL = {
 };
 
 const fieldClass =
-  "mt-2 w-full border-b border-zinc-800 bg-transparent pb-3 text-zinc-100 placeholder:text-zinc-700 focus:border-accent focus:outline-none";
+  "mt-2 w-full border-b border-zinc-800 bg-transparent pb-3 text-zinc-100 placeholder:text-muted focus:border-accent focus:outline-none";
 const labelClass = "font-mono text-xs uppercase tracking-wider text-muted";
 
 export function LeadForm() {
@@ -39,6 +40,7 @@ export function LeadForm() {
         body: JSON.stringify(form),
       });
       if (!res.ok) throw new Error("Request failed");
+      trackEvent("generate_lead", { lead_source: "landing_form" });
       trackLead("landing_form", {
         email: form.email,
         phone: form.phone || undefined,

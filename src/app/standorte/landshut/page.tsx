@@ -106,10 +106,10 @@ export default function LandshutPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
       <Header />
-      <main>
+      <main id="inhalt">
         <section className="border-b border-zinc-900 pb-20 pt-40">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
-            <Reveal>
+            <Reveal immediate>
               <p className="font-mono text-xs uppercase tracking-wider text-accent">
                 Standort Landshut
               </p>

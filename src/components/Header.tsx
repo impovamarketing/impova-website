@@ -13,6 +13,12 @@ const NAV_ITEMS = [
 export function Header() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-zinc-900 bg-base/80 backdrop-blur-md">
+      <a
+        href="#inhalt"
+        className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-3 focus:z-50 focus:bg-accent focus:px-4 focus:py-2 focus:font-mono focus:text-xs focus:uppercase focus:tracking-wider focus:text-black"
+      >
+        Zum Inhalt springen
+      </a>
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6 lg:px-10">
         <Link
           href="/"

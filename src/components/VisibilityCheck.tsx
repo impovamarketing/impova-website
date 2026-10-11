@@ -7,6 +7,7 @@ import { Loader2 } from "lucide-react";
 import { Eyebrow } from "./Eyebrow";
 import { Reveal } from "./Reveal";
 import { trackLead } from "@/lib/meta";
+import { trackEvent } from "@/lib/analytics";
 import { PHONE } from "@/config/site";
 
 type Fields = { website: string; branche: string; ort: string; email: string };
@@ -63,6 +64,7 @@ export function VisibilityCheck() {
         body: JSON.stringify({ kind: "check", ...fields, privacy, company: honeypot }),
       });
       if (!res.ok) throw new Error("Request failed");
+      trackEvent("generate_lead", { lead_source: "visibility_check" });
       trackLead("visibility_check", { email: fields.email });
       router.push("/danke?anfrage=check");
     } catch {
@@ -85,7 +87,7 @@ export function VisibilityCheck() {
         onChange={update(key)}
         aria-invalid={Boolean(errors[key])}
         aria-describedby={errors[key] ? `vc-${key}-error` : undefined}
-        className="mt-2 w-full border-b border-zinc-800 bg-transparent pb-3 text-zinc-100 placeholder:text-zinc-700 focus:border-accent focus:outline-none aria-[invalid=true]:border-status-red"
+        className="mt-2 w-full border-b border-zinc-800 bg-transparent pb-3 text-zinc-100 placeholder:text-muted focus:border-accent focus:outline-none aria-[invalid=true]:border-status-red"
         {...props}
       />
       {errors[key] && (
@@ -120,7 +122,7 @@ export function VisibilityCheck() {
           </ul>
           <p className="mt-8 text-sm text-zinc-400">
             Lieber direkt sprechen?{" "}
-            <a href={PHONE.href} className="text-accent hover:underline">
+            <a href={PHONE.href} className="text-accent underline underline-offset-4">
               {PHONE.display}
             </a>
           </p>

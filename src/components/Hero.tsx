@@ -1,28 +1,8 @@
-"use client";
-
-import { motion, type Variants } from "framer-motion";
 import { Star } from "lucide-react";
 import { StatusDot } from "./StatusDot";
 import { MagneticButton } from "./MagneticButton";
 import { HeroSignalField } from "./HeroSignalField";
-import { DURATION, EASE_OUT_EXPO } from "@/lib/motion";
 import { GOOGLE_REVIEWS, PHONE, PROJECT_SLOTS } from "@/config/site";
-
-const container: Variants = {
-  hidden: {},
-  show: {
-    transition: { staggerChildren: 0.08, delayChildren: 0.1 },
-  },
-};
-
-const item: Variants = {
-  hidden: { opacity: 0, y: 16 },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: DURATION.base, ease: EASE_OUT_EXPO },
-  },
-};
 
 export function Hero() {
   return (
@@ -34,19 +14,15 @@ export function Hero() {
         style={{ background: "var(--color-accent)" }}
       />
 
-      <motion.div
-        variants={container}
-        initial="hidden"
-        animate="show"
-        className="relative mx-auto flex w-full max-w-7xl flex-col gap-6 px-6 py-12 sm:gap-8 sm:py-20 lg:py-32 lg:px-10"
+      <div className="relative mx-auto flex w-full max-w-7xl flex-col gap-6 px-6 py-12 sm:gap-8 sm:py-20 lg:py-32 lg:px-10"
       >
         {PROJECT_SLOTS.show && (
-          <motion.div variants={item}>
+          <div className="animate-rise">
             <StatusDot
               label={`Aktuell ${PROJECT_SLOTS.free} von ${PROJECT_SLOTS.total} Projektplätzen frei`}
               tone="green"
             />
-          </motion.div>
+          </div>
         )}
 
         <div>
@@ -65,18 +41,17 @@ export function Hero() {
           Suchbegriffe auf Platz 2 und 3.
         </p>
 
-        <motion.div variants={item} className="flex flex-wrap items-center gap-4 pt-2">
+        <div className="animate-rise flex flex-wrap items-center gap-4 pt-2 [animation-delay:0.1s]">
           <MagneticButton href="#sichtbarkeits-check">
             Kostenlosen Sichtbarkeits-Check anfordern
           </MagneticButton>
           <MagneticButton href={PHONE.href} variant="outline">
             Anrufen: {PHONE.display}
           </MagneticButton>
-        </motion.div>
+        </div>
 
-        <motion.div
-          variants={item}
-          className="mt-8 flex flex-wrap gap-x-10 gap-y-4 border-t border-zinc-900 pt-6 font-mono text-xs uppercase tracking-wider text-muted sm:mt-12"
+        <div
+          className="animate-rise mt-8 flex flex-wrap gap-x-10 gap-y-4 border-t border-zinc-900 pt-6 font-mono text-xs uppercase tracking-wider text-muted [animation-delay:0.2s] sm:mt-12"
         >
           <a
             href={GOOGLE_REVIEWS.url}
@@ -98,8 +73,8 @@ export function Hero() {
             <span className="text-zinc-200">Persönlich</span> aus Essenbach bei
             Landshut
           </span>
-        </motion.div>
-      </motion.div>
+        </div>
+      </div>
     </section>
   );
 }

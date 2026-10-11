@@ -51,7 +51,7 @@ export default async function DankePage({
   return (
     <>
       <Header />
-      <main className="border-b border-zinc-900 pb-24 pt-40">
+      <main id="inhalt" className="border-b border-zinc-900 pb-24 pt-40">
         <div className="mx-auto max-w-3xl px-6 lg:px-10">
           <CheckCircle2 className="size-10 text-accent" aria-hidden="true" />
           <h1 className="mt-6 text-4xl font-medium leading-tight tracking-tight text-zinc-50 sm:text-5xl">

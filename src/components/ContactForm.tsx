@@ -7,6 +7,7 @@ import { CalendarDays, CheckCircle2, Loader2, Mail, Phone } from "lucide-react";
 import { Eyebrow } from "./Eyebrow";
 import { Reveal } from "./Reveal";
 import { trackLead } from "@/lib/meta";
+import { trackEvent } from "@/lib/analytics";
 import { BOOKING_URL, PHONE, PROJECT_SLOTS } from "@/config/site";
 
 type FormState = {
@@ -48,6 +49,7 @@ export function ContactForm() {
         body: JSON.stringify(form),
       });
       if (!res.ok) throw new Error("Request failed");
+      trackEvent("generate_lead", { lead_source: "contact_form" });
       trackLead("contact_form", { email: form.email });
       setStatus("sent");
       setForm(INITIAL_STATE);
@@ -179,7 +181,7 @@ export function ContactForm() {
                 value={form.details}
                 onChange={(e) => setForm({ ...form, details: e.target.value })}
                 placeholder="Worum geht es? Bestehende Website, Branche, Ziele..."
-                className="mt-4 w-full resize-none border-b border-zinc-800 bg-transparent pb-3 text-zinc-100 placeholder:text-zinc-700 focus:border-accent focus:outline-none"
+                className="mt-4 w-full resize-none border-b border-zinc-800 bg-transparent pb-3 text-zinc-100 placeholder:text-muted focus:border-accent focus:outline-none"
               />
             </div>
 
@@ -244,7 +246,7 @@ function Field({
         required={required}
         value={value}
         onChange={(e) => onChange(e.target.value)}
-        className="mt-4 w-full border-b border-zinc-800 bg-transparent pb-3 text-zinc-100 placeholder:text-zinc-700 focus:border-accent focus:outline-none"
+        className="mt-4 w-full border-b border-zinc-800 bg-transparent pb-3 text-zinc-100 placeholder:text-muted focus:border-accent focus:outline-none"
       />
     </div>
   );

@@ -86,7 +86,7 @@ const ALL_CASE_STUDIES: CaseStudy[] = [
     seoTitle: "MA Gebäudeservice: Case Study | Impova",
     seoDescription:
       "Case Study MA Hausmeisterei & Gebäudeservice aus Landshut: Website mit Vertrauenssignalen und SEO. Laut Kunde Platz 1 bis 2 bei wichtigen Suchbegriffen.",
-    image: "/images/work/ma-gebaeudeservice.png",
+    image: "/images/work/ma-gebaeudeservice.jpg",
     liveUrl: "https://ma-objektservice.de",
     situation:
       "20 Jahre Erfahrung, aber online für Hausverwaltungen kaum als vertrauenswürdiger Ansprechpartner erkennbar.",
@@ -113,7 +113,7 @@ const ALL_CASE_STUDIES: CaseStudy[] = [
     seoTitle: "Sero's Barbershop: Case Study | Impova",
     seoDescription:
       "Case Study Sero's Barbershop in Landshut: Terminbuchung per WhatsApp, Bewertungen im Header und ein eigenständiges Design statt Friseur-Baukasten.",
-    image: "/images/work/seros-barbershop.png",
+    image: "/images/work/seros-barbershop.jpg",
     liveUrl: "https://serosbarbershop.de",
     situation:
       "Bewertungen und Terminbuchung waren für Kunden schwer zu finden, die Seite wirkte wie jeder andere Friseur-Baukasten.",
@@ -134,7 +134,7 @@ const ALL_CASE_STUDIES: CaseStudy[] = [
     seoTitle: "Nox Aeterna Tattoo-Studio: Case Study | Impova",
     seoDescription:
       "Case Study Nox Aeterna, Tattoo-Studio in Landshut: Editorial-Typografie statt Klischee, Portfolio im Mittelpunkt und Terminanfrage ohne Umwege.",
-    image: "/images/work/nox-aeterna.png",
+    image: "/images/work/nox-aeterna.jpg",
     liveUrl: "https://nox-aeterna.de",
     situation:
       "Ein Tattoo-Studio, das sich optisch kaum von jedem anderen im Stadtbild unterschied.",
@@ -155,7 +155,7 @@ const ALL_CASE_STUDIES: CaseStudy[] = [
     seoTitle: "Matthias Tattooz: Case Study | Impova",
     seoDescription:
       "Case Study Matthias Tattooz aus Landshut: sechs Stile unter einer Nadel, ruhiges Layout, große Portfolio-Präsenz und Terminanfrage in einem Klick.",
-    image: "/images/work/matthias-tattooz.png",
+    image: "/images/work/matthias-tattooz.jpg",
     // TODO: Live-URL ergänzen.
     situation:
       "Ein Tattoo-Studio mit sechs verschiedenen Stilen unter einer Nadel: Das sollte sich auf der Website widerspiegeln, statt in einem austauschbaren Portfolio-Theme unterzugehen.",

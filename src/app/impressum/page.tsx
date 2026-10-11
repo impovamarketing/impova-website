@@ -28,14 +28,14 @@ export default function ImpressumPage() {
         <h2 className="text-xl font-medium text-zinc-100">Kontaktmöglichkeiten</h2>
         <p className="mt-2">
           Telefon:{" "}
-          <a href="tel:+4915123819198" className="text-accent hover:underline">
+          <a href="tel:+4915123819198" className="text-accent underline underline-offset-4">
             0151 23819198
           </a>
           <br />
           E-Mail-Adresse:{" "}
           <a
             href="mailto:info@impova.de"
-            className="text-accent hover:underline"
+            className="text-accent underline underline-offset-4"
           >
             info@impova.de
           </a>
@@ -66,7 +66,7 @@ export default function ImpressumPage() {
           href="https://datenschutz-generator.de/"
           target="_blank"
           rel="noopener noreferrer nofollow"
-          className="text-accent hover:underline"
+          className="text-accent underline underline-offset-4"
         >
           Erstellt mit kostenlosem Datenschutz-Generator.de von Dr. Thomas
           Schwenke

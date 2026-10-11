@@ -68,7 +68,7 @@ export default function DatenschutzPage() {
         <List>
           {TOC.map((item) => (
             <li key={item.id}>
-              <a href={`#${item.id}`} className="text-accent hover:underline">
+              <a href={`#${item.id}`} className="text-accent underline underline-offset-4">
                 {item.label}
               </a>
             </li>
@@ -89,7 +89,7 @@ export default function DatenschutzPage() {
           E-Mail-Adresse:{" "}
           <a
             href="mailto:info@impova.de"
-            className="text-accent hover:underline"
+            className="text-accent underline underline-offset-4"
           >
             info@impova.de
           </a>
@@ -575,7 +575,7 @@ export default function DatenschutzPage() {
             Sie können Ihre Einwilligung jederzeit mit Wirkung für die Zukunft
             widerrufen oder erteilen, indem Sie die Cookie-Einstellungen
             öffnen:{" "}
-            <CookieSettingsButton className="text-accent hover:underline" />.
+            <CookieSettingsButton className="text-accent underline underline-offset-4" />.
             Die Rechtmäßigkeit der bis zum Widerruf erfolgten Verarbeitung
             bleibt unberührt.
           </li>
@@ -604,7 +604,7 @@ export default function DatenschutzPage() {
             href="https://policies.google.com/privacy"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-accent hover:underline"
+            className="text-accent underline underline-offset-4"
           >
             policies.google.com/privacy
           </a>
@@ -701,7 +701,7 @@ export default function DatenschutzPage() {
             <strong className="font-medium text-zinc-200">Widerruf:</strong>{" "}
             Sie können Ihre Einwilligung jederzeit mit Wirkung für die Zukunft
             widerrufen, indem Sie die Cookie-Einstellungen öffnen:{" "}
-            <CookieSettingsButton className="text-accent hover:underline" />.
+            <CookieSettingsButton className="text-accent underline underline-offset-4" />.
             Die Rechtmäßigkeit der bis zum Widerruf erfolgten Verarbeitung
             bleibt unberührt.
           </li>
@@ -712,7 +712,7 @@ export default function DatenschutzPage() {
             href="https://www.facebook.com/privacy/policy"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-accent hover:underline"
+            className="text-accent underline underline-offset-4"
           >
             facebook.com/privacy/policy
           </a>
@@ -793,7 +793,7 @@ export default function DatenschutzPage() {
           href="https://datenschutz-generator.de/"
           target="_blank"
           rel="noopener noreferrer nofollow"
-          className="text-accent hover:underline"
+          className="text-accent underline underline-offset-4"
         >
           Erstellt mit kostenlosem Datenschutz-Generator.de von Dr. Thomas
           Schwenke

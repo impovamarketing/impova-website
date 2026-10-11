@@ -71,10 +71,10 @@ export default async function CaseStudyPage({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
       <Header />
-      <main>
+      <main id="inhalt">
         <section className="border-b border-zinc-900 pb-20 pt-40">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
-            <Reveal>
+            <Reveal immediate>
               <Link
                 href="/referenzen"
                 className="font-mono text-xs uppercase tracking-wider text-muted hover:text-accent"
@@ -100,7 +100,7 @@ export default async function CaseStudyPage({
               )}
             </Reveal>
 
-            <Reveal delay={0.1}>
+            <Reveal immediate delay={0.1}>
               <div className="mt-12 overflow-hidden border border-zinc-900">
                 <CaseVisual
                   caseStudy={caseStudy}

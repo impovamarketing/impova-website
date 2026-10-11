@@ -4,6 +4,7 @@ import { MotionConfig } from "framer-motion";
 import { ORGANIZATION_ID } from "@/lib/seo";
 import { GOOGLE_REVIEWS } from "@/config/site";
 import { CookieConsent } from "@/components/CookieConsent";
+import { AnalyticsEvents } from "@/components/AnalyticsEvents";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -151,6 +152,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className="min-h-full flex flex-col bg-base text-foreground">
         <MotionConfig reducedMotion="user">{children}</MotionConfig>
         <CookieConsent />
+        <AnalyticsEvents />
       </body>
     </html>
   );
