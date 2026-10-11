@@ -36,7 +36,7 @@ export function AIAutomation() {
     <section id="automatisierung" className="border-b border-zinc-900 py-28">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <Reveal>
-          <Eyebrow index="05">Zusatzoption</Eyebrow>
+          <Eyebrow index="06">Zusatzoption</Eyebrow>
           <h2 className="mt-5 max-w-2xl text-3xl font-medium leading-tight tracking-tight text-zinc-50 sm:text-4xl">
             Wenn deine Website mehr übernehmen soll als nur dastehen
           </h2>

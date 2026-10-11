@@ -71,7 +71,7 @@ export function FAQ() {
       />
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <Reveal>
-          <Eyebrow index="06">FAQ</Eyebrow>
+          <Eyebrow index="07">FAQ</Eyebrow>
           <h2 className="mt-5 max-w-2xl text-3xl font-medium leading-tight tracking-tight text-zinc-50 sm:text-4xl">
             Häufige Fragen
           </h2>

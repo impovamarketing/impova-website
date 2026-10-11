@@ -5,6 +5,7 @@ import { Eyebrow } from "@/components/Eyebrow";
 import { LeadForm } from "@/components/LeadForm";
 import { PROJECTS } from "@/components/Work";
 import { CookieSettingsButton } from "@/components/CookieConsent";
+import { Testimonials } from "@/components/Testimonials";
 
 // Zielseite für bezahlte Anzeigen: bewusst ohne Navigation und nicht im Index.
 export const metadata: Metadata = {
@@ -134,9 +135,11 @@ export default function AnfragePage() {
           </div>
         </section>
 
+        <Testimonials index="02" />
+
         <section className="border-b border-zinc-900 py-20">
           <div className="mx-auto max-w-6xl px-6 lg:px-10">
-            <Eyebrow index="02">Ablauf</Eyebrow>
+            <Eyebrow index="03">Ablauf</Eyebrow>
             <ol className="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-3">
               {STEPS.map((step, i) => (
                 <li key={step.title} className="border-t border-zinc-800 pt-5">
@@ -155,7 +158,7 @@ export default function AnfragePage() {
 
         <section id="anfrage" className="scroll-mt-6 py-20">
           <div className="mx-auto max-w-3xl px-6 lg:px-10">
-            <Eyebrow index="03">Anfrage</Eyebrow>
+            <Eyebrow index="04">Anfrage</Eyebrow>
             <h2 className="mt-5 text-3xl font-medium leading-tight tracking-tight text-zinc-50">
               Erzähl mir kurz von deinem Projekt
             </h2>

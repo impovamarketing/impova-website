@@ -3,6 +3,7 @@ import { Hero } from "@/components/Hero";
 import { Problem } from "@/components/Problem";
 import { Marquee } from "@/components/Marquee";
 import { Work } from "@/components/Work";
+import { Testimonials } from "@/components/Testimonials";
 import { Philosophy } from "@/components/Philosophy";
 import { Services } from "@/components/Services";
 import { Pipeline } from "@/components/Pipeline";
@@ -33,6 +34,7 @@ export default function Home() {
         <Philosophy />
         <Marquee />
         <Work />
+        <Testimonials />
         <Services />
         <Pipeline />
         <AIAutomation />
