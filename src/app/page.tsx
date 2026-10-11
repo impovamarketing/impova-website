@@ -39,10 +39,10 @@ export default function Home() {
         <Hero />
         <Problem />
         <VisibilityCheck />
+        <Work />
+        <Testimonials index="03" />
         <Philosophy />
         <Marquee />
-        <Work />
-        <Testimonials index="04" />
         <Services />
         <AdsPilot />
         <Pipeline />

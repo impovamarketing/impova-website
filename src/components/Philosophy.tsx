@@ -32,7 +32,7 @@ export function Philosophy() {
     <section id="philosophie" className="border-b border-zinc-900 py-28">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <Reveal>
-          <Eyebrow index="02">Philosophie</Eyebrow>
+          <Eyebrow index="04">Philosophie</Eyebrow>
           <h2 className="mt-5 max-w-2xl text-3xl font-medium leading-tight tracking-tight text-zinc-50 sm:text-4xl">
             Baukasten-Website vs. individuell gebaut
           </h2>

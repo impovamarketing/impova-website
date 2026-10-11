@@ -7,6 +7,8 @@ import { Eyebrow } from "@/components/Eyebrow";
 import { Reveal } from "@/components/Reveal";
 import { MagneticButton } from "@/components/MagneticButton";
 import { pageOpenGraph } from "@/lib/seo";
+import { GOOGLE_REVIEWS, PHONE } from "@/config/site";
+import { CASE_STUDIES } from "@/app/referenzen/case-studies";
 
 const TITLE = "Über mich – Impova";
 const DESCRIPTION =
@@ -83,6 +85,7 @@ export default function UeberMichPage() {
                   <Image
                     src="/images/portraits/founder-lifestyle.jpeg"
                     alt="Tobias Springer, Gründer von Impova"
+                    // TODO: Eigenes, neues Foto für Über mich, das sonst nirgends verwendet wird.
                     fill
                     className="object-cover"
                     sizes="(min-width: 1024px) 40vw, 100vw"
@@ -97,24 +100,48 @@ export default function UeberMichPage() {
         <section className="border-b border-zinc-900 py-24">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <Reveal>
-              <Eyebrow index="01">Warum Impova</Eyebrow>
+              <Eyebrow index="01">Mein Weg</Eyebrow>
               <h2 className="mt-5 max-w-2xl text-3xl font-medium leading-tight tracking-tight text-zinc-50 sm:text-4xl">
-                Was mich an vielen Websites stört
+                Vom Lager in die Selbstständigkeit
               </h2>
               <div className="mt-6 flex max-w-2xl flex-col gap-4 text-zinc-400">
+                {/* TODO: Eigene Story ergänzen: wie lange im Lager, was der Auslöser für den Schritt war, was dich antreibt. */}
                 <p>
-                  Viele Websites von kleinen und mittleren Unternehmen sehen
-                  aus, als kämen sie aus demselben Baukasten: austauschbar,
-                  langsam, unspektakulär. Und wenn du als Kunde anrufst,
-                  landest du oft bei einem von mehreren Ansprechpartnern, die
-                  dein Projekt gar nicht wirklich kennen.
+                  Bevor ich mich selbstständig gemacht habe, habe ich im Lager
+                  gearbeitet. Seit November 2025 baue ich Websites für
+                  Unternehmen in Landshut und Niederbayern.
                 </p>
                 <p>
-                  Genau das wollte ich anders machen: eine Website, die
-                  wirklich individuell gebaut ist, und ein Ansprechpartner,
-                  der dein Projekt von Anfang bis Ende selbst betreut.
+                  Was mich dabei antreibt: Viele gute Betriebe in der Region
+                  sind online kaum zu finden, obwohl ihre Arbeit überzeugt.
+                  Genau das will ich ändern, mit Websites, die gefunden werden
+                  und Anfragen bringen, und mit einem Ansprechpartner, der dein
+                  Projekt von Anfang bis Ende verantwortet.
                 </p>
               </div>
+            </Reveal>
+
+            <Reveal delay={0.1}>
+              <dl className="mt-14 grid max-w-3xl grid-cols-1 gap-8 border-t border-zinc-900 pt-10 sm:grid-cols-3">
+                <div>
+                  <dt className="sr-only">Selbstständig seit</dt>
+                  <dd className="font-mono text-2xl text-zinc-50">Nov. 2025</dd>
+                  <dd className="mt-1 text-sm text-zinc-400">selbstständig mit Impova</dd>
+                </div>
+                <div>
+                  <dt className="sr-only">Google-Bewertung</dt>
+                  <dd className="font-mono text-2xl text-zinc-50">{GOOGLE_REVIEWS.rating}</dd>
+                  <dd className="mt-1 text-sm text-zinc-400">
+                    bei {GOOGLE_REVIEWS.count} Google-Bewertungen
+                  </dd>
+                </div>
+                <div>
+                  <dt className="sr-only">Referenzprojekte</dt>
+                  <dd className="font-mono text-2xl text-zinc-50">{CASE_STUDIES.length}</dd>
+                  <dd className="mt-1 text-sm text-zinc-400">Referenzprojekte mit Case Study</dd>
+                </div>
+              </dl>
+              {/* TODO: Weitere belegbare Zahlen ergänzen, z. B. umgesetzte Projekte insgesamt. */}
             </Reveal>
           </div>
         </section>
@@ -126,18 +153,26 @@ export default function UeberMichPage() {
               <h2 className="mt-5 max-w-2xl text-3xl font-medium leading-tight tracking-tight text-zinc-50 sm:text-4xl">
                 Wie wir zusammenarbeiten
               </h2>
-              <div className="mt-6 max-w-2xl text-zinc-400">
-                <p>
-                  Du schreibst mir dein Anliegen über das Kontaktformular oder
-                  rufst direkt an. Ich melde mich innerhalb von 24 Stunden
-                  persönlich zurück. Kein Callcenter, kein Projektmanager
-                  dazwischen: Fragen zu deinem Projekt beantworte ich selbst,
-                  weil ich dein Projekt von Anfang bis Ende verantworte.
-                </p>
-              </div>
-              <div className="mt-10">
-                <MagneticButton href="/#kontakt">
-                  Website-Projekt besprechen
+              <ul className="mt-8 flex max-w-2xl flex-col gap-3 text-zinc-300">
+                <li className="flex gap-3">
+                  <span className="mt-2 size-1.5 shrink-0 bg-accent" aria-hidden="true" />
+                  Ein fester Ansprechpartner von der ersten Anfrage bis nach dem Launch
+                </li>
+                <li className="flex gap-3">
+                  <span className="mt-2 size-1.5 shrink-0 bg-accent" aria-hidden="true" />
+                  Antwort innerhalb von 24 Stunden, kein Callcenter, kein Ticket-System
+                </li>
+                <li className="flex gap-3">
+                  <span className="mt-2 size-1.5 shrink-0 bg-accent" aria-hidden="true" />
+                  Keine Weitergabe deines Projekts an Dritte
+                </li>
+              </ul>
+              <div className="mt-10 flex flex-wrap items-center gap-4">
+                <MagneticButton href="/#sichtbarkeits-check">
+                  Kostenlosen Sichtbarkeits-Check anfordern
+                </MagneticButton>
+                <MagneticButton href={PHONE.href} variant="outline">
+                  Anrufen: {PHONE.display}
                 </MagneticButton>
               </div>
             </Reveal>

@@ -3,7 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { Eyebrow } from "@/components/Eyebrow";
 import { LeadForm } from "@/components/LeadForm";
-import { PROJECTS } from "@/components/Work";
+import { CASE_STUDIES } from "@/app/referenzen/case-studies";
+import { CaseCard } from "@/components/CaseCard";
 import { CookieSettingsButton } from "@/components/CookieConsent";
 import { Testimonials } from "@/components/Testimonials";
 
@@ -109,27 +110,8 @@ export default function AnfragePage() {
               Echte Projekte, keine Vorlagen
             </h2>
             <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2">
-              {PROJECTS.map((project) => (
-                <div key={project.title} className="border border-zinc-900">
-                  <div className="relative aspect-[3/2] border-b border-zinc-900 bg-zinc-950">
-                    <Image
-                      src={project.image}
-                      alt={`Website-Projekt für ${project.title}`}
-                      fill
-                      className="object-contain"
-                      sizes="(min-width: 640px) 50vw, 100vw"
-                    />
-                  </div>
-                  <div className="p-5">
-                    <p className="font-mono text-[11px] uppercase tracking-wider text-accent">
-                      {project.category}
-                    </p>
-                    <p className="mt-2 font-medium text-zinc-50">{project.title}</p>
-                    <p className="mt-2 text-sm leading-relaxed text-zinc-400">
-                      {project.solution}
-                    </p>
-                  </div>
-                </div>
+              {CASE_STUDIES.map((caseStudy) => (
+                <CaseCard key={caseStudy.slug} caseStudy={caseStudy} />
               ))}
             </div>
           </div>

@@ -80,10 +80,10 @@ export function Services() {
           <Reveal delay={0.1} className="lg:col-span-4">
             <div className="relative aspect-[4/5] w-full max-w-xs overflow-hidden border border-zinc-800 grayscale lg:ml-auto">
               <Image
-                src="/images/portraits/founder-lifestyle.jpeg"
-                alt="Tobias Springer, Gründer von Impova, bei der Arbeit"
+                src="/images/portraits/founder-portrait.jpeg"
+                alt="Tobias Springer, Gründer von Impova"
                 fill
-                className="object-cover object-[50%_25%]"
+                className="object-cover object-[50%_18%]"
                 sizes="(min-width: 1024px) 320px, 80vw"
               />
             </div>

@@ -120,7 +120,7 @@ export default function DienstleisterPage() {
                       {caseStudy.title}
                     </h3>
                     <p className="mt-3 text-sm leading-relaxed text-muted">
-                      {caseStudy.challenge}
+                      {caseStudy.situation}
                     </p>
                     <span className="mt-4 inline-block font-mono text-xs uppercase tracking-wider text-muted group-hover:text-accent">
                       Case Study lesen →

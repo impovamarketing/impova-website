@@ -8,6 +8,7 @@ import { Eyebrow } from "@/components/Eyebrow";
 import { Reveal } from "@/components/Reveal";
 import { MagneticButton } from "@/components/MagneticButton";
 import { LivePreview } from "@/components/LivePreview";
+import { CaseVisual } from "@/components/CaseVisual";
 import { pageOpenGraph } from "@/lib/seo";
 import { CASE_STUDIES, getCaseStudy } from "../case-studies";
 
@@ -22,8 +23,10 @@ export async function generateMetadata({
   const caseStudy = getCaseStudy(slug);
   if (!caseStudy) return {};
 
-  const title = `${caseStudy.title} – Impova`;
-  const description = `${caseStudy.challenge} ${caseStudy.solution}`;
+  const title = `${caseStudy.name}: ${caseStudy.title} | Impova`;
+  const description = caseStudy.result
+    ? `${caseStudy.situation} Ergebnis: ${caseStudy.result.headline} ${caseStudy.result.detail}`
+    : `${caseStudy.situation} ${caseStudy.measures.join(", ")}.`;
   const path = `/referenzen/${caseStudy.slug}`;
 
   return {
@@ -57,7 +60,7 @@ export default async function CaseStudyPage({
       {
         "@type": "ListItem",
         position: 3,
-        name: caseStudy.title,
+        name: caseStudy.name,
         item: `https://www.impova.de/referenzen/${caseStudy.slug}`,
       },
     ],
@@ -83,9 +86,15 @@ export default async function CaseStudyPage({
               <p className="mt-6 font-mono text-xs uppercase tracking-wider text-accent">
                 {caseStudy.category}
               </p>
-              <h1 className="mt-3 max-w-2xl text-4xl font-medium leading-tight tracking-tight text-zinc-50 sm:text-5xl">
-                {caseStudy.title}
+              <h1 className="mt-3 max-w-3xl text-4xl font-medium leading-tight tracking-tight text-zinc-50 sm:text-5xl">
+                {caseStudy.name}
               </h1>
+              {caseStudy.result && (
+                <p className="mt-5 max-w-2xl text-xl leading-snug text-zinc-200">
+                  <span className="text-accent">{caseStudy.result.headline}</span>{" "}
+                  {caseStudy.result.detail}
+                </p>
+              )}
               {caseStudy.liveUrl && (
                 <div className="mt-8">
                   <LivePreview url={caseStudy.liveUrl} label="Website live ansehen" />
@@ -94,12 +103,10 @@ export default async function CaseStudyPage({
             </Reveal>
 
             <Reveal delay={0.1}>
-              <div className="group relative mt-12 aspect-[16/9] overflow-hidden border border-zinc-900 bg-zinc-950 grayscale transition-all duration-500 hover:grayscale-0">
-                <Image
-                  src={caseStudy.image}
-                  alt={`Website-Projekt: ${caseStudy.title}`}
-                  fill
-                  className="object-contain"
+              <div className="mt-12 overflow-hidden border border-zinc-900">
+                <CaseVisual
+                  caseStudy={caseStudy}
+                  aspect="aspect-[16/9]"
                   sizes="(min-width: 1024px) 1200px, 100vw"
                   priority
                 />
@@ -109,70 +116,96 @@ export default async function CaseStudyPage({
         </section>
 
         <section className="border-b border-zinc-900 py-24">
-          <div className="mx-auto max-w-7xl px-6 lg:px-10">
+          <div className="mx-auto grid max-w-7xl grid-cols-1 gap-16 px-6 lg:grid-cols-3 lg:px-10">
             <Reveal>
-              <Eyebrow index="01">Ausgangssituation</Eyebrow>
-              <h2 className="mt-5 max-w-2xl text-3xl font-medium leading-tight tracking-tight text-zinc-50 sm:text-4xl">
-                Die Herausforderung
-              </h2>
-              <p className="mt-6 max-w-2xl text-lg leading-relaxed text-zinc-400">
-                {caseStudy.challenge}
-              </p>
+              <Eyebrow index="01">Ausgangslage</Eyebrow>
+              <p className="mt-6 leading-relaxed text-zinc-300">{caseStudy.situation}</p>
             </Reveal>
-          </div>
-        </section>
-
-        <section className="border-b border-zinc-900 py-24">
-          <div className="mx-auto max-w-7xl px-6 lg:px-10">
-            <Reveal>
-              <Eyebrow index="02">Lösung</Eyebrow>
-              <h2 className="mt-5 max-w-2xl text-3xl font-medium leading-tight tracking-tight text-zinc-50 sm:text-4xl">
-                Was sich geändert hat
-              </h2>
-              <p className="mt-6 max-w-2xl text-lg leading-relaxed text-zinc-400">
-                {caseStudy.solution}
-              </p>
+            <Reveal delay={0.05}>
+              <Eyebrow index="02">Maßnahmen</Eyebrow>
+              <ul className="mt-6 flex flex-col gap-3">
+                {caseStudy.measures.map((measure) => (
+                  <li key={measure} className="flex gap-3 text-zinc-300">
+                    <span className="mt-2 size-1.5 shrink-0 bg-accent" aria-hidden="true" />
+                    {measure}
+                  </li>
+                ))}
+              </ul>
             </Reveal>
-          </div>
-        </section>
-
-        <section className="border-b border-zinc-900 py-24">
-          <div className="mx-auto max-w-7xl px-6 lg:px-10">
-            <Reveal>
+            <Reveal delay={0.1}>
               <Eyebrow index="03">Ergebnis</Eyebrow>
-              <h2 className="mt-5 max-w-2xl text-3xl font-medium leading-tight tracking-tight text-zinc-50 sm:text-4xl">
-                Live im Einsatz
-              </h2>
-              <p className="mt-6 max-w-2xl text-lg leading-relaxed text-zinc-400">
-                {caseStudy.liveUrl
-                  ? "Die Website ist seitdem live. Wirf oben über die Live-Vorschau selbst einen Blick drauf."
-                  : "Die Website ist seitdem live im Einsatz."}
-              </p>
-              <Link
-                href={`/branchen/${caseStudy.branche.slug}`}
-                className="mt-6 inline-block font-mono text-xs uppercase tracking-wider text-accent hover:underline"
-              >
-                Weitere Projekte für {caseStudy.branche.label} →
-              </Link>
+              {caseStudy.result ? (
+                <>
+                  <p className="mt-6 text-2xl font-medium leading-snug text-zinc-50">
+                    {caseStudy.result.headline}
+                  </p>
+                  <p className="mt-2 leading-relaxed text-zinc-300">{caseStudy.result.detail}</p>
+                  <p className="mt-4 font-mono text-[11px] text-muted">{caseStudy.result.source}</p>
+                </>
+              ) : (
+                // TODO: Ergebnis mit Zahl in case-studies.ts ergänzen.
+                <p className="mt-6 leading-relaxed text-zinc-300">
+                  Die Website ist live im Einsatz.
+                  {caseStudy.liveUrl && " Wirf oben über die Live-Vorschau selbst einen Blick drauf."}
+                </p>
+              )}
             </Reveal>
           </div>
         </section>
+
+        {caseStudy.rankingScreenshots.length > 0 && (
+          <section className="border-b border-zinc-900 py-24">
+            <div className="mx-auto max-w-7xl px-6 lg:px-10">
+              <Reveal>
+                <Eyebrow index="04">Beleg</Eyebrow>
+                <h2 className="mt-5 text-3xl font-medium tracking-tight text-zinc-50">
+                  So sieht das bei Google aus
+                </h2>
+              </Reveal>
+              <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2">
+                {caseStudy.rankingScreenshots.map((src) => (
+                  <div key={src} className="relative aspect-[4/3] border border-zinc-900 bg-zinc-950">
+                    <Image
+                      src={src}
+                      alt={`Google-Suchergebnis mit ${caseStudy.name}`}
+                      fill
+                      className="object-contain"
+                      sizes="(min-width: 768px) 50vw, 100vw"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
 
         <section className="py-24">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <Reveal>
-              <Eyebrow index="04">Nächster Schritt</Eyebrow>
+              <Eyebrow index={caseStudy.rankingScreenshots.length > 0 ? "05" : "04"}>
+                Nächster Schritt
+              </Eyebrow>
               <h2 className="mt-5 max-w-2xl text-3xl font-medium leading-tight tracking-tight text-zinc-50 sm:text-4xl">
-                Ähnliches Projekt im Kopf?
+                Wie sichtbar ist dein Unternehmen?
               </h2>
+              <p className="mt-5 max-w-xl text-zinc-400">
+                Im kostenlosen Sichtbarkeits-Check schaue ich mir an, wie gut
+                dich Kunden in deiner Region finden.
+              </p>
               <div className="mt-10 flex flex-wrap items-center gap-4">
-                <MagneticButton href="/#kontakt">
-                  Website-Projekt besprechen
+                <MagneticButton href="/#sichtbarkeits-check">
+                  Kostenlosen Sichtbarkeits-Check anfordern
                 </MagneticButton>
                 <MagneticButton href="/referenzen" variant="outline">
                   Weitere Referenzen
                 </MagneticButton>
               </div>
+              <Link
+                href={`/branchen/${caseStudy.branche.slug}`}
+                className="mt-8 inline-block font-mono text-xs uppercase tracking-wider text-accent hover:underline"
+              >
+                Webdesign für {caseStudy.branche.label} →
+              </Link>
             </Reveal>
           </div>
         </section>

@@ -1,26 +1,32 @@
 import { Star } from "lucide-react";
 import { Eyebrow } from "./Eyebrow";
+import { GOOGLE_REVIEWS } from "@/config/site";
 
 // Wörtliche Auszüge aus Google-Bewertungen (Stand Oktober 2026). Kürzungen nur mit „…“.
-const GOOGLE_REVIEWS_URL = "https://maps.google.com/?cid=9249107226053014283";
-const RATING = "5,0";
-const REVIEW_COUNT = 8;
+// Bewusst kein Review- oder AggregateRating-Schema: Google wertet Bewertungen, die ein
+// Unternehmen auf der eigenen Website über sich selbst auszeichnet, nicht als Rich Result.
+// TODO: Direktlinks zu den einzelnen Bewertungen ergänzen (reviewUrl), sonst Link zum Profil.
 
 const QUOTES = [
   {
     text: "Tobias von Impova hat unsere neue Website gebaut und die SEO übernommen. Ergebnis: Wir stehen jetzt auf Platz 2 und 3 bei Google für Gartenbau Landshut, Gartenbauer Landshut und Garten- und Landschaftsbau Landshut. Vorher waren wir nirgends zu finden.",
     name: "Nikolas N.",
-    context: "Garten- und Landschaftsbau",
+    context: "Garten- und Landschaftsbau, Landshut",
+    reviewUrl: "",
   },
   {
     text: "Er hat unsere Homepage komplett gestaltet und sich auch um SEO und alles, was dazugehört, gekümmert – wirklich von A bis Z. … Unsere Sichtbarkeit bei Google hat sich deutlich verbessert und wir stehen mittlerweile bei wichtigen Suchbegriffen auf Platz 1 bzw. Platz 2.",
     name: "Misala A.",
-    context: "Google-Bewertung",
+    // TODO: Branche bestätigen (vermutlich MA Hausmeisterei & Gebäudeservice).
+    context: "Gebäudeservice",
+    reviewUrl: "",
   },
   {
     text: "Der gesamte Kontakt war von Anfang bis Ende reibungslos, freundlich und professionell. Tobias ist auf alle meine Wünsche und Vorstellungen eingegangen. … Klare Empfehlung, vielen Dank für die tolle Arbeit!",
     name: "Maria W.",
-    context: "Google-Bewertung",
+    // TODO: Branche von Maria W. ergänzen.
+    context: "Kundin",
+    reviewUrl: "",
   },
 ];
 
@@ -44,15 +50,15 @@ export function Testimonials({ index = "03" }: { index?: string }) {
             Was Kunden über die Zusammenarbeit sagen
           </h2>
           <a
-            href={GOOGLE_REVIEWS_URL}
+            href={GOOGLE_REVIEWS.url}
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-3 text-sm text-zinc-300 hover:text-accent"
           >
             <Stars />
             <span>
-              <span className="font-medium text-zinc-50">{RATING}</span> bei{" "}
-              {REVIEW_COUNT} Google-Bewertungen →
+              <span className="font-medium text-zinc-50">{GOOGLE_REVIEWS.rating}</span> bei{" "}
+              {GOOGLE_REVIEWS.count} Google-Bewertungen →
             </span>
           </a>
         </div>
@@ -74,6 +80,14 @@ export function Testimonials({ index = "03" }: { index?: string }) {
                 <p className="font-mono text-[11px] uppercase tracking-wider text-muted">
                   {quote.context}
                 </p>
+                <a
+                  href={quote.reviewUrl || GOOGLE_REVIEWS.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-3 inline-block font-mono text-[11px] uppercase tracking-wider text-accent hover:underline"
+                >
+                  Auf Google ansehen →
+                </a>
               </figcaption>
             </figure>
           ))}
