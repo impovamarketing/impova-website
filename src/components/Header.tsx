@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Phone } from "lucide-react";
 
 const NAV_ITEMS = [
   { label: "Philosophie", href: "/#philosophie" },
@@ -20,24 +21,35 @@ export function Header() {
           IMPOVA<span className="text-accent">.</span>
         </Link>
 
-        <nav className="hidden items-center gap-8 md:flex">
+        <nav className="hidden items-center gap-5 lg:flex xl:gap-8">
           {NAV_ITEMS.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className="font-mono text-xs uppercase tracking-wider text-zinc-400 transition-colors hover:text-accent"
+              className="whitespace-nowrap font-mono text-xs uppercase tracking-wider text-zinc-400 transition-colors hover:text-accent"
             >
               {item.label}
             </Link>
           ))}
         </nav>
 
-        <Link
-          href="/#kontakt"
-          className="border border-zinc-700 px-4 py-2 font-mono text-xs uppercase tracking-wider text-zinc-100 transition-colors hover:border-accent hover:text-accent"
-        >
-          Website-Projekt besprechen
-        </Link>
+        <div className="flex items-center gap-3">
+          <a
+            href="tel:+4915123819198"
+            aria-label="Anrufen: 0151 23819198"
+            className="flex items-center gap-2 whitespace-nowrap border border-zinc-700 px-3 py-2 font-mono text-xs uppercase tracking-wider text-zinc-100 transition-colors hover:border-accent hover:text-accent"
+          >
+            <Phone className="size-3.5" aria-hidden="true" />
+            <span className="hidden xl:inline">0151 23819198</span>
+          </a>
+          <Link
+            href="/#kontakt"
+            className="whitespace-nowrap border border-zinc-700 px-4 py-2 font-mono text-xs uppercase tracking-wider text-zinc-100 transition-colors hover:border-accent hover:text-accent"
+          >
+            <span className="sm:hidden">Anfragen</span>
+            <span className="hidden sm:inline">Website-Projekt besprechen</span>
+          </Link>
+        </div>
       </div>
     </header>
   );

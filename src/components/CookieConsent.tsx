@@ -37,7 +37,7 @@ function useConsent(): Consent | null | "pending" {
 }
 
 const buttonClass =
-  "border border-zinc-600 px-5 py-2.5 font-mono text-xs uppercase tracking-wider text-zinc-100 transition-colors hover:border-accent hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent";
+  "border border-zinc-600 px-2 py-2.5 sm:px-5 font-mono text-xs uppercase tracking-wider text-zinc-100 transition-colors hover:border-accent hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent";
 
 // ad_personalization bleibt bewusst aus: Marketing umfasst nur die Conversion-Messung, kein Remarketing.
 function GoogleScripts({ consent }: { consent: Consent }) {
@@ -110,6 +110,7 @@ export function CookieConsent() {
   const [analytics, setAnalytics] = useState(false);
   const [marketing, setMarketing] = useState(false);
   const [meta, setMeta] = useState(false);
+  const [showDetails, setShowDetails] = useState(false);
 
   useEffect(() => {
     const open = () => {
@@ -118,6 +119,7 @@ export function CookieConsent() {
       setMarketing(current?.marketing ?? false);
       setMeta(current?.meta ?? false);
       setReopened(true);
+      setShowDetails(true);
     };
     window.addEventListener(OPEN_COOKIE_SETTINGS_EVENT, open);
     return () => window.removeEventListener(OPEN_COOKIE_SETTINGS_EVENT, open);
@@ -135,6 +137,7 @@ export function CookieConsent() {
     if (previous?.meta && !next.meta) deleteMetaCookies();
     writeConsent(next);
     setReopened(false);
+    setShowDetails(false);
     // Bereits geladene Google- oder Meta-Skripte lassen sich nicht sauber entladen oder umstellen.
     if (hadGoogle || (previous?.meta && !next.meta)) window.location.reload();
   }
@@ -165,10 +168,9 @@ export function CookieConsent() {
                 Cookies &amp; Einwilligung
               </p>
               <p className="mt-2 text-sm leading-relaxed text-zinc-400">
-                Ohne deine Zustimmung wird nichts von Google oder Meta geladen
-                und es werden keine Daten gesendet. Du entscheidest getrennt und
-                kannst deine Auswahl jederzeit über „Cookie-Einstellungen“ im
-                Footer ändern. Mehr in der{" "}
+                Nur mit deiner Zustimmung: Statistik (Google Analytics) und
+                Erfolgsmessung von Anzeigen (Google Ads, Meta). Widerruf
+                jederzeit über „Cookie-Einstellungen“ im Footer. Mehr in der{" "}
                 <Link
                   href="/datenschutz"
                   className="text-zinc-200 underline underline-offset-2 hover:text-accent"
@@ -177,6 +179,7 @@ export function CookieConsent() {
                 </Link>
                 .
               </p>
+              {showDetails && (
               <div className="mt-4 flex flex-col gap-3">
                 <Choice
                   id="consent-analytics"
@@ -200,8 +203,9 @@ export function CookieConsent() {
                   onChange={setMeta}
                 />
               </div>
+              )}
             </div>
-            <div className="flex shrink-0 flex-wrap gap-3">
+            <div className="grid shrink-0 grid-cols-3 gap-2 sm:flex sm:flex-wrap sm:gap-3">
               <button
                 type="button"
                 onClick={() =>
@@ -211,13 +215,23 @@ export function CookieConsent() {
               >
                 Alle ablehnen
               </button>
-              <button
-                type="button"
-                onClick={() => decide({ analytics, marketing, meta })}
-                className={buttonClass}
-              >
-                Auswahl speichern
-              </button>
+              {showDetails ? (
+                <button
+                  type="button"
+                  onClick={() => decide({ analytics, marketing, meta })}
+                  className={buttonClass}
+                >
+                  Auswahl speichern
+                </button>
+              ) : (
+                <button
+                  type="button"
+                  onClick={() => setShowDetails(true)}
+                  className={buttonClass}
+                >
+                  Einstellungen
+                </button>
+              )}
               <button
                 type="button"
                 onClick={() =>

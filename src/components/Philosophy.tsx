@@ -9,7 +9,7 @@ const COMPARISON = [
   },
   {
     baukasten: "5–8s Ladezeit, aufgeblähter Page-Builder-Code",
-    impova: "Handgeschriebener Next.js-Code, < 1.2s LCP",
+    impova: "Schlanker, individueller Code, der spürbar schneller lädt",
   },
   {
     baukasten: "SEO als nachträgliches Plugin",
@@ -22,7 +22,7 @@ const COMPARISON = [
 ];
 
 const METRICS = [
-  { label: "Ladezeit", to: 1.2, decimals: 1, prefix: "< ", suffix: "s" },
+  { label: "Erste Anzeige", to: 1.2, decimals: 1, prefix: "< ", suffix: "s" },
   { label: "Serverantwort", to: 200, decimals: 0, prefix: "< ", suffix: "ms" },
   { label: "Stabilität", to: 0, decimals: 2, prefix: "", suffix: "" },
 ];
@@ -34,7 +34,7 @@ export function Philosophy() {
         <Reveal>
           <Eyebrow index="01">Philosophie</Eyebrow>
           <h2 className="mt-5 max-w-2xl text-3xl font-medium leading-tight tracking-tight text-zinc-50 sm:text-4xl">
-            08/15-Baukasten vs. Engineering, das rankt
+            Baukasten-Website vs. individuell gebaut
           </h2>
         </Reveal>
 
@@ -42,12 +42,12 @@ export function Philosophy() {
           <div className="grid grid-cols-2 border-b border-zinc-900">
             <div className="p-8">
               <p className="font-mono text-xs uppercase tracking-wider text-muted">
-                08/15 Baukasten
+                Baukasten-Website
               </p>
             </div>
             <div className="border-l border-zinc-900 p-8">
               <p className="font-mono text-xs uppercase tracking-wider text-accent">
-                Impova Engineering
+                Impova
               </p>
             </div>
           </div>

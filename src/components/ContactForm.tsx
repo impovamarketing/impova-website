@@ -115,7 +115,7 @@ export function ContactForm() {
             <div className="flex items-center justify-between border-b border-zinc-900 px-6 py-4 font-mono text-xs uppercase tracking-wider text-muted">
               <span>Projektanfrage</span>
               <span>
-                FORM_STATUS: {fieldsComplete}/3 FIELDS COMPLETE
+                {fieldsComplete} von 3 Feldern ausgefüllt
               </span>
             </div>
 
