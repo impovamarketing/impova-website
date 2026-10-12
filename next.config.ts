@@ -14,6 +14,11 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
+        source: "/referenzen/gartenbau-projekt-landshut",
+        destination: "/referenzen",
+        permanent: true,
+      },
+      {
         source: "/referenzen/baumpflege-projekt-landshut",
         destination: "/referenzen",
         permanent: true,

@@ -9,7 +9,7 @@ import { CASE_STUDIES } from "./case-studies";
 
 const TITLE = "Referenzen: Webdesign-Projekte aus Landshut | Impova";
 const DESCRIPTION =
-  "Webdesign-Projekte für lokale Unternehmen aus Landshut und Umgebung: mit Ausgangslage, Maßnahmen und belegten Ergebnissen bei Google, z. B. Platz 2.";
+  "Webdesign-Projekte für lokale Unternehmen aus Landshut und Umgebung: mit Ausgangslage, Maßnahmen und belegten Ergebnissen bei Google, z. B. Platz 1.";
 
 export const metadata: Metadata = {
   title: TITLE,

@@ -35,7 +35,7 @@ const LOCAL_SIGNALS = [
   },
   {
     title: "Suchbegriffe mit Ortsbezug",
-    text: "Kunden suchen nach Leistung plus Ort, etwa „Gartenbau Landshut“. Genau darauf werden Seiten und Inhalte ausgerichtet.",
+    text: "Kunden suchen nach Leistung plus Ort, etwa „Friseur Landshut“. Genau darauf werden Seiten und Inhalte ausgerichtet.",
   },
   {
     title: "Bewertungen und einheitliche Angaben",

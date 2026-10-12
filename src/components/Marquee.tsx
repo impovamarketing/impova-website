@@ -7,7 +7,6 @@ const LOGOS = [
   { src: "/images/logos/logo-ma-white.png", name: "MA" },
   { src: "/images/logos/logo-zentarak-white.png", name: "Zen Tara K" },
   { src: "/images/logos/logo-eke-white.png", name: "EKE" },
-  { src: "/images/logos/logo-nikolli-white.png", name: "Nikolli" },
   { src: "/images/logos/logo-baumpflege-dugalic-white.png", name: "Baumpflege Dugalić" },
   { src: "/images/logos/logo-niederbayern-raeumt-white.png", name: "Niederbayern räumt" },
   { src: "/images/logos/logo-tonis-grillhaus-white.png", name: "Toni's Balkan Grillhaus" },

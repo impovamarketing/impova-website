@@ -30,33 +30,6 @@ export type CaseStudy = {
 
 const ALL_CASE_STUDIES: CaseStudy[] = [
   {
-    slug: "gartenbau-projekt-landshut",
-    name: "Nikolli Gartenbau",
-    title: "Gartenbau-Projekt in Landshut",
-    category: "Garten- und Landschaftsbau, Landshut",
-    seoTitle: "Nikolli Gartenbau: Platz 2 bei Google | Impova",
-    seoDescription:
-      "Case Study Nikolli Gartenbau aus Landshut: neue Website und SEO. Laut Kunde Platz 2 und 3 bei Google für „Gartenbau Landshut“ und weitere Begriffe.",
-    logo: "/images/logos/logo-nikolli-white.png",
-    // TODO: Screenshot der Website (image) und Live-URL (liveUrl) ergänzen.
-    situation:
-      "Ein Garten- und Landschaftsbau-Betrieb aus Landshut, der bei Google für seine wichtigsten Suchbegriffe nicht zu finden war.",
-    measures: [
-      "Neue Website für den Betrieb",
-      "Suchmaschinenoptimierung für die lokalen Suchbegriffe rund um Gartenbau in Landshut",
-    ],
-    result: {
-      headline: "Platz 2 und 3 bei Google",
-      detail:
-        "für „Gartenbau Landshut“, „Gartenbauer Landshut“ und „Garten- und Landschaftsbau Landshut“. Vorher war der Betrieb dort nicht zu finden.",
-      source: "Laut Google-Bewertung des Kunden, Oktober 2026",
-    },
-    // TODO: Ranking-Screenshots ablegen, z. B. /images/rankings/nikolli-gartenbau-landshut.png
-    rankingScreenshots: [],
-    branche: { slug: "handwerker", label: "Handwerker" },
-    featured: true,
-  },
-  {
     slug: "thai-massage-projekt",
     name: "Zentara Thai Massage",
     // TODO: Ort, Ausgangslage, Maßnahmen, Suchbegriff für Platz 1, Screenshots und Live-URL liefern. Danach draft entfernen.

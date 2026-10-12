@@ -9,12 +9,6 @@ import { GOOGLE_REVIEWS } from "@/config/site";
 
 const QUOTES = [
   {
-    text: "Tobias von Impova hat unsere neue Website gebaut und die SEO übernommen. Ergebnis: Wir stehen jetzt auf Platz 2 und 3 bei Google für Gartenbau Landshut, Gartenbauer Landshut und Garten- und Landschaftsbau Landshut. Vorher waren wir nirgends zu finden.",
-    name: "Nikolas N.",
-    context: "Garten- und Landschaftsbau, Landshut",
-    reviewUrl: "",
-  },
-  {
     text: "Er hat unsere Homepage komplett gestaltet und sich auch um SEO und alles, was dazugehört, gekümmert – wirklich von A bis Z. … Unsere Sichtbarkeit bei Google hat sich deutlich verbessert und wir stehen mittlerweile bei wichtigen Suchbegriffen auf Platz 1 bzw. Platz 2.",
     name: "Misala A.",
     // TODO: Branche bestätigen (vermutlich MA Hausmeisterei & Gebäudeservice).

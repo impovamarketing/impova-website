@@ -37,8 +37,8 @@ export function Hero() {
         <p className="max-w-2xl text-base leading-relaxed text-zinc-400 sm:text-lg">
           Ich baue Websites, die bei Google gefunden werden und Besucher zur
           Anfrage führen. Bewertet mit {GOOGLE_REVIEWS.rating} von 5 bei
-          Google, und Kunden wie Nikolli Gartenbau stehen für ihre wichtigsten
-          Suchbegriffe auf Platz 2 und 3.
+          Google, und Kunden wie MA Gebäudeservice stehen bei wichtigen
+          Suchbegriffen auf Platz 1 bis 2.
         </p>
 
         <div className="animate-rise flex flex-wrap items-center gap-4 pt-2 [animation-delay:0.1s]">
