@@ -26,12 +26,12 @@ export default function Home() {
       <Header />
       <main id="inhalt">
         <Hero />
+        <Marquee />
         <Problem />
         <VisibilityCheck />
         <Work />
         <Testimonials index="03" />
         <Philosophy />
-        <Marquee />
         <Services />
         <Pipeline />
         <Commitments index="07" />
