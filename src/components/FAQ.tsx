@@ -15,12 +15,12 @@ const FAQS: FaqItem[] = [
   {
     question: "Was ist in der monatlichen Pflege enthalten?",
     answer:
-      "Content-Änderungen, die du nicht selbst machen willst, technische Updates und Monitoring, damit Probleme auffallen, bevor Kunden sie merken. Wer zusätzlich laufend an seiner Sichtbarkeit bei Google arbeiten will, bucht darauf aufbauend die SEO-Betreuung, auf Wunsch mit Inhalten als Zusatz.",
+      "Änderungen an Texten, Bildern und Öffnungszeiten, technische Updates und Monitoring, damit Probleme auffallen, bevor Kunden sie merken. Wer zusätzlich laufend an seiner Sichtbarkeit bei Google arbeiten will, bucht darauf aufbauend die SEO-Betreuung, auf Wunsch mit Inhalten als Zusatz.",
   },
   {
-    question: "Kann ich Inhalte selbst ändern?",
+    question: "Wer ändert später Texte, Bilder oder Öffnungszeiten?",
     answer:
-      "Ja. Deine Website bekommt ein einfaches Redaktionssystem (Sanity). Texte, Bilder und Öffnungszeiten änderst du selbst, ohne mich anrufen zu müssen. Für größere Änderungen ist die monatliche Pflege da.",
+      "Das übernehme ich für dich. Du schickst mir kurz, was sich ändern soll, per E-Mail oder Telefon, und ich setze es um. Das ist Teil der monatlichen Pflege. Du musst dich in kein System einarbeiten.",
   },
   {
     question: "Wie lange dauert der Bau einer Website?",

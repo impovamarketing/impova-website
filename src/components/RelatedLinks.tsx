@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Eyebrow } from "./Eyebrow";
 
 const LINKS = [
-  { href: "/webdesign", label: "Webdesign und CMS zum Selbstpflegen" },
+  { href: "/webdesign", label: "Webdesign" },
   { href: "/website-relaunch", label: "Website-Relaunch" },
   { href: "/anzeigen", label: "Anzeigen bei Google und Meta" },
   { href: "/recruiting", label: "Social Recruiting" },

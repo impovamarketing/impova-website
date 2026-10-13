@@ -136,7 +136,7 @@ export default function HandwerkerPage() {
                 Wie deine Website aussehen könnte
               </h2>
               <p className="mt-5 max-w-lg text-zinc-400">
-                Ablauf, die Bausteine Bau und Pflege sowie das CMS zum Selbstpflegen
+                Ablauf und die Bausteine Bau und Pflege
                 stehen auf der{" "}
                 <Link href="/webdesign" className="text-accent underline underline-offset-4">
                   Webdesign-Seite

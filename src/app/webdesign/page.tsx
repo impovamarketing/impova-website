@@ -11,7 +11,7 @@ import { ORGANIZATION_ID, SITE_URL, pageOpenGraph } from "@/lib/seo";
 
 const TITLE = "Webdesign: individuelle Websites statt Baukasten | Impova";
 const DESCRIPTION =
-  "Individuell entwickelte Websites für lokale Unternehmen in Landshut und Niederbayern: SEO-Grundlagen von Anfang an und ein CMS zum Selbstpflegen.";
+  "Individuell entwickelte Websites für lokale Unternehmen in Landshut und Niederbayern: SEO-Grundlagen von Anfang an, Änderungen übernehme ich für dich.";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -111,10 +111,10 @@ const PILLARS: Pillar[] = [
   },
 ];
 
-const CMS_POINTS = [
-  { icon: PenLine, text: "Texte und Angebote selbst ändern" },
-  { icon: ImageIcon, text: "Bilder austauschen, ohne etwas kaputt zu machen" },
-  { icon: Clock, text: "Öffnungszeiten und Termine aktuell halten" },
+const CHANGE_POINTS = [
+  { icon: PenLine, text: "Neue Texte und Angebote" },
+  { icon: ImageIcon, text: "Neue Bilder und Referenzen" },
+  { icon: Clock, text: "Aktuelle Öffnungszeiten und Termine" },
 ];
 
 export default function WebdesignPage() {
@@ -142,8 +142,8 @@ export default function WebdesignPage() {
               <p className="mt-6 max-w-xl text-lg leading-relaxed text-zinc-400">
                 Ich baue Websites für Unternehmen in Landshut und
                 Niederbayern, die professionell wirken und Anfragen bringen
-                sollen: individuell entwickelt, mit einem CMS, in dem du Inhalte
-                selbst pflegst.
+                sollen: individuell entwickelt, und Änderungen übernehme ich
+                danach für dich.
               </p>
               <div className="mt-10">
                 <MagneticButton href="/#kontakt">
@@ -194,18 +194,18 @@ export default function WebdesignPage() {
         <section className="border-b border-zinc-900 py-24">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <Reveal>
-              <Eyebrow index="02">Selbst pflegen</Eyebrow>
+              <Eyebrow index="02">Änderungen</Eyebrow>
               <h2 className="mt-5 max-w-2xl text-3xl font-medium leading-tight tracking-tight text-zinc-50 sm:text-4xl">
-                Individuell entwickelt, mit CMS zum Selbstpflegen
+                Änderungen übernehme ich für dich
               </h2>
               <p className="mt-5 max-w-lg text-zinc-400">
-                Deine Website wird für dich entwickelt. Kleine Änderungen
-                machst du trotzdem selbst, in einem einfachen
-                Redaktionssystem (Sanity), ohne mich anrufen zu müssen.
+                Du musst dich nicht in ein System einarbeiten. Du schickst mir
+                kurz, was sich ändern soll, und ich setze es um, im Rahmen der
+                monatlichen Pflege.
               </p>
             </Reveal>
             <ul className="mt-10 grid grid-cols-1 gap-px overflow-hidden border border-zinc-900 bg-zinc-900 md:grid-cols-3">
-              {CMS_POINTS.map((point) => {
+              {CHANGE_POINTS.map((point) => {
                 const Icon = point.icon;
                 return (
                   <li key={point.text} className="bg-base p-8">

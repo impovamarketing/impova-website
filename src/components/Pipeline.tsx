@@ -26,7 +26,7 @@ const STEPS = [
     title: "Entwicklung",
     status: "Umsetzung",
     description:
-      "Deine Website entsteht: schnell geladen, sauber strukturiert, mit SEO-Grundlagen von Anfang an und einem CMS, in dem du Inhalte selbst pflegst.",
+      "Deine Website entsteht: schnell geladen, sauber strukturiert und mit SEO-Grundlagen von Anfang an.",
   },
   {
     index: "04",

@@ -132,8 +132,8 @@ export default function WebsiteRelaunchPage() {
               <p className="mt-6 max-w-2xl text-lg leading-relaxed text-zinc-400">
                 Auch beim Relaunch gibt es zwei klar getrennte Bausteine:
                 einen Einmalpreis für den Neubau, individuell kalkuliert nach
-                Umfang, und auf Wunsch eine monatliche Pflege. Deine neue Seite
-                bekommt ein CMS, in dem du Inhalte selbst pflegst. Details und
+                Umfang, und auf Wunsch eine monatliche Pflege, in der ich
+                Änderungen für dich übernehme. Details und
                 den genauen Ablauf findest du auf der{" "}
                 <Link href="/webdesign" className="text-accent underline underline-offset-4">
                   Webdesign-Seite

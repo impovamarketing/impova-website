@@ -40,10 +40,10 @@ const OUTCOMES: Outcome[] = [
   },
 ];
 
-const CMS_POINTS = [
-  { icon: PenLine, text: "Texte und Angebote selbst ändern" },
-  { icon: ImageIcon, text: "Bilder austauschen, ohne etwas kaputt zu machen" },
-  { icon: Clock, text: "Öffnungszeiten und Termine aktuell halten" },
+const CHANGE_POINTS = [
+  { icon: PenLine, text: "Neue Texte und Angebote" },
+  { icon: ImageIcon, text: "Neue Bilder und Referenzen" },
+  { icon: Clock, text: "Aktuelle Öffnungszeiten und Termine" },
 ];
 
 const MODULES = [
@@ -53,7 +53,7 @@ const MODULES = [
   },
   {
     title: "Monatliche Pflege",
-    text: "Getrennt vom Bau: Content-Änderungen, die du nicht selbst machen willst, technische Updates und Monitoring.",
+    text: "Getrennt vom Bau: Änderungen an Texten, Bildern und Öffnungszeiten, technische Updates und Monitoring.",
   },
   {
     title: "SEO-Betreuung",
@@ -134,17 +134,17 @@ export function Services() {
         <div className="mt-20 grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-8">
           <Reveal className="lg:col-span-5">
             <h3 className="text-2xl font-medium tracking-tight text-zinc-50">
-              Individuell entwickelt, mit CMS zum Selbstpflegen
+              Individuell entwickelt, Änderungen übernehme ich
             </h3>
             <p className="mt-4 text-zinc-400">
-              Deine Website wird für dich entwickelt. Kleine Änderungen machst
-              du trotzdem selbst, in einem einfachen Redaktionssystem (Sanity),
-              ohne mich anrufen zu müssen. Für alles Größere ist die Pflege da.
+              Du musst dich nicht in ein System einarbeiten. Du schickst mir
+              kurz, was sich ändern soll, und ich setze es um, im Rahmen der
+              monatlichen Pflege.
             </p>
           </Reveal>
           <Reveal delay={0.1} className="lg:col-span-7">
             <ul className="grid grid-cols-1 gap-px border border-zinc-900 bg-zinc-900 sm:grid-cols-3">
-              {CMS_POINTS.map((point) => {
+              {CHANGE_POINTS.map((point) => {
                 const Icon = point.icon;
                 return (
                   <li key={point.text} className="bg-base p-6">

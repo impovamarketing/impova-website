@@ -68,8 +68,8 @@ export default function UeberMichPage() {
                   </p>
                   <p>
                     Jede Website wird individuell für dein Unternehmen
-                    entwickelt und bekommt ein einfaches CMS, in dem du
-                    Texte, Bilder und Öffnungszeiten selbst pflegst. Wie
+                    entwickelt. Änderungen danach übernehme ich für dich,
+                    ohne Ticket-System. Wie
                     das konkret aussieht, siehst du an den{" "}
                     <Link
                       href="/referenzen"

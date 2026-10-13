@@ -1,14 +1,14 @@
 # Impova
 
-> Impova ist das Webdesign- und Local-SEO-Angebot von Tobias Springer mit Sitz in Essenbach bei Landshut (Niederbayern, Deutschland). Ziel: mehr Anfragen für lokale Unternehmen. Websites werden individuell mit Next.js entwickelt und bekommen ein CMS (Sanity), in dem Kunden Texte, Bilder und Öffnungszeiten selbst pflegen. Ein fester Ansprechpartner von der ersten Anfrage bis nach dem Launch, Antwort innerhalb von 24 Stunden, keine Weitergabe an Dritte.
+> Impova ist das Webdesign- und Local-SEO-Angebot von Tobias Springer mit Sitz in Essenbach bei Landshut (Niederbayern, Deutschland). Ziel: mehr Anfragen für lokale Unternehmen. Websites werden individuell mit Next.js entwickelt. Änderungen an Texten, Bildern und Öffnungszeiten übernimmt Tobias Springer im Rahmen der monatlichen Pflege. Ein fester Ansprechpartner von der ersten Anfrage bis nach dem Launch, Antwort innerhalb von 24 Stunden, keine Weitergabe an Dritte.
 
 Zielgruppe: lokale Unternehmen aller Branchen in Landshut und Niederbayern. Zusammenarbeit auch darüber hinaus digital möglich, persönliche Termine im Raum Landshut auf Wunsch.
 
 ## Leistungen
 
-- [Webdesign](https://www.impova.de/webdesign): Individuell entwickelte Websites, die überzeugen und Besucher zur Anfrage führen, mit CMS zum Selbstpflegen.
+- [Webdesign](https://www.impova.de/webdesign): Individuell entwickelte Websites, die überzeugen und Besucher zur Anfrage führen.
 - Lokale Sichtbarkeit (Local SEO): Suchbegriffe der Region, Google-Unternehmensprofil, technische Grundlagen von Anfang an.
-- Monatliche Pflege: Content-Änderungen, Updates, Monitoring. Darauf aufbauend SEO-Betreuung, Inhalte auf Wunsch als Zusatz.
+- Monatliche Pflege: Änderungen an Inhalten, Updates, Monitoring. Darauf aufbauend SEO-Betreuung, Inhalte auf Wunsch als Zusatz.
 - Kostenloser Sichtbarkeits-Check: persönliche Einschätzung, wie gut ein Unternehmen in seiner Region bei Google gefunden wird.
 - [Anzeigen bei Google und Meta](https://www.impova.de/anzeigen): neu, im Pilot mit wenigen Kunden, ohne Versprechen zu Kosten pro Anfrage.
 - Verbindliche Zusagen: Festpreis nach schriftlichem Angebot, schriftlich vereinbarter Go-Live-Termin, 30 Tage kostenlose Nachbesserung nach dem Launch. Keine Ranking-Garantien.
@@ -30,7 +30,7 @@ Zwei Bausteine: ein Einmalpreis für den Bau (individuell nach Umfang) und getre
 
 1. Analyse: Ausgangssituation, Zielgruppe, Konkurrenz
 2. Strategie: Positionierung, Seitenstruktur, SEO-Ziele
-3. Entwicklung: schnelle, sauber strukturierte Website mit SEO-Grundlagen und CMS
+3. Entwicklung: schnelle, sauber strukturierte Website mit SEO-Grundlagen
 4. Launch: Live-Schaltung erst nach finaler Abstimmung, danach Pflege auf Wunsch
 
 Dauer: in der Regel 2 bis 4 Wochen, je nach Umfang.
