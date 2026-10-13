@@ -64,7 +64,7 @@ const faqJsonLd = {
 
 export function FAQ() {
   return (
-    <section id="faq" className="border-b border-zinc-900 py-28">
+    <section id="faq" className="border-b border-white/5 py-28">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
@@ -72,7 +72,7 @@ export function FAQ() {
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <Reveal>
           <Eyebrow index="09">FAQ</Eyebrow>
-          <h2 className="mt-5 max-w-2xl text-3xl font-medium leading-tight tracking-tight text-zinc-50 sm:text-4xl">
+          <h2 className="mt-5 max-w-2xl text-3xl font-semibold leading-tight tracking-tight text-zinc-50 sm:text-[2.75rem]">
             Häufige Fragen
           </h2>
           <p className="mt-5 max-w-lg text-zinc-400">
@@ -81,13 +81,13 @@ export function FAQ() {
           </p>
         </Reveal>
 
-        <div className="mt-16 flex max-w-3xl flex-col border-t border-zinc-900">
+        <div className="mt-16 flex max-w-3xl flex-col gap-3">
           {FAQS.map((faq, i) => (
             <Reveal key={faq.question} delay={i * 0.05}>
-              <details className="group border-b border-zinc-900 py-6">
-                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-medium text-zinc-50 marker:content-none [&::-webkit-details-marker]:hidden">
+              <details className="card group px-6 py-5">
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-base font-medium text-zinc-50 marker:content-none sm:text-lg [&::-webkit-details-marker]:hidden">
                   {faq.question}
-                  <span className="shrink-0 font-mono text-xl text-muted motion-safe:transition-transform motion-safe:duration-300 group-open:rotate-45">
+                  <span className="flex size-8 shrink-0 items-center justify-center rounded-full border border-white/10 font-mono text-lg text-accent motion-safe:transition-transform motion-safe:duration-300 group-open:rotate-45">
                     +
                   </span>
                 </summary>

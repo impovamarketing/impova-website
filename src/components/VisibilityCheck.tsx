@@ -77,7 +77,7 @@ export function VisibilityCheck() {
     label: string,
     props: React.InputHTMLAttributes<HTMLInputElement>
   ) => (
-    <div className="bg-surface px-6 py-5">
+    <div className="bg-base/40 px-6 py-5">
       <label htmlFor={`vc-${key}`} className="font-mono text-xs uppercase tracking-wider text-muted">
         {label} *
       </label>
@@ -99,11 +99,11 @@ export function VisibilityCheck() {
   );
 
   return (
-    <section id="sichtbarkeits-check" className="scroll-mt-20 border-b border-zinc-900 py-24">
+    <section id="sichtbarkeits-check" className="scroll-mt-20 border-b border-white/5 py-24">
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-12 px-6 lg:grid-cols-12 lg:px-10">
         <Reveal className="lg:col-span-5">
           <Eyebrow index="01">Kostenlos</Eyebrow>
-          <h2 className="mt-5 text-3xl font-medium leading-tight tracking-tight text-zinc-50 sm:text-4xl">
+          <h2 className="mt-5 text-3xl font-semibold leading-tight tracking-tight text-zinc-50 sm:text-[2.75rem]">
             Sichtbarkeits-Check für dein Unternehmen
           </h2>
           <p className="mt-5 text-zinc-400">
@@ -112,10 +112,10 @@ export function VisibilityCheck() {
             Hebeln. Kostenlos und unverbindlich, Antwort innerhalb von 24
             Stunden.
           </p>
-          <ul className="mt-8 flex flex-col gap-3 border-t border-zinc-900 pt-6">
+          <ul className="mt-8 flex flex-col gap-3 border-t border-white/5 pt-6">
             {STEPS.map((step) => (
               <li key={step} className="flex gap-3 text-sm text-zinc-300">
-                <span className="mt-1.5 size-1.5 shrink-0 bg-accent" aria-hidden="true" />
+                <span className="mt-1.5 size-1.5 shrink-0 rounded-full bg-accent" aria-hidden="true" />
                 {step}
               </li>
             ))}
@@ -129,7 +129,7 @@ export function VisibilityCheck() {
         </Reveal>
 
         <Reveal delay={0.1} className="lg:col-span-7">
-          <form onSubmit={handleSubmit} noValidate className="border border-zinc-900">
+          <form onSubmit={handleSubmit} noValidate className="card overflow-hidden">
             <input
               type="text"
               name="company_website"
@@ -140,7 +140,7 @@ export function VisibilityCheck() {
               className="hidden"
               aria-hidden="true"
             />
-            <div className="grid grid-cols-1 gap-px bg-zinc-900 sm:grid-cols-2">
+            <div className="grid grid-cols-1 gap-px bg-white/5 sm:grid-cols-2">
               {field("website", "Deine Website", {
                 type: "text",
                 inputMode: "url",
@@ -160,7 +160,7 @@ export function VisibilityCheck() {
               })}
             </div>
 
-            <div className="border-t border-zinc-900 bg-surface px-6 py-5">
+            <div className="border-t border-white/5 bg-base/40 px-6 py-5">
               <label className="flex cursor-pointer items-start gap-3 text-sm leading-relaxed text-zinc-400">
                 <input
                   type="checkbox"
@@ -189,12 +189,12 @@ export function VisibilityCheck() {
               )}
             </div>
 
-            <div className="flex flex-col gap-4 border-t border-zinc-900 bg-surface px-6 py-6 sm:flex-row sm:items-center sm:justify-between">
+            <div className="flex flex-col gap-4 border-t border-white/5 bg-base/40 px-6 py-6 sm:flex-row sm:items-center sm:justify-between">
               <p className="font-mono text-xs text-muted">Keine Weitergabe an Dritte.</p>
               <button
                 type="submit"
                 disabled={status === "submitting"}
-                className="inline-flex items-center justify-center gap-2 bg-accent px-6 py-3 font-mono text-sm uppercase tracking-wider text-base transition-colors hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent disabled:opacity-60"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-medium text-black transition-colors hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent disabled:opacity-60"
               >
                 {status === "submitting" && <Loader2 className="size-4 animate-spin" />}
                 Check anfordern
@@ -202,7 +202,7 @@ export function VisibilityCheck() {
             </div>
 
             {status === "error" && (
-              <p role="alert" className="border-t border-zinc-900 px-6 py-4 font-mono text-xs text-status-red">
+              <p role="alert" className="border-t border-white/5 px-6 py-4 font-mono text-xs text-status-red">
                 Das hat leider nicht geklappt. Bitte versuch es erneut oder ruf
                 mich an: {PHONE.display}.
               </p>

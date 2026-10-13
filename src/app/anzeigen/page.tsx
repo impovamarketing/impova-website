@@ -55,13 +55,13 @@ export default function AnzeigenPage() {
       />
       <Header />
       <main id="inhalt">
-        <section className="border-b border-zinc-900 pb-20 pt-40">
+        <section className="border-b border-white/5 pb-20 pt-40">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <Reveal immediate>
               <p className="font-mono text-xs uppercase tracking-wider text-accent">
                 Neu: Anzeigen im Pilot
               </p>
-              <h1 className="mt-5 max-w-3xl text-4xl font-medium leading-tight tracking-tight text-zinc-50 sm:text-5xl">
+              <h1 className="mt-5 max-w-3xl text-4xl font-semibold leading-tight tracking-tight text-zinc-50 sm:text-5xl">
                 Anzeigen bei Google und Meta, ehrlich als Test
               </h1>
               <p className="mt-6 max-w-2xl text-lg leading-relaxed text-zinc-400">
@@ -76,17 +76,17 @@ export default function AnzeigenPage() {
           </div>
         </section>
 
-        <section className="border-b border-zinc-900 py-24">
+        <section className="border-b border-white/5 py-24">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <Reveal>
               <Eyebrow index="01">Kanäle</Eyebrow>
-              <h2 className="mt-5 max-w-2xl text-3xl font-medium leading-tight tracking-tight text-zinc-50 sm:text-4xl">
+              <h2 className="mt-5 max-w-2xl text-3xl font-semibold leading-tight tracking-tight text-zinc-50 sm:text-[2.75rem]">
                 Was ich im Pilot teste
               </h2>
             </Reveal>
-            <ul className="mt-10 grid grid-cols-1 gap-px border border-zinc-900 bg-zinc-900 md:grid-cols-3">
+            <ul className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-3">
               {CHANNELS.map((channel) => (
-                <li key={channel.title} className="bg-base p-6">
+                <li key={channel.title} className="card p-6">
                   <p className="font-medium text-zinc-100">{channel.title}</p>
                   <p className="mt-2 text-sm leading-relaxed text-zinc-400">{channel.text}</p>
                   {channel.href && (

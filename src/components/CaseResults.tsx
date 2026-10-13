@@ -23,11 +23,11 @@ export function CaseResults({ kpis, note, screenshots, name }: CaseResultsProps)
     <div className="flex flex-col gap-10">
       {kpis.length > 0 && (
         <div>
-          <dl className="grid grid-cols-2 gap-px border border-zinc-900 bg-zinc-900 lg:grid-cols-5">
+          <dl className="grid grid-cols-2 gap-4 lg:grid-cols-5">
             {kpis.map((kpi) => (
               <div
                 key={kpi.label}
-                className="flex flex-col bg-base p-5 [&:last-child:nth-child(odd)]:col-span-2 lg:[&:last-child:nth-child(odd)]:col-span-1"
+                className="card flex flex-col p-5 [&:last-child:nth-child(odd)]:col-span-2 lg:[&:last-child:nth-child(odd)]:col-span-1"
               >
                 <dt className="order-2 mt-2 text-sm leading-snug text-zinc-400">{kpi.label}</dt>
                 <dd className="order-1 text-3xl font-medium tabular-nums tracking-tight text-zinc-50">
@@ -53,7 +53,7 @@ export function CaseResults({ kpis, note, screenshots, name }: CaseResultsProps)
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
           {screenshots.map((shot) => (
             <figure key={shot.src}>
-              <div className="relative aspect-[4/3] border border-zinc-900 bg-zinc-950">
+              <div className="card relative aspect-[4/3] overflow-hidden">
                 <Image
                   src={shot.src}
                   alt={`${shot.caption}, ${name}`}

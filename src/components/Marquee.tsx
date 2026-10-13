@@ -41,7 +41,7 @@ export function Marquee() {
   if (!SHOW_CLIENT_LOGOS) return null;
 
   return (
-    <section className="border-b border-zinc-900 py-14">
+    <section className="border-b border-white/5 py-14">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <p className="mb-10 text-center font-mono text-xs uppercase tracking-[0.2em] text-muted">
           Kunden aus der Region

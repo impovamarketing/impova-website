@@ -11,11 +11,11 @@ const ORDERED = [...CASE_STUDIES].sort(
 
 export function Work() {
   return (
-    <section id="referenzen" className="border-b border-zinc-900 py-28">
+    <section id="referenzen" className="border-b border-white/5 py-28">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <Reveal>
           <Eyebrow index="02">Referenzen</Eyebrow>
-          <h2 className="mt-5 max-w-2xl text-3xl font-medium leading-tight tracking-tight text-zinc-50 sm:text-4xl">
+          <h2 className="mt-5 max-w-2xl text-3xl font-semibold leading-tight tracking-tight text-zinc-50 sm:text-[2.75rem]">
             Echte Projekte aus der Region, mit Ergebnis
           </h2>
           <p className="mt-5 max-w-xl text-zinc-400">

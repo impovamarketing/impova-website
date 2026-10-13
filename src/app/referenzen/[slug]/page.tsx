@@ -73,7 +73,7 @@ export default async function CaseStudyPage({
       />
       <Header />
       <main id="inhalt">
-        <section className="border-b border-zinc-900 pb-20 pt-40">
+        <section className="border-b border-white/5 pb-20 pt-40">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <Reveal immediate>
               <Link
@@ -85,7 +85,7 @@ export default async function CaseStudyPage({
               <p className="mt-6 font-mono text-xs uppercase tracking-wider text-accent">
                 {caseStudy.category}
               </p>
-              <h1 className="mt-3 max-w-3xl text-4xl font-medium leading-tight tracking-tight text-zinc-50 sm:text-5xl">
+              <h1 className="mt-3 max-w-3xl text-4xl font-semibold leading-tight tracking-tight text-zinc-50 sm:text-5xl">
                 {caseStudy.name}
               </h1>
               {caseStudy.highlight && (
@@ -104,7 +104,7 @@ export default async function CaseStudyPage({
             </Reveal>
 
             <Reveal immediate delay={0.1}>
-              <div className="mt-12 overflow-hidden border border-zinc-900">
+              <div className="card mt-12 overflow-hidden">
                 <CaseVisual
                   caseStudy={caseStudy}
                   aspect="aspect-[16/9]"
@@ -116,7 +116,7 @@ export default async function CaseStudyPage({
           </div>
         </section>
 
-        <section className="border-b border-zinc-900 py-24">
+        <section className="border-b border-white/5 py-24">
           <div className="mx-auto grid max-w-7xl grid-cols-1 gap-16 px-6 lg:grid-cols-3 lg:px-10">
             <Reveal>
               <Eyebrow index="01">Ausgangslage</Eyebrow>
@@ -156,7 +156,7 @@ export default async function CaseStudyPage({
         </section>
 
         {hasResults && (
-          <section className="border-b border-zinc-900 py-24">
+          <section className="border-b border-white/5 py-24">
             <div className="mx-auto max-w-7xl px-6 lg:px-10">
               <Reveal>
                 <Eyebrow index="04">Ergebnisse in Zahlen</Eyebrow>
@@ -182,7 +182,7 @@ export default async function CaseStudyPage({
               <Eyebrow index={hasResults ? "05" : "04"}>
                 Nächster Schritt
               </Eyebrow>
-              <h2 className="mt-5 max-w-2xl text-3xl font-medium leading-tight tracking-tight text-zinc-50 sm:text-4xl">
+              <h2 className="mt-5 max-w-2xl text-3xl font-semibold leading-tight tracking-tight text-zinc-50 sm:text-[2.75rem]">
                 Wie sichtbar ist dein Unternehmen?
               </h2>
               <p className="mt-5 max-w-xl text-zinc-400">

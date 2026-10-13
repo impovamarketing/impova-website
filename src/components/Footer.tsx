@@ -121,7 +121,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-16 flex flex-col gap-3 border-t border-zinc-900 pt-6 font-mono text-[11px] uppercase tracking-wider text-muted sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-16 flex flex-col gap-3 border-t border-white/5 pt-6 font-mono text-[11px] uppercase tracking-wider text-muted sm:flex-row sm:items-center sm:justify-between">
           <span>© 2026 Impova, Tobias Springer</span>
           <span>Webdesign und lokale Sichtbarkeit, Landshut</span>
         </div>

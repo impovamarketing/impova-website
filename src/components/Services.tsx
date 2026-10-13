@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import type { LucideIcon } from "lucide-react";
 import { Clock, Image as ImageIcon, MapPin, MousePointerClick, PenLine, Search } from "lucide-react";
@@ -63,69 +62,49 @@ const MODULES = [
 
 export function Services() {
   return (
-    <section id="leistungen" className="border-b border-zinc-900 py-28">
+    <section id="leistungen" className="border-b border-white/5 py-28">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
-        <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:items-end lg:gap-8">
-          <Reveal className="lg:col-span-8">
-            <Eyebrow index="05">Leistungen</Eyebrow>
-            <h2 className="mt-5 max-w-2xl text-3xl font-medium leading-tight tracking-tight text-zinc-50 sm:text-4xl">
-              Was du von mir bekommst: mehr Anfragen aus deiner Region
-            </h2>
-            <p className="mt-5 max-w-lg text-zinc-400">
-              Dahinter steht das <span className="text-zinc-100">{METHOD_NAME}</span>:
-              drei Bausteine, die zusammen wirken. Eine Website, die überzeugt,
-              Sichtbarkeit bei Google in deiner Region und klare Wege zur
-              Anfrage.
-            </p>
-            <p className="mt-4 max-w-lg text-zinc-400">
-              Ein fester Ansprechpartner von der ersten Anfrage bis nach dem
-              Launch. Antwort innerhalb von 24 Stunden, keine Weitergabe an
-              Dritte.
-            </p>
-          </Reveal>
+        <Reveal>
+          <Eyebrow index="05">Leistungen</Eyebrow>
+          <h2 className="mt-5 max-w-2xl text-3xl font-semibold leading-tight tracking-tight text-zinc-50 sm:text-[2.75rem]">
+            Was du von mir bekommst: mehr Anfragen aus deiner Region
+          </h2>
+          <p className="mt-5 max-w-lg text-zinc-400">
+            Dahinter steht das <span className="text-zinc-100">{METHOD_NAME}</span>:
+            drei Bausteine, die zusammen wirken. Eine Website, die überzeugt,
+            Sichtbarkeit bei Google in deiner Region und klare Wege zur
+            Anfrage.
+          </p>
+          <p className="mt-4 max-w-lg text-zinc-400">
+            Ein fester Ansprechpartner von der ersten Anfrage bis nach dem
+            Launch. Antwort innerhalb von 24 Stunden, keine Weitergabe an
+            Dritte.
+          </p>
+        </Reveal>
 
-          <Reveal delay={0.1} className="lg:col-span-4">
-            <div className="relative aspect-[4/5] w-full max-w-xs overflow-hidden border border-zinc-800 grayscale lg:ml-auto">
-              <Image
-                src="/images/portraits/founder-portrait.jpeg"
-                alt="Tobias Springer, Gründer von Impova"
-                fill
-                className="object-cover object-[50%_18%]"
-                sizes="(min-width: 1024px) 320px, 80vw"
-              />
-            </div>
-          </Reveal>
-        </div>
-
-        <div className="mt-16 border-b border-zinc-900">
-          {OUTCOMES.map((outcome) => {
+        <div className="mt-14 grid grid-cols-1 gap-4 md:grid-cols-3">
+          {OUTCOMES.map((outcome, i) => {
             const Icon = outcome.icon;
             return (
-              <Reveal key={outcome.index}>
-                <div className="grid grid-cols-1 gap-6 border-t border-zinc-900 px-2 py-10 md:grid-cols-12 md:items-center md:gap-8">
-                  <div className="font-mono text-sm text-muted md:col-span-1">
-                    {outcome.index}
-                  </div>
-                  <h3 className="text-xl font-medium tracking-tight text-zinc-50 sm:text-2xl md:col-span-4">
-                    {outcome.title}
-                  </h3>
-                  <div className="md:col-span-6">
-                    <p className="text-zinc-400">{outcome.description}</p>
-                    {outcome.href && (
-                      <Link
-                        href={outcome.href.url}
-                        className="mt-3 inline-block font-mono text-xs uppercase tracking-wider text-accent hover:underline"
-                      >
-                        {outcome.href.label} →
-                      </Link>
-                    )}
-                  </div>
-                  <Icon
-                    strokeWidth={1}
-                    aria-hidden="true"
-                    className="size-8 text-zinc-600 md:col-span-1 md:justify-self-end"
-                  />
+              <Reveal key={outcome.index} delay={i * 0.06} className="card card-interactive flex flex-col p-7">
+                <div className="flex items-center justify-between">
+                  <span className="icon-tile">
+                    <Icon className="size-5" strokeWidth={1.5} aria-hidden="true" />
+                  </span>
+                  <span className="font-mono text-xs text-muted">{outcome.index}</span>
                 </div>
+                <h3 className="mt-6 text-xl font-semibold tracking-tight text-zinc-50">
+                  {outcome.title}
+                </h3>
+                <p className="mt-3 text-sm leading-relaxed text-zinc-400">{outcome.description}</p>
+                {outcome.href && (
+                  <Link
+                    href={outcome.href.url}
+                    className="mt-auto pt-5 text-sm font-medium text-accent hover:underline"
+                  >
+                    {outcome.href.label} →
+                  </Link>
+                )}
               </Reveal>
             );
           })}
@@ -143,11 +122,11 @@ export function Services() {
             </p>
           </Reveal>
           <Reveal delay={0.1} className="lg:col-span-7">
-            <ul className="grid grid-cols-1 gap-px border border-zinc-900 bg-zinc-900 sm:grid-cols-3">
+            <ul className="grid grid-cols-1 gap-4 sm:grid-cols-3">
               {CHANGE_POINTS.map((point) => {
                 const Icon = point.icon;
                 return (
-                  <li key={point.text} className="bg-base p-6">
+                  <li key={point.text} className="card p-6">
                     <Icon strokeWidth={1} aria-hidden="true" className="size-6 text-accent" />
                     <p className="mt-4 text-sm text-zinc-300">{point.text}</p>
                   </li>
@@ -161,9 +140,9 @@ export function Services() {
           <h3 className="text-2xl font-medium tracking-tight text-zinc-50">
             Klar getrennt: Bau, Pflege und Sichtbarkeit
           </h3>
-          <ol className="mt-8 grid grid-cols-1 gap-px border border-zinc-900 bg-zinc-900 md:grid-cols-3">
+          <ol className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-3">
             {MODULES.map((module, i) => (
-              <li key={module.title} className="bg-base p-6">
+              <li key={module.title} className="card p-6">
                 <span className="font-mono text-xs text-accent">
                   {String(i + 1).padStart(2, "0")}
                 </span>

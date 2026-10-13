@@ -119,13 +119,13 @@ export default function RecruitingPage() {
       ))}
       <Header />
       <main id="inhalt">
-        <section className="border-b border-zinc-900 pb-20 pt-40">
+        <section className="border-b border-white/5 pb-20 pt-40">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <Reveal immediate>
               <p className="font-mono text-xs uppercase tracking-wider text-accent">
                 Social Recruiting in Landshut und Niederbayern
               </p>
-              <h1 className="mt-5 max-w-3xl text-4xl font-medium leading-tight tracking-tight text-zinc-50 sm:text-5xl">
+              <h1 className="mt-5 max-w-3xl text-4xl font-semibold leading-tight tracking-tight text-zinc-50 sm:text-5xl">
                 Mitarbeiter finden, die gar nicht aktiv suchen.
               </h1>
               <p className="mt-6 max-w-2xl text-lg leading-relaxed text-zinc-400">
@@ -144,17 +144,17 @@ export default function RecruitingPage() {
           </div>
         </section>
 
-        <section className="border-b border-zinc-900 py-24">
+        <section className="border-b border-white/5 py-24">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <Reveal>
               <Eyebrow index="01">Ausgangslage</Eyebrow>
-              <h2 className="mt-5 max-w-2xl text-3xl font-medium leading-tight tracking-tight text-zinc-50 sm:text-4xl">
+              <h2 className="mt-5 max-w-2xl text-3xl font-semibold leading-tight tracking-tight text-zinc-50 sm:text-[2.75rem]">
                 Kommt dir das bekannt vor?
               </h2>
             </Reveal>
-            <div className="mt-10 flex flex-col border-t border-zinc-900">
+            <div className="mt-10 flex flex-col border-t border-white/5">
               {PAINS.map((pain, i) => (
-                <Reveal key={pain} delay={i * 0.05} className="border-b border-zinc-900 py-5">
+                <Reveal key={pain} delay={i * 0.05} className="border-b border-white/5 py-5">
                   <p className="text-zinc-300">{pain}</p>
                 </Reveal>
               ))}
@@ -162,17 +162,17 @@ export default function RecruitingPage() {
           </div>
         </section>
 
-        <section className="border-b border-zinc-900 py-24">
+        <section className="border-b border-white/5 py-24">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <Reveal>
               <Eyebrow index="02">Ablauf</Eyebrow>
-              <h2 className="mt-5 max-w-2xl text-3xl font-medium leading-tight tracking-tight text-zinc-50 sm:text-4xl">
+              <h2 className="mt-5 max-w-2xl text-3xl font-semibold leading-tight tracking-tight text-zinc-50 sm:text-[2.75rem]">
                 So kommst du zu Bewerbungen
               </h2>
             </Reveal>
-            <ol className="mt-10 grid grid-cols-1 gap-px border border-zinc-900 bg-zinc-900 md:grid-cols-2 lg:grid-cols-4">
+            <ol className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
               {STEPS.map((step, i) => (
-                <li key={step.title} className="bg-base p-6">
+                <li key={step.title} className="card p-6">
                   <p className="font-mono text-xs text-muted">{String(i + 1).padStart(2, "0")}</p>
                   <p className="mt-3 font-medium text-zinc-100">{step.title}</p>
                   <p className="mt-2 text-sm leading-relaxed text-zinc-400">{step.text}</p>
@@ -182,7 +182,7 @@ export default function RecruitingPage() {
           </div>
         </section>
 
-        <section className="border-b border-zinc-900 py-24">
+        <section className="border-b border-white/5 py-24">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <Reveal>
               <div className="border border-zinc-800 bg-surface p-8 sm:p-10">
@@ -206,16 +206,16 @@ export default function RecruitingPage() {
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <Reveal>
               <Eyebrow index="04">FAQ</Eyebrow>
-              <h2 className="mt-5 max-w-2xl text-3xl font-medium leading-tight tracking-tight text-zinc-50 sm:text-4xl">
+              <h2 className="mt-5 max-w-2xl text-3xl font-semibold leading-tight tracking-tight text-zinc-50 sm:text-[2.75rem]">
                 Häufige Fragen zum Social Recruiting
               </h2>
             </Reveal>
-            <div className="mt-10 flex max-w-3xl flex-col border-t border-zinc-900">
+            <div className="mt-10 flex max-w-3xl flex-col gap-3">
               {FAQS.map((faq) => (
-                <details key={faq.question} className="group border-b border-zinc-900 py-6">
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-medium text-zinc-50 marker:content-none [&::-webkit-details-marker]:hidden">
+                <details key={faq.question} className="card group px-6 py-5">
+                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-base font-medium text-zinc-50 marker:content-none sm:text-lg [&::-webkit-details-marker]:hidden">
                     {faq.question}
-                    <span className="shrink-0 font-mono text-xl text-muted motion-safe:transition-transform motion-safe:duration-300 group-open:rotate-45">
+                    <span className="flex size-8 shrink-0 items-center justify-center rounded-full border border-white/10 font-mono text-lg text-accent motion-safe:transition-transform motion-safe:duration-300 group-open:rotate-45">
                       +
                     </span>
                   </summary>

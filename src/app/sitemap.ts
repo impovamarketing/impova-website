@@ -17,6 +17,7 @@ const HOME_FILES = [
   "src/components/Philosophy.tsx",
   "src/components/Services.tsx",
   "src/components/Commitments.tsx",
+  "src/components/Fit.tsx",
   "src/components/Pipeline.tsx",
   "src/components/FAQ.tsx",
   "src/components/ContactForm.tsx",

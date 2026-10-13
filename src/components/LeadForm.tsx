@@ -52,7 +52,7 @@ export function LeadForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="border border-zinc-900 bg-surface">
+    <form onSubmit={handleSubmit} className="card overflow-hidden">
       <input
         type="text"
         name="company_website"
@@ -64,20 +64,20 @@ export function LeadForm() {
         aria-hidden="true"
       />
 
-      <div className="grid grid-cols-1 gap-px bg-zinc-900 sm:grid-cols-2">
-        <div className="bg-surface px-6 py-5">
+      <div className="grid grid-cols-1 gap-px bg-white/5 sm:grid-cols-2">
+        <div className="bg-base/40 px-6 py-5">
           <label htmlFor="lf-name" className={labelClass}>
             Name *
           </label>
           <input id="lf-name" required value={form.name} onChange={set("name")} className={fieldClass} autoComplete="name" />
         </div>
-        <div className="bg-surface px-6 py-5">
+        <div className="bg-base/40 px-6 py-5">
           <label htmlFor="lf-email" className={labelClass}>
             E-Mail *
           </label>
           <input id="lf-email" type="email" required value={form.email} onChange={set("email")} className={fieldClass} autoComplete="email" />
         </div>
-        <div className="bg-surface px-6 py-5">
+        <div className="bg-base/40 px-6 py-5">
           <label htmlFor="lf-branche" className={labelClass}>
             Branche *
           </label>
@@ -92,7 +92,7 @@ export function LeadForm() {
             ))}
           </select>
         </div>
-        <div className="bg-surface px-6 py-5">
+        <div className="bg-base/40 px-6 py-5">
           <label htmlFor="lf-budget" className={labelClass}>
             Budget-Rahmen *
           </label>
@@ -109,14 +109,14 @@ export function LeadForm() {
         </div>
       </div>
 
-      <div className="border-t border-zinc-900 px-6 py-5">
+      <div className="border-t border-white/5 px-6 py-5">
         <label htmlFor="lf-phone" className={labelClass}>
           Telefon (optional, für einen schnellen Rückruf)
         </label>
         <input id="lf-phone" type="tel" value={form.phone} onChange={set("phone")} className={fieldClass} autoComplete="tel" />
       </div>
 
-      <div className="border-t border-zinc-900 px-6 py-5">
+      <div className="border-t border-white/5 px-6 py-5">
         <label htmlFor="lf-details" className={labelClass}>
           Worum geht es? *
         </label>
@@ -131,14 +131,14 @@ export function LeadForm() {
         />
       </div>
 
-      <div className="flex flex-col gap-4 border-t border-zinc-900 px-6 py-6 sm:flex-row sm:items-center sm:justify-between">
+      <div className="flex flex-col gap-4 border-t border-white/5 px-6 py-6 sm:flex-row sm:items-center sm:justify-between">
         <p className="font-mono text-xs text-muted">
           Ich melde mich innerhalb von 24 Stunden persönlich zurück.
         </p>
         <button
           type="submit"
           disabled={status === "submitting"}
-          className="inline-flex items-center justify-center gap-2 bg-accent px-6 py-3 font-mono text-sm uppercase tracking-wider text-base transition-colors hover:bg-white disabled:opacity-60"
+          className="inline-flex items-center justify-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-medium text-black transition-colors hover:bg-white disabled:opacity-60"
         >
           {status === "submitting" && <Loader2 className="size-4 animate-spin" />}
           Unverbindlich anfragen
@@ -146,7 +146,7 @@ export function LeadForm() {
       </div>
 
       {status === "error" && (
-        <p className="border-t border-zinc-900 px-6 py-4 font-mono text-xs text-status-red">
+        <p className="border-t border-white/5 px-6 py-4 font-mono text-xs text-status-red">
           Fehler beim Senden. Bitte versuch es erneut oder schreib direkt an
           info@impova.de.
         </p>

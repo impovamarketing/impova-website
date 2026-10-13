@@ -61,7 +61,7 @@ export default function ImpressumPage() {
         <p>LinkedIn: Tobias Springer</p>
       </section>
 
-      <p className="border-t border-zinc-900 pt-6 text-xs text-muted">
+      <p className="border-t border-white/5 pt-6 text-xs text-muted">
         <a
           href="https://datenschutz-generator.de/"
           target="_blank"

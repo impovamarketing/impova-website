@@ -47,14 +47,14 @@ export default function UeberMichPage() {
       />
       <Header />
       <main id="inhalt">
-        <section className="border-b border-zinc-900 pb-20 pt-40">
+        <section className="border-b border-white/5 pb-20 pt-40">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:items-center">
               <Reveal immediate className="lg:col-span-7">
                 <p className="font-mono text-xs uppercase tracking-wider text-muted">
                   Über mich
                 </p>
-                <h1 className="mt-5 max-w-xl text-4xl font-medium leading-tight tracking-tight text-zinc-50 sm:text-5xl">
+                <h1 className="mt-5 max-w-xl text-4xl font-semibold leading-tight tracking-tight text-zinc-50 sm:text-5xl">
                   Ich bin Tobias, dein fester Ansprechpartner bei Impova.
                 </h1>
                 <div className="mt-6 flex max-w-lg flex-col gap-4 text-lg leading-relaxed text-zinc-400">
@@ -82,7 +82,7 @@ export default function UeberMichPage() {
                 </div>
               </Reveal>
               <Reveal immediate delay={0.1} className="lg:col-span-5">
-                <div className="group relative aspect-[4/5] overflow-hidden border border-zinc-900 grayscale transition-all duration-500 hover:grayscale-0">
+                <div className="group relative aspect-[4/5] overflow-hidden rounded-[2rem] border border-white/10">
                   <Image
                     src="/images/portraits/founder-lifestyle.jpeg"
                     alt="Tobias Springer, Gründer von Impova"
@@ -98,11 +98,11 @@ export default function UeberMichPage() {
           </div>
         </section>
 
-        <section className="border-b border-zinc-900 py-24">
+        <section className="border-b border-white/5 py-24">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <Reveal>
               <Eyebrow index="01">Mein Weg</Eyebrow>
-              <h2 className="mt-5 max-w-2xl text-3xl font-medium leading-tight tracking-tight text-zinc-50 sm:text-4xl">
+              <h2 className="mt-5 max-w-2xl text-3xl font-semibold leading-tight tracking-tight text-zinc-50 sm:text-[2.75rem]">
                 Vom Lager in die Selbstständigkeit
               </h2>
               <div className="mt-6 flex max-w-2xl flex-col gap-4 text-zinc-400">
@@ -123,7 +123,7 @@ export default function UeberMichPage() {
             </Reveal>
 
             <Reveal delay={0.1}>
-              <dl className="mt-14 grid max-w-3xl grid-cols-1 gap-8 border-t border-zinc-900 pt-10 sm:grid-cols-3">
+              <dl className="mt-14 grid max-w-3xl grid-cols-1 gap-8 border-t border-white/5 pt-10 sm:grid-cols-3">
                 <div>
                   <dt className="sr-only">Selbstständig seit</dt>
                   <dd className="font-mono text-2xl text-zinc-50">Nov. 2025</dd>
@@ -151,7 +151,7 @@ export default function UeberMichPage() {
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <Reveal>
               <Eyebrow index="02">Zusammenarbeit</Eyebrow>
-              <h2 className="mt-5 max-w-2xl text-3xl font-medium leading-tight tracking-tight text-zinc-50 sm:text-4xl">
+              <h2 className="mt-5 max-w-2xl text-3xl font-semibold leading-tight tracking-tight text-zinc-50 sm:text-[2.75rem]">
                 Wie wir zusammenarbeiten
               </h2>
               <ul className="mt-8 flex max-w-2xl flex-col gap-3 text-zinc-300">

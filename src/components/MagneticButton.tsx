@@ -38,10 +38,11 @@ export function MagneticButton({
   }
 
   const base =
-    "group inline-flex items-center gap-3 px-7 py-4 font-mono text-sm uppercase tracking-wider transition-colors duration-300";
-  const solid = "bg-accent text-base hover:bg-white";
+    "group inline-flex items-center gap-3 rounded-full px-7 py-4 text-sm font-medium transition-colors duration-300";
+  const solid =
+    "bg-accent text-black shadow-[0_0_40px_-12px_rgb(198_255_0/0.7)] hover:bg-white";
   const outline =
-    "border border-zinc-700 text-zinc-100 hover:border-accent hover:text-accent";
+    "border border-white/15 bg-white/[0.03] text-zinc-100 hover:border-accent/60 hover:text-accent";
 
   return (
     <motion.a

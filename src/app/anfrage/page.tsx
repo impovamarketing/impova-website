@@ -40,7 +40,7 @@ const POINTS = [
 export default function AnfragePage() {
   return (
     <>
-      <header className="border-b border-zinc-900">
+      <header className="border-b border-white/5">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5 lg:px-10">
           <Link
             href="/"
@@ -58,7 +58,7 @@ export default function AnfragePage() {
       </header>
 
       <main id="inhalt">
-        <section className="border-b border-zinc-900 py-20 sm:py-28">
+        <section className="border-b border-white/5 py-20 sm:py-28">
           <div className="mx-auto grid max-w-6xl grid-cols-1 gap-12 px-6 lg:grid-cols-12 lg:px-10">
             <div className="lg:col-span-8">
               <p className="font-mono text-xs uppercase tracking-wider text-accent">
@@ -70,20 +70,20 @@ export default function AnfragePage() {
               <ul className="mt-8 flex flex-col gap-3">
                 {POINTS.map((point) => (
                   <li key={point} className="flex gap-3 text-zinc-300">
-                    <span className="mt-2 size-1.5 shrink-0 bg-accent" aria-hidden="true" />
+                    <span className="mt-2 size-1.5 shrink-0 rounded-full bg-accent" aria-hidden="true" />
                     {point}
                   </li>
                 ))}
               </ul>
               <a
                 href="#anfrage"
-                className="mt-10 inline-flex bg-accent px-6 py-3 font-mono text-sm uppercase tracking-wider text-base transition-colors hover:bg-white"
+                className="mt-10 inline-flex rounded-full bg-accent px-6 py-3 text-sm font-medium text-black transition-colors hover:bg-white"
               >
                 Unverbindlich anfragen
               </a>
             </div>
             <div className="flex items-end gap-4 lg:col-span-4 lg:flex-col lg:items-start">
-              <div className="relative h-40 w-32 shrink-0 overflow-hidden border border-zinc-800 grayscale sm:h-56 sm:w-44">
+              <div className="relative h-40 w-32 shrink-0 overflow-hidden rounded-2xl border border-white/10 sm:h-56 sm:w-44">
                 <Image
                   src="/images/portraits/founder-portrait.jpeg"
                   alt="Tobias Springer, Gründer von Impova"
@@ -103,7 +103,7 @@ export default function AnfragePage() {
           </div>
         </section>
 
-        <section className="border-b border-zinc-900 py-20">
+        <section className="border-b border-white/5 py-20">
           <div className="mx-auto max-w-6xl px-6 lg:px-10">
             <Eyebrow index="01">Referenzen</Eyebrow>
             <h2 className="mt-5 max-w-2xl text-3xl font-medium leading-tight tracking-tight text-zinc-50">
@@ -119,7 +119,7 @@ export default function AnfragePage() {
 
         <Testimonials index="02" />
 
-        <section className="border-b border-zinc-900 py-20">
+        <section className="border-b border-white/5 py-20">
           <div className="mx-auto max-w-6xl px-6 lg:px-10">
             <Eyebrow index="03">Ablauf</Eyebrow>
             <ol className="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-3">
@@ -156,7 +156,7 @@ export default function AnfragePage() {
         </section>
       </main>
 
-      <footer className="border-t border-zinc-900 py-8">
+      <footer className="border-t border-white/5 py-8">
         <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-x-6 gap-y-2 px-6 font-mono text-xs uppercase tracking-wider text-muted lg:px-10">
           <span>© Impova</span>
           <Link href="/impressum" className="hover:text-zinc-100">

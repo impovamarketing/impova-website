@@ -33,11 +33,11 @@ const FEATURES: Feature[] = [
 
 export function AIAutomation() {
   return (
-    <section id="automatisierung" className="border-b border-zinc-900 py-28">
+    <section id="automatisierung" className="border-b border-white/5 py-28">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <Reveal>
           <Eyebrow index="08">Zusatzoption</Eyebrow>
-          <h2 className="mt-5 max-w-2xl text-3xl font-medium leading-tight tracking-tight text-zinc-50 sm:text-4xl">
+          <h2 className="mt-5 max-w-2xl text-3xl font-semibold leading-tight tracking-tight text-zinc-50 sm:text-[2.75rem]">
             Wenn deine Website mehr übernehmen soll als nur dastehen
           </h2>
           <p className="mt-5 max-w-xl text-zinc-400">
@@ -46,16 +46,15 @@ export function AIAutomation() {
           </p>
         </Reveal>
 
-        <div className="mt-16 grid grid-cols-1 gap-px overflow-hidden border border-zinc-900 bg-zinc-900 md:grid-cols-3">
+        <div className="mt-16 grid grid-cols-1 gap-4 md:grid-cols-3">
           {FEATURES.map((feature, i) => {
             const Icon = feature.icon;
             return (
-              <Reveal key={feature.title} delay={i * 0.08} className="group bg-base p-8">
-                <Icon
-                  strokeWidth={1}
-                  className="size-8 text-zinc-600 transition-all duration-300 group-hover:text-accent motion-safe:group-hover:scale-110"
-                />
-                <h3 className="mt-6 text-lg font-medium text-zinc-50">
+              <Reveal key={feature.title} delay={i * 0.08} className="card card-interactive group p-8">
+                <span className="icon-tile">
+                  <Icon strokeWidth={1.5} className="size-5" aria-hidden="true" />
+                </span>
+                <h3 className="mt-6 text-lg font-semibold text-zinc-50">
                   {feature.title}
                 </h3>
                 <p className="mt-3 text-sm leading-relaxed text-zinc-400">

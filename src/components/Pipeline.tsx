@@ -1,9 +1,5 @@
-"use client";
-
-import { motion } from "framer-motion";
 import { Eyebrow } from "./Eyebrow";
 import { Reveal } from "./Reveal";
-import { EASE_OUT_EXPO } from "@/lib/motion";
 import { METHOD_NAME } from "@/config/site";
 
 const STEPS = [
@@ -39,11 +35,11 @@ const STEPS = [
 
 export function Pipeline() {
   return (
-    <section id="prozess" className="border-b border-zinc-900 py-28">
+    <section id="prozess" className="border-b border-white/5 py-28">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <Reveal>
           <Eyebrow index="06">Prozess</Eyebrow>
-          <h2 className="mt-5 max-w-2xl text-3xl font-medium leading-tight tracking-tight text-zinc-50 sm:text-4xl">
+          <h2 className="mt-5 max-w-2xl text-3xl font-semibold leading-tight tracking-tight text-zinc-50 sm:text-[2.75rem]">
             So läuft die Zusammenarbeit ab
           </h2>
           <p className="mt-5 max-w-lg text-zinc-400">
@@ -52,37 +48,23 @@ export function Pipeline() {
           </p>
         </Reveal>
 
-        <div className="relative mt-20">
-          <div className="absolute left-0 right-0 top-5 hidden h-px bg-zinc-900 lg:block" />
-          <motion.div
-            initial={{ scaleX: 0 }}
-            whileInView={{ scaleX: 1 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 1.2, ease: EASE_OUT_EXPO }}
-            style={{ transformOrigin: "left" }}
-            className="absolute left-0 right-0 top-5 hidden h-px bg-accent lg:block"
-          />
-
-          <div className="grid grid-cols-1 gap-10 lg:grid-cols-4 lg:gap-8">
-            {STEPS.map((step, i) => (
-              <Reveal key={step.index} delay={i * 0.12}>
-                <div className="relative">
-                  <div className="relative z-10 mb-6 flex size-10 items-center justify-center border border-zinc-700 bg-base font-mono text-xs text-zinc-300">
+        <div className="mt-14 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
+          {STEPS.map((step, i) => (
+            <Reveal key={step.index} delay={i * 0.08} className="card flex flex-col p-7">
+              <div>
+                <div className="flex items-center gap-3">
+                  <span className="flex size-10 items-center justify-center rounded-full border border-accent/40 bg-accent/10 font-mono text-xs text-accent">
                     {step.index}
-                  </div>
-                  <p className="font-mono text-[11px] uppercase tracking-wider text-accent">
+                  </span>
+                  <span className="font-mono text-[11px] uppercase tracking-wider text-muted">
                     {step.status}
-                  </p>
-                  <h3 className="mt-2 text-xl font-medium text-zinc-50">
-                    {step.title}
-                  </h3>
-                  <p className="mt-3 text-sm leading-relaxed text-zinc-400">
-                    {step.description}
-                  </p>
+                  </span>
                 </div>
-              </Reveal>
-            ))}
-          </div>
+                <h3 className="mt-6 text-xl font-semibold text-zinc-50">{step.title}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-zinc-400">{step.description}</p>
+              </div>
+            </Reveal>
+          ))}
         </div>
       </div>
     </section>

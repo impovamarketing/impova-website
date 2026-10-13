@@ -12,22 +12,25 @@ const PAINS = [
 
 export function Problem() {
   return (
-    <section className="border-b border-zinc-900 py-20 sm:py-24">
+    <section className="border-b border-white/5 py-20 sm:py-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <Reveal>
-          <h2 className="max-w-2xl text-3xl font-medium leading-tight tracking-tight text-zinc-50 sm:text-4xl">
+          <h2 className="max-w-2xl text-3xl font-semibold leading-tight tracking-tight text-zinc-50 sm:text-[2.75rem]">
             Kommt dir das bekannt vor?
           </h2>
         </Reveal>
 
-        <div className="mt-10 grid grid-cols-1 gap-px border border-zinc-900 bg-zinc-900 sm:grid-cols-2">
+        <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2">
           {PAINS.map((pain, i) => (
             <Reveal
               key={pain}
               delay={i * 0.05}
-              className="flex gap-4 bg-base p-6 sm:[&:last-child:nth-child(odd)]:col-span-2"
+              className="card flex gap-4 p-6 sm:[&:last-child:nth-child(odd)]:col-span-2"
             >
-              <span className="mt-1 font-mono text-xs text-status-red" aria-hidden="true">
+              <span
+                className="flex size-7 shrink-0 items-center justify-center rounded-lg bg-status-red/10 font-mono text-xs text-status-red"
+                aria-hidden="true"
+              >
                 ✕
               </span>
               <p className="text-zinc-300">{pain}</p>

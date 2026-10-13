@@ -52,13 +52,13 @@ export default function WebsiteRelaunchPage() {
       />
       <Header />
       <main id="inhalt">
-        <section className="border-b border-zinc-900 pb-20 pt-40">
+        <section className="border-b border-white/5 pb-20 pt-40">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <Reveal immediate>
               <p className="font-mono text-xs uppercase tracking-wider text-muted">
                 Website-Relaunch
               </p>
-              <h1 className="mt-5 max-w-3xl text-4xl font-medium leading-tight tracking-tight text-zinc-50 sm:text-5xl">
+              <h1 className="mt-5 max-w-3xl text-4xl font-semibold leading-tight tracking-tight text-zinc-50 sm:text-5xl">
                 Wenn deine aktuelle Website dich mehr kostet als sie bringt.
               </h1>
               <p className="mt-6 max-w-xl text-lg leading-relaxed text-zinc-400">
@@ -75,20 +75,20 @@ export default function WebsiteRelaunchPage() {
           </div>
         </section>
 
-        <section className="border-b border-zinc-900 py-24">
+        <section className="border-b border-white/5 py-24">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <Reveal>
               <Eyebrow index="01">Anzeichen</Eyebrow>
-              <h2 className="mt-5 max-w-2xl text-3xl font-medium leading-tight tracking-tight text-zinc-50 sm:text-4xl">
+              <h2 className="mt-5 max-w-2xl text-3xl font-semibold leading-tight tracking-tight text-zinc-50 sm:text-[2.75rem]">
                 Woran du merkst, dass ein Relaunch fällig ist
               </h2>
             </Reveal>
-            <div className="mt-10 flex flex-col border-t border-zinc-900">
+            <div className="mt-10 flex flex-col border-t border-white/5">
               {SIGNS.map((sign, i) => (
                 <Reveal
                   key={sign}
                   delay={i * 0.05}
-                  className="border-b border-zinc-900 py-5"
+                  className="border-b border-white/5 py-5"
                 >
                   <p className="text-zinc-300">{sign}</p>
                 </Reveal>
@@ -97,11 +97,11 @@ export default function WebsiteRelaunchPage() {
           </div>
         </section>
 
-        <section className="border-b border-zinc-900 py-24">
+        <section className="border-b border-white/5 py-24">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <Reveal>
               <Eyebrow index="02">Ablauf</Eyebrow>
-              <h2 className="mt-5 max-w-2xl text-3xl font-medium leading-tight tracking-tight text-zinc-50 sm:text-4xl">
+              <h2 className="mt-5 max-w-2xl text-3xl font-semibold leading-tight tracking-tight text-zinc-50 sm:text-[2.75rem]">
                 Neu gebaut, ohne bei null anzufangen
               </h2>
               <div className="mt-6 flex max-w-2xl flex-col gap-4 text-zinc-400">
@@ -126,7 +126,7 @@ export default function WebsiteRelaunchPage() {
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <Reveal>
               <Eyebrow index="03">Umsetzung &amp; Preis</Eyebrow>
-              <h2 className="mt-5 max-w-2xl text-3xl font-medium leading-tight tracking-tight text-zinc-50 sm:text-4xl">
+              <h2 className="mt-5 max-w-2xl text-3xl font-semibold leading-tight tracking-tight text-zinc-50 sm:text-[2.75rem]">
                 Gleiche Transparenz wie bei einem Neubau
               </h2>
               <p className="mt-6 max-w-2xl text-lg leading-relaxed text-zinc-400">

@@ -60,11 +60,11 @@ export function ContactForm() {
   }
 
   return (
-    <section id="kontakt" className="border-b border-zinc-900 py-28">
+    <section id="kontakt" className="border-b border-white/5 py-28">
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-16 px-6 lg:grid-cols-12 lg:px-10">
         <Reveal className="lg:col-span-4">
           <Eyebrow index="10">Kontakt</Eyebrow>
-          <h2 className="mt-5 text-3xl font-medium leading-tight tracking-tight text-zinc-50 sm:text-4xl">
+          <h2 className="mt-5 text-3xl font-semibold leading-tight tracking-tight text-zinc-50 sm:text-[2.75rem]">
             Website-Projekt besprechen
           </h2>
           <p className="mt-5 text-zinc-400">
@@ -76,8 +76,8 @@ export function ContactForm() {
             Ich melde mich innerhalb von 24 Stunden persönlich zurück.
           </p>
 
-          <div className="mt-12 flex items-center gap-4 border-t border-zinc-900 pt-8">
-            <div className="relative h-16 w-14 shrink-0 overflow-hidden border border-zinc-800 grayscale">
+          <div className="mt-12 flex items-center gap-4 border-t border-white/5 pt-8">
+            <div className="relative size-14 shrink-0 overflow-hidden rounded-full border border-white/10">
               <Image
                 src="/images/portraits/founder-portrait.jpeg"
                 alt="Tobias Springer, Gründer von Impova"
@@ -126,9 +126,9 @@ export function ContactForm() {
         <Reveal delay={0.1} className="lg:col-span-8">
           <form
             onSubmit={handleSubmit}
-            className="border border-zinc-900 bg-surface"
+            className="card overflow-hidden"
           >
-            <div className="flex items-center justify-between border-b border-zinc-900 px-6 py-4 font-mono text-xs uppercase tracking-wider text-muted">
+            <div className="flex items-center justify-between border-b border-white/5 px-6 py-4 font-mono text-xs uppercase tracking-wider text-muted">
               <span>Projektanfrage</span>
               <span>
                 {fieldsComplete} von 3 Feldern ausgefüllt
@@ -146,7 +146,7 @@ export function ContactForm() {
               aria-hidden="true"
             />
 
-            <div className="grid grid-cols-1 gap-px bg-zinc-900 sm:grid-cols-2">
+            <div className="grid grid-cols-1 gap-px bg-white/5 sm:grid-cols-2">
               <Field
                 index="01"
                 label="Name"
@@ -166,7 +166,7 @@ export function ContactForm() {
               />
             </div>
 
-            <div className="border-t border-zinc-900 px-6 py-6">
+            <div className="border-t border-white/5 px-6 py-6">
               <label
                 htmlFor="details"
                 className="font-mono text-xs uppercase tracking-wider text-muted"
@@ -185,14 +185,14 @@ export function ContactForm() {
               />
             </div>
 
-            <div className="flex items-center justify-between border-t border-zinc-900 px-6 py-6">
+            <div className="flex items-center justify-between border-t border-white/5 px-6 py-6">
               <p className="font-mono text-xs text-muted">
                 Kein Spam. Keine Weitergabe an Dritte.
               </p>
               <button
                 type="submit"
                 disabled={status === "submitting" || status === "sent"}
-                className="inline-flex items-center gap-2 bg-accent px-6 py-3 font-mono text-sm uppercase tracking-wider text-base transition-colors hover:bg-white disabled:opacity-60"
+                className="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-medium text-black transition-colors hover:bg-white disabled:opacity-60"
               >
                 {status === "submitting" && (
                   <Loader2 className="size-4 animate-spin" />
@@ -202,7 +202,7 @@ export function ContactForm() {
               </button>
             </div>
             {status === "error" && (
-              <p className="border-t border-zinc-900 px-6 py-4 font-mono text-xs text-status-red">
+              <p className="border-t border-white/5 px-6 py-4 font-mono text-xs text-status-red">
                 Fehler beim Senden. Bitte versuch es erneut oder schreib direkt
                 an info@impova.de.
               </p>
@@ -232,7 +232,7 @@ function Field({
   required?: boolean;
 }) {
   return (
-    <div className="bg-surface px-6 py-6">
+    <div className="bg-base/40 px-6 py-6">
       <label
         htmlFor={name}
         className="font-mono text-xs uppercase tracking-wider text-muted"

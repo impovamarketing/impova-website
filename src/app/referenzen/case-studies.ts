@@ -30,6 +30,8 @@ export type CaseStudy = {
   seoTitle: string;
   seoDescription: string;
   image?: string;
+  // Handy-Screenshot der Website (Startseite, iPhone-Format) für das Geräte-Mockup.
+  mobileImage?: string;
   logo?: string;
   liveUrl?: string;
   situation: string;
@@ -74,6 +76,7 @@ const ALL_CASE_STUDIES: CaseStudy[] = [
     seoDescription:
       "Case Study MA Hausmeisterei & Gebäudeservice, Landshut: neue Website und SEO. Nach 6 Wochen Ø Position 3,8 für „hausmeister landshut“ (Search Console).",
     image: "/images/work/ma-gebaeudeservice.jpg",
+    mobileImage: "/images/work/ma-gebaeudeservice-mobile.jpg",
     liveUrl: "https://ma-objektservice.de",
     situation:
       "20 Jahre Erfahrung, aber online für Hausverwaltungen kaum als vertrauenswürdiger Ansprechpartner erkennbar.",
@@ -110,6 +113,7 @@ const ALL_CASE_STUDIES: CaseStudy[] = [
     seoDescription:
       "Case Study Sero's Barbershop in Landshut: Terminbuchung per WhatsApp, Bewertungen im Header und ein eigenständiges Design statt Friseur-Baukasten.",
     image: "/images/work/seros-barbershop.jpg",
+    mobileImage: "/images/work/seros-barbershop-mobile.jpg",
     liveUrl: "https://serosbarbershop.de",
     situation:
       "Bewertungen und Terminbuchung waren für Kunden schwer zu finden, die Seite wirkte wie jeder andere Friseur-Baukasten.",
@@ -132,6 +136,7 @@ const ALL_CASE_STUDIES: CaseStudy[] = [
     seoDescription:
       "Case Study Nox Aeterna, Tattoo-Studio in Landshut: Editorial-Typografie statt Klischee, Portfolio im Mittelpunkt und Terminanfrage ohne Umwege.",
     image: "/images/work/nox-aeterna.jpg",
+    mobileImage: "/images/work/nox-aeterna-mobile.jpg",
     liveUrl: "https://nox-aeterna.de",
     situation:
       "Ein Tattoo-Studio, das sich optisch kaum von jedem anderen im Stadtbild unterschied.",

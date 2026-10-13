@@ -6,16 +6,16 @@ export function CaseCard({ caseStudy }: { caseStudy: CaseStudy }) {
   return (
     <Link
       href={`/referenzen/${caseStudy.slug}`}
-      className="group flex h-full flex-col border border-zinc-900 transition-colors duration-300 hover:border-zinc-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+      className="card card-interactive group flex h-full flex-col overflow-hidden focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
     >
-      <div className="overflow-hidden border-b border-zinc-900">
+      <div className="border-b border-white/5">
         <CaseVisual caseStudy={caseStudy} sizes="(min-width: 768px) 50vw, 100vw" />
       </div>
       <div className="flex flex-1 flex-col p-6">
         <p className="font-mono text-[11px] uppercase tracking-wider text-accent">
           {caseStudy.category}
         </p>
-        <h3 className="mt-2 text-lg font-medium text-zinc-50">{caseStudy.name}</h3>
+        <h3 className="mt-2 text-lg font-semibold text-zinc-50">{caseStudy.name}</h3>
         {caseStudy.highlight ? (
           <div className="mt-4">
             <p className="text-sm font-medium leading-relaxed text-zinc-50">
