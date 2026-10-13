@@ -5,6 +5,7 @@ import { Problem } from "@/components/Problem";
 import { Marquee } from "@/components/Marquee";
 import { VisibilityCheck } from "@/components/VisibilityCheck";
 import { Commitments } from "@/components/Commitments";
+import { Fit } from "@/components/Fit";
 import { Work } from "@/components/Work";
 import { Testimonials } from "@/components/Testimonials";
 import { Philosophy } from "@/components/Philosophy";
@@ -25,15 +26,16 @@ export default function Home() {
       <Header />
       <main id="inhalt">
         <Hero />
+        <Marquee />
         <Problem />
         <VisibilityCheck />
         <Work />
         <Testimonials index="03" />
         <Philosophy />
-        <Marquee />
         <Services />
         <Pipeline />
         <Commitments index="07" />
+        <Fit />
         <AIAutomation />
         <FAQ />
         <ContactForm />

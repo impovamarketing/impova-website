@@ -78,6 +78,44 @@
   }
 }
 
+/* Bausteine des Glas-Stils: abgerundete Karten, Icon-Kacheln, weiches Leuchten. Ohne backdrop-filter, damit es schnell bleibt. */
+@layer components {
+  .card {
+    border-radius: 1.25rem;
+    border: 1px solid rgb(255 255 255 / 0.08);
+    background: linear-gradient(180deg, rgb(255 255 255 / 0.05), rgb(255 255 255 / 0.015));
+    box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.05);
+  }
+
+  .card-interactive {
+    transition: border-color 0.3s, transform 0.3s;
+  }
+
+  .card-interactive:hover {
+    border-color: rgb(198 255 0 / 0.35);
+  }
+
+  .icon-tile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    flex-shrink: 0;
+    border-radius: 0.875rem;
+    border: 1px solid rgb(198 255 0 / 0.25);
+    background: rgb(198 255 0 / 0.08);
+    color: var(--color-accent);
+  }
+
+  .glow {
+    pointer-events: none;
+    position: absolute;
+    border-radius: 9999px;
+    background: radial-gradient(circle, rgb(198 255 0 / 0.16), transparent 65%);
+  }
+}
+
 @layer base {
   /* Gut sichtbarer Tastatur-Fokus auf dem dunklen Grund. Komponenten können ihn per Utility überschreiben. */
   :focus-visible {

@@ -51,10 +51,10 @@ export default async function DankePage({
   return (
     <>
       <Header />
-      <main id="inhalt" className="border-b border-zinc-900 pb-24 pt-40">
+      <main id="inhalt" className="border-b border-white/5 pb-24 pt-40">
         <div className="mx-auto max-w-3xl px-6 lg:px-10">
           <CheckCircle2 className="size-10 text-accent" aria-hidden="true" />
-          <h1 className="mt-6 text-4xl font-medium leading-tight tracking-tight text-zinc-50 sm:text-5xl">
+          <h1 className="mt-6 text-4xl font-semibold leading-tight tracking-tight text-zinc-50 sm:text-5xl">
             {isCheck
               ? "Danke, dein Sichtbarkeits-Check ist angefragt."
               : "Danke, deine Anfrage ist angekommen."}
@@ -64,7 +64,7 @@ export default async function DankePage({
             dir. Eine automatische Bestätigungsmail gibt es nicht.
           </p>
 
-          <ol className="mt-14 flex flex-col gap-6 border-t border-zinc-900 pt-10">
+          <ol className="mt-14 flex flex-col gap-6 border-t border-white/5 pt-10">
             {steps.map((step, i) => (
               <li key={step.title} className="flex gap-5">
                 <span className="font-mono text-sm text-accent">

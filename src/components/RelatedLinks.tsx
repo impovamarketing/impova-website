@@ -16,7 +16,7 @@ const LINKS = [
 // Einheitlicher Block für interne Verlinkung am Ende der Unterseiten.
 export function RelatedLinks({ current, index }: { current: string; index: string }) {
   return (
-    <section className="border-t border-zinc-900 py-20">
+    <section className="border-t border-white/5 py-20">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <Eyebrow index={index}>Weiterlesen</Eyebrow>
         <ul className="mt-8 grid max-w-4xl grid-cols-1 gap-3 font-mono text-xs uppercase tracking-wider sm:grid-cols-2">

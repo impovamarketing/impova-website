@@ -43,13 +43,13 @@ export default function ReferenzenPage() {
       />
       <Header />
       <main id="inhalt">
-        <section className="border-b border-zinc-900 pb-20 pt-40">
+        <section className="border-b border-white/5 pb-20 pt-40">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <Reveal immediate>
               <p className="font-mono text-xs uppercase tracking-wider text-muted">
                 Referenzen
               </p>
-              <h1 className="mt-5 max-w-2xl text-4xl font-medium leading-tight tracking-tight text-zinc-50 sm:text-5xl">
+              <h1 className="mt-5 max-w-2xl text-4xl font-semibold leading-tight tracking-tight text-zinc-50 sm:text-5xl">
                 Echte Projekte statt Portfolio-Vorlagen
               </h1>
               <p className="mt-6 max-w-xl text-lg leading-relaxed text-zinc-400">

@@ -130,13 +130,13 @@ export default function WebdesignPage() {
       />
       <Header />
       <main id="inhalt">
-        <section className="border-b border-zinc-900 pb-20 pt-40">
+        <section className="border-b border-white/5 pb-20 pt-40">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <Reveal immediate>
               <p className="font-mono text-xs uppercase tracking-wider text-muted">
                 Webdesign
               </p>
-              <h1 className="mt-5 max-w-3xl text-4xl font-medium leading-tight tracking-tight text-zinc-50 sm:text-5xl">
+              <h1 className="mt-5 max-w-3xl text-4xl font-semibold leading-tight tracking-tight text-zinc-50 sm:text-5xl">
                 Webdesign, das nicht nach Baukasten aussieht.
               </h1>
               <p className="mt-6 max-w-xl text-lg leading-relaxed text-zinc-400">
@@ -154,20 +154,20 @@ export default function WebdesignPage() {
           </div>
         </section>
 
-        <section className="border-b border-zinc-900 py-24">
+        <section className="border-b border-white/5 py-24">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <Reveal>
               <Eyebrow index="01">Was du bekommst</Eyebrow>
-              <h2 className="mt-5 max-w-2xl text-3xl font-medium leading-tight tracking-tight text-zinc-50 sm:text-4xl">
+              <h2 className="mt-5 max-w-2xl text-3xl font-semibold leading-tight tracking-tight text-zinc-50 sm:text-[2.75rem]">
                 Drei Dinge, auf die es bei einer Website wirklich ankommt
               </h2>
             </Reveal>
-            <div className="mt-16 border-b border-zinc-900">
+            <div className="mt-16 border-b border-white/5">
               {PILLARS.map((pillar, i) => {
                 const Icon = pillar.icon;
                 return (
                   <Reveal key={pillar.title} delay={i * 0.06}>
-                    <div className="group grid grid-cols-1 gap-6 border-t border-zinc-900 px-2 py-10 transition-colors duration-300 hover:border-zinc-700 md:grid-cols-12 md:items-center md:gap-8">
+                    <div className="group grid grid-cols-1 gap-6 border-t border-white/5 px-2 py-10 transition-colors duration-300 hover:border-zinc-700 md:grid-cols-12 md:items-center md:gap-8">
                       <div className="font-mono text-sm text-muted md:col-span-1">
                         {pillar.index}
                       </div>
@@ -191,11 +191,11 @@ export default function WebdesignPage() {
           </div>
         </section>
 
-        <section className="border-b border-zinc-900 py-24">
+        <section className="border-b border-white/5 py-24">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <Reveal>
               <Eyebrow index="02">Änderungen</Eyebrow>
-              <h2 className="mt-5 max-w-2xl text-3xl font-medium leading-tight tracking-tight text-zinc-50 sm:text-4xl">
+              <h2 className="mt-5 max-w-2xl text-3xl font-semibold leading-tight tracking-tight text-zinc-50 sm:text-[2.75rem]">
                 Änderungen übernehme ich für dich
               </h2>
               <p className="mt-5 max-w-lg text-zinc-400">
@@ -204,11 +204,11 @@ export default function WebdesignPage() {
                 monatlichen Pflege.
               </p>
             </Reveal>
-            <ul className="mt-10 grid grid-cols-1 gap-px overflow-hidden border border-zinc-900 bg-zinc-900 md:grid-cols-3">
+            <ul className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-3">
               {CHANGE_POINTS.map((point) => {
                 const Icon = point.icon;
                 return (
-                  <li key={point.text} className="bg-base p-8">
+                  <li key={point.text} className="card p-8">
                     <Icon strokeWidth={1} aria-hidden="true" className="size-8 text-accent" />
                     <p className="mt-6 text-zinc-300">{point.text}</p>
                   </li>
@@ -218,11 +218,11 @@ export default function WebdesignPage() {
           </div>
         </section>
 
-        <section className="border-b border-zinc-900 py-24">
+        <section className="border-b border-white/5 py-24">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <Reveal>
               <Eyebrow index="03">Ablauf &amp; Preis</Eyebrow>
-              <h2 className="mt-5 max-w-2xl text-3xl font-medium leading-tight tracking-tight text-zinc-50 sm:text-4xl">
+              <h2 className="mt-5 max-w-2xl text-3xl font-semibold leading-tight tracking-tight text-zinc-50 sm:text-[2.75rem]">
                 Vier Schritte, ein klares Angebot
               </h2>
               <div className="mt-6 flex max-w-2xl flex-col gap-4 text-zinc-400">
@@ -251,7 +251,7 @@ export default function WebdesignPage() {
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <Reveal>
               <Eyebrow index="04">Beweis</Eyebrow>
-              <h2 className="mt-5 max-w-2xl text-3xl font-medium leading-tight tracking-tight text-zinc-50 sm:text-4xl">
+              <h2 className="mt-5 max-w-2xl text-3xl font-semibold leading-tight tracking-tight text-zinc-50 sm:text-[2.75rem]">
                 Echte Projekte statt Stock-Beispiele
               </h2>
               <p className="mt-5 max-w-lg text-zinc-400">

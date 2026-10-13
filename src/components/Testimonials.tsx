@@ -36,11 +36,11 @@ function Stars({ className = "" }: { className?: string }) {
 
 export function Testimonials({ index = "03" }: { index?: string }) {
   return (
-    <section id="kundenstimmen" className="border-b border-zinc-900 py-24">
+    <section id="kundenstimmen" className="border-b border-white/5 py-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <Eyebrow index={index}>Kundenstimmen</Eyebrow>
         <div className="mt-5 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
-          <h2 className="max-w-2xl text-3xl font-medium leading-tight tracking-tight text-zinc-50 sm:text-4xl">
+          <h2 className="max-w-2xl text-3xl font-semibold leading-tight tracking-tight text-zinc-50 sm:text-[2.75rem]">
             Was Kunden über die Zusammenarbeit sagen
           </h2>
           <a
@@ -61,7 +61,7 @@ export function Testimonials({ index = "03" }: { index?: string }) {
           {QUOTES.map((quote) => (
             <figure
               key={quote.name}
-              className="flex flex-col justify-between border border-zinc-900 bg-surface p-6"
+              className="card flex flex-col justify-between p-7"
             >
               <div>
                 <Stars className="mb-4" />
@@ -69,7 +69,7 @@ export function Testimonials({ index = "03" }: { index?: string }) {
                   „{quote.text}“
                 </blockquote>
               </div>
-              <figcaption className="mt-6 border-t border-zinc-900 pt-4">
+              <figcaption className="mt-6 border-t border-white/5 pt-4">
                 <p className="text-sm text-zinc-100">{quote.name}</p>
                 <p className="font-mono text-[11px] uppercase tracking-wider text-muted">
                   {quote.context}

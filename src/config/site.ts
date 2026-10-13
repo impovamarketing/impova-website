@@ -32,8 +32,8 @@ export const COMMITMENTS = {
   ],
 };
 
-// TODO: Erst auf true setzen, wenn alle Kunden in der Logo-Leiste der Nutzung ihres Logos zugestimmt haben.
-export const SHOW_CLIENT_LOGOS = false;
+// Logo-Leiste mit Kundenlogos. Auf Wunsch von Tobias seit 13.10.2026 sichtbar.
+export const SHOW_CLIENT_LOGOS = true;
 
 export const PHONE = { display: "0151 23819198", href: "tel:+4915123819198" };
 

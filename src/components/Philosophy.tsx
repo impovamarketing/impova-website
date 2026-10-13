@@ -1,3 +1,4 @@
+import { Check, X } from "lucide-react";
 import { Eyebrow } from "./Eyebrow";
 import { Reveal } from "./Reveal";
 import { MEASURED } from "@/config/site";
@@ -9,7 +10,7 @@ const COMPARISON = [
   },
   {
     baukasten: "Du kümmerst dich selbst um Texte, Technik und Google",
-    impova: "Ein fester Ansprechpartner kümmert sich, du pflegst nur, was du willst",
+    impova: "Ein fester Ansprechpartner kümmert sich um Technik, Texte und Google",
   },
   {
     baukasten: "SEO-Grundlagen hängen davon ab, was die Vorlage mitbringt",
@@ -29,11 +30,11 @@ const METRICS = [
 
 export function Philosophy() {
   return (
-    <section id="philosophie" className="border-b border-zinc-900 py-28">
+    <section id="philosophie" className="border-b border-white/5 py-28">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <Reveal>
           <Eyebrow index="04">Philosophie</Eyebrow>
-          <h2 className="mt-5 max-w-2xl text-3xl font-medium leading-tight tracking-tight text-zinc-50 sm:text-4xl">
+          <h2 className="mt-5 max-w-2xl text-3xl font-semibold leading-tight tracking-tight text-zinc-50 sm:text-[2.75rem]">
             Baukasten-Website vs. individuell gebaut
           </h2>
           <p className="mt-5 max-w-xl text-zinc-400">
@@ -43,34 +44,29 @@ export function Philosophy() {
           </p>
         </Reveal>
 
-        <div className="mt-16 flex flex-col border border-zinc-900">
-          <div className="grid grid-cols-2 border-b border-zinc-900">
-            <div className="p-6 sm:p-8">
-              <p className="font-mono text-xs uppercase tracking-wider text-muted">
-                Baukasten-Website
-              </p>
-            </div>
-            <div className="border-l border-zinc-900 p-6 sm:p-8">
-              <p className="font-mono text-xs uppercase tracking-wider text-accent">
-                Impova
-              </p>
-            </div>
-          </div>
-
-          {COMPARISON.map((row, i) => (
-            <Reveal
-              key={row.impova}
-              delay={i * 0.05}
-              className={`grid grid-cols-2 ${
-                i < COMPARISON.length - 1 ? "border-b border-zinc-900" : ""
-              }`}
-            >
-              <div className="p-6 text-muted sm:p-8">{row.baukasten}</div>
-              <div className="border-l border-zinc-900 p-6 text-zinc-200 sm:p-8">
-                {row.impova}
-              </div>
-            </Reveal>
-          ))}
+        <div className="mt-16 grid grid-cols-1 gap-4 md:grid-cols-2">
+          <Reveal className="card p-7 sm:p-8">
+            <p className="font-mono text-xs uppercase tracking-wider text-muted">Baukasten-Website</p>
+            <ul className="mt-6 flex flex-col gap-4">
+              {COMPARISON.map((row) => (
+                <li key={row.baukasten} className="flex gap-3 text-muted">
+                  <X className="mt-0.5 size-4 shrink-0" aria-hidden="true" />
+                  {row.baukasten}
+                </li>
+              ))}
+            </ul>
+          </Reveal>
+          <Reveal delay={0.08} className="card p-7 ring-1 ring-accent/30 sm:p-8">
+            <p className="font-mono text-xs uppercase tracking-wider text-accent">Impova</p>
+            <ul className="mt-6 flex flex-col gap-4">
+              {COMPARISON.map((row) => (
+                <li key={row.impova} className="flex gap-3 text-zinc-200">
+                  <Check className="mt-0.5 size-4 shrink-0 text-accent" aria-hidden="true" />
+                  {row.impova}
+                </li>
+              ))}
+            </ul>
+          </Reveal>
         </div>
 
         <Reveal delay={0.1}>
@@ -78,11 +74,11 @@ export function Philosophy() {
             Was das für dich heißt: Besucher sehen sofort etwas und springen
             nicht ab, bevor sie dein Angebot kennen. Gemessen an dieser Website:
           </p>
-          <dl className="mt-6 grid grid-cols-1 gap-8 border-t border-zinc-900 pt-10 sm:grid-cols-3">
+          <dl className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-3">
             {METRICS.map((m) => (
-              <div key={m.label}>
+              <div key={m.label} className="card p-6">
                 <dt className="sr-only">{m.label}</dt>
-                <dd className="font-mono text-2xl text-zinc-50">{m.value}</dd>
+                <dd className="text-3xl font-semibold tabular-nums text-zinc-50">{m.value}</dd>
                 <dd className="mt-1 text-sm text-zinc-400">{m.label}</dd>
               </div>
             ))}

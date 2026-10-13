@@ -107,13 +107,13 @@ export default function LandshutPage() {
       />
       <Header />
       <main id="inhalt">
-        <section className="border-b border-zinc-900 pb-20 pt-40">
+        <section className="border-b border-white/5 pb-20 pt-40">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <Reveal immediate>
               <p className="font-mono text-xs uppercase tracking-wider text-accent">
                 Standort Landshut
               </p>
-              <h1 className="mt-5 max-w-3xl text-4xl font-medium leading-tight tracking-tight text-zinc-50 sm:text-5xl">
+              <h1 className="mt-5 max-w-3xl text-4xl font-semibold leading-tight tracking-tight text-zinc-50 sm:text-5xl">
                 Webdesign in Landshut
               </h1>
               <p className="mt-6 max-w-2xl text-lg leading-relaxed text-zinc-400">
@@ -149,11 +149,11 @@ export default function LandshutPage() {
           </div>
         </section>
 
-        <section className="border-b border-zinc-900 py-24">
+        <section className="border-b border-white/5 py-24">
           <div className="mx-auto grid max-w-7xl grid-cols-1 gap-12 px-6 lg:grid-cols-12 lg:px-10">
             <Reveal className="lg:col-span-7">
               <Eyebrow index="01">Warum lokal</Eyebrow>
-              <h2 className="mt-5 max-w-2xl text-3xl font-medium leading-tight tracking-tight text-zinc-50 sm:text-4xl">
+              <h2 className="mt-5 max-w-2xl text-3xl font-semibold leading-tight tracking-tight text-zinc-50 sm:text-[2.75rem]">
                 Was ein Ansprechpartner aus der Region bringt
               </h2>
               <div className="mt-6 flex max-w-2xl flex-col gap-4 text-zinc-400">
@@ -172,7 +172,7 @@ export default function LandshutPage() {
             </Reveal>
 
             <Reveal delay={0.1} className="lg:col-span-5">
-              <address className="not-italic border border-zinc-900 bg-surface p-6">
+              <address className="card not-italic p-6">
                 <p className="font-mono text-xs uppercase tracking-wider text-muted">
                   Kontakt und Anfahrt
                 </p>
@@ -193,7 +193,7 @@ export default function LandshutPage() {
                   <Mail className="size-4 shrink-0 text-zinc-600" aria-hidden="true" />
                   {EMAIL}
                 </a>
-                <div className="mt-6 flex flex-wrap gap-4 border-t border-zinc-900 pt-5 font-mono text-xs uppercase tracking-wider">
+                <div className="mt-6 flex flex-wrap gap-4 border-t border-white/5 pt-5 font-mono text-xs uppercase tracking-wider">
                   <a href={GOOGLE_REVIEWS.url} target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">
                     In Google Maps öffnen →
                   </a>
@@ -206,17 +206,17 @@ export default function LandshutPage() {
           </div>
         </section>
 
-        <section className="border-b border-zinc-900 py-24">
+        <section className="border-b border-white/5 py-24">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <Reveal>
               <Eyebrow index="02">Lokale Sichtbarkeit</Eyebrow>
-              <h2 className="mt-5 max-w-2xl text-3xl font-medium leading-tight tracking-tight text-zinc-50 sm:text-4xl">
+              <h2 className="mt-5 max-w-2xl text-3xl font-semibold leading-tight tracking-tight text-zinc-50 sm:text-[2.75rem]">
                 Worauf es bei Google in Landshut ankommt
               </h2>
             </Reveal>
-            <ul className="mt-10 grid grid-cols-1 gap-px border border-zinc-900 bg-zinc-900 md:grid-cols-3">
+            <ul className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-3">
               {LOCAL_SIGNALS.map((signal) => (
-                <li key={signal.title} className="bg-base p-6">
+                <li key={signal.title} className="card p-6">
                   <p className="font-medium text-zinc-100">{signal.title}</p>
                   <p className="mt-2 text-sm leading-relaxed text-zinc-400">{signal.text}</p>
                 </li>
@@ -225,11 +225,11 @@ export default function LandshutPage() {
           </div>
         </section>
 
-        <section className="border-b border-zinc-900 py-24">
+        <section className="border-b border-white/5 py-24">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <Reveal>
               <Eyebrow index="03">Referenzen</Eyebrow>
-              <h2 className="mt-5 max-w-2xl text-3xl font-medium leading-tight tracking-tight text-zinc-50 sm:text-4xl">
+              <h2 className="mt-5 max-w-2xl text-3xl font-semibold leading-tight tracking-tight text-zinc-50 sm:text-[2.75rem]">
                 Projekte aus Landshut und Umgebung
               </h2>
               <p className="mt-5 max-w-lg text-zinc-400">
@@ -249,16 +249,16 @@ export default function LandshutPage() {
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <Reveal>
               <Eyebrow index="04">FAQ</Eyebrow>
-              <h2 className="mt-5 max-w-2xl text-3xl font-medium leading-tight tracking-tight text-zinc-50 sm:text-4xl">
+              <h2 className="mt-5 max-w-2xl text-3xl font-semibold leading-tight tracking-tight text-zinc-50 sm:text-[2.75rem]">
                 Häufige Fragen aus Landshut
               </h2>
             </Reveal>
-            <div className="mt-10 flex max-w-3xl flex-col border-t border-zinc-900">
+            <div className="mt-10 flex max-w-3xl flex-col gap-3">
               {FAQS.map((faq) => (
-                <details key={faq.question} className="group border-b border-zinc-900 py-6">
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-medium text-zinc-50 marker:content-none [&::-webkit-details-marker]:hidden">
+                <details key={faq.question} className="card group px-6 py-5">
+                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-base font-medium text-zinc-50 marker:content-none sm:text-lg [&::-webkit-details-marker]:hidden">
                     {faq.question}
-                    <span className="shrink-0 font-mono text-xl text-muted motion-safe:transition-transform motion-safe:duration-300 group-open:rotate-45">
+                    <span className="flex size-8 shrink-0 items-center justify-center rounded-full border border-white/10 font-mono text-lg text-accent motion-safe:transition-transform motion-safe:duration-300 group-open:rotate-45">
                       +
                     </span>
                   </summary>

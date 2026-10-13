@@ -53,13 +53,13 @@ export default function DienstleisterPage() {
       />
       <Header />
       <main id="inhalt">
-        <section className="border-b border-zinc-900 pb-20 pt-40">
+        <section className="border-b border-white/5 pb-20 pt-40">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <Reveal immediate>
               <p className="font-mono text-xs uppercase tracking-wider text-muted">
                 Branche
               </p>
-              <h1 className="mt-5 max-w-3xl text-4xl font-medium leading-tight tracking-tight text-zinc-50 sm:text-5xl">
+              <h1 className="mt-5 max-w-3xl text-4xl font-semibold leading-tight tracking-tight text-zinc-50 sm:text-5xl">
                 Webdesign für lokale Dienstleister
               </h1>
               <p className="mt-6 max-w-xl text-lg leading-relaxed text-zinc-400">
@@ -76,11 +76,11 @@ export default function DienstleisterPage() {
           </div>
         </section>
 
-        <section className="border-b border-zinc-900 py-24">
+        <section className="border-b border-white/5 py-24">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <Reveal>
               <Eyebrow index="01">Herausforderung</Eyebrow>
-              <h2 className="mt-5 max-w-2xl text-3xl font-medium leading-tight tracking-tight text-zinc-50 sm:text-4xl">
+              <h2 className="mt-5 max-w-2xl text-3xl font-semibold leading-tight tracking-tight text-zinc-50 sm:text-[2.75rem]">
                 Was lokale Dienstleister online oft ausbremst
               </h2>
               <div className="mt-6 flex max-w-2xl flex-col gap-4 text-zinc-400">
@@ -102,17 +102,17 @@ export default function DienstleisterPage() {
           </div>
         </section>
 
-        <section className="border-b border-zinc-900 py-24">
+        <section className="border-b border-white/5 py-24">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <Reveal>
               <Eyebrow index="02">Referenzen</Eyebrow>
-              <h2 className="mt-5 max-w-2xl text-3xl font-medium leading-tight tracking-tight text-zinc-50 sm:text-4xl">
+              <h2 className="mt-5 max-w-2xl text-3xl font-semibold leading-tight tracking-tight text-zinc-50 sm:text-[2.75rem]">
                 Echte Dienstleister, echte Projekte
               </h2>
             </Reveal>
-            <div className="mt-12 grid grid-cols-1 gap-px overflow-hidden border border-zinc-900 bg-zinc-900 sm:grid-cols-2">
+            <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2">
               {references.map((caseStudy, i) => (
-                <Reveal key={caseStudy.slug} delay={i * 0.06} className="bg-base p-6">
+                <Reveal key={caseStudy.slug} delay={i * 0.06} className="card p-6">
                   <Link href={`/referenzen/${caseStudy.slug}`} className="group block">
                     <p className="font-mono text-[11px] uppercase tracking-wider text-accent">
                       {caseStudy.category}
@@ -137,7 +137,7 @@ export default function DienstleisterPage() {
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <Reveal>
               <Eyebrow index="03">Umsetzung</Eyebrow>
-              <h2 className="mt-5 max-w-2xl text-3xl font-medium leading-tight tracking-tight text-zinc-50 sm:text-4xl">
+              <h2 className="mt-5 max-w-2xl text-3xl font-semibold leading-tight tracking-tight text-zinc-50 sm:text-[2.75rem]">
                 Wie deine Website aussehen könnte
               </h2>
               <p className="mt-5 max-w-lg text-zinc-400">
