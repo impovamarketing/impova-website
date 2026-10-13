@@ -11,6 +11,7 @@ Zielgruppe: lokale Unternehmen aller Branchen in Landshut und Niederbayern. Zusa
 - Monatliche Pflege: Content-Änderungen, Updates, Monitoring. Darauf aufbauend SEO-Betreuung, Inhalte auf Wunsch als Zusatz.
 - Kostenloser Sichtbarkeits-Check: persönliche Einschätzung, wie gut ein Unternehmen in seiner Region bei Google gefunden wird.
 - Anzeigen bei Google und Meta: neu, im Pilot mit begrenzten Plätzen.
+- [Social Recruiting](https://www.impova.de/recruiting): Stellenanzeigen auf Facebook und Instagram für Betriebe in der Region, ebenfalls im Pilot.
 - KI-Integration und Workflow-Automatisierung (optional).
 
 ## Referenzen

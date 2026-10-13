@@ -42,6 +42,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "", files: HOME_FILES, priority: 1 },
     { path: "/webdesign", files: ["src/app/webdesign/page.tsx"], priority: 0.8 },
     { path: "/website-relaunch", files: ["src/app/website-relaunch/page.tsx"], priority: 0.8 },
+    { path: "/recruiting", files: ["src/app/recruiting/page.tsx"], priority: 0.7 },
     { path: "/standorte/landshut", files: ["src/app/standorte/landshut/page.tsx"], priority: 0.8 },
     { path: "/referenzen", files: ["src/app/referenzen/page.tsx", ...caseFiles], priority: 0.7 },
     { path: "/branchen/handwerker", files: ["src/app/branchen/handwerker/page.tsx"], priority: 0.7 },

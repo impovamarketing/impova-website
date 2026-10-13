@@ -2,9 +2,9 @@ import Link from "next/link";
 import { Phone } from "lucide-react";
 
 const NAV_ITEMS = [
-  { label: "Philosophie", href: "/#philosophie" },
   { label: "Referenzen", href: "/#referenzen" },
   { label: "Leistungen", href: "/#leistungen" },
+  { label: "Recruiting", href: "/recruiting" },
   { label: "Prozess", href: "/#prozess" },
   { label: "Über mich", href: "/ueber-mich" },
   { label: "Kontakt", href: "/#kontakt" },

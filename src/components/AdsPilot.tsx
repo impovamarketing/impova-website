@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Eyebrow } from "./Eyebrow";
 import { Reveal } from "./Reveal";
 
@@ -17,7 +18,12 @@ export function AdsPilot() {
                 Anzeigen bei Google sowie auf Facebook und Instagram, mit
                 wenigen Kunden und kleinen Budgets. Das ist für mich neu.
                 Deshalb gibt es keine Versprechen zu Kosten pro Anfrage, sondern
-                einen ehrlichen Test mit offenen Zahlen.
+                einen ehrlichen Test mit offenen Zahlen. Das gilt auch für die
+                Mitarbeitersuche per{" "}
+                <Link href="/recruiting" className="text-accent underline underline-offset-4">
+                  Social Recruiting
+                </Link>
+                .
               </p>
             </div>
             <div className="lg:col-span-4 lg:justify-self-end">
