@@ -14,10 +14,26 @@ const PORTRAIT = "/images/portraits/founder-portrait.jpeg";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden border-b border-white/5 pt-24 lg:min-h-screen lg:pt-28">
+    <section className="relative overflow-hidden border-b border-white/5 pt-48 sm:pt-64 lg:min-h-screen lg:pt-28">
       <div className="bg-noise pointer-events-none absolute inset-0 opacity-[0.03]" />
       <HeroSignalField />
-      <div className="glow -top-48 right-[-10%] h-[640px] w-[640px]" />
+
+      {/* Porträt als Hintergrund, läuft zur Textseite hin ins Schwarz aus. */}
+      <div className="pointer-events-none absolute right-0 top-0 h-[560px] w-full sm:h-[640px] lg:inset-y-0 lg:h-auto lg:w-[56%]">
+        <Image
+          src={PORTRAIT}
+          alt="Tobias Springer, Gründer von Impova"
+          fill
+          preload
+          sizes="(min-width: 1024px) 56vw, 100vw"
+          className="object-cover object-[50%_0%] opacity-80 lg:object-[45%_14%] lg:opacity-100"
+        />
+        <div className="absolute inset-0 hidden bg-gradient-to-r from-base via-base/25 to-transparent lg:block" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-base/80 to-base [background-size:100%_100%] lg:hidden" />
+        <div className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-base via-base/70 to-transparent" />
+        <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-base/60 to-transparent" />
+      </div>
+      <div className="glow -top-48 left-[-15%] h-[560px] w-[560px]" />
 
       <div className="relative mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-12 px-6 py-12 sm:py-16 lg:grid-cols-12 lg:gap-10 lg:px-10 lg:py-20">
         <div className="flex flex-col gap-6 sm:gap-8 lg:col-span-7">
@@ -83,45 +99,21 @@ export function Hero() {
                 {GOOGLE_REVIEWS.count} Google-Bewertungen ({GOOGLE_REVIEWS.asOf})
               </span>
             </a>
-            <span className="flex items-center gap-3">
-              <span className="relative size-9 shrink-0 overflow-hidden rounded-full border border-white/15 lg:hidden">
-                <Image
-                  src={PORTRAIT}
-                  alt=""
-                  fill
-                  sizes="36px"
-                  className="object-cover object-[50%_15%]"
-                />
-              </span>
-              <span>
-                <span className="font-medium text-zinc-100">Tobias Springer</span>, persönlich
-                aus Essenbach bei Landshut
-              </span>
+            <span>
+              <span className="font-medium text-zinc-100">Tobias Springer</span>, persönlich aus
+              Essenbach bei Landshut
             </span>
           </div>
         </div>
 
-        <div className="relative hidden lg:col-span-5 lg:block">
-          <div className="relative mx-auto aspect-[4/5] w-full max-w-[440px] overflow-hidden rounded-[2rem] border border-white/10">
-            <Image
-              src={PORTRAIT}
-              alt="Tobias Springer, Gründer von Impova"
-              fill
-              loading="eager"
-              fetchPriority="high"
-              sizes="(min-width: 1024px) 440px, 1px"
-              className="object-cover object-[50%_20%]"
-            />
-            <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-base via-base/60 to-transparent" />
-          </div>
-
-          <div className="card absolute -left-6 top-10 flex items-center gap-3 rounded-full px-5 py-3 shadow-[0_16px_40px_-12px_rgb(0_0_0/0.9)] xl:-left-12">
+        <div className="relative hidden h-[520px] lg:col-span-5 lg:block">
+          <div className="card absolute right-4 top-6 flex items-center gap-3 rounded-full bg-base/80 px-5 py-3 shadow-[0_16px_40px_-12px_rgb(0_0_0/0.9)]">
             <Search className="size-4 text-zinc-400" aria-hidden="true" />
             <span className="text-sm text-zinc-200">webdesign landshut</span>
           </div>
 
           {PROOF_CASE && PROOF_KPI && (
-            <div className="card absolute -left-6 bottom-12 max-w-[270px] bg-base/90 p-5 shadow-[0_16px_40px_-12px_rgb(0_0_0/0.9)] xl:-left-12">
+            <div className="card absolute bottom-6 left-0 max-w-[270px] bg-base/90 p-5 shadow-[0_16px_40px_-12px_rgb(0_0_0/0.9)]">
               <p className="text-3xl font-semibold tabular-nums text-zinc-50">{PROOF_KPI.value}</p>
               <p className="mt-1 text-sm leading-snug text-zinc-300">{PROOF_KPI.label}</p>
               <p className="mt-3 font-mono text-[10px] leading-relaxed text-muted">
