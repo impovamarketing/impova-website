@@ -35,7 +35,7 @@ const STEPS = [
   },
   {
     title: "Bewerbungsseite",
-    text: "Eine kurze Seite, die am Handy funktioniert: Bewerbung in wenigen Klicks, ohne Pflicht zu Anschreiben oder Lebenslauf.",
+    text: "Eine kurze Seite, die ich für dich baue und die am Handy funktioniert: Bewerbung in wenigen Klicks, ohne Pflicht zu Anschreiben oder Lebenslauf.",
   },
   {
     title: "Anzeigen",
@@ -56,7 +56,7 @@ const FAQS = [
   {
     question: "Brauche ich dafür eine neue Website?",
     answer:
-      "Nein. Die Anzeigen führen auf eine eigene, kurze Bewerbungsseite. Deine bestehende Website bleibt, wie sie ist.",
+      "Nein. Die Anzeigen führen auf eine eigene, kurze Bewerbungsseite, die ich für dich baue. Deine bestehende Website bleibt, wie sie ist.",
   },
   {
     question: "Wie viele Bewerbungen bekomme ich?",

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Phone } from "lucide-react";
+import { MobileMenu } from "./MobileMenu";
 
 const NAV_ITEMS = [
   { label: "Referenzen", href: "/#referenzen" },
@@ -57,6 +58,7 @@ export function Header() {
               Kostenloser Sichtbarkeits-Check
             </span>
           </Link>
+          <MobileMenu items={NAV_ITEMS} />
         </div>
       </div>
     </header>
