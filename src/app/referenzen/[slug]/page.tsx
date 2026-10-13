@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Header } from "@/components/Header";
@@ -9,6 +8,7 @@ import { Reveal } from "@/components/Reveal";
 import { MagneticButton } from "@/components/MagneticButton";
 import { LivePreview } from "@/components/LivePreview";
 import { CaseVisual } from "@/components/CaseVisual";
+import { CaseResults } from "@/components/CaseResults";
 import { pageOpenGraph } from "@/lib/seo";
 import { CASE_STUDIES, getCaseStudy } from "../case-studies";
 
@@ -43,6 +43,7 @@ export default async function CaseStudyPage({
   const { slug } = await params;
   const caseStudy = getCaseStudy(slug);
   if (!caseStudy) notFound();
+  const hasResults = caseStudy.kpis.length > 0 || caseStudy.screenshots.length > 0;
 
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
@@ -87,11 +88,13 @@ export default async function CaseStudyPage({
               <h1 className="mt-3 max-w-3xl text-4xl font-medium leading-tight tracking-tight text-zinc-50 sm:text-5xl">
                 {caseStudy.name}
               </h1>
-              {caseStudy.result && (
-                <p className="mt-5 max-w-2xl text-xl leading-snug text-zinc-200">
-                  <span className="text-accent">{caseStudy.result.headline}</span>{" "}
-                  {caseStudy.result.detail}
-                </p>
+              {caseStudy.highlight && (
+                <div className="mt-5 max-w-2xl">
+                  <p className="text-xl leading-snug text-zinc-200">{caseStudy.highlight.text}</p>
+                  <p className="mt-2 font-mono text-[11px] text-muted">
+                    {caseStudy.highlight.source}, {caseStudy.highlight.period}
+                  </p>
+                </div>
               )}
               {caseStudy.liveUrl && (
                 <div className="mt-8">
@@ -132,16 +135,17 @@ export default async function CaseStudyPage({
             </Reveal>
             <Reveal delay={0.1}>
               <Eyebrow index="03">Ergebnis</Eyebrow>
-              {caseStudy.result ? (
+              {caseStudy.highlight ? (
                 <>
-                  <p className="mt-6 text-2xl font-medium leading-snug text-zinc-50">
-                    {caseStudy.result.headline}
+                  <p className="mt-6 text-xl font-medium leading-snug text-zinc-50">
+                    {caseStudy.highlight.text}
                   </p>
-                  <p className="mt-2 leading-relaxed text-zinc-300">{caseStudy.result.detail}</p>
-                  <p className="mt-4 font-mono text-[11px] text-muted">{caseStudy.result.source}</p>
+                  <p className="mt-4 font-mono text-[11px] text-muted">
+                    {caseStudy.highlight.source}, {caseStudy.highlight.period}
+                  </p>
                 </>
               ) : (
-                // TODO: Ergebnis mit Zahl in case-studies.ts ergänzen.
+                // TODO: Kennzahlen mit Zeitraum und Quelle in case-studies.ts ergänzen.
                 <p className="mt-6 leading-relaxed text-zinc-300">
                   Die Website ist live im Einsatz.
                   {caseStudy.liveUrl && " Wirf oben über die Live-Vorschau selbst einen Blick drauf."}
@@ -151,27 +155,22 @@ export default async function CaseStudyPage({
           </div>
         </section>
 
-        {caseStudy.rankingScreenshots.length > 0 && (
+        {hasResults && (
           <section className="border-b border-zinc-900 py-24">
             <div className="mx-auto max-w-7xl px-6 lg:px-10">
               <Reveal>
-                <Eyebrow index="04">Beleg</Eyebrow>
+                <Eyebrow index="04">Ergebnisse in Zahlen</Eyebrow>
                 <h2 className="mt-5 text-3xl font-medium tracking-tight text-zinc-50">
-                  So sieht das bei Google aus
+                  Was bei Google messbar passiert ist
                 </h2>
               </Reveal>
-              <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2">
-                {caseStudy.rankingScreenshots.map((src) => (
-                  <div key={src} className="relative aspect-[4/3] border border-zinc-900 bg-zinc-950">
-                    <Image
-                      src={src}
-                      alt={`Google-Suchergebnis mit ${caseStudy.name}`}
-                      fill
-                      className="object-contain"
-                      sizes="(min-width: 768px) 50vw, 100vw"
-                    />
-                  </div>
-                ))}
+              <div className="mt-10">
+                <CaseResults
+                  kpis={caseStudy.kpis}
+                  note={caseStudy.kpiNote}
+                  screenshots={caseStudy.screenshots}
+                  name={caseStudy.name}
+                />
               </div>
             </div>
           </section>
@@ -180,7 +179,7 @@ export default async function CaseStudyPage({
         <section className="py-24">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <Reveal>
-              <Eyebrow index={caseStudy.rankingScreenshots.length > 0 ? "05" : "04"}>
+              <Eyebrow index={hasResults ? "05" : "04"}>
                 Nächster Schritt
               </Eyebrow>
               <h2 className="mt-5 max-w-2xl text-3xl font-medium leading-tight tracking-tight text-zinc-50 sm:text-4xl">

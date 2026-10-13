@@ -4,6 +4,7 @@ import { Eyebrow } from "./Eyebrow";
 const LINKS = [
   { href: "/webdesign", label: "Webdesign und CMS zum Selbstpflegen" },
   { href: "/website-relaunch", label: "Website-Relaunch" },
+  { href: "/anzeigen", label: "Anzeigen bei Google und Meta" },
   { href: "/recruiting", label: "Social Recruiting" },
   { href: "/standorte/landshut", label: "Webdesign in Landshut" },
   { href: "/branchen/handwerker", label: "Webdesign für Handwerker" },

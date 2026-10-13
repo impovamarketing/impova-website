@@ -8,7 +8,7 @@ import { Eyebrow } from "./Eyebrow";
 import { Reveal } from "./Reveal";
 import { trackLead } from "@/lib/meta";
 import { trackEvent } from "@/lib/analytics";
-import { BOOKING_URL, PHONE, PROJECT_SLOTS } from "@/config/site";
+import { BOOKING, PHONE, PROJECT_SLOTS } from "@/config/site";
 
 type FormState = {
   name: string;
@@ -109,9 +109,9 @@ export function ContactForm() {
               <Mail className="size-4 shrink-0 text-zinc-600" />
               info@impova.de
             </a>
-            {BOOKING_URL && (
+            {BOOKING.url && (
               <a
-                href={BOOKING_URL}
+                href={BOOKING.url}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 hover:text-accent"

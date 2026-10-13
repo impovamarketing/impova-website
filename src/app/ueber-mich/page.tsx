@@ -133,7 +133,7 @@ export default function UeberMichPage() {
                   <dt className="sr-only">Google-Bewertung</dt>
                   <dd className="font-mono text-2xl text-zinc-50">{GOOGLE_REVIEWS.rating}</dd>
                   <dd className="mt-1 text-sm text-zinc-400">
-                    bei {GOOGLE_REVIEWS.count} Google-Bewertungen
+                    bei {GOOGLE_REVIEWS.count} Google-Bewertungen, {GOOGLE_REVIEWS.asOf}
                   </dd>
                 </div>
                 <div>

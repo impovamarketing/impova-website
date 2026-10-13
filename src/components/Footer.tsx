@@ -5,6 +5,7 @@ import { ADDRESS, EMAIL, PHONE } from "@/config/site";
 const LEISTUNGEN = [
   { href: "/webdesign", label: "Webdesign" },
   { href: "/website-relaunch", label: "Website-Relaunch" },
+  { href: "/anzeigen", label: "Anzeigen (Pilot)" },
   { href: "/recruiting", label: "Social Recruiting" },
   { href: "/standorte/landshut", label: "Webdesign Landshut" },
   { href: "/branchen/handwerker", label: "Webdesign für Handwerker" },

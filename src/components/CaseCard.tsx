@@ -16,11 +16,15 @@ export function CaseCard({ caseStudy }: { caseStudy: CaseStudy }) {
           {caseStudy.category}
         </p>
         <h3 className="mt-2 text-lg font-medium text-zinc-50">{caseStudy.name}</h3>
-        {caseStudy.result ? (
-          <p className="mt-4 text-sm leading-relaxed text-zinc-300">
-            <span className="font-medium text-zinc-50">{caseStudy.result.headline}</span>{" "}
-            {caseStudy.result.detail}
-          </p>
+        {caseStudy.highlight ? (
+          <div className="mt-4">
+            <p className="text-sm font-medium leading-relaxed text-zinc-50">
+              {caseStudy.highlight.text}
+            </p>
+            <p className="mt-2 font-mono text-[11px] text-muted">
+              {caseStudy.highlight.source}, {caseStudy.highlight.period}
+            </p>
+          </div>
         ) : (
           <p className="mt-4 text-sm leading-relaxed text-muted">{caseStudy.situation}</p>
         )}

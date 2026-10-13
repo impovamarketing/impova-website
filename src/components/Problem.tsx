@@ -5,7 +5,6 @@ import { MagneticButton } from "./MagneticButton";
 const PAINS = [
   "Kunden suchen bei Google nach genau deinem Angebot und landen bei der Konkurrenz.",
   "Neue Kunden kommen fast nur über Empfehlungen. Bleiben die aus, wird es eng.",
-  "Deine Website zeigst du lieber niemandem, weil sie nicht zu deiner Arbeit passt.",
   "Wenn doch mal Anfragen kommen, passen sie nicht zu dem, was du eigentlich anbietest.",
   "Für Website, Google und Co. bleibt neben dem Tagesgeschäft schlicht keine Zeit.",
   "Für eine Website hast du schon Geld ausgegeben: viel Fachchinesisch, wenig Ergebnis.",
@@ -23,7 +22,11 @@ export function Problem() {
 
         <div className="mt-10 grid grid-cols-1 gap-px border border-zinc-900 bg-zinc-900 sm:grid-cols-2">
           {PAINS.map((pain, i) => (
-            <Reveal key={pain} delay={i * 0.05} className="flex gap-4 bg-base p-6">
+            <Reveal
+              key={pain}
+              delay={i * 0.05}
+              className="flex gap-4 bg-base p-6 sm:[&:last-child:nth-child(odd)]:col-span-2"
+            >
               <span className="mt-1 font-mono text-xs text-status-red" aria-hidden="true">
                 ✕
               </span>

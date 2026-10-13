@@ -2,7 +2,11 @@ import { Star } from "lucide-react";
 import { StatusDot } from "./StatusDot";
 import { MagneticButton } from "./MagneticButton";
 import { HeroSignalField } from "./HeroSignalField";
-import { GOOGLE_REVIEWS, PHONE, PROJECT_SLOTS } from "@/config/site";
+import { BOOKING, GOOGLE_REVIEWS, PROJECT_SLOTS } from "@/config/site";
+import { getCaseStudy } from "@/app/referenzen/case-studies";
+
+// Beleg im Startbereich: Kernaussage einer Case Study mit Zeitraum und Quelle.
+const PROOF_CASE = getCaseStudy("gebaeudeservice-projekt-landshut");
 
 export function Hero() {
   return (
@@ -34,19 +38,30 @@ export function Hero() {
           </h1>
         </div>
 
-        <p className="max-w-2xl text-base leading-relaxed text-zinc-400 sm:text-lg">
-          Ich baue Websites, die bei Google gefunden werden und Besucher zur
-          Anfrage führen. Bewertet mit {GOOGLE_REVIEWS.rating} von 5 bei
-          Google, und Kunden wie MA Gebäudeservice stehen bei wichtigen
-          Suchbegriffen auf Platz 1 bis 2.
-        </p>
+        <div className="max-w-2xl">
+          <p className="text-base leading-relaxed text-zinc-400 sm:text-lg">
+            Ich baue Websites, die bei Google gefunden werden und Besucher zur
+            Anfrage führen.
+            {PROOF_CASE?.highlight && (
+              <>
+                {" "}Ein Beispiel aus der Region, {PROOF_CASE.name}:{" "}
+                <span className="text-zinc-200">{PROOF_CASE.highlight.text}.</span>
+              </>
+            )}
+          </p>
+          {PROOF_CASE?.highlight && (
+            <p className="mt-2 font-mono text-[11px] text-muted">
+              Quelle: {PROOF_CASE.highlight.source}, {PROOF_CASE.highlight.period}
+            </p>
+          )}
+        </div>
 
         <div className="animate-rise flex flex-wrap items-center gap-4 pt-2 [animation-delay:0.1s]">
           <MagneticButton href="#sichtbarkeits-check">
             Kostenlosen Sichtbarkeits-Check anfordern
           </MagneticButton>
-          <MagneticButton href={PHONE.href} variant="outline">
-            Anrufen: {PHONE.display}
+          <MagneticButton href={BOOKING.href} variant="outline">
+            {BOOKING.label}
           </MagneticButton>
         </div>
 
@@ -66,7 +81,7 @@ export function Hero() {
             </span>
             <span>
               <span className="text-zinc-200">{GOOGLE_REVIEWS.rating}</span> bei{" "}
-              {GOOGLE_REVIEWS.count} Google-Bewertungen
+              {GOOGLE_REVIEWS.count} Google-Bewertungen ({GOOGLE_REVIEWS.asOf})
             </span>
           </a>
           <span>

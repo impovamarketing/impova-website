@@ -92,7 +92,7 @@ const faqJsonLd = {
 
 export default function LandshutPage() {
   const cases = [...CASE_STUDIES].sort(
-    (a, b) => Number(Boolean(b.result)) - Number(Boolean(a.result))
+    (a, b) => Number(Boolean(b.highlight)) - Number(Boolean(a.highlight))
   );
 
   return (
@@ -134,7 +134,7 @@ export default function LandshutPage() {
                 </span>
                 <span>
                   <span className="text-zinc-200">{GOOGLE_REVIEWS.rating}</span> bei{" "}
-                  {GOOGLE_REVIEWS.count} Google-Bewertungen
+                  {GOOGLE_REVIEWS.count} Google-Bewertungen ({GOOGLE_REVIEWS.asOf})
                 </span>
               </a>
               <div className="mt-10 flex flex-wrap items-center gap-4">

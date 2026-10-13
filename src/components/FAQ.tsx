@@ -38,16 +38,6 @@ const FAQS: FaqItem[] = [
       "Du nennst mir deine Website, deine Branche und deinen Ort. Ich schaue mir persönlich an, wie gut dich Kunden in deiner Region bei Google finden, und schicke dir innerhalb von 24 Stunden eine kurze Einschätzung mit den wichtigsten Hebeln. Unverbindlich.",
   },
   {
-    question: "Bietest du auch Google- und Meta-Anzeigen an?",
-    answer:
-      "Ja, aber als Pilot: Anzeigen sind für mich neu, ich teste sie gerade mit wenigen Kunden und kleinen Budgets. Deshalb gibt es keine Versprechen zu Kosten pro Anfrage, sondern einen ehrlichen Test mit offenen Zahlen. Die Plätze sind begrenzt.",
-  },
-  {
-    question: "Hilfst du auch bei der Suche nach Mitarbeitern?",
-    answer:
-      "Ja, mit Social Recruiting: Stellenanzeigen auf Facebook und Instagram, die Menschen in deiner Region auf eine kurze Bewerbungsseite führen. Auch das läuft bei mir aktuell als Pilot, ohne Versprechen zur Zahl der Bewerbungen. Mehr dazu auf der Seite Social Recruiting.",
-  },
-  {
     question: "Arbeitest du auch mit Kunden außerhalb von Landshut?",
     answer:
       "Mein Schwerpunkt sind Unternehmen in Landshut und Niederbayern, Vor-Ort-Termine sind hier möglich. Darüber hinaus arbeite ich auch komplett digital zusammen.",

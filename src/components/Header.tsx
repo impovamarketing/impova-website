@@ -5,7 +5,6 @@ import { MobileMenu } from "./MobileMenu";
 const NAV_ITEMS = [
   { label: "Referenzen", href: "/#referenzen" },
   { label: "Leistungen", href: "/#leistungen" },
-  { label: "Recruiting", href: "/recruiting" },
   { label: "Prozess", href: "/#prozess" },
   { label: "Über mich", href: "/ueber-mich" },
   { label: "Kontakt", href: "/#kontakt" },

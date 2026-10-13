@@ -4,7 +4,7 @@ import { Hero } from "@/components/Hero";
 import { Problem } from "@/components/Problem";
 import { Marquee } from "@/components/Marquee";
 import { VisibilityCheck } from "@/components/VisibilityCheck";
-import { AdsPilot } from "@/components/AdsPilot";
+import { Commitments } from "@/components/Commitments";
 import { Work } from "@/components/Work";
 import { Testimonials } from "@/components/Testimonials";
 import { Philosophy } from "@/components/Philosophy";
@@ -32,8 +32,8 @@ export default function Home() {
         <Philosophy />
         <Marquee />
         <Services />
-        <AdsPilot />
         <Pipeline />
+        <Commitments index="07" />
         <AIAutomation />
         <FAQ />
         <ContactForm />

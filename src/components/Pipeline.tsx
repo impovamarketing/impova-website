@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Eyebrow } from "./Eyebrow";
 import { Reveal } from "./Reveal";
 import { EASE_OUT_EXPO } from "@/lib/motion";
+import { METHOD_NAME } from "@/config/site";
 
 const STEPS = [
   {
@@ -41,13 +42,13 @@ export function Pipeline() {
     <section id="prozess" className="border-b border-zinc-900 py-28">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <Reveal>
-          <Eyebrow index="07">Prozess</Eyebrow>
+          <Eyebrow index="06">Prozess</Eyebrow>
           <h2 className="mt-5 max-w-2xl text-3xl font-medium leading-tight tracking-tight text-zinc-50 sm:text-4xl">
             So läuft die Zusammenarbeit ab
           </h2>
           <p className="mt-5 max-w-lg text-zinc-400">
-            Du weißt jederzeit, was als Nächstes passiert. Keine Blackbox,
-            kein Rätselraten.
+            In vier Schritten setze ich das {METHOD_NAME} für dich um. Du
+            weißt jederzeit, was als Nächstes passiert.
           </p>
         </Reveal>
 

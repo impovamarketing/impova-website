@@ -52,7 +52,7 @@ export function Testimonials({ index = "03" }: { index?: string }) {
             <Stars />
             <span>
               <span className="font-medium text-zinc-50">{GOOGLE_REVIEWS.rating}</span> bei{" "}
-              {GOOGLE_REVIEWS.count} Google-Bewertungen →
+              {GOOGLE_REVIEWS.count} Google-Bewertungen ({GOOGLE_REVIEWS.asOf}) →
             </span>
           </a>
         </div>

@@ -1,10 +1,25 @@
 // Einzige Datenquelle für alle Referenzen (Startseite, Referenzen-Seite, Case Studies, Landingpage).
-// Ergebnisse nur mit Beleg eintragen. Fehlende Angaben sind als TODO markiert.
+// Regel: Jede Zahl mit Zeitraum und Quelle. Nichts eintragen, was nicht belegt ist.
+// Leere Felder werden nirgends angezeigt. Fehlende Angaben sind als TODO markiert.
 
-export type CaseResult = {
-  headline: string;
-  detail: string;
+// Eine Kennzahl, z. B. { value: "62", label: "Klicks aus der Google-Suche", period: "01.09. bis 11.10.2026", source: "Google Search Console" }.
+export type CaseKpi = {
+  value: string;
+  label: string;
+  period: string;
   source: string;
+};
+
+// Kurze Kernaussage für Karten und Startseite, belegt wie eine Kennzahl.
+export type CaseHighlight = {
+  text: string;
+  period: string;
+  source: string;
+};
+
+export type CaseScreenshot = {
+  src: string;
+  caption: string;
 };
 
 export type CaseStudy = {
@@ -19,9 +34,12 @@ export type CaseStudy = {
   liveUrl?: string;
   situation: string;
   measures: string[];
-  result?: CaseResult;
-  // Pfade zu Ranking-Screenshots in /public. Leer: Platzhalter-Slot wird angezeigt.
-  rankingScreenshots: string[];
+  highlight?: CaseHighlight;
+  kpis: CaseKpi[];
+  // Kontext zu den Kennzahlen, z. B. wie lange die Website zu dem Zeitpunkt online war.
+  kpiNote?: string;
+  // Screenshots als Beleg (Pfade in /public), jeweils mit Bildunterschrift.
+  screenshots: CaseScreenshot[];
   branche: { slug: string; label: string };
   featured?: boolean;
   // Entwürfe erscheinen nirgends und sind nicht indexierbar, bis die Daten vollständig sind.
@@ -32,7 +50,7 @@ const ALL_CASE_STUDIES: CaseStudy[] = [
   {
     slug: "thai-massage-projekt",
     name: "Zentara Thai Massage",
-    // TODO: Ort, Ausgangslage, Maßnahmen, Suchbegriff für Platz 1, Screenshots und Live-URL liefern. Danach draft entfernen.
+    // TODO: Ort, Ausgangslage, Maßnahmen, Kennzahlen mit Zeitraum und Quelle, Screenshots und Live-URL liefern. Danach draft entfernen.
     title: "Thai-Massage-Projekt",
     category: "Thai-Massage",
     seoTitle: "Zentara Thai Massage: Case Study | Impova",
@@ -41,12 +59,8 @@ const ALL_CASE_STUDIES: CaseStudy[] = [
     logo: "/images/logos/logo-zentarak-white.png",
     situation: "TODO: Ausgangslage von Zentara Thai Massage",
     measures: ["TODO: Was wurde umgesetzt?"],
-    result: {
-      headline: "Platz 1 bei Google",
-      detail: "TODO: für welchen Suchbegriff?",
-      source: "TODO: Beleg (Ranking-Screenshot mit Datum)",
-    },
-    rankingScreenshots: [],
+    kpis: [],
+    screenshots: [],
     branche: { slug: "dienstleister", label: "Dienstleister" },
     featured: true,
     draft: true,
@@ -58,7 +72,7 @@ const ALL_CASE_STUDIES: CaseStudy[] = [
     category: "Gebäudeservice, Landshut",
     seoTitle: "MA Gebäudeservice: Case Study | Impova",
     seoDescription:
-      "Case Study MA Hausmeisterei & Gebäudeservice aus Landshut: Website mit Vertrauenssignalen und SEO. Laut Kunde Platz 1 bis 2 bei wichtigen Suchbegriffen.",
+      "Case Study MA Hausmeisterei & Gebäudeservice, Landshut: neue Website und SEO. Nach 6 Wochen Ø Position 3,8 für „hausmeister landshut“ (Search Console).",
     image: "/images/work/ma-gebaeudeservice.jpg",
     liveUrl: "https://ma-objektservice.de",
     situation:
@@ -68,13 +82,22 @@ const ALL_CASE_STUDIES: CaseStudy[] = [
       "Klare Leistungsübersicht für Gewerbe und Hausverwaltungen",
       "Suchmaschinenoptimierung",
     ],
-    result: {
-      headline: "Platz 1 bis 2 bei Google",
-      // TODO: Konkrete Suchbegriffe ergänzen und Ranking-Screenshot ablegen.
-      detail: "bei wichtigen Suchbegriffen, die Sichtbarkeit bei Google hat sich deutlich verbessert.",
-      source: "Laut Google-Bewertung des Kunden, Oktober 2026",
+    highlight: {
+      text: "Ø Position 3,8 bei Google für „hausmeister landshut“, rund 6 Wochen nach dem Launch",
+      period: "01.09. bis 11.10.2026",
+      source: "Google Search Console",
     },
-    rankingScreenshots: [],
+    kpis: [
+      { value: "3,8", label: "Ø Position für „hausmeister landshut“", period: "01.09. bis 11.10.2026", source: "Google Search Console" },
+      { value: "6,2", label: "Ø Position für „hausmeisterservice landshut“", period: "01.09. bis 11.10.2026", source: "Google Search Console" },
+      { value: "1.800", label: "Impressionen in der Google-Suche", period: "01.09. bis 11.10.2026", source: "Google Search Console" },
+      { value: "62", label: "Klicks aus der Google-Suche", period: "01.09. bis 11.10.2026", source: "Google Search Console" },
+      { value: "107", label: "verschiedene Suchbegriffe", period: "01.09. bis 11.10.2026", source: "Google Search Console" },
+    ],
+    kpiNote: "Die Website war zu diesem Zeitpunkt rund 6 Wochen online.",
+    // TODO: Screenshot aus der Search Console ablegen, z. B. /images/results/ma-search-console.png,
+    // und hier eintragen: { src: "...", caption: "Google Search Console, 01.09. bis 11.10.2026" }
+    screenshots: [],
     branche: { slug: "handwerker", label: "Handwerker" },
     featured: true,
   },
@@ -95,8 +118,9 @@ const ALL_CASE_STUDIES: CaseStudy[] = [
       "Bewertungen im Header statt versteckt",
       "Eigenständiges, dunkles Editorial-Design statt Standard-Vorlage",
     ],
-    // TODO: Ergebnis mit Zahl (z. B. Buchungen, Anrufe, Rankings) liefern.
-    rankingScreenshots: [],
+    // TODO: Kennzahlen mit Zeitraum und Quelle liefern (z. B. Search Console, Buchungen, Anrufe).
+    kpis: [],
+    screenshots: [],
     branche: { slug: "dienstleister", label: "Dienstleister" },
   },
   {
@@ -116,8 +140,9 @@ const ALL_CASE_STUDIES: CaseStudy[] = [
       "Portfolio als Herzstück der Seite",
       "Terminanfrage ohne Umwege",
     ],
-    // TODO: Ergebnis mit Zahl liefern.
-    rankingScreenshots: [],
+    // TODO: Kennzahlen mit Zeitraum und Quelle liefern.
+    kpis: [],
+    screenshots: [],
     branche: { slug: "dienstleister", label: "Dienstleister" },
   },
   {
@@ -137,8 +162,9 @@ const ALL_CASE_STUDIES: CaseStudy[] = [
       "Große Portfolio-Präsenz direkt im Header",
       "Terminanfrage in einem Klick",
     ],
-    // TODO: Ergebnis mit Zahl liefern.
-    rankingScreenshots: [],
+    // TODO: Kennzahlen mit Zeitraum und Quelle liefern.
+    kpis: [],
+    screenshots: [],
     branche: { slug: "dienstleister", label: "Dienstleister" },
   },
 ];

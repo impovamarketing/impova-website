@@ -4,6 +4,7 @@ import type { LucideIcon } from "lucide-react";
 import { Clock, Image as ImageIcon, MapPin, MousePointerClick, PenLine, Search } from "lucide-react";
 import { Eyebrow } from "./Eyebrow";
 import { Reveal } from "./Reveal";
+import { METHOD_NAME } from "@/config/site";
 
 type Outcome = {
   index: string;
@@ -71,6 +72,12 @@ export function Services() {
               Was du von mir bekommst: mehr Anfragen aus deiner Region
             </h2>
             <p className="mt-5 max-w-lg text-zinc-400">
+              Dahinter steht das <span className="text-zinc-100">{METHOD_NAME}</span>:
+              drei Bausteine, die zusammen wirken. Eine Website, die überzeugt,
+              Sichtbarkeit bei Google in deiner Region und klare Wege zur
+              Anfrage.
+            </p>
+            <p className="mt-4 max-w-lg text-zinc-400">
               Ein fester Ansprechpartner von der ersten Anfrage bis nach dem
               Launch. Antwort innerhalb von 24 Stunden, keine Weitergabe an
               Dritte.
