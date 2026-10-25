@@ -14,31 +14,29 @@ const PORTRAIT = "/images/portraits/founder-portrait.jpeg";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden border-b border-white/5 pt-48 sm:pt-64 lg:min-h-screen lg:pt-28">
+    <section className="relative overflow-hidden border-b border-white/5 pt-60 sm:pt-[22rem] lg:min-h-screen lg:pt-28">
       <div className="bg-noise pointer-events-none absolute inset-0 opacity-[0.03]" />
       <HeroSignalField />
 
-      {/* Porträt als Hintergrund, läuft zur Textseite hin ins Schwarz aus. */}
-      <div className="pointer-events-none absolute right-0 top-0 h-[560px] w-full sm:h-[640px] lg:inset-y-0 lg:h-auto lg:w-[56%]">
+      {/* Porträt als Hintergrund, vollständig im Bild, Ränder laufen weich ins Schwarz aus. */}
+      <div
+        className="hero-photo-mask pointer-events-none absolute left-1/2 top-16 aspect-[2/3] h-[400px] -translate-x-1/2 sm:h-[520px] lg:bottom-0 lg:left-auto lg:right-[5%] lg:top-20 lg:h-auto lg:translate-x-0"
+      >
         <Image
           src={PORTRAIT}
           alt="Tobias Springer, Gründer von Impova"
           fill
           preload
-          sizes="(min-width: 1024px) 56vw, 100vw"
-          className="object-cover object-[50%_0%] opacity-80 lg:object-[45%_14%] lg:opacity-100"
+          sizes="(min-width: 1024px) 560px, 360px"
+          className="object-cover opacity-90 lg:opacity-70 xl:opacity-100"
         />
-        <div className="absolute inset-0 hidden bg-gradient-to-r from-base via-base/25 to-transparent lg:block" />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-base/80 to-base [background-size:100%_100%] lg:hidden" />
-        <div className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-base via-base/70 to-transparent" />
-        <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-base/60 to-transparent" />
       </div>
       <div className="glow -top-48 left-[-15%] h-[560px] w-[560px]" />
 
       <div className="relative mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-12 px-6 py-12 sm:py-16 lg:grid-cols-12 lg:gap-10 lg:px-10 lg:py-20">
         <div className="flex flex-col gap-6 sm:gap-8 lg:col-span-7">
           {PROJECT_SLOTS.show && (
-            <div className="animate-rise">
+            <div className="animate-rise hidden sm:block">
               <StatusDot
                 label={`Aktuell ${PROJECT_SLOTS.free} von ${PROJECT_SLOTS.total} Projektplätzen frei`}
                 tone="green"
@@ -48,10 +46,10 @@ export function Hero() {
 
           <div>
             <p className="font-mono text-xs uppercase tracking-[0.18em] text-accent">
-              Webdesign und lokale Sichtbarkeit in Landshut und Niederbayern
+              Websites und lokale Sichtbarkeit für Unternehmen in Niederbayern
             </p>
             <h1 className="mt-4 max-w-3xl text-4xl font-semibold leading-[1.04] tracking-tight text-zinc-50 [text-wrap:balance] sm:text-6xl lg:text-[4.25rem]">
-              Mehr Anfragen für dein Unternehmen aus der Region.
+              Webdesign in Landshut, das dir mehr Anfragen bringt.
             </h1>
           </div>
 

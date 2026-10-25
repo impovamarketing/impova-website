@@ -159,7 +159,8 @@ const ALL_CASE_STUDIES: CaseStudy[] = [
     seoDescription:
       "Case Study Matthias Tattooz aus Landshut: sechs Stile unter einer Nadel, ruhiges Layout, große Portfolio-Präsenz und Terminanfrage in einem Klick.",
     image: "/images/work/matthias-tattooz.jpg",
-    // TODO: Live-URL ergänzen.
+    mobileImage: "/images/work/matthias-tattooz-mobile.jpg",
+    liveUrl: "https://matthias-tattooz.com",
     situation:
       "Ein Tattoo-Studio mit sechs verschiedenen Stilen unter einer Nadel: Das sollte sich auf der Website widerspiegeln, statt in einem austauschbaren Portfolio-Theme unterzugehen.",
     measures: [
