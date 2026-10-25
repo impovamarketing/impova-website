@@ -46,10 +46,10 @@ export const GOOGLE_REVIEWS = {
 
 // Gemessen an impova.de im Oktober 2026: Lighthouse mobil (erste Anzeige, CLS) und Serverantwort per curl (Median).
 export const MEASURED = {
-  firstPaint: "1,0 s",
+  firstPaint: "1,3 s",
   serverResponse: "0,1 s",
   layoutShift: "0",
-  source: "Gemessen an impova.de am 13.10.2026: Lighthouse (mobil, Median aus 3 Läufen) und Serverantwortzeit (Median aus 9 Abrufen).",
+  source: "Gemessen an impova.de am 25.10.2026: Lighthouse (mobil, Median aus 5 Läufen) und Serverantwortzeit (Median aus 9 Abrufen).",
 };
 
 export const EMAIL = "info@impova.de";
