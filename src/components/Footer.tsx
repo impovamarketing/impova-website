@@ -7,7 +7,7 @@ const LEISTUNGEN = [
   { href: "/website-relaunch", label: "Website-Relaunch" },
   { href: "/anzeigen", label: "Anzeigen (Pilot)" },
   { href: "/recruiting", label: "Social Recruiting" },
-  { href: "/standorte/landshut", label: "Webdesign Landshut" },
+  { href: "/standorte/landshut", label: "Website erstellen in Landshut" },
   { href: "/branchen/handwerker", label: "Webdesign für Handwerker" },
   { href: "/branchen/dienstleister", label: "Webdesign für Dienstleister" },
   { href: "/#sichtbarkeits-check", label: "Sichtbarkeits-Check" },

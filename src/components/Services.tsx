@@ -28,7 +28,7 @@ const OUTCOMES: Outcome[] = [
     description:
       "Lokale Sichtbarkeit bei Google: die Suchbegriffe, die Kunden in deiner Region wirklich eingeben, ein gepflegtes Google-Unternehmensprofil und saubere technische Grundlagen.",
     icon: MapPin,
-    href: { label: "Webdesign in Landshut", url: "/standorte/landshut" },
+    href: { label: "Website erstellen lassen in Landshut", url: "/standorte/landshut" },
   },
   {
     index: "03",

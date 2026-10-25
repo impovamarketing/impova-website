@@ -11,9 +11,9 @@ import { CASE_STUDIES } from "@/app/referenzen/case-studies";
 import { ADDRESS, EMAIL, GOOGLE_REVIEWS, PHONE } from "@/config/site";
 import { pageOpenGraph } from "@/lib/seo";
 
-const TITLE = "Webdesign Landshut: Website erstellen lassen | Impova";
+const TITLE = "Website erstellen lassen in Landshut | Impova";
 const DESCRIPTION =
-  "Webdesign in Landshut mit Sitz in Essenbach: Websites für lokale Unternehmen, die bei Google gefunden werden. Persönlich vor Ort, 5,0 bei Google.";
+  "Website erstellen lassen in Landshut: persönlich betreut aus Essenbach, mit lokaler Sichtbarkeit bei Google von Anfang an. 5,0 bei Google.";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -74,7 +74,7 @@ const breadcrumbJsonLd = {
     {
       "@type": "ListItem",
       position: 2,
-      name: "Webdesign Landshut",
+      name: "Website erstellen lassen in Landshut",
       item: "https://www.impova.de/standorte/landshut",
     },
   ],
@@ -114,7 +114,7 @@ export default function LandshutPage() {
                 Standort Landshut
               </p>
               <h1 className="mt-5 max-w-3xl text-4xl font-semibold leading-tight tracking-tight text-zinc-50 sm:text-5xl">
-                Webdesign in Landshut
+                Website erstellen lassen in Landshut
               </h1>
               <p className="mt-6 max-w-2xl text-lg leading-relaxed text-zinc-400">
                 Websites für Unternehmen aus Landshut und Umgebung, die bei Google

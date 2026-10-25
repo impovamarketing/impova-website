@@ -8,6 +8,15 @@ type CaseResultsProps = {
   name: string;
 };
 
+// Spaltenzahl auf großen Bildschirmen passend zur Anzahl der Kennzahlen.
+const LG_COLUMNS: Record<number, string> = {
+  1: "lg:grid-cols-1",
+  2: "lg:grid-cols-2",
+  3: "lg:grid-cols-3",
+  4: "lg:grid-cols-4",
+  5: "lg:grid-cols-5",
+};
+
 // Kennzahlen-Streifen plus Screenshots. Zeigt nur, was befüllt ist.
 export function CaseResults({ kpis, note, screenshots, name }: CaseResultsProps) {
   if (kpis.length === 0 && screenshots.length === 0) return null;
@@ -23,14 +32,14 @@ export function CaseResults({ kpis, note, screenshots, name }: CaseResultsProps)
     <div className="flex flex-col gap-10">
       {kpis.length > 0 && (
         <div>
-          <dl className="grid grid-cols-2 gap-4 lg:grid-cols-5">
+          <dl className={`grid grid-cols-2 gap-4 ${LG_COLUMNS[Math.min(kpis.length, 5)] ?? "lg:grid-cols-5"}`}>
             {kpis.map((kpi) => (
               <div
                 key={kpi.label}
                 className="card flex flex-col p-5 [&:last-child:nth-child(odd)]:col-span-2 lg:[&:last-child:nth-child(odd)]:col-span-1"
               >
                 <dt className="order-2 mt-2 text-sm leading-snug text-zinc-400">{kpi.label}</dt>
-                <dd className="order-1 text-3xl font-medium tabular-nums tracking-tight text-zinc-50">
+                <dd className="order-1 whitespace-nowrap text-2xl font-medium tabular-nums tracking-tight text-zinc-50 sm:text-3xl">
                   {kpi.value}
                 </dd>
                 {!shared && (

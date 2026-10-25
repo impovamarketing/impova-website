@@ -19,9 +19,9 @@ const geistMono = Geist_Mono({
 
 const siteUrl = "https://www.impova.de";
 
-const TITLE = "Webdesign und lokale Sichtbarkeit in Landshut | Impova";
+const TITLE = "Webdesign Landshut: Websites, die Anfragen bringen | Impova";
 const DESCRIPTION =
-  "Websites für lokale Unternehmen in Landshut und Niederbayern, die bei Google gefunden werden und Anfragen bringen. Persönlich betreut, 5,0 bei Google.";
+  "Webdesign in Landshut für lokale Unternehmen: Websites, die bei Google gefunden werden und Anfragen bringen. Persönlich betreut, 5,0 bei Google.";
 
 // Kein Canonical im Layout: sonst erben Unterseiten ohne eigenen Canonical den der Startseite.
 export const metadata: Metadata = {

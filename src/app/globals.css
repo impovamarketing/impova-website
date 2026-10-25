@@ -108,6 +108,23 @@
     color: var(--color-accent);
   }
 
+  /* Weicher Übergang des Porträts in den Hintergrund, ohne sichtbare Bildkanten. */
+  .hero-photo-mask {
+    --mask-x: linear-gradient(to right, transparent 0%, #000 22%, #000 78%, transparent 100%);
+    --mask-y: linear-gradient(to bottom, transparent 0%, #000 6%, #000 62%, transparent 100%);
+    mask-image: var(--mask-x), var(--mask-y);
+    mask-composite: intersect;
+    -webkit-mask-image: var(--mask-x), var(--mask-y);
+    -webkit-mask-composite: source-in;
+  }
+
+  @media (min-width: 1024px) {
+    .hero-photo-mask {
+      --mask-x: linear-gradient(to right, transparent 0%, #000 26%, #000 92%, transparent 100%);
+      --mask-y: linear-gradient(to bottom, transparent 0%, #000 5%, #000 72%, transparent 100%);
+    }
+  }
+
   .glow {
     pointer-events: none;
     position: absolute;
