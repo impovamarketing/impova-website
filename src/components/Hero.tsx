@@ -20,7 +20,7 @@ export function Hero() {
 
       {/* Porträt als Hintergrund, vollständig im Bild, Ränder laufen weich ins Schwarz aus. */}
       <div
-        className="hero-photo-mask pointer-events-none absolute left-1/2 top-16 aspect-[2/3] h-[400px] -translate-x-1/2 sm:h-[520px] lg:bottom-0 lg:left-auto lg:right-[5%] lg:top-20 lg:h-auto lg:translate-x-0"
+        className="hero-photo-mask pointer-events-none absolute left-1/2 top-16 aspect-[2/3] h-[400px] -translate-x-1/2 sm:h-[520px] lg:left-auto lg:right-[max(2.5rem,calc((100vw-80rem)/2))] lg:top-24 lg:h-[min(50rem,calc(100%-7rem))] lg:translate-x-0"
       >
         <Image
           src={PORTRAIT}
@@ -105,7 +105,7 @@ export function Hero() {
         </div>
 
         <div className="relative hidden h-[520px] lg:col-span-5 lg:block">
-          <div className="card absolute right-4 top-6 flex items-center gap-3 rounded-full bg-base/80 px-5 py-3 shadow-[0_16px_40px_-12px_rgb(0_0_0/0.9)]">
+          <div className="card absolute bottom-[13.5rem] left-0 flex items-center gap-3 rounded-full bg-base/80 px-5 py-3 shadow-[0_16px_40px_-12px_rgb(0_0_0/0.9)]">
             <Search className="size-4 text-zinc-400" aria-hidden="true" />
             <span className="text-sm text-zinc-200">webdesign landshut</span>
           </div>

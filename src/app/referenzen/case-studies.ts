@@ -2,7 +2,7 @@
 // Regel: Jede Zahl mit Zeitraum und Quelle. Nichts eintragen, was nicht belegt ist.
 // Leere Felder werden nirgends angezeigt. Fehlende Angaben sind als TODO markiert.
 
-// Eine Kennzahl, z. B. { value: "62", label: "Klicks aus der Google-Suche", period: "01.09. bis 11.10.2026", source: "Google Search Console" }.
+// Eine Kennzahl, z. B. { value: "2,9", label: "Ø Position für „hausmeister landshut“", period: "14.10. bis 23.10.2026", source: "Google Search Console" }.
 export type CaseKpi = {
   value: string;
   label: string;
@@ -74,7 +74,7 @@ const ALL_CASE_STUDIES: CaseStudy[] = [
     category: "Gebäudeservice, Landshut",
     seoTitle: "MA Gebäudeservice: Case Study | Impova",
     seoDescription:
-      "Case Study MA Hausmeisterei & Gebäudeservice, Landshut: neue Website und SEO. Nach 6 Wochen Ø Position 3,8 für „hausmeister landshut“ (Search Console).",
+      "Case Study MA Hausmeisterei & Gebäudeservice, Landshut: neue Website und SEO. Ø Position 2,9 für „hausmeister landshut“ (Search Console, 14.10. bis 23.10.2026).",
     image: "/images/work/ma-gebaeudeservice.jpg",
     mobileImage: "/images/work/ma-gebaeudeservice-mobile.jpg",
     liveUrl: "https://ma-objektservice.de",
@@ -86,20 +86,18 @@ const ALL_CASE_STUDIES: CaseStudy[] = [
       "Suchmaschinenoptimierung",
     ],
     highlight: {
-      text: "Ø Position 3,8 bei Google für „hausmeister landshut“, rund 6 Wochen nach dem Launch",
-      period: "01.09. bis 11.10.2026",
+      text: "Ø Position 2,9 bei Google für „hausmeister landshut“",
+      period: "14.10. bis 23.10.2026",
       source: "Google Search Console",
     },
     kpis: [
-      { value: "3,8", label: "Ø Position für „hausmeister landshut“", period: "01.09. bis 11.10.2026", source: "Google Search Console" },
-      { value: "6,2", label: "Ø Position für „hausmeisterservice landshut“", period: "01.09. bis 11.10.2026", source: "Google Search Console" },
-      { value: "1.800", label: "Impressionen in der Google-Suche", period: "01.09. bis 11.10.2026", source: "Google Search Console" },
-      { value: "62", label: "Klicks aus der Google-Suche", period: "01.09. bis 11.10.2026", source: "Google Search Console" },
-      { value: "107", label: "verschiedene Suchbegriffe", period: "01.09. bis 11.10.2026", source: "Google Search Console" },
+      { value: "2,9", label: "Ø Position für „hausmeister landshut“", period: "14.10. bis 23.10.2026", source: "Google Search Console" },
+      { value: "3,3", label: "Ø Position für „hausmeisterservice landshut“", period: "14.10. bis 23.10.2026", source: "Google Search Console" },
+      { value: "14,3 → 7,7", label: "Ø Position für „winterdienst landshut“", period: "12.09. bis 21.09.2026 verglichen mit 14.10. bis 23.10.2026", source: "Google Search Console" },
+      { value: "+55 %", label: "Impressionen in der Google-Suche (854 statt 552)", period: "12.09. bis 21.09.2026 verglichen mit 14.10. bis 23.10.2026", source: "Google Search Console" },
     ],
-    kpiNote: "Die Website war zu diesem Zeitpunkt rund 6 Wochen online.",
     // TODO: Screenshot aus der Search Console ablegen, z. B. /images/results/ma-search-console.png,
-    // und hier eintragen: { src: "...", caption: "Google Search Console, 01.09. bis 11.10.2026" }
+    // und hier eintragen: { src: "...", caption: "Google Search Console, 14.10. bis 23.10.2026" }
     screenshots: [],
     branche: { slug: "handwerker", label: "Handwerker" },
     featured: true,
