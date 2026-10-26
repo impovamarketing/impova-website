@@ -200,6 +200,30 @@ const ALL_CASE_STUDIES: CaseStudy[] = [
     screenshots: [],
     branche: { slug: "dienstleister", label: "Dienstleister" },
   },
+  {
+    slug: "grillhaus-projekt-attenkirchen",
+    name: "Toni's Balkan Grillhaus",
+    title: "Grillhaus-Projekt in Attenkirchen",
+    category: "Restaurant, Attenkirchen",
+    seoTitle: "Toni's Balkan Grillhaus: Case Study | Impova",
+    seoDescription:
+      "Case Study Toni's Balkan Grillhaus in Attenkirchen: Website mit Speisekarte, Reservierung, Feiern und Catering sowie der Pension im selben Haus.",
+    image: "/images/work/tonis-grillhaus.jpg",
+    mobileImage: "/images/work/tonis-grillhaus-mobile.jpg",
+    liveUrl: "https://www.tonis-balkangrillhaus.de",
+    situation:
+      "Ein Balkan-Grillhaus mit Terrasse, Feiern, Catering und einer Pension im selben Haus: viel Angebot, das auf einer Website klar zusammenfinden sollte.",
+    measures: [
+      "Speisekarte, Reservierung per Telefon und Öffnungszeiten auf einen Blick",
+      "Eigene Bereiche für Ambiente, Terrasse, Feiern und Catering",
+      "Google-Bewertungen direkt im Startbereich",
+      "Pension im selben Haus eingebunden",
+    ],
+    // TODO: Kennzahlen mit Zeitraum und Quelle liefern (z. B. Ø Position aus der Search Console).
+    kpis: [],
+    screenshots: [],
+    branche: { slug: "dienstleister", label: "Dienstleister" },
+  },
 ];
 
 export const CASE_STUDIES = ALL_CASE_STUDIES.filter((c) => !c.draft);

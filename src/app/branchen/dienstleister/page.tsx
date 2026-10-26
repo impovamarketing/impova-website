@@ -40,6 +40,7 @@ const REFERENCE_SLUGS = [
   "barbershop-projekt-landshut",
   "tattoo-studio-projekt-landshut",
   "custom-tattoo-studio-projekt-landshut",
+  "grillhaus-projekt-attenkirchen",
 ];
 
 export default function DienstleisterPage() {
