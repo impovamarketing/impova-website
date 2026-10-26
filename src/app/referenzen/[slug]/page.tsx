@@ -10,7 +10,7 @@ import { LivePreview } from "@/components/LivePreview";
 import { CaseVisual } from "@/components/CaseVisual";
 import { CaseResults } from "@/components/CaseResults";
 import { pageOpenGraph } from "@/lib/seo";
-import { CASE_STUDIES, getCaseStudy } from "../case-studies";
+import { CASE_STUDIES, getCaseStudy, highlightCitation } from "../case-studies";
 
 export function generateStaticParams() {
   return CASE_STUDIES.map((c) => ({ slug: c.slug }));
@@ -92,7 +92,7 @@ export default async function CaseStudyPage({
                 <div className="mt-5 max-w-2xl">
                   <p className="text-xl leading-snug text-zinc-200">{caseStudy.highlight.text}</p>
                   <p className="mt-2 font-mono text-[11px] text-muted">
-                    {caseStudy.highlight.source}, {caseStudy.highlight.period}
+                    {highlightCitation(caseStudy.highlight)}
                   </p>
                 </div>
               )}
@@ -141,7 +141,7 @@ export default async function CaseStudyPage({
                     {caseStudy.highlight.text}
                   </p>
                   <p className="mt-4 font-mono text-[11px] text-muted">
-                    {caseStudy.highlight.source}, {caseStudy.highlight.period}
+                    {highlightCitation(caseStudy.highlight)}
                   </p>
                 </>
               ) : (

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import type { CaseStudy } from "@/app/referenzen/case-studies";
+import { highlightCitation, type CaseStudy } from "@/app/referenzen/case-studies";
 import { CaseVisual } from "./CaseVisual";
 
 export function CaseCard({ caseStudy }: { caseStudy: CaseStudy }) {
@@ -22,7 +22,7 @@ export function CaseCard({ caseStudy }: { caseStudy: CaseStudy }) {
               {caseStudy.highlight.text}
             </p>
             <p className="mt-2 font-mono text-[11px] text-muted">
-              {caseStudy.highlight.source}, {caseStudy.highlight.period}
+              {highlightCitation(caseStudy.highlight)}
             </p>
           </div>
         ) : (
