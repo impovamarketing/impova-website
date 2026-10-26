@@ -132,7 +132,7 @@ const ALL_CASE_STUDIES: CaseStudy[] = [
     category: "Tattoo-Studio, Landshut",
     seoTitle: "Nox Aeterna Tattoo-Studio: Case Study | Impova",
     seoDescription:
-      "Case Study Nox Aeterna, Tattoo-Studio in Landshut: Editorial-Typografie statt Klischee, Portfolio im Mittelpunkt und Terminanfrage ohne Umwege.",
+      "Case Study Nox Aeterna, Tattoo-Studio in Landshut: Ø Position 4,7 für „tattoo landshut“ (Google Search Console, 01.09. bis 24.10.2026).",
     image: "/images/work/nox-aeterna.jpg",
     mobileImage: "/images/work/nox-aeterna-mobile.jpg",
     liveUrl: "https://nox-aeterna.de",
@@ -143,8 +143,20 @@ const ALL_CASE_STUDIES: CaseStudy[] = [
       "Portfolio als Herzstück der Seite",
       "Terminanfrage ohne Umwege",
     ],
-    // TODO: Kennzahlen mit Zeitraum und Quelle liefern.
-    kpis: [],
+    highlight: {
+      text: "Ø Position 4,7 bei Google für „tattoo landshut“ (497 Impressionen, 15 Klicks)",
+      period: "01.09. bis 24.10.2026",
+      source: "Google Search Console",
+    },
+    kpis: [
+      { value: "4,7", label: "Ø Position für „tattoo landshut“ (497 Impressionen, 15 Klicks)", period: "01.09. bis 24.10.2026", source: "Google Search Console" },
+      { value: "79", label: "Klicks aus der Google-Suche", period: "01.09. bis 24.10.2026", source: "Google Search Console" },
+      { value: "2.040", label: "Impressionen in der Google-Suche", period: "01.09. bis 24.10.2026", source: "Google Search Console" },
+      { value: "4,8", label: "Ø Position, alle Suchbegriffe", period: "01.09. bis 24.10.2026", source: "Google Search Console" },
+      { value: "160", label: "Routenanfragen", period: "August bis Oktober 2026 (Oktober unvollständig)", source: "Google-Unternehmensprofil" },
+      { value: "89", label: "Website-Klicks aus dem Unternehmensprofil", period: "August bis Oktober 2026 (Oktober unvollständig)", source: "Google-Unternehmensprofil" },
+    ],
+    kpiNote: "Website-Launch: 10.08.2026.",
     screenshots: [],
     branche: { slug: "dienstleister", label: "Dienstleister" },
   },
