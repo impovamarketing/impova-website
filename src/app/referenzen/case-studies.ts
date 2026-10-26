@@ -15,7 +15,14 @@ export type CaseHighlight = {
   text: string;
   period: string;
   source: string;
+  // Optional: eigener Quellenhinweis, falls "Quelle, Zeitraum" nicht passt (z. B. "Stand 26.10.2026, eigene Recherche").
+  citation?: string;
 };
+
+// Quellenhinweis zur Kernaussage, wie er unter Karten und in der Case Study steht.
+export function highlightCitation(highlight: CaseHighlight) {
+  return highlight.citation ?? `${highlight.source}, ${highlight.period}`;
+}
 
 export type CaseScreenshot = {
   src: string;
@@ -109,7 +116,7 @@ const ALL_CASE_STUDIES: CaseStudy[] = [
     category: "Barbershop, Landshut",
     seoTitle: "Sero's Barbershop: Case Study | Impova",
     seoDescription:
-      "Case Study Sero's Barbershop in Landshut: Terminbuchung per WhatsApp, Bewertungen im Header und ein eigenständiges Design statt Friseur-Baukasten.",
+      "Case Study Sero's Barbershop in Landshut: Platz 2 in den lokalen Google-Ergebnissen für „barbershop landshut“ (Stand 26.10.2026, eigene Recherche).",
     image: "/images/work/seros-barbershop.jpg",
     mobileImage: "/images/work/seros-barbershop-mobile.jpg",
     liveUrl: "https://serosbarbershop.de",
@@ -120,7 +127,13 @@ const ALL_CASE_STUDIES: CaseStudy[] = [
       "Bewertungen im Header statt versteckt",
       "Eigenständiges, dunkles Editorial-Design statt Standard-Vorlage",
     ],
-    // TODO: Kennzahlen mit Zeitraum und Quelle liefern (z. B. Search Console, Buchungen, Anrufe).
+    // Momentaufnahme aus eigener Google-Suche (Standort Landshut), lokale Unternehmensergebnisse.
+    highlight: {
+      text: "Platz 2 in den lokalen Google-Ergebnissen für „barbershop landshut“",
+      period: "Stand 26.10.2026",
+      source: "eigene Recherche",
+      citation: "Stand 26.10.2026, eigene Recherche",
+    },
     kpis: [],
     screenshots: [],
     branche: { slug: "dienstleister", label: "Dienstleister" },
@@ -167,7 +180,7 @@ const ALL_CASE_STUDIES: CaseStudy[] = [
     category: "Tattoo-Studio, Landshut",
     seoTitle: "Matthias Tattooz: Case Study | Impova",
     seoDescription:
-      "Case Study Matthias Tattooz aus Landshut: sechs Stile unter einer Nadel, ruhiges Layout, große Portfolio-Präsenz und Terminanfrage in einem Klick.",
+      "Case Study Matthias Tattooz, Tattoo-Studio in Landshut: Ø Position 3,7 für „tattoo landshut“ (Google Search Console, 05.09. bis 24.10.2026).",
     image: "/images/work/matthias-tattooz.jpg",
     mobileImage: "/images/work/matthias-tattooz-mobile.jpg",
     liveUrl: "https://matthias-tattooz.com",
@@ -178,8 +191,21 @@ const ALL_CASE_STUDIES: CaseStudy[] = [
       "Große Portfolio-Präsenz direkt im Header",
       "Terminanfrage in einem Klick",
     ],
-    // TODO: Kennzahlen mit Zeitraum und Quelle liefern.
-    kpis: [],
+    highlight: {
+      text: "Ø Position 3,7 bei Google für „tattoo landshut“ (344 Impressionen, 16 Klicks)",
+      period: "05.09. bis 24.10.2026",
+      source: "Google Search Console",
+    },
+    kpis: [
+      { value: "3,7", label: "Ø Position für „tattoo landshut“ (344 Impressionen, 16 Klicks)", period: "05.09. bis 24.10.2026", source: "Google Search Console" },
+      { value: "5,4", label: "Ø Position für „tattoo studio landshut“ (215 Impressionen, 14 Klicks)", period: "05.09. bis 24.10.2026", source: "Google Search Console" },
+      { value: "102", label: "Klicks aus der Google-Suche", period: "05.09. bis 24.10.2026", source: "Google Search Console" },
+      { value: "1.520", label: "Impressionen in der Google-Suche", period: "05.09. bis 24.10.2026", source: "Google Search Console" },
+      { value: "4,2", label: "Ø Position, alle Suchbegriffe", period: "05.09. bis 24.10.2026", source: "Google Search Console" },
+      { value: "77", label: "Routenanfragen", period: "Mai bis Oktober 2026 (Oktober unvollständig)", source: "Google-Unternehmensprofil" },
+      { value: "73", label: "Website-Klicks aus dem Unternehmensprofil", period: "Mai bis Oktober 2026 (Oktober unvollständig)", source: "Google-Unternehmensprofil" },
+      { value: "624", label: "Profilaufrufe", period: "Mai bis Oktober 2026 (Oktober unvollständig)", source: "Google-Unternehmensprofil" },
+    ],
     screenshots: [],
     branche: { slug: "dienstleister", label: "Dienstleister" },
   },

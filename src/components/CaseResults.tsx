@@ -16,6 +16,8 @@ const LG_COLUMNS: Record<number, string> = {
   4: "lg:grid-cols-4",
   5: "lg:grid-cols-5",
   6: "lg:grid-cols-3",
+  7: "lg:grid-cols-4",
+  8: "lg:grid-cols-4",
 };
 
 // Kennzahlen-Streifen plus Screenshots. Zeigt nur, was befüllt ist.

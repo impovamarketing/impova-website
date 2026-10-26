@@ -4,7 +4,7 @@ import { StatusDot } from "./StatusDot";
 import { MagneticButton } from "./MagneticButton";
 import { HeroSignalField } from "./HeroSignalField";
 import { BOOKING, GOOGLE_REVIEWS, PROJECT_SLOTS } from "@/config/site";
-import { getCaseStudy } from "@/app/referenzen/case-studies";
+import { getCaseStudy, highlightCitation } from "@/app/referenzen/case-studies";
 
 // Beleg im Startbereich: Kernaussage einer Case Study mit Zeitraum und Quelle.
 const PROOF_CASE = getCaseStudy("gebaeudeservice-projekt-landshut");
@@ -66,7 +66,7 @@ export function Hero() {
             </p>
             {PROOF_CASE?.highlight && (
               <p className="mt-2 font-mono text-[11px] text-muted">
-                Quelle: {PROOF_CASE.highlight.source}, {PROOF_CASE.highlight.period}
+                Quelle: {highlightCitation(PROOF_CASE.highlight)}
               </p>
             )}
           </div>
