@@ -15,6 +15,7 @@ const LG_COLUMNS: Record<number, string> = {
   3: "lg:grid-cols-3",
   4: "lg:grid-cols-4",
   5: "lg:grid-cols-5",
+  6: "lg:grid-cols-3",
 };
 
 // Kennzahlen-Streifen plus Screenshots. Zeigt nur, was befüllt ist.
@@ -32,7 +33,7 @@ export function CaseResults({ kpis, note, screenshots, name }: CaseResultsProps)
     <div className="flex flex-col gap-10">
       {kpis.length > 0 && (
         <div>
-          <dl className={`grid grid-cols-2 gap-4 ${LG_COLUMNS[Math.min(kpis.length, 5)] ?? "lg:grid-cols-5"}`}>
+          <dl className={`grid grid-cols-2 gap-4 ${LG_COLUMNS[kpis.length] ?? "lg:grid-cols-4"}`}>
             {kpis.map((kpi) => (
               <div
                 key={kpi.label}
