@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Mail, MapPin, Phone, Star } from "lucide-react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -43,6 +44,25 @@ const LOCAL_SIGNALS = [
   },
 ];
 
+const LOCAL_STEPS = [
+  {
+    title: "Kennenlernen",
+    text: "Persönlich im Raum Landshut, zum Beispiel in Landshut, Essenbach, Ergolding oder Altdorf, oder telefonisch. Wir klären, was du anbietest und wen du in der Region erreichen willst.",
+  },
+  {
+    title: "Angebot und Konzept",
+    text: "Du bekommst ein schriftliches Angebot mit Festpreis. Danach entstehen Struktur, Suchbegriffe mit Ortsbezug und das Design.",
+  },
+  {
+    title: "Umsetzung",
+    text: "Die Website wird gebaut, schnell und für das Handy optimiert. Parallel stimmen wir dein Google-Unternehmensprofil ab.",
+  },
+  {
+    title: "Launch",
+    text: "Live geht die Seite zum schriftlich vereinbarten Termin. In den ersten 30 Tagen bessere ich kostenlos nach, falls etwas nicht wie vereinbart funktioniert.",
+  },
+];
+
 const FAQS = [
   {
     question: "Kommst du für ein Gespräch auch zu mir nach Landshut?",
@@ -58,6 +78,21 @@ const FAQS = [
     question: "Was kostet eine Website für ein Unternehmen in Landshut?",
     answer:
       "Es gibt zwei Bausteine: einen Einmalpreis für den Bau, individuell kalkuliert nach Umfang, und getrennt davon eine monatliche Pflege. Im ersten Gespräch bekommst du ein konkretes, unverbindliches Angebot.",
+  },
+  {
+    question: "Hilfst du auch beim Google-Unternehmensprofil?",
+    answer:
+      "Ja. Ein gepflegtes Google-Unternehmensprofil gehört zur lokalen Sichtbarkeit dazu: richtige Kategorien, Leistungen, Fotos und überall gleiche Angaben zu Name, Adresse und Telefon. Das stimmen wir zusammen mit der Website ab.",
+  },
+  {
+    question: "Hast du Referenzen aus Landshut?",
+    answer:
+      "Ja. MA Hausmeisterei & Gebäudeservice, Sero's Barbershop, Nox Aeterna und Matthias Tattooz kommen aus Landshut, Toni's Balkan Grillhaus aus Attenkirchen. Zu jedem Projekt gibt es eine Case Study mit Ausgangslage und Vorgehen.",
+  },
+  {
+    question: "Wie lange dauert es, bis meine Website online ist?",
+    answer:
+      "In der Regel 2 bis 4 Wochen, je nach Umfang. Den Go-Live-Termin legen wir gemeinsam fest und halten ihn schriftlich fest.",
   },
   {
     question: "Arbeitest du nur mit Unternehmen aus Landshut?",
@@ -168,6 +203,18 @@ export default function LandshutPage() {
                   außerhalb von Landshut. Die lokale Nähe ist ein Plus, keine
                   Voraussetzung.
                 </p>
+                <p>
+                  Einen Überblick über Leistungen, Ablauf und Zusagen findest du
+                  auf der Startseite unter{" "}
+                  <Link href="/" className="text-accent underline underline-offset-4">
+                    Webdesign in Landshut
+                  </Link>
+                  . Was in jeder Website steckt, steht auf der Seite{" "}
+                  <Link href="/webdesign" className="text-accent underline underline-offset-4">
+                    Webdesign
+                  </Link>
+                  .
+                </p>
               </div>
             </Reveal>
 
@@ -222,6 +269,33 @@ export default function LandshutPage() {
                 </li>
               ))}
             </ul>
+          </div>
+        </section>
+
+        <section className="border-b border-white/5 py-24">
+          <div className="mx-auto max-w-7xl px-6 lg:px-10">
+            <Reveal>
+              <Eyebrow>Ablauf</Eyebrow>
+              <h2 className="mt-5 max-w-2xl text-3xl font-semibold leading-tight tracking-tight text-zinc-50 sm:text-[2.75rem]">
+                So entsteht deine Website in Landshut
+              </h2>
+              <p className="mt-5 max-w-2xl text-zinc-400">
+                In der Regel dauert ein Projekt 2 bis 4 Wochen. Du hast von der
+                ersten Anfrage bis nach dem Launch einen festen Ansprechpartner,
+                Antwort innerhalb von 24 Stunden.
+              </p>
+            </Reveal>
+            <ol className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
+              {LOCAL_STEPS.map((step, i) => (
+                <li key={step.title} className="card p-6">
+                  <span className="flex size-9 items-center justify-center rounded-full border border-accent/40 bg-accent/10 font-mono text-xs text-accent">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <p className="mt-5 font-medium text-zinc-100">{step.title}</p>
+                  <p className="mt-2 text-sm leading-relaxed text-zinc-400">{step.text}</p>
+                </li>
+              ))}
+            </ol>
           </div>
         </section>
 

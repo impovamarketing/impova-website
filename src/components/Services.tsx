@@ -80,6 +80,17 @@ export function Services() {
             Launch. Antwort innerhalb von 24 Stunden, keine Weitergabe an
             Dritte.
           </p>
+          <p className="mt-4 max-w-lg text-zinc-400">
+            Speziell für deine Branche:{" "}
+            <Link href="/branchen/handwerker" className="text-accent underline underline-offset-4">
+              Webdesign für Handwerker
+            </Link>{" "}
+            und{" "}
+            <Link href="/branchen/dienstleister" className="text-accent underline underline-offset-4">
+              Webdesign für Dienstleister
+            </Link>
+            .
+          </p>
         </Reveal>
 
         <div className="mt-14 grid grid-cols-1 gap-4 md:grid-cols-3">

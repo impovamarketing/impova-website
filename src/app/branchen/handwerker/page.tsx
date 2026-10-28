@@ -6,6 +6,9 @@ import { RelatedLinks } from "@/components/RelatedLinks";
 import { Eyebrow } from "@/components/Eyebrow";
 import { Reveal } from "@/components/Reveal";
 import { MagneticButton } from "@/components/MagneticButton";
+import { CaseCard } from "@/components/CaseCard";
+import { PageFaq, type FaqItem } from "@/components/PageFaq";
+import { Check } from "lucide-react";
 import { CASE_STUDIES } from "@/app/referenzen/case-studies";
 import { pageOpenGraph } from "@/lib/seo";
 
@@ -37,6 +40,45 @@ const breadcrumbJsonLd = {
 };
 
 const REFERENCE_SLUGS = ["gebaeudeservice-projekt-landshut"];
+
+const NEEDS = [
+  "Leistungen klar nach Gewerk oder Service gegliedert, nicht in einem Fließtext versteckt",
+  "Einsatzgebiet sichtbar, damit Kunden sofort sehen, ob du zu ihnen kommst",
+  "Erfahrung und fester Ansprechpartner gleich auf der Startseite",
+  "Fotos echter Arbeiten statt Stockbilder",
+  "Anruf mit einem Tipp und ein kurzes Anfrageformular, auch für Besichtigungstermine",
+  "Echte Google-Bewertungen sichtbar eingebunden",
+  "Eigene Ansprache für Gewerbekunden und Hausverwaltungen, wenn du sie erreichen willst",
+  "Ausrichtung auf Suchbegriffe wie Leistung plus Ort, etwa „Hausmeister Landshut“",
+];
+
+const FAQS: FaqItem[] = [
+  {
+    question: "Ich habe neben der Baustelle kaum Zeit. Wie viel Aufwand ist das für mich?",
+    answer:
+      "Wenig. Wir klären im Erstgespräch, was du anbietest und wen du erreichen willst. Du lieferst Infos zu deinen Leistungen und am besten ein paar Fotos deiner Arbeiten, den Rest übernehme ich. Änderungen nach dem Launch schickst du mir einfach kurz.",
+  },
+  {
+    question: "Kann ich Fotos von meinen Baustellen und Projekten verwenden?",
+    answer:
+      "Ja, und das ist sogar ideal. Eigene Fotos echter Arbeiten wirken deutlich glaubwürdiger als Stockbilder und zeigen, was du wirklich kannst.",
+  },
+  {
+    question: "Lohnt sich eine Website, wenn meine Aufträge über Empfehlungen kommen?",
+    answer:
+      "Gerade dann. Wer dich empfohlen bekommt, schaut sich fast immer zuerst online an, wer du bist. Eine Website, die Erfahrung und Referenzen zeigt, bestätigt die Empfehlung, statt Zweifel zu wecken.",
+  },
+  {
+    question: "Erreiche ich damit auch Hausverwaltungen und Gewerbekunden?",
+    answer:
+      "Wenn du sie erreichen willst, bekommen sie eine eigene, klare Ansprache mit Leistungsübersicht und festem Ansprechpartner. Ein Beispiel ist die Case Study von MA Hausmeisterei & Gebäudeservice.",
+  },
+  {
+    question: "Was kostet eine Website für einen Handwerksbetrieb?",
+    answer:
+      "Es gibt zwei getrennte Bausteine: einen Einmalpreis für den Bau, individuell kalkuliert nach Umfang, und auf Wunsch eine monatliche Pflege. Vor dem Start bekommst du ein schriftliches Angebot mit Festpreis für den vereinbarten Umfang.",
+  },
+];
 
 export default function HandwerkerPage() {
   const references = CASE_STUDIES.filter((c) => REFERENCE_SLUGS.includes(c.slug));
@@ -100,33 +142,44 @@ export default function HandwerkerPage() {
         <section className="border-b border-white/5 py-24">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <Reveal>
+              <Eyebrow>Worauf es ankommt</Eyebrow>
+              <h2 className="mt-5 max-w-2xl text-3xl font-semibold leading-tight tracking-tight text-zinc-50 sm:text-[2.75rem]">
+                Was eine Website für Handwerksbetriebe leisten muss
+              </h2>
+              <p className="mt-5 max-w-2xl text-zinc-400">
+                Kunden und Hausverwaltungen entscheiden oft in wenigen Sekunden, ob sie anrufen. Diese Punkte machen den Unterschied, und sie stecken in jeder Handwerker-Website, die ich baue.
+              </p>
+            </Reveal>
+            <ul className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-2">
+              {NEEDS.map((need) => (
+                <li key={need} className="card flex gap-3 p-5 text-zinc-300">
+                  <Check className="mt-0.5 size-5 shrink-0 text-accent" aria-hidden="true" />
+                  {need}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+
+        <section className="border-b border-white/5 py-24">
+          <div className="mx-auto max-w-7xl px-6 lg:px-10">
+            <Reveal>
               <Eyebrow index="02">Referenzen</Eyebrow>
               <h2 className="mt-5 max-w-2xl text-3xl font-semibold leading-tight tracking-tight text-zinc-50 sm:text-[2.75rem]">
                 Echte Handwerksbetriebe, echte Projekte
               </h2>
             </Reveal>
-            <div className="mt-12 grid max-w-md grid-cols-1 gap-4">
+            <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2">
               {references.map((caseStudy, i) => (
-                <Reveal key={caseStudy.slug} delay={i * 0.06} className="card p-6">
-                  <Link href={`/referenzen/${caseStudy.slug}`} className="group block">
-                    <p className="font-mono text-[11px] uppercase tracking-wider text-accent">
-                      {caseStudy.category}
-                    </p>
-                    <h3 className="mt-2 text-lg font-medium text-zinc-50 group-hover:text-accent">
-                      {caseStudy.title}
-                    </h3>
-                    <p className="mt-3 text-sm leading-relaxed text-muted">
-                      {caseStudy.situation}
-                    </p>
-                    <span className="mt-4 inline-block font-mono text-xs uppercase tracking-wider text-muted group-hover:text-accent">
-                      Case Study lesen →
-                    </span>
-                  </Link>
+                <Reveal key={caseStudy.slug} delay={i * 0.06} className="h-full">
+                  <CaseCard caseStudy={caseStudy} />
                 </Reveal>
               ))}
             </div>
           </div>
         </section>
+
+        <PageFaq title="Häufige Fragen von Handwerksbetrieben" faqs={FAQS} />
 
         <section className="py-24">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
@@ -136,12 +189,19 @@ export default function HandwerkerPage() {
                 Wie deine Website aussehen könnte
               </h2>
               <p className="mt-5 max-w-lg text-zinc-400">
-                Ablauf und die Bausteine Bau und Pflege
-                stehen auf der{" "}
+                Wie ein Projekt abläuft und was es kostet, steht auf der Seite{" "}
                 <Link href="/webdesign" className="text-accent underline underline-offset-4">
-                  Webdesign-Seite
+                  Webdesign
                 </Link>
-                .
+                . Wenn du aus der Region kommst, findest du alles Weitere unter{" "}
+                <Link href="/standorte/landshut" className="text-accent underline underline-offset-4">
+                  Website erstellen lassen in Landshut
+                </Link>
+                . Und wenn du schon eine Website hast, lies dir den{" "}
+                <Link href="/website-relaunch" className="text-accent underline underline-offset-4">
+                  Website-Relaunch
+                </Link>{" "}
+                durch.
               </p>
               <div className="mt-10 flex flex-wrap items-center gap-4">
                 <MagneticButton href="/#kontakt">
