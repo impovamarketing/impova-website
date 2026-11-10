@@ -7,8 +7,8 @@ const LINKS = [
   { href: "/anzeigen", label: "Anzeigen bei Google und Meta" },
   { href: "/recruiting", label: "Social Recruiting" },
   { href: "/standorte/landshut", label: "Website erstellen lassen in Landshut" },
-  { href: "/branchen/handwerker", label: "Webdesign für Handwerker" },
-  { href: "/branchen/dienstleister", label: "Webdesign für Dienstleister" },
+  { href: "/branchen/handwerker", label: "Websites für Handwerker" },
+  { href: "/branchen/dienstleister", label: "Websites für Dienstleister" },
   { href: "/referenzen", label: "Referenzen und Case Studies" },
   { href: "/ueber-mich", label: "Über mich" },
 ];
