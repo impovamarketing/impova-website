@@ -12,7 +12,7 @@ import { Check } from "lucide-react";
 import { CASE_STUDIES } from "@/app/referenzen/case-studies";
 import { pageOpenGraph } from "@/lib/seo";
 
-const TITLE = "Webdesign für Handwerker in Landshut | Impova";
+const TITLE = "Website für Handwerker: mehr Anfragen aus der Region | Impova";
 const DESCRIPTION =
   "Websites für Handwerksbetriebe in Landshut und Niederbayern, die Kompetenz zeigen und bei Google gefunden werden. Persönlich betreut, mit Referenzen.";
 
@@ -33,7 +33,7 @@ const breadcrumbJsonLd = {
     {
       "@type": "ListItem",
       position: 2,
-      name: "Webdesign für Handwerker",
+      name: "Websites für Handwerker",
       item: "https://www.impova.de/branchen/handwerker",
     },
   ],
@@ -98,7 +98,7 @@ export default function HandwerkerPage() {
                 Branche
               </p>
               <h1 className="mt-5 max-w-3xl text-4xl font-semibold leading-tight tracking-tight text-zinc-50 sm:text-5xl">
-                Webdesign für Handwerksbetriebe
+                Websites für Handwerksbetriebe
               </h1>
               <p className="mt-6 max-w-xl text-lg leading-relaxed text-zinc-400">
                 Deine Arbeit spricht für sich, deine Website oft nicht. Ich
@@ -189,7 +189,11 @@ export default function HandwerkerPage() {
                 Wie deine Website aussehen könnte
               </h2>
               <p className="mt-5 max-w-lg text-zinc-400">
-                Wie ein Projekt abläuft und was es kostet, steht auf der Seite{" "}
+                Einen Überblick über mein Angebot findest du unter{" "}
+                <Link href="/" className="text-accent underline underline-offset-4">
+                  Webdesign in Landshut
+                </Link>
+                . Wie ein Projekt abläuft und was es kostet, steht auf der Seite{" "}
                 <Link href="/webdesign" className="text-accent underline underline-offset-4">
                   Webdesign
                 </Link>

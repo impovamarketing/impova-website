@@ -12,7 +12,7 @@ import { Check } from "lucide-react";
 import { CASE_STUDIES } from "@/app/referenzen/case-studies";
 import { pageOpenGraph } from "@/lib/seo";
 
-const TITLE = "Webdesign für Dienstleister in Landshut | Impova";
+const TITLE = "Website für Barbershop, Studio und Restaurant | Impova";
 const DESCRIPTION =
   "Websites für lokale Dienstleister in Landshut und Niederbayern: gefunden werden, überzeugen, Anfragen bekommen. Persönlich betreut, mit Referenzen.";
 
@@ -33,7 +33,7 @@ const breadcrumbJsonLd = {
     {
       "@type": "ListItem",
       position: 2,
-      name: "Webdesign für Dienstleister",
+      name: "Websites für Dienstleister",
       item: "https://www.impova.de/branchen/dienstleister",
     },
   ],
@@ -103,7 +103,7 @@ export default function DienstleisterPage() {
                 Branche
               </p>
               <h1 className="mt-5 max-w-3xl text-4xl font-semibold leading-tight tracking-tight text-zinc-50 sm:text-5xl">
-                Webdesign für lokale Dienstleister
+                Websites für lokale Dienstleister
               </h1>
               <p className="mt-6 max-w-xl text-lg leading-relaxed text-zinc-400">
                 Ob Barbershop, Studio oder Praxis: Deine Website ist oft der
@@ -195,7 +195,11 @@ export default function DienstleisterPage() {
                 Wie deine Website aussehen könnte
               </h2>
               <p className="mt-5 max-w-lg text-zinc-400">
-                Wie ein Projekt abläuft und was es kostet, steht auf der Seite{" "}
+                Einen Überblick über mein Angebot findest du unter{" "}
+                <Link href="/" className="text-accent underline underline-offset-4">
+                  Webdesign in Landshut
+                </Link>
+                . Wie ein Projekt abläuft und was es kostet, steht auf der Seite{" "}
                 <Link href="/webdesign" className="text-accent underline underline-offset-4">
                   Webdesign
                 </Link>

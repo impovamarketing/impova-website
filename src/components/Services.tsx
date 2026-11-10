@@ -83,11 +83,11 @@ export function Services() {
           <p className="mt-4 max-w-lg text-zinc-400">
             Speziell für deine Branche:{" "}
             <Link href="/branchen/handwerker" className="text-accent underline underline-offset-4">
-              Webdesign für Handwerker
+              Websites für Handwerker
             </Link>{" "}
             und{" "}
             <Link href="/branchen/dienstleister" className="text-accent underline underline-offset-4">
-              Webdesign für Dienstleister
+              Websites für Dienstleister
             </Link>
             .
           </p>

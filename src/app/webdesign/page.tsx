@@ -352,11 +352,11 @@ export default function WebdesignPage() {
                 Ausgangslage, dem, was ich gemacht habe, und dem Ergebnis.
                 Passend zu deiner Branche:{" "}
                 <Link href="/branchen/handwerker" className="text-accent underline underline-offset-4">
-                  Webdesign für Handwerker
+                  Websites für Handwerker
                 </Link>{" "}
                 und{" "}
                 <Link href="/branchen/dienstleister" className="text-accent underline underline-offset-4">
-                  Webdesign für Dienstleister
+                  Websites für Dienstleister
                 </Link>
                 . Aus der Region:{" "}
                 <Link href="/standorte/landshut" className="text-accent underline underline-offset-4">
