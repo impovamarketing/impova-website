@@ -8,6 +8,7 @@ const SOURCES = new Set([
   "landing_form",
   "visibility_check",
   "phone_click",
+  "entwurf_form",
 ]);
 
 type CapiPayload = {

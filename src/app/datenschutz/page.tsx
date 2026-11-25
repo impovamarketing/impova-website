@@ -469,9 +469,10 @@ export default function DatenschutzPage() {
             Anfrageformular:
           </strong>{" "}
           Wenn du eines unserer Anfrageformulare nutzt, verarbeiten wir die
-          von dir angegebenen Daten (Name, E-Mail-Adresse, Projekt-Details
-          sowie, je nach Formular, Branche, Budget-Rahmen und freiwillig deine
-          Telefonnummer) ausschließlich zur Bearbeitung deiner Anfrage auf
+          von dir angegebenen Daten (Name bzw. Vorname, E-Mail-Adresse sowie,
+          je nach Formular, Projekt-Details, Website-Adresse, Firmenname,
+          Branche, Budget-Rahmen und freiwillig deine Telefonnummer)
+          ausschließlich zur Bearbeitung deiner Anfrage auf
           Grundlage von Art. 6 Abs. 1 lit. b DSGVO. Eine Weitergabe an Dritte
           zu anderen Zwecken erfolgt nicht. Nur wenn du in die Kategorie
           &bdquo;Meta&ldquo; eingewilligt hast, übermitteln wir deine

@@ -26,6 +26,21 @@ const CHECK_STEPS = [
   },
 ];
 
+const ENTWURF_STEPS = [
+  {
+    title: "Ich schaue mir deinen Betrieb an",
+    text: "Deine aktuelle Website, deine Branche und wie Kunden aus der Region dich finden.",
+  },
+  {
+    title: "Ich designe deinen Entwurf",
+    text: "Eine moderne Startseite, zugeschnitten auf deinen Betrieb. Sie kommt innerhalb von 24 Stunden per E-Mail.",
+  },
+  {
+    title: "Du entscheidest in Ruhe",
+    text: "Gefällt dir der Entwurf, setzen wir ihn um. Wenn nicht, behältst du die Ideen einfach.",
+  },
+];
+
 const STEPS = [
   {
     title: "Ich lese deine Anfrage",
@@ -46,8 +61,43 @@ export default async function DankePage({
 }: {
   searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 }) {
-  const isCheck = (await searchParams).anfrage === "check";
-  const steps = isCheck ? CHECK_STEPS : STEPS;
+  const anfrage = (await searchParams).anfrage;
+  const variant = anfrage === "check" || anfrage === "entwurf" ? anfrage : "default";
+  const content = {
+    check: {
+      title: "Danke, dein Sichtbarkeits-Check ist angefragt.",
+      text: "Sie liegt direkt in meinem Postfach, ich melde mich persönlich bei dir. Eine automatische Bestätigungsmail gibt es nicht.",
+      steps: CHECK_STEPS,
+    },
+    entwurf: {
+      title: "Perfekt! Deine Anfrage ist eingegangen.",
+      text: "Ich schaue mir deinen Betrieb jetzt persönlich an. Dein individueller Startseiten-Entwurf landet innerhalb der nächsten 24 Stunden in deinem E-Mail-Postfach.",
+      steps: ENTWURF_STEPS,
+    },
+    default: {
+      title: "Danke, deine Anfrage ist angekommen.",
+      text: "Sie liegt direkt in meinem Postfach, ich melde mich persönlich bei dir. Eine automatische Bestätigungsmail gibt es nicht.",
+      steps: STEPS,
+    },
+  }[variant];
+
+  /*
+   * ================================================================
+   * META PIXEL: LEAD-EVENT
+   * ----------------------------------------------------------------
+   * Hier würde klassisch fbq("track", "Lead") stehen. Das Lead-Event
+   * wird aber bewusst NICHT auf dieser Seite gefeuert, sondern direkt
+   * beim erfolgreichen Absenden des Formulars:
+   *   - /entwurf:  src/components/EntwurfForm.tsx  -> trackLead("entwurf_form")
+   *   - Kontakt:   trackLead("contact_form") / trackLead("landing_form")
+   *   - Check:     trackLead("visibility_check")
+   * trackLead (src/lib/meta.ts) schickt Pixel + Conversions API mit
+   * derselben event_id (Deduplizierung) und nur mit Meta-Einwilligung.
+   * Vorteil: Ein Neuladen oder direkter Aufruf von /danke zählt keinen
+   * falschen Lead. Bitte hier also KEIN zweites Lead-Event einbauen.
+   * ================================================================
+   */
+
   return (
     <>
       <Header />
@@ -55,17 +105,14 @@ export default async function DankePage({
         <div className="mx-auto max-w-3xl px-6 lg:px-10">
           <CheckCircle2 className="size-10 text-accent" aria-hidden="true" />
           <h1 className="mt-6 text-4xl font-semibold leading-tight tracking-tight text-zinc-50 sm:text-5xl">
-            {isCheck
-              ? "Danke, dein Sichtbarkeits-Check ist angefragt."
-              : "Danke, deine Anfrage ist angekommen."}
+            {content.title}
           </h1>
           <p className="mt-5 max-w-xl text-base leading-relaxed text-zinc-400">
-            Sie liegt direkt in meinem Postfach, ich melde mich persönlich bei
-            dir. Eine automatische Bestätigungsmail gibt es nicht.
+            {content.text}
           </p>
 
           <ol className="mt-14 flex flex-col gap-6 border-t border-white/5 pt-10">
-            {steps.map((step, i) => (
+            {content.steps.map((step, i) => (
               <li key={step.title} className="flex gap-5">
                 <span className="font-mono text-sm text-accent">
                   {String(i + 1).padStart(2, "0")}

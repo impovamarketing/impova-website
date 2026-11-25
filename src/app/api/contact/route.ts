@@ -13,6 +13,8 @@ type ContactPayload = {
   website?: string;
   ort?: string;
   privacy?: boolean;
+  firma?: string;
+  vorname?: string;
 };
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -82,6 +84,25 @@ export async function POST(request: NextRequest) {
       `E-Mail: ${email}`,
       "",
       "Datenschutzhinweis bestätigt.",
+    ]);
+  }
+
+  // Kostenloser Startseiten-Entwurf von der Meta-Landingpage /entwurf.
+  if (body.kind === "entwurf") {
+    const website = text(body.website, 300); // URL oder z. B. "Noch keine"
+    const firma = text(body.firma, 160);
+    const vorname = text(body.vorname, 80);
+    const phone = text(body.phone, 40);
+    if (!website || !firma || !vorname) return badRequest("Pflichtfelder fehlen.");
+
+    return sendMail(`Entwurf-Anfrage: ${firma}`, email, [
+      `Website: ${website}`,
+      `Firma & Branche: ${firma}`,
+      `Vorname: ${vorname}`,
+      `E-Mail: ${email}`,
+      phone ? `Telefon: ${phone}` : "Telefon: nicht angegeben",
+      "",
+      "Quelle: Landingpage /entwurf (Entwurf innerhalb von 24 Stunden zugesagt).",
     ]);
   }
 
