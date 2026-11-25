@@ -12,7 +12,8 @@ export type LeadSource =
   | "contact_form"
   | "landing_form"
   | "visibility_check"
-  | "phone_click";
+  | "phone_click"
+  | "entwurf_form";
 export type LeadUserData = { email?: string; phone?: string };
 
 function hasMetaConsent(): boolean {
