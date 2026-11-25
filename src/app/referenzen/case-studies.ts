@@ -82,8 +82,8 @@ const ALL_CASE_STUDIES: CaseStudy[] = [
     seoTitle: "MA Gebäudeservice: Case Study | Impova",
     seoDescription:
       "Case Study MA Hausmeisterei & Gebäudeservice, Landshut: neue Website und SEO. Ø Position 2,9 für „hausmeister landshut“ (Search Console, 14.10. bis 23.10.2026).",
-    image: "/images/work/ma-gebaeudeservice.jpg",
-    mobileImage: "/images/work/ma-gebaeudeservice-mobile.jpg",
+    image: "/images/work/ma-gebaeudeservice-v2.jpg",
+    mobileImage: "/images/work/ma-gebaeudeservice-v2-mobile.jpg",
     liveUrl: "https://ma-objektservice.de",
     situation:
       "20 Jahre Erfahrung, aber online für Hausverwaltungen kaum als vertrauenswürdiger Ansprechpartner erkennbar.",
@@ -117,8 +117,8 @@ const ALL_CASE_STUDIES: CaseStudy[] = [
     seoTitle: "Sero's Barbershop: Case Study | Impova",
     seoDescription:
       "Case Study Sero's Barbershop in Landshut: Platz 2 in den lokalen Google-Ergebnissen für „barbershop landshut“ (Stand 26.10.2026, eigene Recherche).",
-    image: "/images/work/seros-barbershop.jpg",
-    mobileImage: "/images/work/seros-barbershop-mobile.jpg",
+    image: "/images/work/seros-barbershop-v2.jpg",
+    mobileImage: "/images/work/seros-barbershop-v2-mobile.jpg",
     liveUrl: "https://serosbarbershop.de",
     situation:
       "Bewertungen und Terminbuchung waren für Kunden schwer zu finden, die Seite wirkte wie jeder andere Friseur-Baukasten.",
